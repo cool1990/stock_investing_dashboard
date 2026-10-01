@@ -1,122 +1,155 @@
 import './styles/tokens.css';
+import './styles/base.css';
 import { renderSiteHeader } from './components/header';
 import { renderStockHeader } from './components/stockHeader';
 import { renderConsensusPage } from './pages/consensus';
+import { renderWatchlistPage } from './pages/watchlist';
+import { renderReviewPage } from './pages/review';
+import { renderFinancialsPage } from './pages/financials';
+import { renderCallPage } from './pages/call';
+import { renderPricePage } from './pages/price';
+import { renderSourcesPage } from './pages/sources';
+import { loadJson, sampleOrPage } from './lib/load';
+import type { ConsensusPage, StockMeta } from './lib/types';
 import { el } from './components/segmented';
-import type { ConsensusPage } from './lib/types';
-import { onRouteChange, parseHash } from './router';
+import { onRouteChange, parseHash, routeTab, type Route } from './router';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
-async function loadConsensus(ticker: string): Promise<ConsensusPage> {
-  const url = `./data/pages/${ticker}/consensus.json`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`无法加载 ${url}（${res.status}）`);
-  return res.json();
+let watchlistFilter = '';
+
+async function loadStockMeta(ticker: string, fallback?: StockMeta): Promise<StockMeta> {
+  try {
+    const h = await loadJson<StockMeta>(sampleOrPage('stockHeader', ticker));
+    return { ...h, ticker: h.ticker || ticker };
+  } catch {
+    if (fallback) return { ...fallback, ticker };
+    throw new Error(`无法加载 ${ticker} 的页头数据`);
+  }
 }
 
-function renderWatchlist(): HTMLElement {
-  const main = el('main', { className: 'main' });
-  main.appendChild(
-    el('div', { className: 'placeholder-page' }, [
-      el('h2', { text: '观察池' }),
-      el('p', {
-        text: '当前已接入美光（MU）。点击下方进入分析师预期页，或在顶栏搜索框输入代码。',
-      }),
-      el('p', {}, [
-        el('a', { href: '#/MU/consensus', text: 'MU · Micron Technology 美光科技 →' }),
-      ]),
-    ]),
-  );
-  return main;
+async function loadRouteData(route: Route): Promise<unknown> {
+  switch (route.name) {
+    case 'watchlist':
+      return loadJson(sampleOrPage('watchlist'));
+    case 'sources':
+      return loadJson(sampleOrPage('sources'));
+    case 'review':
+      return loadJson(sampleOrPage('review', route.ticker));
+    case 'financials':
+      return loadJson(sampleOrPage('financials', route.ticker));
+    case 'call':
+      return loadJson(sampleOrPage('call', route.ticker));
+    case 'consensus':
+      return loadJson<ConsensusPage>(sampleOrPage('consensus', route.ticker));
+    case 'price':
+      return loadJson(sampleOrPage('price', route.ticker));
+    default:
+      return null;
+  }
 }
 
-function renderSources(): HTMLElement {
-  const main = el('main', { className: 'main' });
-  main.appendChild(
-    el('div', { className: 'placeholder-page' }, [
-      el('h2', { text: '数据说明' }),
-      el('p', {
-        text: '浏览器只读同源 JSON。每日由 GitHub Actions 抓取 Yahoo / SEC 等免费源，写入 data/ 并构建本站。抓取状态见 data/_status.json。',
-      }),
-      el('ul', {}, [
-        el('li', { text: '未来共识：Yahoo earnings_estimate / revenue_estimate / eps_trend' }),
-        el('li', { text: '已公布 EPS：Yahoo Reported EPS（Non-GAAP），新闻稿可 YAML 覆盖' }),
-        el('li', { text: '已公布营收：SEC EDGAR XBRL' }),
-        el('li', { text: '指引：config/companies/<TICKER>.yaml 手工录入' }),
-        el('li', { text: '缺失字段显示 [ ]，禁止插值或编造' }),
-      ]),
-    ]),
-  );
-  return main;
-}
-
-function renderPlaceholder(ticker: string, tab: string): HTMLElement {
-  const labels: Record<string, string> = {
-    overview: '财报解读',
-    statements: '财务报表',
-    call: '电话会',
-    price: '股价反应',
-  };
-  const main = el('main', { className: 'main' });
-  main.appendChild(
-    el('div', { className: 'placeholder-page' }, [
-      el('h2', { text: `${labels[tab] ?? tab}（占位）` }),
-      el('p', { text: `${ticker} 的此页面尚未实现。请先查看分析师预期。` }),
-      el('p', {}, [el('a', { href: `#/${ticker}/consensus`, text: '前往分析师预期 →' })]),
-    ]),
-  );
-  return main;
+function renderPage(route: Route, data: unknown): HTMLElement {
+  switch (route.name) {
+    case 'watchlist':
+      return renderWatchlistPage(data as Parameters<typeof renderWatchlistPage>[0], {
+        filterQuery: watchlistFilter,
+      });
+    case 'sources':
+      return renderSourcesPage(data as Parameters<typeof renderSourcesPage>[0]);
+    case 'review':
+      return renderReviewPage(data as Parameters<typeof renderReviewPage>[0], route.ticker);
+    case 'financials':
+      return renderFinancialsPage(data as Parameters<typeof renderFinancialsPage>[0]);
+    case 'call':
+      return renderCallPage(data as Parameters<typeof renderCallPage>[0], route.ticker);
+    case 'consensus':
+      return renderConsensusPage(data as ConsensusPage);
+    case 'price':
+      return renderPricePage(data as Parameters<typeof renderPricePage>[0]);
+    default:
+      return el('div', { className: 'error-box', text: '页面不存在' });
+  }
 }
 
 async function render() {
   const route = parseHash();
   app.replaceChildren();
 
-  if (route.name === 'watchlist') {
-    app.append(renderSiteHeader('watchlist'), renderWatchlist());
-    return;
-  }
-  if (route.name === 'sources') {
-    app.append(renderSiteHeader('sources'), renderSources());
-    return;
-  }
   if (route.name === 'notfound') {
     app.append(
       renderSiteHeader(),
       el('div', { className: 'error-box', text: '页面不存在。返回观察池。' }),
+      el('div', { className: 'placeholder-page' }, [el('a', { href: '#/', text: '观察池' })]),
     );
     return;
   }
 
-  app.append(renderSiteHeader(), el('div', { className: 'loading-box', text: '加载中…' }));
-  try {
-    const data = await loadConsensus(route.ticker);
-    app.replaceChildren();
-    app.append(renderSiteHeader(), renderStockHeader(data, route.name === 'consensus' ? 'consensus' : route.tab));
-    if (route.name === 'consensus') {
-      app.append(renderConsensusPage(data));
-    } else {
-      app.append(renderPlaceholder(route.ticker, route.tab));
+  const isStock = routeTab(route) != null;
+  const siteActive =
+    route.name === 'watchlist' ? 'watchlist' : route.name === 'sources' ? 'sources' : 'none';
+
+  if (!isStock) {
+    if (route.name === 'watchlist' || route.name === 'sources') {
+      try {
+        const data = await loadRouteData(route);
+        app.append(
+          renderSiteHeader(siteActive, {
+            onWatchlistFilter: (q) => {
+              watchlistFilter = q;
+              if (route.name === 'watchlist') void render();
+            },
+          }),
+          renderPage(route, data),
+        );
+      } catch (err) {
+        app.append(
+          renderSiteHeader(siteActive),
+          el('div', {
+            className: 'error-box',
+            text: err instanceof Error ? err.message : '加载失败',
+          }),
+        );
+      }
+      return;
     }
+  }
+
+  app.append(renderSiteHeader(siteActive), el('div', { className: 'loading-box', text: '加载中…' }));
+  try {
+    if (route.name === 'watchlist' || route.name === 'sources') return;
+    const stockRoute = route as Extract<Route, { ticker: string }>;
+    const data = await loadRouteData(stockRoute);
+    let meta: StockMeta | undefined;
+    if (stockRoute.name === 'consensus') {
+      meta = (data as ConsensusPage).meta;
+    }
+    const stockMeta = await loadStockMeta(stockRoute.ticker, meta);
+    const tab = routeTab(stockRoute)!;
+    app.replaceChildren();
+    app.append(
+      renderSiteHeader(siteActive),
+      renderStockHeader(stockMeta, tab),
+      renderPage(stockRoute, data),
+    );
   } catch (err) {
     app.replaceChildren();
     app.append(
-      renderSiteHeader(),
+      renderSiteHeader(siteActive),
       el('div', {
         className: 'error-box',
         text: err instanceof Error ? err.message : '加载失败',
       }),
       el('div', { className: 'placeholder-page' }, [
-        el('p', { text: '目前样例数据仅覆盖 MU。' }),
-        el('a', { href: '#/MU/consensus', text: '打开 MU 分析师预期' }),
+        el('p', { text: '目前样例数据主要覆盖 MU。' }),
+        el('a', { href: '#/MU', text: '打开 MU 财报解读' }),
       ]),
     );
   }
 }
 
 if (!location.hash || location.hash === '#') {
-  location.hash = '#/MU/consensus';
+  location.hash = '#/';
 }
 
 onRouteChange(() => {

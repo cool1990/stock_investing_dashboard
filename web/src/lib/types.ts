@@ -1,4 +1,19 @@
 export type MetricKind = 'eps' | 'rev';
+export type StockTab = 'review' | 'financials' | 'call' | 'consensus' | 'price';
+
+export interface StockMeta {
+  ticker: string;
+  name_en: string;
+  name_zh: string;
+  exchange: string;
+  sector: string;
+  updated_at_bj: string;
+  latest_report: string;
+  latest_report_date: string;
+  release_timing: string;
+  snapshot_note?: string;
+  header: Record<string, number | string | null>;
+}
 export type GrowthKind = 'yoy' | 'pop';
 export type PeriodKind = 'q' | 'y';
 export type RevisionKey = 'FQ1-27' | 'FY27';
@@ -37,19 +52,9 @@ export interface HistoryBlock {
 }
 
 export interface ConsensusPage {
-  meta: {
-    ticker: string;
-    name_en: string;
-    name_zh: string;
-    exchange: string;
-    sector: string;
-    updated_at_bj: string;
-    latest_report: string;
-    latest_report_date: string;
-    release_timing: string;
+  meta: StockMeta & {
     snapshot_note: string;
     quarter_labels: string[];
-    header: Record<string, number | string | null>;
   };
   future: {
     years: string[];
