@@ -54,10 +54,13 @@ def main() -> int:
     yoy_p = periods.get(prior_year_period(period)) or {}
     pq, py = prior.get("q") or {}, yoy_p.get("q") or {}
 
-    # Prefer existing sample/curated for AI text skeleton
-    existing = read_json(ROOT / "data" / "pages" / ticker / "review.json", default=None)
-    if existing is None:
-        existing = read_json(ROOT / "web" / "public" / "sample" / "review.json", default={}) or {}
+    # Prefer curated page; always keep sample metrics/talk skeleton as fallback
+    sample = read_json(ROOT / "web" / "public" / "sample" / "review.json", default={}) or {}
+    existing = read_json(ROOT / "data" / "pages" / ticker / "review.json", default=None) or {}
+    if not existing.get("metrics"):
+        existing = {**sample, **existing, "metrics": sample.get("metrics") or {}}
+    if not (existing.get("talk") or {}).get("mgmt") and sample.get("talk"):
+        existing.setdefault("talk", sample.get("talk"))
 
     rev = q.get("revenue")
     rev_b = rev / 1000.0 if rev is not None else None
@@ -143,61 +146,82 @@ def main() -> int:
         cards[4]["vs_cons_tone"] = eps_tone
 
     guide = (cfg.get("guidance") or {}).get("FQ1-27") or {}
-    page = {
-        "period": period,
-        "release": {
-            "date": slot.get("end") or existing.get("release", {}).get("date"),
-            "timing": cfg.get("release_timing", "after_close"),
-            "press_url": "https://investors.micron.com/",
-            "remarks_url": "https://investors.micron.com/",
-        },
-        "verdict": {
-            "label": "超预期" if (eps_surp or 0) > 0 or (rev_surp or 0) > 0 else "待判定",
-            "line": {
-                "rev_surp": round(rev_surp, 4) if rev_surp is not None else None,
-                "rev_surp_tone": rev_tone,
-                "eps_surp": round(eps_surp, 4) if eps_surp is not None else None,
-                "eps_surp_tone": eps_tone,
-                "guide_vs_cons": None,
-                "guide_vs_cons_tone": "na",
-            },
-            "summary": {
-                "text": None,
-                "refs": [],
-                "prompt_version": "review_summary_v2",
-                "status": "pending_ai",
-                "placeholder": "AI 文案待手动任务包生成（P4）",
-            },
-            "watch": existing.get("verdict", {}).get("watch")
-            or [
-                {"title": "毛利率走势", "text": "关注下季指引是否低于本季", "confirmed": False, "resolved": False}
-            ],
-        },
-        "cards": cards,
-        "bridge": existing.get("bridge") or {"rows": [], "note": "拆解表待新闻稿解析（P3 深化）"},
-        "guidance": {
-            "next_q": "FQ1-27",
-            "rows": [
-                {
-                    "metric": "营收",
-                    "guide": f"${guide['rev_mid']}B" if guide.get("rev_mid") else None,
-                    "cons": None,
-                    "vs": None,
-                    "vs_tone": "na",
-                },
-                {
-                    "metric": "EPS",
-                    "guide": f"${guide['eps_mid']}" if guide.get("eps_mid") else None,
-                    "cons": None,
-                    "vs": None,
-                    "vs_tone": "na",
-                },
-            ],
-            "note": "指引来自 config/companies/MU.yaml；共识对比在快照齐全后填充。",
-        },
-        "talk": existing.get("talk") or {"status": "pending_ai", "items": []},
-        "ai_status": "numbers_ready_copy_pending",
+    # Start from sample/curated skeleton so metrics/guidance/talk match frontend schema
+    page = dict(existing) if existing else {}
+    page["period"] = period
+    page["release"] = {
+        "date": slot.get("end") or (existing.get("release") or {}).get("date"),
+        "timing": cfg.get("release_timing", "after_close"),
+        "press_url": "https://investors.micron.com/",
+        "remarks_url": "https://investors.micron.com/",
     }
+    page["verdict"] = {
+        "label": "超预期" if (eps_surp or 0) > 0 or (rev_surp or 0) > 0 else "待判定",
+        "line": {
+            "rev_surp": round(rev_surp, 4) if rev_surp is not None else None,
+            "rev_surp_tone": rev_tone,
+            "eps_surp": round(eps_surp, 4) if eps_surp is not None else None,
+            "eps_surp_tone": eps_tone,
+            "guide_vs_cons": [None, None],
+            "guide_vs_cons_tone": ["na", "na"],
+        },
+        "summary": {
+            "text": None,
+            "refs": [],
+            "prompt_version": "review_summary_v2",
+            "status": "pending_ai",
+        },
+        "watch": (existing.get("verdict") or {}).get("watch")
+        or [
+            {
+                "title": "毛利率走势",
+                "text": "关注下季指引是否低于本季",
+                "confirmed": False,
+                "resolved": False,
+            }
+        ],
+    }
+    page["cards"] = cards
+    page["metrics"] = existing.get("metrics") or sample.get("metrics") or {}
+    if not page["metrics"]:
+        page["metrics"] = sample.get("metrics") or {}
+    # Guidance in frontend schema: groups[].rows
+    g_rows = [
+        {
+            "metric": "营收",
+            "name": "营收",
+            "v": f"${guide['rev_mid']}B" if guide.get("rev_mid") else None,
+            "value": f"${guide['rev_mid']}B" if guide.get("rev_mid") else None,
+            "qoq": None,
+            "yoy": None,
+            "vs_cons": None,
+            "vs_cons_tone": "na",
+        },
+        {
+            "metric": "EPS",
+            "name": "摊薄 EPS",
+            "v": f"${guide['eps_mid']}" if guide.get("eps_mid") else None,
+            "value": f"${guide['eps_mid']}" if guide.get("eps_mid") else None,
+            "qoq": None,
+            "yoy": None,
+            "vs_cons": None,
+            "vs_cons_tone": "na",
+        },
+    ]
+    page["guidance"] = {
+        "groups": [{"title": "下季指引 FQ1-27", "rows": g_rows}],
+        "reasons": {
+            "text": None,
+            "refs": [],
+            "status": "pending_ai",
+        },
+    }
+    talk = existing.get("talk") or {}
+    page["talk"] = {
+        "mgmt": talk.get("mgmt") or [],
+        "qa": talk.get("qa") or [],
+    }
+    page["ai_status"] = "numbers_ready_copy_pending"
 
     # Enrich guidance vs cons from snapshot
     snap_files = sorted((ROOT / "data" / "snapshots" / ticker).glob("*.json"))
@@ -207,21 +231,16 @@ def main() -> int:
         rev_avg = ((snap.get("periods") or {}).get("FQ1-27") or {}).get("rev", {}).get("avg")
         if guide.get("eps_mid") and eps_avg:
             vs = guide["eps_mid"] / eps_avg - 1
-            page["guidance"]["rows"][1]["cons"] = round(eps_avg, 2)
-            page["guidance"]["rows"][1]["vs"] = round(vs, 4)
-            page["guidance"]["rows"][1]["vs_tone"] = "up" if vs > 0 else "down"
-            page["verdict"]["line"]["guide_vs_cons"] = [round(vs, 4), None]
-            page["verdict"]["line"]["guide_vs_cons_tone"] = ["up" if vs > 0 else "down", "na"]
+            g_rows[1]["vs_cons"] = round(vs, 4)
+            g_rows[1]["vs_cons_tone"] = "up" if vs > 0 else "down"
+            page["verdict"]["line"]["guide_vs_cons"][0] = round(vs, 4)
+            page["verdict"]["line"]["guide_vs_cons_tone"][0] = "up" if vs > 0 else "down"
         if guide.get("rev_mid") and rev_avg:
             vs = guide["rev_mid"] / rev_avg - 1
-            page["guidance"]["rows"][0]["cons"] = round(rev_avg, 2)
-            page["guidance"]["rows"][0]["vs"] = round(vs, 4)
-            page["guidance"]["rows"][0]["vs_tone"] = "up" if vs > 0 else "down"
-            gvc = page["verdict"]["line"].get("guide_vs_cons") or [None, None]
-            if not isinstance(gvc, list):
-                gvc = [None, None]
-            gvc[1] = round(vs, 4)
-            page["verdict"]["line"]["guide_vs_cons"] = gvc
+            g_rows[0]["vs_cons"] = round(vs, 4)
+            g_rows[0]["vs_cons_tone"] = "up" if vs > 0 else "down"
+            page["verdict"]["line"]["guide_vs_cons"][1] = round(vs, 4)
+            page["verdict"]["line"]["guide_vs_cons_tone"][1] = "up" if vs > 0 else "down"
 
     out = ROOT / "data" / "pages" / ticker / "review.json"
     write_json(out, page)

@@ -217,9 +217,10 @@ def main() -> int:
                 "sub": meta.get("sector"),
                 "has_page": t == "MU",
                 "price": round(price, 2) if price else None,
-                "d1": round(d1, 2) if d1 is not None else None,
+                # Store as ratio for formatRatioChange (0.273 → +27.3%)
+                "d1": round(d1 / 100.0, 6) if d1 is not None else None,
                 "d1_tone": tone_pct(d1),
-                "ytd": round(ytd, 1) if ytd is not None else None,
+                "ytd": round(ytd / 100.0, 6) if ytd is not None else None,
                 "ytd_tone": tone_pct(ytd),
                 "mcap": mcap,
                 "ntm_eps": round(ntm, 2) if ntm else None,

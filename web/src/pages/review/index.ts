@@ -112,17 +112,18 @@ function tagKind(tag?: string): TagKind {
 }
 
 export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement {
-  let metricKey = Object.keys(data.metrics)[0] ?? 'rev';
+  const metrics = data.metrics ?? {};
+  let metricKey = Object.keys(metrics)[0] ?? 'rev';
   let histMode: 'q' | 'y' = 'q';
   let talkMode: 'mgmt' | 'qa' = 'mgmt';
   const root = el('main', { className: 'main review-page' });
 
   const paint = () => {
     root.replaceChildren();
-    const timing = data.release.timing === 'after_close' ? '盘后' : '盘前';
+    const timing = data.release?.timing === 'after_close' ? '盘后' : '盘前';
     root.appendChild(
       renderBanner(
-        `${data.period} · ${data.release.date} ${timing}发布。P0 使用样例数据；AI 摘要未确认时显示「AI 解读待生成」。`,
+        `${data.period} · ${data.release?.date ?? '[ ]'} ${timing}发布。数字来自 XBRL/共识；AI 摘要未确认时显示「AI 解读待生成」。`,
       ),
     );
 
@@ -151,9 +152,9 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
           text: `EPS ${formatRatioChange(v.line.eps_surp)}`,
         }),
         el('span', { text: ' · 指引 vs 共识 ' }),
-        ...v.line.guide_vs_cons.map((g, i) =>
+        ...(v.line.guide_vs_cons ?? []).map((g, i) =>
           el('span', {
-            className: colorClass(v.line.guide_vs_cons_tone[i]),
+            className: colorClass(v.line.guide_vs_cons_tone?.[i]),
             text: `${i ? ' / ' : ''}${formatRatioChange(g)}`,
           }),
         ),
@@ -163,7 +164,7 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
         text: v.summary.text ?? 'AI 解读待生成',
       }),
     );
-    if (v.watch.length) {
+    if (v.watch?.length) {
       const ul = el('ul', { className: 'watch-list' });
       for (const w of v.watch) {
         ul.appendChild(
@@ -196,25 +197,27 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
     root.appendChild(verdict);
 
     // Metrics breakdown
-    const keys = Object.keys(data.metrics);
-    const m = data.metrics[metricKey];
+    const keys = Object.keys(metrics);
+    const m = metrics[metricKey];
     const metricSec = el('section', { className: 'section' });
     metricSec.appendChild(
       el('div', { className: 'section__head' }, [
         el('div', {}, [
           el('h2', { text: '指标拆解' }),
-          el('div', { className: 'section__sub', text: m ? `${m.label} · ${m.basis}` : '' }),
+          el('div', { className: 'section__sub', text: m ? `${m.label} · ${m.basis}` : '拆解待新闻稿解析' }),
         ]),
         el('div', { className: 'toolbar' }, [
-          createSegmented(
-            '指标',
-            keys.map((k) => ({ value: k, label: data.metrics[k].label })),
-            metricKey,
-            (v2) => {
-              metricKey = v2;
-              paint();
-            },
-          ),
+          keys.length
+            ? createSegmented(
+                '指标',
+                keys.map((k) => ({ value: k, label: metrics[k].label })),
+                metricKey,
+                (v2) => {
+                  metricKey = v2;
+                  paint();
+                },
+              )
+            : el('span', { className: 'faint', text: '暂无拆解指标' }),
           createSegmented(
             '历史视图',
             [
@@ -316,7 +319,7 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
         el('div', {}, [el('h2', { text: '2 指引' }), el('div', { className: 'section__sub', text: '下季与明年目标' })]),
       ]),
     );
-    for (const g of data.guidance.groups) {
+    for (const g of data.guidance?.groups ?? []) {
       const cardG = el('div', { className: 'card' });
       cardG.appendChild(el('div', { className: 'card__title', text: g.title }));
       cardG.appendChild(
@@ -353,12 +356,13 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
     gSec.appendChild(
       el('div', {
         className: 'footnote',
-        text: data.guidance.reasons.text ?? '管理层原因：AI 解读待生成',
+        text: data.guidance?.reasons?.text ?? '管理层原因：AI 解读待生成',
       }),
     );
     root.appendChild(gSec);
 
     // Talk
+    const talk = data.talk ?? { mgmt: [], qa: [] };
     const tSec = el('section', { className: 'section' });
     tSec.appendChild(
       el('div', { className: 'section__head' }, [
@@ -385,10 +389,10 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
     );
     const talkCard = el('div', { className: 'card' });
     if (talkMode === 'mgmt') {
-      if (!data.talk.mgmt.length) {
+      if (!talk.mgmt?.length) {
         talkCard.appendChild(el('p', { className: 'faint', text: '待生成' }));
       }
-      for (const item of data.talk.mgmt) {
+      for (const item of talk.mgmt ?? []) {
         const row = el('div', { className: 'talk-item' });
         row.append(
           el('div', { className: 'talk-item__head' }, [
@@ -402,10 +406,10 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
         talkCard.appendChild(row);
       }
     } else {
-      if (!data.talk.qa.length) {
+      if (!talk.qa?.length) {
         talkCard.appendChild(el('p', { className: 'faint', text: '待生成' }));
       }
-      for (const item of data.talk.qa) {
+      for (const item of talk.qa ?? []) {
         const row = el('div', { className: 'talk-item' });
         row.append(
           el('div', { className: 'talk-item__head' }, [

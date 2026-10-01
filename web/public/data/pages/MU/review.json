@@ -19,15 +19,14 @@
       ],
       "guide_vs_cons_tone": [
         "up",
-        "na"
+        "up"
       ]
     },
     "summary": {
       "text": null,
       "refs": [],
       "prompt_version": "review_summary_v2",
-      "status": "pending_ai",
-      "placeholder": "AI 文案待手动任务包生成（P4）"
+      "status": "pending_ai"
     },
     "watch": [
       {
@@ -160,29 +159,233 @@
       }
     }
   ],
-  "bridge": {
-    "rows": [],
-    "note": "拆解表待新闻稿解析（P3 深化）"
+  "metrics": {
+    "rev": {
+      "label": "营收",
+      "basis": "GAAP · $B",
+      "q": {
+        "labels": [
+          "FQ4-25",
+          "FQ1-26",
+          "FQ2-26",
+          "FQ3-26",
+          "FQ4-26"
+        ],
+        "v": [
+          11.32,
+          13.64,
+          23.86,
+          41.46,
+          54.23
+        ],
+        "yoy": [
+          0.46,
+          0.566,
+          1.963,
+          3.458,
+          3.793
+        ],
+        "qoq": [
+          0.217,
+          0.206,
+          0.749,
+          0.738,
+          0.308
+        ]
+      },
+      "y": {
+        "labels": [
+          "FY22",
+          "FY23",
+          "FY24",
+          "FY25",
+          "FY26"
+        ],
+        "v": [
+          30.76,
+          15.54,
+          25.11,
+          37.38,
+          133.19
+        ],
+        "yoy": [
+          0.11,
+          -0.495,
+          0.616,
+          0.489,
+          2.563
+        ],
+        "qoq": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "hist_note": "变化率超过 400% 的点在图上封顶显示。",
+      "struct": [
+        {
+          "title": "按业务单元",
+          "src": "FQ4-26 新闻稿",
+          "rows": [
+            {
+              "label": "CDBU 核心数据中心",
+              "val": "$18.00B",
+              "sub": "占 33.2% · 同比 +1042% · 环比 +56.2%",
+              "pct": 100,
+              "tone": 1
+            }
+          ],
+          "note": {
+            "text": "CDBU 环比 +56%。",
+            "refs": []
+          }
+        }
+      ]
+    },
+    "gm": {
+      "label": "毛利率",
+      "basis": "Non-GAAP · %",
+      "q": {
+        "labels": [
+          "FQ4-25",
+          "FQ1-26",
+          "FQ2-26",
+          "FQ3-26",
+          "FQ4-26"
+        ],
+        "v": [
+          45.7,
+          56.8,
+          74.9,
+          84.9,
+          87.0
+        ],
+        "yoy": [
+          0.092,
+          0.173,
+          0.37,
+          0.459,
+          0.413
+        ],
+        "qoq": [
+          0.067,
+          0.111,
+          0.181,
+          0.1,
+          0.021
+        ]
+      },
+      "y": {
+        "labels": [
+          "FY25",
+          "FY26"
+        ],
+        "v": [
+          40.9,
+          81.1
+        ],
+        "yoy": [
+          null,
+          0.402
+        ],
+        "qoq": [
+          null,
+          null
+        ]
+      },
+      "hist_note": "GAAP FQ4-26 86.8%。",
+      "struct": []
+    },
+    "eps": {
+      "label": "摊薄 EPS",
+      "basis": "Non-GAAP · $",
+      "q": {
+        "labels": [
+          "FQ4-25",
+          "FQ1-26",
+          "FQ2-26",
+          "FQ3-26",
+          "FQ4-26"
+        ],
+        "v": [
+          3.03,
+          4.78,
+          12.2,
+          25.11,
+          33.42
+        ],
+        "yoy": [
+          null,
+          null,
+          6.82,
+          null,
+          10.03
+        ],
+        "qoq": [
+          null,
+          0.578,
+          1.552,
+          1.058,
+          0.331
+        ]
+      },
+      "y": {
+        "labels": [
+          "FY25",
+          "FY26"
+        ],
+        "v": [
+          8.29,
+          75.52
+        ],
+        "yoy": [
+          null,
+          8.11
+        ],
+        "qoq": [
+          null,
+          null
+        ]
+      },
+      "hist_note": "GAAP $32.87。",
+      "struct": []
+    }
   },
   "guidance": {
-    "next_q": "FQ1-27",
-    "rows": [
+    "groups": [
       {
-        "metric": "营收",
-        "guide": "$61.5B",
-        "cons": 61.32,
-        "vs": 0.0029,
-        "vs_tone": "up"
-      },
-      {
-        "metric": "EPS",
-        "guide": "$38.15",
-        "cons": 38.02,
-        "vs": 0.0034,
-        "vs_tone": "up"
+        "title": "下季指引 FQ1-27",
+        "rows": [
+          {
+            "metric": "营收",
+            "name": "营收",
+            "v": "$61.5B",
+            "value": "$61.5B",
+            "qoq": null,
+            "yoy": null,
+            "vs_cons": 0.0029,
+            "vs_cons_tone": "up"
+          },
+          {
+            "metric": "EPS",
+            "name": "摊薄 EPS",
+            "v": "$38.15",
+            "value": "$38.15",
+            "qoq": null,
+            "yoy": null,
+            "vs_cons": 0.0034,
+            "vs_cons_tone": "up"
+          }
+        ]
       }
     ],
-    "note": "指引来自 config/companies/MU.yaml；共识对比在快照齐全后填充。"
+    "reasons": {
+      "text": null,
+      "refs": [],
+      "status": "pending_ai"
+    }
   },
   "talk": {
     "mgmt": [
