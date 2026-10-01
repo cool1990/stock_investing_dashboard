@@ -50,12 +50,16 @@ export interface ReviewPage {
       struct: Array<{
         title: string;
         src?: string;
-        note?: string | null;
+        note?: string | null | { text?: string | null; refs?: unknown[] };
         rows: Array<{
           label: string;
-          value: number | null;
+          value?: number | null;
+          val?: string | null;
           unit?: string;
           share?: number | null;
+          sub?: string | null;
+          pct?: number | null;
+          tone?: number | string | null;
           yoy?: number | null;
           yoy_tone?: Tone;
           qoq?: number | null;
@@ -69,14 +73,17 @@ export interface ReviewPage {
     groups: Array<{
       title: string;
       rows: Array<{
-        metric: string;
-        value: string | null;
-        qoq: string | null;
-        yoy: string | null;
-        vs_cons: string | null;
+        name?: string;
+        metric?: string;
+        v?: string | null;
+        value?: string | null;
+        qoq: number | string | null;
+        yoy: number | string | null;
+        vs_cons: number | string | null;
         qoq_tone?: Tone;
         yoy_tone?: Tone;
         vs_cons_tone?: Tone;
+        derived?: boolean;
       }>;
     }>;
     reasons: { text: string | null; refs: unknown[] };
@@ -259,33 +266,42 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
           );
           for (const row of panel.rows) {
             const line = el('div', { className: 'struct-row' });
+            const mainVal =
+              row.val ??
+              (row.value == null
+                ? '[ ]'
+                : `${row.unit === '%' ? '' : '$'}${row.value}${row.unit === 'B' ? 'B' : row.unit === '%' ? '%' : ''}`);
             line.append(
               el('div', { className: 'struct-row__top' }, [
                 el('span', { text: row.label }),
-                el('span', {
-                  className: 'mono',
-                  text:
-                    row.value == null
-                      ? '[ ]'
-                      : `${row.unit === '%' ? '' : '$'}${row.value}${row.unit === 'B' ? 'B' : row.unit === '%' ? '%' : ''}`,
-                }),
+                el('span', { className: 'mono', text: mainVal }),
               ]),
               el('div', {
                 className: 'struct-row__sub',
-                text: [
-                  row.share != null ? `占 ${(row.share * 100).toFixed(1)}%` : null,
-                  row.yoy != null ? `同比 ${formatRatioChange(row.yoy)}` : null,
-                  row.qoq != null ? `环比 ${formatRatioChange(row.qoq)}` : null,
-                ]
-                  .filter(Boolean)
-                  .join(' · '),
+                text:
+                  row.sub ??
+                  [
+                    row.share != null ? `占 ${(row.share * 100).toFixed(1)}%` : null,
+                    row.yoy != null ? `同比 ${formatRatioChange(row.yoy)}` : null,
+                    row.qoq != null ? `环比 ${formatRatioChange(row.qoq)}` : null,
+                  ]
+                    .filter(Boolean)
+                    .join(' · '),
               }),
             );
-            const barW = row.bar != null ? Math.max(0, Math.min(100, row.bar * 100)) : row.share != null ? row.share * 100 : 0;
+            const barW =
+              row.pct != null
+                ? Math.max(0, Math.min(100, row.pct))
+                : row.bar != null
+                  ? Math.max(0, Math.min(100, row.bar * 100))
+                  : row.share != null
+                    ? row.share * 100
+                    : 0;
             line.appendChild(el('div', { className: 'struct-row__bar' }, [el('i', { style: `width:${barW}%` })]));
             p.appendChild(line);
           }
-          if (panel.note) p.appendChild(el('div', { className: 'footnote', text: panel.note }));
+          const noteText = typeof panel.note === 'string' ? panel.note : panel.note?.text;
+          if (noteText) p.appendChild(el('div', { className: 'footnote', text: noteText }));
           grid.appendChild(p);
         }
         metricSec.appendChild(grid);
@@ -314,11 +330,20 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
           ],
           rows: g.rows.map((r) => ({
             cells: [
-              { text: r.metric },
-              { text: r.value },
-              { text: r.qoq, color: r.qoq_tone },
-              { text: r.yoy, color: r.yoy_tone },
-              { text: r.vs_cons, color: r.vs_cons_tone },
+              { text: r.name ?? r.metric ?? '[ ]' },
+              { text: r.v ?? r.value ?? '[ ]' },
+              {
+                text: typeof r.qoq === 'number' ? formatRatioChange(r.qoq) : r.qoq,
+                color: r.qoq_tone,
+              },
+              {
+                text: typeof r.yoy === 'number' ? formatRatioChange(r.yoy) : r.yoy,
+                color: r.yoy_tone,
+              },
+              {
+                text: typeof r.vs_cons === 'number' ? formatRatioChange(r.vs_cons) : r.vs_cons,
+                color: r.vs_cons_tone,
+              },
             ],
           })),
         }),
