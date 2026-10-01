@@ -36,6 +36,12 @@ def main() -> int:
     draft = json.loads(draft_path.read_text(encoding="utf-8"))
     schema = json.loads(schema_path.read_text(encoding="utf-8")) if schema_path.exists() else {}
     errs = check_required(draft, schema)
+    origin = str(draft.get("origin") or draft.get("content_origin") or "")
+    status = str(draft.get("ai_status") or draft.get("status") or "")
+    if origin != "reviewed":
+        errs.append("origin must be reviewed; sample or seed drafts are not applied")
+    if "sample" in status or "seed" in status:
+        errs.append(f"refusing sample/seed status: {status}")
     # No fabricated numeric guard: summary text length
     if "summary" in draft and isinstance(draft["summary"], dict):
         text = draft["summary"].get("text")

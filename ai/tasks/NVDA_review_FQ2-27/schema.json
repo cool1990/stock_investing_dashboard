@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "required": [
+    "period",
+    "summary"
+  ],
+  "properties": {
+    "period": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "watch": {
+      "type": "array"
+    },
+    "talk": {
+      "type": "object"
+    }
+  }
+}

@@ -188,7 +188,7 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
         renderKpiCard({
           label: `${c.label} · ${c.basis}`,
           value: fmtCardValue(c.value, c.unit),
-          sub: `同比 ${formatRatioChange(c.yoy)} · 环比 ${formatRatioChange(c.qoq)} · vs共识 ${formatRatioChange(c.vs_cons)}`,
+          sub: `同比 ${formatRatioChange(c.yoy, { asPp: c.unit === '%' })} · 环比 ${formatRatioChange(c.qoq, { asPp: c.unit === '%' })} · vs共识 ${formatRatioChange(c.vs_cons)}`,
           color: c.yoy_tone,
         }),
       );
@@ -390,7 +390,7 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
     const talkCard = el('div', { className: 'card' });
     if (talkMode === 'mgmt') {
       if (!talk.mgmt?.length) {
-        talkCard.appendChild(el('p', { className: 'faint', text: '待生成' }));
+        talkCard.appendChild(el('p', { className: 'faint', text: '未接入' }));
       }
       for (const item of talk.mgmt ?? []) {
         const row = el('div', { className: 'talk-item' });
@@ -407,7 +407,7 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
       }
     } else {
       if (!talk.qa?.length) {
-        talkCard.appendChild(el('p', { className: 'faint', text: '待生成' }));
+        talkCard.appendChild(el('p', { className: 'faint', text: '未接入' }));
       }
       for (const item of talk.qa ?? []) {
         const row = el('div', { className: 'talk-item' });
@@ -427,7 +427,7 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
 
     root.appendChild(
       renderFooterNote([
-        `财报解读样例 · ${data.period}。超预期色类由后端给出；负号使用 ${MINUS}。`,
+        `${data.period}。超预期色类由后端给出；负号使用 ${MINUS}。AI 文案未接入时显示「未接入」。`,
         '新闻稿 / 准备稿链接仅作展示；缺失时不静默用第三方顶替。',
       ]),
     );

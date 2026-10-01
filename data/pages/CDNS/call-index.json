@@ -1,0 +1,12 @@
+{
+  "ticker": "CDNS",
+  "periods": [
+    {
+      "period": "FQ1-26",
+      "label": "FQ1-26",
+      "status": "not_connected",
+      "href": "#/CDNS/call/FQ1-26"
+    }
+  ],
+  "latest": "FQ1-26"
+}

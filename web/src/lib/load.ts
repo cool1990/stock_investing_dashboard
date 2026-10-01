@@ -1,4 +1,4 @@
-/** Load page JSON: prefer formal data/pages, fall back to sample/. */
+/** Load page JSON from data/pages. Sample files are not a silent fallback. */
 
 export async function loadJson<T>(paths: string[]): Promise<T> {
   let lastErr: Error | null = null;
@@ -17,16 +17,17 @@ export async function loadJson<T>(paths: string[]): Promise<T> {
   throw lastErr ?? new Error('加载失败');
 }
 
-export function sampleOrPage(page: string, ticker?: string): string[] {
+export function pagePaths(page: string, ticker?: string, period?: string): string[] {
   if (page === 'watchlist' || page === 'sources') {
-    return [`./data/pages/${page}.json`, `./sample/${page}.json`];
+    return [`./data/pages/${page}.json`];
   }
-  const t = ticker ?? 'MU';
-  if (page === 'stockHeader') {
-    return [`./data/pages/${t}/stockHeader.json`, `./sample/stockHeader.json`];
+  const t = ticker ?? '';
+  if (!t) return [];
+  if (page === 'stockHeader') return [`./data/pages/${t}/stockHeader.json`];
+  if ((page === 'review' || page === 'call') && period) {
+    return [`./data/pages/${t}/${page}-${period}.json`];
   }
-  // Formal pages first for all stock pages after P1+
-  return [`./data/pages/${t}/${page}.json`, `./sample/${page}.json`];
+  return [`./data/pages/${t}/${page}.json`];
 }
 
 export function addStockUrl(): string {

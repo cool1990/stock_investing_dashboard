@@ -1,0 +1,134 @@
+{
+  "ticker": "CRWV",
+  "fetched_at": "2026-10-01T15:47:39Z",
+  "source": "yahoo",
+  "period_method": "heuristic",
+  "reported_through": null,
+  "price_close": null,
+  "periods": {
+    "FQ4-26": {
+      "type": "q",
+      "eps": {
+        "avg": -1.52697,
+        "low": -1.78,
+        "high": -0.87756,
+        "n": 18,
+        "year_ago": -0.22
+      },
+      "rev": {
+        "avg": 3.54,
+        "low": 3.45,
+        "high": 3.62,
+        "n": 35,
+        "year_ago": 1.36
+      },
+      "eps_trend": {
+        "d7": -1.51732,
+        "d30": -1.55873,
+        "d60": -1.36509,
+        "d90": -1.12246,
+        "current": -1.52697
+      },
+      "revisions": {
+        "up7": 0.0,
+        "up30": 4.0,
+        "down7": 1.0,
+        "down30": 11.0
+      }
+    },
+    "FQ1-27": {
+      "type": "q",
+      "eps": {
+        "avg": -1.04829,
+        "low": -1.7,
+        "high": -0.4479,
+        "n": 18,
+        "year_ago": -0.89
+      },
+      "rev": {
+        "avg": 4.69,
+        "low": 4.3,
+        "high": 5.03,
+        "n": 35,
+        "year_ago": 1.57
+      },
+      "eps_trend": {
+        "d7": -1.00918,
+        "d30": -1.03806,
+        "d60": -0.84765,
+        "d90": -0.76885,
+        "current": -1.04829
+      },
+      "revisions": {
+        "up7": 1.0,
+        "up30": 5.0,
+        "down7": null,
+        "down30": 9.0
+      }
+    },
+    "FY26": {
+      "type": "y",
+      "eps": {
+        "avg": -5.11243,
+        "low": -5.89,
+        "high": -3.82931,
+        "n": 22,
+        "year_ago": -2.75
+      },
+      "rev": {
+        "avg": 12.87,
+        "low": 12.4,
+        "high": 13.23,
+        "n": 40,
+        "year_ago": 5.13
+      },
+      "eps_trend": {
+        "d7": -5.08288,
+        "d30": -5.17535,
+        "d60": -5.04646,
+        "d90": -4.6443,
+        "current": -5.11243
+      },
+      "revisions": {
+        "up7": 1.0,
+        "up30": 9.0,
+        "down7": null,
+        "down30": 8.0
+      }
+    },
+    "FY27": {
+      "type": "y",
+      "eps": {
+        "avg": -4.32516,
+        "low": -8.53,
+        "high": -1.11574,
+        "n": 22,
+        "year_ago": -5.11243
+      },
+      "rev": {
+        "avg": 26.26,
+        "low": 21.1,
+        "high": 31.03,
+        "n": 40,
+        "year_ago": 12.87
+      },
+      "eps_trend": {
+        "d7": -4.1945,
+        "d30": -4.23612,
+        "d60": -3.68765,
+        "d90": -3.36865,
+        "current": -4.32516
+      },
+      "revisions": {
+        "up7": 1.0,
+        "up30": 7.0,
+        "down7": null,
+        "down30": 9.0
+      }
+    }
+  },
+  "secondary": {
+    "source": "nasdaq",
+    "periods": {}
+  }
+}

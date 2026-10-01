@@ -4,6 +4,9 @@ import { el } from '../../components/segmented';
 
 export function renderRevision(data: ConsensusPage, key: string): HTMLElement {
   const e = data.revision[key];
+  if (!e || !e.points?.length) {
+    return el('div', { className: 'card faint', text: key ? `${key} 修正轨迹未接入。` : '没有可绘制的共识修正。' });
+  }
   const card = el('div', { className: 'card', style: 'padding:20px' });
   card.appendChild(
     el('div', {
@@ -122,19 +125,25 @@ export function renderRevision(data: ConsensusPage, key: string): HTMLElement {
   card.append(pane, el('div', { style: 'height:28px' }), el('div', { className: 'footnote', text: e.note }));
 
   const cur = e.points[e.points.length - 1][1];
+  const d30 = e.points.find((p) => p[0] === 30) ?? e.points[Math.min(2, e.points.length - 1)];
+  const move30 = d30 && d30[1] ? Math.abs(cur / d30[1] - 1) : null;
   const hasG = e.guide !== null;
   const stats = [
     { k: '90 天修正', v: formatPct(cur, e.points[0][1]), sub: `自 ${formatEps(e.points[0][1])}` },
-    { k: '30 天修正', v: formatPct(cur, e.points[2][1]), sub: '近一个月基本走平' },
+    {
+      k: '30 天修正',
+      v: formatPct(cur, d30?.[1]),
+      sub: move30 != null && move30 < 0.01 ? '近 30 天修正很小' : '由轨迹点计算',
+    },
     {
       k: '上调 / 下调（30 天）',
-      v: `${e.up30} / ${e.down30}`,
-      sub: `覆盖 ${e.n} 家，方向未形成合力`,
+      v: `${e.up30 ?? '—'} / ${e.down30 ?? '—'}`,
+      sub: e.n != null ? `覆盖 ${e.n} 家` : '覆盖家数未接入',
     },
     {
       k: '共识 vs 指引',
       v: hasG ? formatPct(cur, e.guide) : '无指引',
-      sub: hasG ? '共识低于指引，发布后大概率上修' : '美光只给下一季指引',
+      sub: hasG ? '当前共识相对公司指引中值' : '该公司这一期没有写入指引',
     },
   ];
 

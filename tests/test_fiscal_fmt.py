@@ -22,6 +22,13 @@ def test_mu_fq_from_end_dates():
     assert period_label(2026) == "FY26"
 
 
+def test_quarter_that_closes_in_january_keeps_the_prior_fiscal_year():
+    sndk = FiscalCalendar([9, 12, 3, 6])
+    # Sandisk Q2 nominally ends in December; FY26 ends June 2026.
+    assert fiscal_quarter_for_end_date(sndk, date(2026, 1, 2)) == (2026, 2)
+    assert fiscal_quarter_for_end_date(sndk, date(2026, 7, 3)) == (2026, 4)
+
+
 def test_yahoo_relative_with_end_date():
     assert (
         yahoo_relative_to_absolute(MU, "0q", date(2026, 10, 1), end_date=date(2026, 11, 26))

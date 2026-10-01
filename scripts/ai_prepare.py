@@ -40,14 +40,15 @@ REVIEW_SCHEMA = {
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--ticker", default="MU")
-    parser.add_argument("--period", default="FQ4-26")
+    parser.add_argument("--period", default="")
     parser.add_argument("--kind", choices=["call", "review", "both"], default="both")
     args = parser.parse_args()
     ticker = args.ticker.upper()
-    period = args.period
-
     review = read_json(ROOT / "data" / "pages" / ticker / "review.json", default={}) or {}
-    call_sample = read_json(ROOT / "web" / "public" / "sample" / "call.json", default={}) or {}
+    period = args.period or review.get("period") or ""
+    if not period:
+        print(f"no review period for {ticker}; skip AI pack", file=sys.stderr)
+        return 0
 
     written = []
     if args.kind in ("call", "both"):
@@ -69,16 +70,6 @@ def main() -> int:
             },
             schema=CALL_SCHEMA,
         )
-        # Seed draft from sample structure so page can render before AI fill
-        draft_path = d / "output" / "draft.json"
-        if not draft_path.exists():
-            seed = dict(call_sample)
-            seed["period"] = period
-            seed["ai_status"] = "seed_from_sample_awaiting_cursor"
-            draft_path.write_text(
-                __import__("json").dumps(seed, ensure_ascii=False, indent=2) + "\n",
-                encoding="utf-8",
-            )
         written.append(str(d))
 
     if args.kind in ("review", "both"):

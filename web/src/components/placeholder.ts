@@ -1,6 +1,17 @@
 import { el } from './segmented';
 
-const PLACEHOLDER_TEXTS = new Set(['[ ]', '[x.x]', '[±x%]', '[日期]', '不可得', '未披露', 'n.m.', '—', 'NM']);
+const PLACEHOLDER_TEXTS = new Set([
+  '[ ]',
+  '[x.x]',
+  '[±x%]',
+  '[日期]',
+  '不可得',
+  '未披露',
+  '未接入',
+  'n.m.',
+  '—',
+  'NM',
+]);
 
 export function isPlaceholder(v: unknown): boolean {
   if (v === null || v === undefined || v === '') return true;

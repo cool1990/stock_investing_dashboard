@@ -1,0 +1,31 @@
+{
+  "ticker": "UBER",
+  "name_en": "Uber",
+  "name_zh": "优步",
+  "exchange": "纽交所",
+  "sector": "出行平台",
+  "updated_at_bj": "2026-10-01 23:49",
+  "latest_report": "FQ2-26",
+  "latest_report_date": "2026-08-05",
+  "release_timing": "after_close",
+  "header": {
+    "price": 68.51,
+    "price_1d": "−1.2%",
+    "price_ytd": "−16.2%",
+    "market_cap": "$139.9B",
+    "ev": null,
+    "net_cash_b": null,
+    "forward_pe_ntm": 16.3,
+    "short_interest": "未接入",
+    "next_earnings": "2026-11-03（预估）",
+    "implied_move": "未接入",
+    "week52": "$66 – $100",
+    "ev_ebitda_ntm": "未接入",
+    "dividend_quarterly": null,
+    "dividend_yield": null,
+    "target_price": 100.77,
+    "ratings": "buy · 47 家",
+    "inst_insider": "未接入",
+    "days_to_cover": "未接入"
+  }
+}

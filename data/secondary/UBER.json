@@ -1,0 +1,125 @@
+{
+  "ticker": "UBER",
+  "fetched_at": "2026-10-01T15:47:58Z",
+  "source": "nasdaq",
+  "raw": {
+    "data": {
+      "symbol": "uber",
+      "quarterlyForecast": {
+        "asOf": null,
+        "headers": {
+          "fiscalEnd": "Fiscal Quarter End",
+          "consensusEPSForecast": "Consensus EPS* Forecast",
+          "highEPSForecast": "High EPS* Forecast",
+          "lowEPSForecast": "Low EPS* Forecast",
+          "noOfEstimates": "Number of Estimates",
+          "up": "Over the Last 4 Weeks Number of Revisions - Up",
+          "down": "Over the Last 4 Weeks Number of Revisions - Down"
+        },
+        "rows": [
+          {
+            "fiscalEnd": "Sep 2026",
+            "consensusEPSForecast": 1.03,
+            "highEPSForecast": 1.66,
+            "lowEPSForecast": 0.84,
+            "noOfEstimates": 8,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Dec 2026",
+            "consensusEPSForecast": 1.17,
+            "highEPSForecast": 1.95,
+            "lowEPSForecast": 0.96,
+            "noOfEstimates": 7,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Mar 2027",
+            "consensusEPSForecast": 0.94,
+            "highEPSForecast": 1.53,
+            "lowEPSForecast": 0.35,
+            "noOfEstimates": 3,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Jun 2027",
+            "consensusEPSForecast": 1.42,
+            "highEPSForecast": 1.67,
+            "lowEPSForecast": 1.08,
+            "noOfEstimates": 3,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Sep 2027",
+            "consensusEPSForecast": 1.26,
+            "highEPSForecast": 1.43,
+            "lowEPSForecast": 1.16,
+            "noOfEstimates": 3,
+            "up": 0,
+            "down": 0
+          }
+        ]
+      },
+      "yearlyForecast": {
+        "asOf": null,
+        "headers": {
+          "fiscalEnd": "Fiscal Year End",
+          "consensusEPSForecast": "Consensus EPS* Forecast",
+          "highEPSForecast": "High EPS* Forecast",
+          "lowEPSForecast": "Low EPS* Forecast",
+          "noOfEstimates": "Number of Estimates",
+          "up": "Over the Last 4 Weeks Number of Revisions - Up",
+          "down": "Over the Last 4 Weeks Number of Revisions - Down"
+        },
+        "rows": [
+          {
+            "fiscalEnd": "Dec 2026",
+            "consensusEPSForecast": 3.35,
+            "highEPSForecast": 4.91,
+            "lowEPSForecast": 2.43,
+            "noOfEstimates": 12,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Dec 2027",
+            "consensusEPSForecast": 4.59,
+            "highEPSForecast": 6.01,
+            "lowEPSForecast": 3.15,
+            "noOfEstimates": 12,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Dec 2028",
+            "consensusEPSForecast": 5.74,
+            "highEPSForecast": 7.05,
+            "lowEPSForecast": 3.88,
+            "noOfEstimates": 7,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Dec 2029",
+            "consensusEPSForecast": 6.35,
+            "highEPSForecast": 7.53,
+            "lowEPSForecast": 4.66,
+            "noOfEstimates": 3,
+            "up": 0,
+            "down": 0
+          }
+        ]
+      }
+    },
+    "message": null,
+    "status": {
+      "rCode": 200,
+      "bCodeMessage": null,
+      "developerMessage": null
+    }
+  }
+}

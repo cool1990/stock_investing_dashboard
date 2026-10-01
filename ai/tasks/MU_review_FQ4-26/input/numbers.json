@@ -6,12 +6,12 @@
     "eps_surp": 0.0536,
     "eps_surp_tone": "up",
     "guide_vs_cons": [
-      0.0034,
-      0.0029
+      null,
+      0.0934
     ],
     "guide_vs_cons_tone": [
-      "up",
-      "na"
+      "na",
+      "up"
     ]
   },
   "cards": [
@@ -28,9 +28,9 @@
       "vs_cons": 0.0565,
       "vs_cons_tone": "up",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     },
     {
@@ -46,27 +46,27 @@
       "vs_cons": null,
       "vs_cons_tone": "na",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     },
     {
       "key": "opm",
       "label": "营业利润率",
       "basis": "GAAP",
-      "value": null,
+      "value": 80.7,
       "unit": "%",
-      "yoy": null,
-      "yoy_tone": "na",
-      "qoq": null,
-      "qoq_tone": "na",
+      "yoy": 0.4838,
+      "yoy_tone": "up",
+      "qoq": 0.0031,
+      "qoq_tone": "up",
       "vs_cons": null,
       "vs_cons_tone": "na",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     },
     {
@@ -82,9 +82,9 @@
       "vs_cons": null,
       "vs_cons_tone": "na",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     },
     {
@@ -93,23 +93,23 @@
       "basis": "Non-GAAP",
       "value": 33.42,
       "unit": "$",
-      "yoy": null,
-      "yoy_tone": "na",
-      "qoq": 0.3547,
+      "yoy": 10.0297,
+      "yoy_tone": "up",
+      "qoq": 0.3309,
       "qoq_tone": "up",
       "vs_cons": 0.0536,
       "vs_cons_tone": "up",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     },
     {
       "key": "fcf",
       "label": "自由现金流",
-      "basis": "GAAP 近似",
-      "value": null,
+      "basis": "公司口径",
+      "value": 33.2,
       "unit": "B",
       "yoy": null,
       "yoy_tone": "na",
@@ -118,9 +118,9 @@
       "vs_cons": null,
       "vs_cons_tone": "na",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     }
   ]

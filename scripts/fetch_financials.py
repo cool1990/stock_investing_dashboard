@@ -25,6 +25,8 @@ from scripts.lib.edgar import (  # noqa: E402
 )
 from scripts.lib.fiscal import parse_period_label, period_label, prior_quarter_period  # noqa: E402
 from scripts.lib.io import load_company, update_status, write_json  # noqa: E402
+from scripts.lib.overrides import apply_financial_overrides, derive_q4_eps  # noqa: E402
+from scripts.lib.xbrl_default import DEFAULT_XBRL_MAP  # noqa: E402
 
 # Fields treated as flow (IS/CF) — need q / ytd; BS fields use bs only.
 FLOW_FIELDS = {
@@ -126,9 +128,7 @@ def resolve_quarterly(
 def build_financials(ticker: str, *, force: bool = False) -> dict:
     cfg = load_company(ticker)
     cal = calendar_from_company(cfg)
-    xbrl_map: dict[str, list[str]] = cfg.get("xbrl_map") or {}
-    if not xbrl_map:
-        raise RuntimeError(f"{ticker}: xbrl_map is empty; run diagnose_xbrl_tags.py and fill MU.yaml")
+    xbrl_map: dict[str, list[str]] = cfg.get("xbrl_map") or dict(DEFAULT_XBRL_MAP)
 
     facts = fetch_companyfacts(cfg["cik"], ticker=ticker, force=force)
     series_by_field: dict[str, dict[str, dict]] = {}
@@ -227,16 +227,20 @@ def build_financials(ticker: str, *, force: bool = False) -> dict:
                 if slot.get("bs") is not None:
                     entry["bs"][field] = round(slot["bs"], 4)
 
-        # Apply overrides (fill or replace specific fields)
+        # Q4 EPS is often absent as a quarterly duration. Approximate with
+        # Q4 net income / diluted shares, then let a press-release override win.
+        if fq == 4 and entry["q"].get("eps_diluted") is None:
+            shares = entry["q"].get("shares_diluted") or entry["ytd"].get("shares_diluted")
+            approx = derive_q4_eps(entry["q"].get("net_income"), shares)
+            if approx is not None:
+                entry["q"]["eps_diluted"] = approx
+                entry["derived"]["eps_diluted"] = (
+                    "ni_over_shares" if entry["q"].get("shares_diluted") else "ni_over_ytd_shares"
+                )
+
+        # None in YAML means "do not override", so a later 10-K value survives.
         ov = overrides.get(period) or {}
-        for section in ("q", "ytd", "bs"):
-            for k, v in (ov.get(section) or {}).items():
-                entry[section][k] = v
-                entry["derived"][k] = "override"
-        if ov.get("end"):
-            entry["end"] = ov["end"]
-        if ov.get("non_gaap"):
-            entry["non_gaap"] = ov["non_gaap"]
+        apply_financial_overrides(entry, ov)
 
         out_periods[period] = entry
 
@@ -259,16 +263,16 @@ def main() -> int:
     try:
         data = build_financials(ticker, force=args.force)
         n = len(data["periods"])
-        if n == 0:
-            raise RuntimeError("no periods extracted")
         write_json(out, data)
+        if n == 0:
+            print(f"WARN: {ticker} companyfacts returned no periods", file=sys.stderr)
         update_status("sec_financials", True, f"{n} periods")
         print(f"wrote {out} ({n} periods)")
         return 0
     except Exception as e:  # noqa: BLE001
         update_status("sec_financials", False, str(e))
         print(f"ERROR: {e}", file=sys.stderr)
-        return 0 if out.exists() else 1
+        return 1
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build data/pages/watchlist.json from watchlist.yaml + prices + consensus + filings."""
+"""Build data/pages/watchlist.json for every ticker in watchlist.yaml."""
 
 from __future__ import annotations
 
@@ -13,8 +13,9 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts.lib.fmt import format_change  # noqa: E402
-from scripts.lib.io import read_json, retry, update_status, write_json  # noqa: E402
+from scripts.lib.fiscal import parse_period_label  # noqa: E402
+from scripts.lib.io import load_company, read_json, update_status, write_json  # noqa: E402
+from scripts.lib.metrics import NOT_CONNECTED, keep_count  # noqa: E402
 
 
 def bj_now() -> str:
@@ -56,30 +57,6 @@ def price_stats(closes: dict) -> tuple[float | None, float | None, float | None]
     return last, d1, ytd
 
 
-def fetch_ticker_quote(ticker: str) -> dict:
-    """Lightweight quote for non-MU names when prices file missing."""
-    import yfinance as yf
-
-    t = yf.Ticker(ticker)
-    hist = retry(lambda: t.history(period="1y"))
-    closes = {}
-    if hist is not None and not hist.empty:
-        for idx, row in hist.iterrows():
-            try:
-                d = idx.tz_convert("America/New_York").date().isoformat()
-            except Exception:  # noqa: BLE001
-                d = str(idx)[:10]
-            closes[d] = round(float(row["Close"]), 4)
-    info = {}
-    try:
-        raw = t.fast_info
-        info["shares"] = getattr(raw, "shares", None) or None
-        info["mcap"] = getattr(raw, "market_cap", None) or None
-    except Exception:  # noqa: BLE001
-        pass
-    return {"closes": closes, "info": info}
-
-
 def fmt_mcap(price: float | None, shares: float | None, mcap_raw: float | None) -> str | None:
     mcap_b = None
     if price and shares:
@@ -93,45 +70,70 @@ def fmt_mcap(price: float | None, shares: float | None, mcap_raw: float | None) 
     return f"${mcap_b:.1f}B"
 
 
-def mu_ntm_and_rev() -> tuple[float | None, float | None, str]:
-    cons = read_json(ROOT / "data" / "pages" / "MU" / "consensus.json", default={}) or {}
-    ntm = (cons.get("future") or {}).get("pe", {}).get("ntm_eps")
-    # 30d revision from FQ1-27 revision points if present
-    rev_block = (cons.get("revision") or {}).get("FQ1-27") or {}
-    points = rev_block.get("points") or []
+def ntm_and_rev(ticker: str) -> tuple[float | None, float | None, str, float | None]:
+    cons = read_json(ROOT / "data" / "pages" / ticker / "consensus.json", default={}) or {}
+    ntm = ((cons.get("future") or {}).get("pe") or {}).get("ntm_eps")
+    header_fpe = ((cons.get("meta") or {}).get("header") or {}).get("forward_pe_ntm")
+    rev = cons.get("revision") or {}
+    keys = sorted((k for k in rev if str(k).startswith("FQ")), key=parse_period_label)
     rev30 = None
-    if len(points) >= 2:
-        # find ~30d and current
+    if keys:
+        points = (rev[keys[0]] or {}).get("points") or []
         by_d = {p[0]: p[1] for p in points}
-        cur = by_d.get(0) or points[-1][1]
+        cur = by_d.get(0)
+        if cur is None and points:
+            cur = points[-1][1]
         d30 = by_d.get(30)
-        if d30 is None:
-            # nearest
-            for d, v in sorted(points, key=lambda x: abs(x[0] - 30)):
-                d30 = v
-                break
+        if d30 is None and points:
+            d30 = sorted(points, key=lambda x: abs(x[0] - 30))[0][1]
         if cur and d30:
             rev30 = cur / d30 - 1
-    return ntm, rev30, "na" if rev30 is None else ("up" if rev30 > 0.01 else "down" if rev30 < -0.01 else "flat")
+    tone = "na" if rev30 is None else ("up" if rev30 > 0.01 else "down" if rev30 < -0.01 else "flat")
+    return (float(ntm) if ntm else None), rev30, tone, (float(header_fpe) if header_fpe else None)
 
 
-def load_filings() -> list[dict]:
-    path = ROOT / "data" / "filings" / "watchlist.json"
-    return read_json(path, default={"items": []}).get("items") or []
+def next_quarter_eps(ticker: str) -> float | None:
+    cons = read_json(ROOT / "data" / "pages" / ticker / "consensus.json", default={}) or {}
+    detail = (((cons.get("future") or {}).get("detail") or {}).get("eps")) or []
+    for row in detail:
+        if row.get("estimate") and row.get("avg") is not None:
+            return float(row["avg"])
+    return None
+
+
+def timing_code(cfg: dict) -> str:
+    raw = str(cfg.get("release_timing") or "after_close")
+    if raw in ("盘后", "after", "after_close"):
+        return "after_close"
+    if raw in ("盘前", "before", "before_open"):
+        return "before_open"
+    return raw
+
+
+def surprise(row: dict) -> tuple[float | None, str]:
+    if row.get("actual") is None or not row.get("consensus"):
+        return None, "na"
+    surp = float(row["actual"]) / float(row["consensus"]) - 1
+    return surp, "up" if surp > 0 else "down"
+
+
+def unresolved_watch(ticker: str) -> int:
+    page = read_json(ROOT / "data" / "pages" / ticker / "review.json", default={}) or {}
+    n = 0
+    for item in ((page.get("verdict") or {}).get("watch")) or []:
+        if not item.get("confirmed") and not item.get("resolved"):
+            n += 1
+    return n
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--fetch-missing-prices", action="store_true", default=True)
+    parser.add_argument("--fetch-missing-prices", action="store_true", default=False)
     args = parser.parse_args()
     wl = load_watchlist()
     tickers_cfg = wl.get("tickers") or {}
 
-    group_id_map = {
-        "AI 硬件": "hw",
-        "软件": "sw",
-        "平台": "pf",
-    }
+    group_id_map = {"AI 硬件": "hw", "软件": "sw", "平台": "pf"}
     groups = [
         {"id": "all", "label": "全部"},
         {"id": "hw", "label": "AI 硬件"},
@@ -139,49 +141,61 @@ def main() -> int:
         {"id": "pf", "label": "平台"},
     ]
 
-    ntm_mu, rev30_mu, rev30_tone = mu_ntm_and_rev()
-    filings = load_filings()
+    filings = (read_json(ROOT / "data" / "filings" / "watchlist.json", default={"items": []}) or {}).get("items") or []
     now = datetime.now(timezone.utc).date()
 
     stocks = []
     calendar = []
+    recent = []
+    todo = 0
     for t, meta in tickers_cfg.items():
         prices = read_json(ROOT / "data" / "prices" / f"{t}.json", default=None)
         if prices is None and args.fetch_missing_prices:
             try:
-                q = fetch_ticker_quote(t)
-                write_json(
-                    ROOT / "data" / "prices" / f"{t}.json",
-                    {
-                        "ticker": t,
-                        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-                        "source": "yahoo",
-                        "closes": q["closes"],
-                        "info": q.get("info") or {},
-                    },
-                )
-                prices = read_json(ROOT / "data" / "prices" / f"{t}.json")
+                import yfinance as yf
+
+                hist = yf.Ticker(t).history(period="1y", auto_adjust=False)
+                closes = {}
+                if hist is not None and not hist.empty:
+                    for idx, row in hist.iterrows():
+                        try:
+                            d = idx.tz_convert("America/New_York").date().isoformat()
+                        except Exception:  # noqa: BLE001
+                            d = str(idx)[:10]
+                        closes[d] = round(float(row["Close"]), 4)
+                prices = {"closes": closes, "info": {}}
             except Exception as e:  # noqa: BLE001
                 print(f"price fetch {t}: {e}", file=sys.stderr)
                 prices = {"closes": {}, "info": {}}
-
-        closes = (prices or {}).get("closes") or {}
-        info = (prices or {}).get("info") or {}
+        prices = prices or {"closes": {}, "info": {}}
+        closes = prices.get("closes") or {}
+        info = prices.get("info") or {}
         price, d1, ytd = price_stats(closes)
         shares = info.get("shares_outstanding") or info.get("shares")
         mcap = fmt_mcap(price, shares, info.get("market_cap") or info.get("mcap"))
 
         header = read_json(ROOT / "data" / "pages" / t / "stockHeader.json", default={}) or {}
-        next_d = (header.get("header") or {}).get("next_earnings")
-        last_report = header.get("latest_report")
-        last_date = header.get("latest_report_date")
+        has_page = (ROOT / "data" / "pages" / t / "stockHeader.json").exists()
+        next_raw = (header.get("header") or {}).get("next_earnings") or info.get("next_earnings")
+        estimated = bool(info.get("next_earnings_estimated")) or (
+            isinstance(next_raw, str) and "预估" in next_raw
+        )
+        next_day = str(next_raw)[:10] if next_raw and len(str(next_raw)) >= 10 else None
+        last_report = header.get("latest_report") if has_page else None
+        last_date = header.get("latest_report_date") if has_page else None
+        if last_date == "—":
+            last_date = None
 
-        ntm = ntm_mu if t == "MU" else None
-        rev30 = rev30_mu if t == "MU" else None
-        r_tone = rev30_tone if t == "MU" else "na"
-        fpe = None
-        if price and ntm and ntm > 0:
+        ntm, rev30, r_tone, header_fpe = ntm_and_rev(t)
+        fpe = header_fpe
+        if fpe is None and price and ntm and ntm > 0:
             fpe = round(price / ntm, 1)
+
+        try:
+            cfg = load_company(t)
+        except Exception:  # noqa: BLE001
+            cfg = {}
+        timing = timing_code(cfg)
 
         red7 = sum(
             1
@@ -192,22 +206,38 @@ def main() -> int:
             and (now - datetime.fromisoformat(f["d"]).date()).days <= 7
         )
 
-        # surprise from consensus history for MU
-        eps_surp = None
-        eps_tone = "na"
-        react = None
-        react_tone = "na"
-        if t == "MU":
-            cons = read_json(ROOT / "data" / "pages" / "MU" / "consensus.json", default={}) or {}
-            hist_q = (((cons.get("history") or {}).get("eps") or {}).get("q")) or []
-            if hist_q:
-                last = hist_q[-1]
-                if last.get("actual") is not None and last.get("consensus"):
-                    eps_surp = last["actual"] / last["consensus"] - 1
-                    eps_tone = "up" if eps_surp > 0 else "down"
-                if last.get("next_day") is not None:
-                    react = last["next_day"]
-                    react_tone = tone_pct(react * 100 if abs(react) < 2 else react)
+        cons = read_json(ROOT / "data" / "pages" / t / "consensus.json", default={}) or {}
+        hist_q = (((cons.get("history") or {}).get("eps") or {}).get("q")) or []
+        hist_rev = {
+            r.get("period"): r for r in (((cons.get("history") or {}).get("rev") or {}).get("q") or [])
+        }
+        eps_surp = react = None
+        eps_tone = react_tone = "na"
+        if hist_q:
+            last = hist_q[-1]
+            eps_surp, eps_tone = surprise(last)
+            if last.get("next_day") is not None:
+                react = float(last["next_day"])
+                react_tone = tone_pct(react * 100 if abs(react) < 2 else react)
+            for row in reversed(hist_q):
+                if not row.get("release_date"):
+                    continue
+                surp, tone = surprise(row)
+                rev_row = hist_rev.get(row.get("period")) or {}
+                rsurp, rtone = surprise(rev_row)
+                recent.append(
+                    {
+                        "d": row["release_date"],
+                        "t": t,
+                        "q": row["period"],
+                        "eps_surp": round(surp, 4) if surp is not None else None,
+                        "eps_surp_tone": tone,
+                        "rev_surp": round(rsurp, 4) if rsurp is not None else None,
+                        "rev_surp_tone": rtone,
+                    }
+                )
+                if sum(1 for r in recent if r["t"] == t) >= 2:
+                    break
 
         stocks.append(
             {
@@ -215,9 +245,8 @@ def main() -> int:
                 "name": (meta.get("name_en") or t).split()[0],
                 "group": group_id_map.get(meta.get("group", ""), "hw"),
                 "sub": meta.get("sector"),
-                "has_page": t == "MU",
+                "has_page": has_page,
                 "price": round(price, 2) if price else None,
-                # Store as ratio for formatRatioChange (0.273 → +27.3%)
                 "d1": round(d1 / 100.0, 6) if d1 is not None else None,
                 "d1_tone": tone_pct(d1),
                 "ytd": round(ytd / 100.0, 6) if ytd is not None else None,
@@ -228,51 +257,58 @@ def main() -> int:
                 "rev30_tone": r_tone,
                 "fpe": fpe,
                 "short": None,
+                "short_note": NOT_CONNECTED,
                 "short_date": None,
                 "last": {
-                    "d": last_date if t == "MU" else None,
-                    "q": last_report if t == "MU" else None,
+                    "d": last_date,
+                    "q": last_report,
                     "eps_surp": round(eps_surp, 4) if eps_surp is not None else None,
                     "eps_surp_tone": eps_tone,
                 },
                 "react": round(react, 4) if react is not None else None,
                 "react_tone": react_tone,
                 "next": {
-                    "d": next_d if next_d and len(str(next_d)) >= 10 else None,
-                    "approx": None if next_d and len(str(next_d)) >= 10 else (str(next_d)[:7] if next_d else None),
+                    "d": None if estimated else next_day,
+                    "approx": next_day if estimated else None,
+                    "estimated": estimated,
                 },
-                "red7d": red7 or None,
+                "red7d": red7,
             }
         )
-        if next_d and len(str(next_d)) >= 10:
+        if next_day:
             try:
-                nd = datetime.fromisoformat(str(next_d)[:10]).date()
+                nd = datetime.fromisoformat(next_day).date()
                 if 0 <= (nd - now).days <= 60:
                     calendar.append(
                         {
-                            "d": str(next_d)[:10],
+                            "d": next_day,
                             "t": t,
-                            "timing": "盘后",
+                            "timing": timing,
                             "q": last_report or "—",
-                            "cons_eps": ntm if t == "MU" else None,
+                            "estimated": estimated,
+                            "cons_eps": next_quarter_eps(t),
                             "iv": None,
+                            "iv_note": NOT_CONNECTED,
                         }
                     )
             except ValueError:
                 pass
+        todo += unresolved_watch(t)
 
-    # KPIs
     red_items = [
         f
         for f in filings
         if f.get("red") and f.get("d") and (now - datetime.fromisoformat(f["d"]).date()).days <= 7
     ]
-    up = sum(1 for s in stocks if s.get("rev30") is not None and s["rev30"] > 0.01)
-    down = sum(1 for s in stocks if s.get("rev30") is not None and s["rev30"] < -0.01)
-    cal30 = [c for c in calendar if 0 <= (datetime.fromisoformat(c["d"]).date() - now).days <= 30]
+    up = keep_count(sum(1 for s in stocks if s.get("rev30") is not None and s["rev30"] > 0.01))
+    down = keep_count(sum(1 for s in stocks if s.get("rev30") is not None and s["rev30"] < -0.01))
+    cal30 = sorted(
+        [c for c in calendar if 0 <= (datetime.fromisoformat(c["d"]).date() - now).days <= 30],
+        key=lambda x: x["d"],
+    )
 
     news = []
-    for f in sorted(filings, key=lambda x: x.get("d") or "", reverse=True)[:30]:
+    for f in sorted(filings, key=lambda x: x.get("d") or "", reverse=True)[:40]:
         news.append(
             {
                 "d": f.get("d"),
@@ -285,49 +321,29 @@ def main() -> int:
             }
         )
 
-    # Recent releases from MU history
-    recent = []
-    cons = read_json(ROOT / "data" / "pages" / "MU" / "consensus.json", default={}) or {}
-    for row in list(reversed((((cons.get("history") or {}).get("eps") or {}).get("q")) or []))[:6]:
-        if not row.get("release_date"):
-            continue
-        surp = None
-        tone = "na"
-        if row.get("actual") is not None and row.get("consensus"):
-            surp = row["actual"] / row["consensus"] - 1
-            tone = "up" if surp > 0 else "down"
-        recent.append(
-            {
-                "d": row["release_date"],
-                "t": "MU",
-                "q": row["period"],
-                "eps_surp": round(surp, 4) if surp is not None else None,
-                "eps_surp_tone": tone,
-                "rev_surp": None,
-                "rev_surp_tone": "na",
-            }
-        )
+    def fpe_key(s: dict):
+        return (s["fpe"] is None, s["fpe"] if s["fpe"] is not None else 0, s["t"])
 
     page = {
         "as_of_bj": bj_now(),
         "groups": groups,
         "kpi": {
             "red7d": {
-                "n": len(red_items) if filings else None,
-                "tickers": len({f["t"] for f in red_items}) if filings else None,
+                "n": keep_count(len(red_items)),
+                "tickers": keep_count(len({f["t"] for f in red_items})),
             },
             "earn30d": {
-                "n": len(cal30) if cal30 else None,
+                "n": keep_count(len(cal30)),
                 "next": {"t": cal30[0]["t"], "d": cal30[0]["d"]} if cal30 else None,
             },
-            "rev30d": {"up": up or None, "down": down or None},
-            "todo": None,
+            "rev30d": {"up": up, "down": down},
+            "todo": keep_count(todo),
         },
-        "stocks": stocks,
+        "stocks": sorted(stocks, key=fpe_key),
         "news": news,
         "calendar": sorted(calendar, key=lambda x: x["d"] or ""),
-        "recent": recent,
-        "red_rules_note": "红色规则见 config/red_rules.yaml（8-K 2.02/5.02 等）。",
+        "recent": sorted(recent, key=lambda x: x.get("d") or "", reverse=True)[:12],
+        "red_rules_note": "红色规则见 config/red_rules.yaml。8-K 8.01 只有标题含关键词才标红。",
     }
 
     out = ROOT / "data" / "pages" / "watchlist.json"

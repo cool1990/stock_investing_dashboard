@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import time
 from typing import Any, Iterable, Optional
 
 from scripts.lib.fiscal import (
@@ -27,13 +28,20 @@ def companyfacts_path(ticker: str) -> Path:
     return ROOT / "data" / "raw" / ticker.upper() / "companyfacts.json"
 
 
+# Re-download companyfacts once a day unless --force. A cache that never
+# expires hides the next 10-Q/10-K from local rebuilds.
+COMPANYFACTS_MAX_AGE_S = 18 * 3600
+
+
 def fetch_companyfacts(cik: int | str, *, ticker: str, force: bool = False) -> dict:
     """Download and cache companyfacts JSON under data/raw/<T>/."""
     path = companyfacts_path(ticker)
     if path.exists() and not force:
-        cached = read_json(path)
-        if cached:
-            return cached
+        age = time.time() - path.stat().st_mtime
+        if age < COMPANYFACTS_MAX_AGE_S:
+            cached = read_json(path)
+            if cached:
+                return cached
     url = COMPANYFACTS_URL.format(cik=cik10(cik))
     resp = get(url, sec=True, timeout=120.0)
     data = resp.json()
@@ -62,15 +70,34 @@ def _is_filing_form(form: str | None) -> bool:
     return form.startswith("10-Q") or form.startswith("10-K")
 
 
-def pick_latest(items: list[dict]) -> Optional[dict]:
+def pick_latest(items: list[dict], *, label: str | None = None) -> Optional[dict]:
+    """Prefer the latest filing (restatements win). Same-day, prefer fy/fp match."""
     if not items:
         return None
+    fy_l = fq_l = None
+    if label:
+        try:
+            from scripts.lib.fiscal import parse_period_label
+
+            fy_l, fq_l = parse_period_label(label)
+        except ValueError:
+            fy_l = fq_l = None
 
     def key(it: dict) -> tuple:
         filed = it.get("filed") or ""
-        form = it.get("form") or ""
-        amend_penalty = 1 if "/A" in form else 0
-        return (filed, -amend_penalty)
+        fp = str(it.get("_fp") or it.get("fp") or "").upper()
+        match = 0
+        fy = it.get("_fy") if it.get("_fy") is not None else it.get("fy")
+        try:
+            fy_i = int(fy) if fy is not None else None
+        except (TypeError, ValueError):
+            fy_i = None
+        if fy_l is not None and fy_i == fy_l:
+            if fq_l == 4 and fp == "FY":
+                match = 1
+            elif fq_l is not None and fp == f"Q{fq_l}":
+                match = 1
+        return (filed, match)
 
     return sorted(items, key=key)[-1]
 
@@ -106,15 +133,17 @@ def extract_tag_series(
     shares: bool = False,
     eps: bool = False,
 ) -> dict[str, dict[str, Any]]:
-    """Extract values keyed by period label for the first matching tag.
+    """Extract values keyed by period label.
 
-    Period keys come from the fact's ``end`` date (not filing fy/fp), so
-    comparative prior-year columns land on the correct FQ.
+    Tag order is a per-period preference: a later tag fills periods the
+    earlier tag does not cover (companies change tags). Within one tag,
+    the latest ``filed`` date wins so a subsequent filing's restatement
+    replaces the original number. Period keys come from the fact's ``end``
+    date, so comparative columns land on the right quarter.
     """
     us_gaap = (facts.get("facts") or {}).get("us-gaap") or {}
-    chosen_tag = None
     rows: list[dict] = []
-    for tag in tags:
+    for pref, tag in enumerate(tags):
         payload = us_gaap.get(tag)
         if not payload:
             continue
@@ -134,20 +163,18 @@ def extract_tag_series(
             items = units.get(uk) or []
             if not items:
                 continue
-            chosen_tag = tag
             for it in items:
                 row = dict(it)
                 row["_unit"] = uk
                 row["_tag"] = tag
+                row["_pref"] = pref
                 rows.append(row)
-            break
-        if rows:
             break
 
     if not rows:
         return {}
 
-    grouped: dict[tuple[str, str], list[dict]] = {}
+    grouped: dict[tuple[str, str, int], list[dict]] = {}
 
     for item in rows:
         if not _is_filing_form(item.get("form")):
@@ -187,11 +214,18 @@ def extract_tag_series(
             "_fp": fp,
             "_fy": int(fy) if fy is not None else None,
         }
-        grouped.setdefault((label, bucket), []).append(enriched)
+        grouped.setdefault((label, bucket, int(item.get("_pref") or 0)), []).append(enriched)
+
+    # Lowest preference index that actually has this period wins; then latest filing.
+    by_period: dict[tuple[str, str], list[tuple[int, list[dict]]]] = {}
+    for (label, bucket, pref), items in grouped.items():
+        by_period.setdefault((label, bucket), []).append((pref, items))
 
     out: dict[str, dict[str, Any]] = {}
-    for (label, bucket), items in grouped.items():
-        best = pick_latest(items)
+    for (label, bucket), options in by_period.items():
+        options.sort(key=lambda x: x[0])
+        _pref, items = options[0]
+        best = pick_latest(items, label=label)
         if best is None:
             continue
         slot = out.setdefault(
@@ -206,33 +240,10 @@ def extract_tag_series(
                 "fp": best.get("_fp"),
                 "form": best.get("form"),
                 "filed": best.get("filed"),
-                "tag": chosen_tag,
+                "tag": best.get("_tag"),
                 "derived": {},
             },
         )
-        # Prefer values from filings whose fy/fp match the period (non-comparative)
-        candidates = items
-        fy_l, fq_l = None, None
-        try:
-            from scripts.lib.fiscal import parse_period_label
-
-            fy_l, fq_l = parse_period_label(label)
-        except ValueError:
-            pass
-        matched = []
-        for it in candidates:
-            if fy_l is None:
-                matched.append(it)
-                continue
-            if it.get("_fy") != fy_l:
-                continue
-            fp = it.get("_fp")
-            if fq_l == 4 and fp == "FY":
-                matched.append(it)
-            elif fp == f"Q{fq_l}":
-                matched.append(it)
-        best = pick_latest(matched) or pick_latest(candidates)
-        assert best is not None
         slot[bucket] = best["_value"]
         # Refresh meta from the chosen fact when it's "current" for that period
         if best.get("end"):

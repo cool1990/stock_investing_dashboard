@@ -1,5 +1,16 @@
 import { describe, expect, it } from 'vitest';
-import { formatGrowth, formatPct, peMultiple, ttmShare, MINUS, NM, MISSING } from './fmt';
+import {
+  formatAmtMillions,
+  formatGrowth,
+  formatPct,
+  formatRatioChange,
+  formatStoredPct,
+  peMultiple,
+  ttmShare,
+  MINUS,
+  NM,
+  MISSING,
+} from './fmt';
 
 describe('formatGrowth', () => {
   it('FY24 Q1 vs FY23 Q1 → n.m.', () => {
@@ -36,5 +47,10 @@ describe('formatPct / PE', () => {
   });
   it('TTM share for FY27 ≈ 48%', () => {
     expect(ttmShare(75.52, 156.53)).toBe('48%');
+  });
+  it('amounts use unicode minus and stored percents are not scaled', () => {
+    expect(formatAmtMillions(-88, 'M')).toBe(`${MINUS}88`);
+    expect(formatStoredPct(0.64)).toBe('0.6%');
+    expect(formatRatioChange(0.421, { asPp: true })).toBe('+42.1pp');
   });
 });

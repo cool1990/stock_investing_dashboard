@@ -1,0 +1,21 @@
+ticker: CDNS
+cik: 813672
+name_en: Cadence
+name_zh: 铿腾电子
+exchange: 纳斯达克
+sector: EDA 软件
+fiscal:
+  quarter_end_months: [3, 6, 9, 12]
+  fy_label: end_year
+release_timing: after_close
+backfill_from: FQ1-22
+eps_basis: non_gaap
+ir:
+  prepared_remarks_url_pattern: null
+guidance: {}
+overrides:
+  actuals: {}
+  financials: {}
+peers: []
+header:
+  dividend_quarterly: null

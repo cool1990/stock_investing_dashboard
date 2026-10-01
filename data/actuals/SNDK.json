@@ -1,0 +1,156 @@
+{
+  "eps_basis": "non_gaap",
+  "quarters": {},
+  "years": {},
+  "raw": {
+    "yahoo_eps_by_release": {
+      "2026-08-05": {
+        "eps": 39.25,
+        "eps_estimate": 34.52,
+        "release_date": "2026-08-05",
+        "source": "yahoo"
+      },
+      "2026-04-30": {
+        "eps": 23.41,
+        "eps_estimate": 14.66,
+        "release_date": "2026-04-30",
+        "source": "yahoo"
+      },
+      "2026-01-29": {
+        "eps": 6.2,
+        "eps_estimate": 3.54,
+        "release_date": "2026-01-29",
+        "source": "yahoo"
+      },
+      "2025-11-06": {
+        "eps": 1.22,
+        "eps_estimate": 0.89,
+        "release_date": "2025-11-06",
+        "source": "yahoo"
+      },
+      "2025-08-14": {
+        "eps": 0.29,
+        "eps_estimate": 0.03,
+        "release_date": "2025-08-14",
+        "source": "yahoo"
+      },
+      "2025-05-07": {
+        "eps": -0.3,
+        "eps_estimate": -0.39,
+        "release_date": "2025-05-07",
+        "source": "yahoo"
+      }
+    },
+    "sec_revenue_by_end": {
+      "2023-06-30": {
+        "rev_usd": 6086000000,
+        "rev": 6.09,
+        "fp": "FY",
+        "fy": 2025,
+        "form": "10-K",
+        "filed": "2025-08-21",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2023-12-29": {
+        "rev_usd": 1665000000,
+        "rev": 1.67,
+        "fp": "Q2",
+        "fy": 2025,
+        "form": "10-Q",
+        "filed": "2025-03-07",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2024-03-29": {
+        "rev_usd": 1705000000,
+        "rev": 1.71,
+        "fp": "Q3",
+        "fy": 2025,
+        "form": "10-Q",
+        "filed": "2025-05-12",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2024-06-28": {
+        "rev_usd": 6663000000,
+        "rev": 6.66,
+        "fp": "FY",
+        "fy": 2026,
+        "form": "10-K",
+        "filed": "2026-08-17",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2024-09-27": {
+        "rev_usd": 1883000000,
+        "rev": 1.88,
+        "fp": "Q1",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2025-11-07",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2024-12-27": {
+        "rev_usd": 1876000000,
+        "rev": 1.88,
+        "fp": "Q2",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-01-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2025-03-28": {
+        "rev_usd": 1695000000,
+        "rev": 1.7,
+        "fp": "Q3",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-05-01",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2025-06-27": {
+        "rev_usd": 7355000000,
+        "rev": 7.36,
+        "fp": "FY",
+        "fy": 2026,
+        "form": "10-K",
+        "filed": "2026-08-17",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2025-10-03": {
+        "rev_usd": 2308000000,
+        "rev": 2.31,
+        "fp": "Q1",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2025-11-07",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2026-01-02": {
+        "rev_usd": 3025000000,
+        "rev": 3.02,
+        "fp": "Q2",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-01-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2026-04-03": {
+        "rev_usd": 5950000000,
+        "rev": 5.95,
+        "fp": "Q3",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-05-01",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2026-07-03": {
+        "rev_usd": 20248000000,
+        "rev": 20.25,
+        "fp": "FY",
+        "fy": 2026,
+        "form": "10-K",
+        "filed": "2026-08-17",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      }
+    }
+  },
+  "updated_at": "2026-10-01T15:47:35Z"
+}

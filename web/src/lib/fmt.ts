@@ -88,8 +88,17 @@ export function formatRatioChange(
 
 export function formatAmtMillions(v: number | null | undefined, unit: 'M' | 'B'): string {
   if (isNullish(v)) return MISSING;
-  if (unit === 'B') return (v / 1000).toFixed(2);
-  return Math.round(v).toLocaleString('en-US');
+  const neg = v < 0;
+  const abs = Math.abs(v);
+  const body = unit === 'B' ? (abs / 1000).toFixed(2) : Math.round(abs).toLocaleString('en-US');
+  return neg ? `${MINUS}${body}` : body;
+}
+
+/** A percent already stored in percent units (0.64 → 0.64%, not 64%). */
+export function formatStoredPct(v: number | null | undefined, digits = 1): string {
+  if (isNullish(v)) return MISSING;
+  const sign = v < 0 ? MINUS : '';
+  return `${sign}${Math.abs(v).toFixed(digits)}%`;
 }
 
 export function formatTablePct(v: number | null | undefined): string {

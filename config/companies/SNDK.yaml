@@ -1,0 +1,21 @@
+ticker: SNDK
+cik: 2023554
+name_en: Sandisk
+name_zh: 闪迪
+exchange: 纳斯达克
+sector: 存储
+fiscal:
+  quarter_end_months: [9, 12, 3, 6]  # FY 截至 6 月；2025-02 自 WDC 分拆
+  fy_label: end_year
+release_timing: after_close
+backfill_from: FQ1-22
+eps_basis: non_gaap
+ir:
+  prepared_remarks_url_pattern: null
+guidance: {}
+overrides:
+  actuals: {}
+  financials: {}
+peers: [MU, WDC]
+header:
+  dividend_quarterly: null

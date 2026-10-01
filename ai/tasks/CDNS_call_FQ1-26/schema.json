@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "period",
+    "speakers",
+    "qa"
+  ],
+  "properties": {
+    "period": {
+      "type": "string"
+    },
+    "speakers": {
+      "type": "array"
+    },
+    "qa": {
+      "type": "array"
+    },
+    "guidance": {
+      "type": "array"
+    }
+  }
+}

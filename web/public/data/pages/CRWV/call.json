@@ -1,0 +1,25 @@
+{
+  "period": "FQ2-26",
+  "date_et": null,
+  "duration_min": null,
+  "status": "not_connected",
+  "ai_status": "not_connected",
+  "content_origin": "not_connected",
+  "links": {
+    "remarks_pdf": null,
+    "webcast": null,
+    "third_party": null
+  },
+  "executives": [],
+  "guidance": [],
+  "prev_period": "",
+  "speakers": [],
+  "qa_topics": [],
+  "qa": [],
+  "transcript": {
+    "sources": [],
+    "paras": []
+  },
+  "banner": "电话会原文、时长与 AI 摘要未接入。此页不使用样例稿。",
+  "remarks_status": "未接入"
+}

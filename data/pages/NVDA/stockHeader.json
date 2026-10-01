@@ -1,0 +1,31 @@
+{
+  "ticker": "NVDA",
+  "name_en": "NVIDIA",
+  "name_zh": "英伟达",
+  "exchange": "纳斯达克",
+  "sector": "AI 芯片",
+  "updated_at_bj": "2026-10-01 23:49",
+  "latest_report": "FQ2-27",
+  "latest_report_date": "2026-08-26",
+  "release_timing": "after_close",
+  "header": {
+    "price": 228.38,
+    "price_1d": "+0.5%",
+    "price_ytd": "+22.5%",
+    "market_cap": "$5514.7B",
+    "ev": null,
+    "net_cash_b": null,
+    "forward_pe_ntm": 16.9,
+    "short_interest": "未接入",
+    "next_earnings": "2026-11-17（预估）",
+    "implied_move": "未接入",
+    "week52": "$165 – $236",
+    "ev_ebitda_ntm": "未接入",
+    "dividend_quarterly": null,
+    "dividend_yield": "0.12%",
+    "target_price": 327.7,
+    "ratings": "strong_buy · 59 家",
+    "inst_insider": "未接入",
+    "days_to_cover": "未接入"
+  }
+}

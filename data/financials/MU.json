@@ -1,6 +1,6 @@
 {
   "ticker": "MU",
-  "updated_at": "2026-10-01T13:24:47Z",
+  "updated_at": "2026-10-01T15:49:07Z",
   "units": "USD millions (EPS in USD; shares absolute)",
   "source": "sec_companyfacts",
   "periods": {
@@ -106,7 +106,7 @@
         "cfo": 3628.0,
         "capex_gross": 2611.0,
         "da": 1742.0,
-        "sbc": 129.0,
+        "sbc": 120.0,
         "buyback": 408.0,
         "dividends": 112.0,
         "debt_repay": 32.0
@@ -160,7 +160,7 @@
         "cfo": "ytd_diff",
         "capex_gross": "ytd_diff",
         "da": "ytd_diff",
-        "sbc": "ytd_diff",
+        "sbc": "reported",
         "buyback": "ytd_diff",
         "dividends": "reported",
         "debt_repay": "ytd_diff"
@@ -188,7 +188,7 @@
         "cfo": 3838.0,
         "capex_gross": 2578.0,
         "da": 1821.0,
-        "sbc": 131.0,
+        "sbc": 135.0,
         "buyback": 981.0,
         "dividends": 111.0,
         "debt_repay": 27.0
@@ -242,7 +242,7 @@
         "cfo": "ytd_diff",
         "capex_gross": "ytd_diff",
         "da": "ytd_diff",
-        "sbc": "ytd_diff",
+        "sbc": "reported",
         "buyback": "ytd_diff",
         "dividends": "reported",
         "debt_repay": "ytd_diff"
@@ -271,7 +271,8 @@
         "sbc": 136.0,
         "buyback": 784.0,
         "dividends": 126.0,
-        "debt_repay": 24.0
+        "debt_repay": 24.0,
+        "eps_diluted": 1.33
       },
       "ytd": {
         "revenue": 30758.0,
@@ -324,7 +325,8 @@
         "sbc": "fy_minus_9m",
         "buyback": "fy_minus_9m",
         "dividends": "fy_minus_9m",
-        "debt_repay": "fy_minus_9m"
+        "debt_repay": "fy_minus_9m",
+        "eps_diluted": "ni_over_ytd_shares"
       }
     },
     "FQ1-23": {
@@ -429,7 +431,7 @@
         "cfo": 343.0,
         "capex_gross": 2205.0,
         "da": 1942.0,
-        "sbc": 157.0,
+        "sbc": 133.0,
         "buyback": 0.0,
         "dividends": 126.0,
         "debt_repay": 33.0
@@ -483,7 +485,7 @@
         "cfo": "ytd_diff",
         "capex_gross": "ytd_diff",
         "da": "ytd_diff",
-        "sbc": "ytd_diff",
+        "sbc": "reported",
         "buyback": "ytd_diff",
         "dividends": "reported",
         "debt_repay": "ytd_diff"
@@ -511,7 +513,7 @@
         "cfo": 24.0,
         "capex_gross": 1561.0,
         "da": 1956.0,
-        "sbc": 145.0,
+        "sbc": 148.0,
         "buyback": 0.0,
         "dividends": 126.0,
         "debt_repay": 653.0
@@ -565,7 +567,7 @@
         "cfo": "ytd_diff",
         "capex_gross": "ytd_diff",
         "da": "ytd_diff",
-        "sbc": "ytd_diff",
+        "sbc": "reported",
         "buyback": "ytd_diff",
         "dividends": "reported",
         "debt_repay": "ytd_diff"
@@ -594,7 +596,8 @@
         "sbc": 148.0,
         "buyback": 0.0,
         "dividends": 126.0,
-        "debt_repay": 55.0
+        "debt_repay": 55.0,
+        "eps_diluted": -1.31
       },
       "ytd": {
         "revenue": 15540.0,
@@ -647,7 +650,8 @@
         "sbc": "fy_minus_9m",
         "buyback": "fy_minus_9m",
         "dividends": "reported",
-        "debt_repay": "fy_minus_9m"
+        "debt_repay": "fy_minus_9m",
+        "eps_diluted": "ni_over_ytd_shares"
       }
     },
     "FQ1-24": {
@@ -752,7 +756,7 @@
         "cfo": 1219.0,
         "capex_gross": 1384.0,
         "da": 1924.0,
-        "sbc": 213.0,
+        "sbc": 209.0,
         "buyback": 0.0,
         "dividends": 127.0,
         "debt_repay": 1048.0
@@ -806,7 +810,7 @@
         "cfo": "ytd_diff",
         "capex_gross": "ytd_diff",
         "da": "ytd_diff",
-        "sbc": "ytd_diff",
+        "sbc": "reported",
         "buyback": "ytd_diff",
         "dividends": "reported",
         "debt_repay": "ytd_diff"
@@ -834,7 +838,7 @@
         "cfo": 2482.0,
         "capex_gross": 2086.0,
         "da": 1955.0,
-        "sbc": 219.0,
+        "sbc": 217.0,
         "buyback": 0.0,
         "dividends": 128.0,
         "debt_repay": 715.0
@@ -889,7 +893,7 @@
         "cfo": "ytd_diff",
         "capex_gross": "ytd_diff",
         "da": "ytd_diff",
-        "sbc": "ytd_diff",
+        "sbc": "reported",
         "buyback": "ytd_diff",
         "dividends": "reported",
         "debt_repay": "ytd_diff"
@@ -918,7 +922,8 @@
         "sbc": 213.0,
         "buyback": 300.0,
         "dividends": 129.0,
-        "debt_repay": 81.0
+        "debt_repay": 81.0,
+        "eps_diluted": 0.79
       },
       "ytd": {
         "revenue": 25111.0,
@@ -972,7 +977,8 @@
         "sbc": "fy_minus_9m",
         "buyback": "fy_minus_9m",
         "dividends": "fy_minus_9m",
-        "debt_repay": "fy_minus_9m"
+        "debt_repay": "fy_minus_9m",
+        "eps_diluted": "ni_over_ytd_shares"
       }
     },
     "FQ1-25": {
@@ -1078,7 +1084,7 @@
         "cfo": 3942.0,
         "capex_gross": 4055.0,
         "da": 2079.0,
-        "sbc": 249.0,
+        "sbc": 233.0,
         "buyback": 0.0,
         "dividends": 130.0,
         "debt_repay": 2542.0
@@ -1133,7 +1139,7 @@
         "cfo": "ytd_diff",
         "capex_gross": "ytd_diff",
         "da": "reported",
-        "sbc": "ytd_diff",
+        "sbc": "reported",
         "buyback": "ytd_diff",
         "dividends": "ytd_diff",
         "debt_repay": "ytd_diff"
@@ -1161,7 +1167,7 @@
         "cfo": 4609.0,
         "capex_gross": 2938.0,
         "da": 2094.0,
-        "sbc": 253.0,
+        "sbc": 263.0,
         "buyback": 0.0,
         "dividends": 131.0,
         "debt_repay": 978.0
@@ -1216,7 +1222,7 @@
         "cfo": "ytd_diff",
         "capex_gross": "ytd_diff",
         "da": "reported",
-        "sbc": "ytd_diff",
+        "sbc": "reported",
         "buyback": "ytd_diff",
         "dividends": "ytd_diff",
         "debt_repay": "ytd_diff"
@@ -1245,7 +1251,8 @@
         "sbc": 250.0,
         "buyback": 0.0,
         "dividends": 130.0,
-        "debt_repay": 1015.0
+        "debt_repay": 1015.0,
+        "eps_diluted": 2.83
       },
       "ytd": {
         "revenue": 37378.0,
@@ -1299,7 +1306,14 @@
         "sbc": "fy_minus_9m",
         "buyback": "fy_minus_9m",
         "dividends": "fy_minus_9m",
-        "debt_repay": "fy_minus_9m"
+        "debt_repay": "fy_minus_9m",
+        "eps_diluted": "override"
+      },
+      "non_gaap": {
+        "gross_profit": 5169,
+        "op_income": 3955,
+        "net_income": 3469,
+        "eps_diluted": 3.03
       }
     },
     "FQ1-26": {
@@ -1380,6 +1394,9 @@
         "buyback": "reported",
         "dividends": "reported",
         "debt_repay": "reported"
+      },
+      "non_gaap": {
+        "eps_diluted": 4.78
       }
     },
     "FQ2-26": {
@@ -1404,7 +1421,7 @@
         "cfo": 11903.0,
         "capex_gross": 6387.0,
         "da": 2286.0,
-        "sbc": 309.0,
+        "sbc": 297.0,
         "buyback": 350.0,
         "dividends": 132.0,
         "debt_repay": 1683.0
@@ -1458,10 +1475,13 @@
         "cfo": "ytd_diff",
         "capex_gross": "ytd_diff",
         "da": "reported",
-        "sbc": "ytd_diff",
+        "sbc": "reported",
         "buyback": "ytd_diff",
         "dividends": "ytd_diff",
         "debt_repay": "ytd_diff"
+      },
+      "non_gaap": {
+        "eps_diluted": 12.2
       }
     },
     "FQ3-26": {
@@ -1486,7 +1506,7 @@
         "cfo": 25388.0,
         "capex_gross": 7826.0,
         "da": 2364.0,
-        "sbc": 355.0,
+        "sbc": 341.0,
         "buyback": 0.0,
         "dividends": 171.0,
         "debt_repay": 4754.0
@@ -1541,10 +1561,16 @@
         "cfo": "ytd_diff",
         "capex_gross": "ytd_diff",
         "da": "reported",
-        "sbc": "ytd_diff",
+        "sbc": "reported",
         "buyback": "ytd_diff",
         "dividends": "ytd_diff",
         "debt_repay": "ytd_diff"
+      },
+      "non_gaap": {
+        "gross_profit": 35199,
+        "op_income": 33681,
+        "net_income": 28857,
+        "eps_diluted": 25.11
       }
     },
     "FQ4-26": {
@@ -1557,29 +1583,99 @@
         "revenue": 54229,
         "cogs": 7182,
         "gross_profit": 47047,
+        "rnd": 1913,
+        "sga": 859,
+        "other_op_expense": 524,
+        "op_income": 43751,
+        "interest_other": -88,
         "net_income": 37701,
         "eps_diluted": 32.87,
-        "cfo": 43973
+        "shares_diluted": 1147000000,
+        "cfo": 43973,
+        "capex_net": 10773,
+        "fcf_adj": 33200
       },
       "ytd": {
         "revenue": 133188,
-        "cfo": 89675,
+        "cogs": 25684,
+        "gross_profit": 107504,
+        "rnd": 5650,
+        "sga": 1947,
+        "other_op_expense": 567,
+        "op_income": 99340,
+        "interest_other": -647,
         "net_income": 84969,
-        "eps_diluted": null
+        "eps_diluted": 74.33,
+        "shares_diluted": 1143000000,
+        "cfo": 89675,
+        "capex_gross": 30712,
+        "capex_net": 27370,
+        "fcf_adj": 62310,
+        "da": 9503,
+        "sbc": 1333,
+        "debt_repay": 10043,
+        "buyback": 1777,
+        "dividends": 610
       },
-      "bs": {},
+      "bs": {
+        "cash": 38364,
+        "st_investments": 5070,
+        "receivables": 36197,
+        "inventory": 10372,
+        "lt_securities": 30019,
+        "ppe_net": 63310,
+        "total_assets": 195888,
+        "st_debt": 491,
+        "lt_debt": 4688,
+        "contract_liab_noncurrent": 12895,
+        "total_liabilities": 57510,
+        "equity": 138378
+      },
       "derived": {
         "revenue": "override",
         "cogs": "override",
         "gross_profit": "override",
+        "rnd": "override",
+        "sga": "override",
+        "other_op_expense": "override",
+        "op_income": "override",
+        "interest_other": "override",
         "net_income": "override",
         "eps_diluted": "override",
-        "cfo": "override"
+        "shares_diluted": "override",
+        "cfo": "override",
+        "capex_net": "override",
+        "fcf_adj": "override",
+        "capex_gross": "override",
+        "da": "override",
+        "sbc": "override",
+        "debt_repay": "override",
+        "buyback": "override",
+        "dividends": "override",
+        "cash": "override",
+        "st_investments": "override",
+        "receivables": "override",
+        "inventory": "override",
+        "lt_securities": "override",
+        "ppe_net": "override",
+        "total_assets": "override",
+        "st_debt": "override",
+        "lt_debt": "override",
+        "contract_liab_noncurrent": "override",
+        "total_liabilities": "override",
+        "equity": "override"
       },
       "non_gaap": {
+        "gross_profit": 47204,
+        "op_income": 44636,
+        "net_income": 38398,
         "eps_diluted": 33.42,
-        "net_income": null,
-        "op_income": null
+        "ytd": {
+          "gross_profit": 108032,
+          "op_income": 101191,
+          "net_income": 86758,
+          "eps_diluted": 75.52
+        }
       }
     }
   }

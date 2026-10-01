@@ -1,0 +1,31 @@
+{
+  "ticker": "SNDK",
+  "name_en": "Sandisk",
+  "name_zh": "闪迪",
+  "exchange": "纳斯达克",
+  "sector": "存储",
+  "updated_at_bj": "2026-10-01 23:49",
+  "latest_report": "FQ4-26",
+  "latest_report_date": "2026-08-05",
+  "release_timing": "after_close",
+  "header": {
+    "price": 1739.89,
+    "price_1d": "+0.6%",
+    "price_ytd": "+633.0%",
+    "market_cap": "$254.8B",
+    "ev": null,
+    "net_cash_b": null,
+    "forward_pe_ntm": 7.7,
+    "short_interest": "未接入",
+    "next_earnings": "2026-10-29（预估）",
+    "implied_move": "未接入",
+    "week52": "$112 – $2335",
+    "ev_ebitda_ntm": "未接入",
+    "dividend_quarterly": null,
+    "dividend_yield": null,
+    "target_price": 2136.54,
+    "ratings": "buy · 24 家",
+    "inst_insider": "未接入",
+    "days_to_cover": "未接入"
+  }
+}

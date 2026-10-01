@@ -90,7 +90,7 @@ export function renderConsensusPage(data: ConsensusPage): HTMLElement {
           el('i'),
           document.createTextNode('底色 = 分析师共识（预估）；无底色 = 已公布'),
         ]),
-        document.createTextNode('季度为美光财季，Q1–Q4 分别截至 11 / 2 / 5 / 8 月'),
+        document.createTextNode('季度为该公司财季'),
         document.createTextNode('n.m. = 基数为负或为零，增速无意义'),
         document.createTextNode('[ ] = 待接入'),
       ]),
@@ -100,12 +100,20 @@ export function renderConsensusPage(data: ConsensusPage): HTMLElement {
 
     // ---- Section 2 ----
     const s2 = el('section', { className: 'section' });
-    const revKey = state.ep === 'q' ? 'FQ1-27' : 'FY27';
+    const rank = (k: string) => {
+      const y = /(\d{2})$/.exec(k);
+      const q = /FQ(\d)/.exec(k);
+      return (y ? Number(y[1]) : 0) * 10 + (q ? Number(q[1]) : 0);
+    };
+    const revKeys = Object.keys(data.revision ?? {}).sort((a, b) => rank(a) - rank(b));
+    const qKey = revKeys.find((k) => k.startsWith('FQ')) ?? revKeys[0] ?? '';
+    const yKey = revKeys.find((k) => k.startsWith('FY')) ?? qKey;
+    const revKey = state.ep === 'q' ? qKey : yKey;
     const revSeg = createSegmented(
       '期间',
       [
-        { value: 'q', label: 'FQ1-27 EPS' },
-        { value: 'y', label: 'FY27 EPS' },
+        { value: 'q', label: qKey ? `${qKey} EPS` : '季度 EPS' },
+        { value: 'y', label: yKey ? `${yKey} EPS` : '年度 EPS' },
       ],
       state.ep,
       (v) => {
@@ -174,7 +182,7 @@ export function renderConsensusPage(data: ConsensusPage): HTMLElement {
     root.appendChild(
       el('footer', {
         className: 'page-footer',
-        text: '样式稿：未来预期与共识修正取自 Yahoo Finance 分析页（财报发布前快照）；已公布值取自公司新闻稿（调整后 EPS）；历史共识取自 MarketBeat，并与 Yahoo 交叉校验；指引来自公司新闻稿；[ ] 为待接入。蓝 = 上调 / 好于预期，橙 = 下调 / 差于预期。',
+        text: '未来预期与共识修正取自 Yahoo Finance 快照；已公布值优先公司新闻稿与 XBRL；历史共识取自 MarketBeat 并与 Yahoo 交叉校验。没有数据源的字段显示「未接入」。蓝 = 上调 / 好于预期，橙 = 下调 / 差于预期。',
       }),
     );
   };

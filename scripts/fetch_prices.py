@@ -7,19 +7,24 @@ import argparse
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from scripts.lib.io import retry, update_status, write_json  # noqa: E402
+from scripts.lib.prices import dividend_yield_percent, drop_incomplete_session  # noqa: E402
 
 
 def fetch_prices(ticker: str) -> dict:
     import yfinance as yf
 
     t = yf.Ticker(ticker)
-    hist = retry(lambda: t.history(period="max"))
-    closes = {}
+    # Unadjusted OHLC for reaction math; Adj Close for the chart (splits).
+    hist = retry(lambda: t.history(period="max", auto_adjust=False))
+    closes: dict[str, float] = {}
+    closes_adj: dict[str, float] = {}
+    opens: dict[str, float] = {}
     if hist is not None and not hist.empty:
         for idx, row in hist.iterrows():
             try:
@@ -27,6 +32,19 @@ def fetch_prices(ticker: str) -> dict:
             except Exception:  # noqa: BLE001
                 d = str(idx)[:10]
             closes[d] = round(float(row["Close"]), 4)
+            if "Open" in row and row["Open"] == row["Open"]:
+                opens[d] = round(float(row["Open"]), 4)
+            adj = None
+            for col in ("Adj Close", "AdjClose"):
+                if col in row and row[col] == row[col]:
+                    adj = float(row[col])
+                    break
+            closes_adj[d] = round(adj, 4) if adj is not None else closes[d]
+    now_et = datetime.now(ZoneInfo("America/New_York"))
+    # An unfinished session is not a close. Keep the open so the next-open
+    # gap can still stand in for the after-hours print.
+    closes = drop_incomplete_session(closes, now_et)
+    closes_adj = drop_incomplete_session(closes_adj, now_et)
 
     info: dict = {}
     try:
@@ -43,17 +61,14 @@ def fetch_prices(ticker: str) -> dict:
             ),
             "next_earnings": None,
         }
-        # Dividend yield: prefer trailing rate / price (Yahoo dividendYield units vary)
+        # dividendYield from current yfinance is already a percent (0.06 → 0.06%).
         try:
-            px = None
-            if closes:
-                px = closes[sorted(closes.keys())[-1]]
-            trail = raw.get("trailingAnnualDividendRate")
-            if trail and px:
-                info["dividend_yield"] = round(float(trail) / float(px) * 100, 2)
-            elif raw.get("dividendYield") not in (None, 0):
-                y = float(raw["dividendYield"])
-                info["dividend_yield"] = round(y * 100, 2) if y <= 1 else round(y, 2)
+            px = closes[sorted(closes.keys())[-1]] if closes else None
+            info["dividend_yield"] = dividend_yield_percent(
+                raw.get("trailingAnnualDividendRate"),
+                px,
+                raw.get("dividendYield"),
+            )
         except Exception:  # noqa: BLE001
             pass
         # earnings date
@@ -66,6 +81,8 @@ def fetch_prices(ticker: str) -> dict:
                         info["next_earnings"] = str(ed[0])[:10]
                     elif ed is not None:
                         info["next_earnings"] = str(ed)[:10]
+                if info.get("next_earnings"):
+                    info["next_earnings_estimated"] = True
         except Exception:  # noqa: BLE001
             pass
         # analyst ratings summary if present
@@ -81,6 +98,8 @@ def fetch_prices(ticker: str) -> dict:
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source": "yahoo",
         "closes": closes,
+        "closes_adj": closes_adj,
+        "opens": opens,
         "info": info,
     }
 
@@ -101,8 +120,8 @@ def main() -> int:
         return 0
     except Exception as e:  # noqa: BLE001
         update_status("yahoo_prices", False, str(e))
-        print(f"ERROR (kept old data): {e}", file=sys.stderr)
-        return 0 if out.exists() else 1
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
 
 
 if __name__ == "__main__":

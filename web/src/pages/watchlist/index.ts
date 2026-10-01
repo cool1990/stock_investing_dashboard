@@ -55,6 +55,7 @@ export interface WatchlistPage {
     q: string;
     cons_eps: number | null;
     iv: number | null;
+    estimated?: boolean;
   }>;
   recent: Array<{
     d: string;
@@ -106,9 +107,15 @@ export function renderWatchlistPage(
 
     const stocks =
       group === 'all' ? data.stocks : data.stocks.filter((s) => s.group === group);
-    const filtered = filterQuery
+    const matched = filterQuery
       ? stocks.filter((s) => s.t.startsWith(filterQuery) || s.name.toUpperCase().includes(filterQuery))
       : stocks;
+    const filtered = [...matched].sort((a, b) => {
+      if (a.fpe == null && b.fpe == null) return a.t.localeCompare(b.t);
+      if (a.fpe == null) return 1;
+      if (b.fpe == null) return -1;
+      return a.fpe - b.fpe;
+    });
 
     const kpiRow = el('div', { className: 'kpi-grid kpi-grid--4' }, [
       renderKpiCard({
@@ -186,7 +193,7 @@ export function renderWatchlistPage(
             { text: s.ntm_eps != null ? `$${s.ntm_eps.toFixed(2)}` : null },
             { text: s.rev30 != null ? formatRatioChange(s.rev30) : null, color: s.rev30_tone },
             { text: s.fpe != null ? s.fpe.toFixed(1) : null },
-            { text: s.short != null ? `${(s.short * 100).toFixed(1)}%` : null },
+            { text: s.short != null ? `${(s.short * 100).toFixed(1)}%` : '未接入' },
             {
               text: s.last.q ? `${s.last.d ?? ''}\n${formatRatioChange(s.last.eps_surp)}` : s.last.d,
               color: s.last.eps_surp_tone,
@@ -270,7 +277,7 @@ export function renderWatchlistPage(
       const timing = c.timing === 'after_close' ? '盘后' : '盘前';
       calList.appendChild(
         el('li', {
-          text: `${displayValue(c.d, '[日期]')} ${timing} ${c.t} ${c.q} · 共识 EPS ${displayValue(c.cons_eps != null ? `$${c.cons_eps}` : null)}`,
+          text: `${displayValue(c.d, '未接入')} ${timing}${c.estimated ? '（预估）' : ''} ${c.t} ${c.q} · 共识 EPS ${c.cons_eps != null ? `$${c.cons_eps}` : '未接入'} · IV 未接入`,
         }),
       );
     }
