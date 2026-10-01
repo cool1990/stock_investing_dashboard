@@ -31,10 +31,15 @@ export function renderStockHeader(meta: StockMeta, activeTab: StockTab): HTMLEle
     ]),
   ]);
 
+  const priceText =
+    typeof h.price === 'number'
+      ? `$${h.price.toFixed(2)}`
+      : displayValue(h.price, '[$xxx.xx]');
+
   const grid = el('div', { className: 'metrics-grid' }, [
     metric(
       '股价',
-      displayValue(h.price, '[$xxx.xx]'),
+      priceText,
       `1D ${displayValue(h.price_1d, '[±x%]')} · YTD ${displayValue(h.price_ytd, '[±x%]')}`,
     ),
     metric('市值', displayValue(h.market_cap, '[$xxxB]'), '股价 × 总股本'),

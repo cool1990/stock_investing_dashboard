@@ -1,4 +1,4 @@
-/** Load page JSON: prefer sample/ during P0, fall back to data/pages. */
+/** Load page JSON: prefer formal data/pages, fall back to sample/. */
 
 export async function loadJson<T>(paths: string[]): Promise<T> {
   let lastErr: Error | null = null;
@@ -19,11 +19,15 @@ export async function loadJson<T>(paths: string[]): Promise<T> {
 
 export function sampleOrPage(page: string, ticker?: string): string[] {
   if (page === 'watchlist' || page === 'sources') {
-    return [`./sample/${page}.json`, `./data/pages/${page}.json`];
+    return [`./data/pages/${page}.json`, `./sample/${page}.json`];
   }
   const t = ticker ?? 'MU';
   if (page === 'stockHeader') {
-    return [`./sample/stockHeader.json`, `./data/pages/${t}/stockHeader.json`];
+    return [`./data/pages/${t}/stockHeader.json`, `./sample/stockHeader.json`];
+  }
+  // P1+: financials prefers formal pages; other pages still sample-first until their phase
+  if (page === 'financials') {
+    return [`./data/pages/${t}/${page}.json`, `./sample/${page}.json`];
   }
   return [`./sample/${page}.json`, `./data/pages/${t}/${page}.json`];
 }

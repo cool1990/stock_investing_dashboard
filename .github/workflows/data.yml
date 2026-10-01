@@ -31,6 +31,12 @@ jobs:
       - name: Fetch prices
         run: python3 scripts/fetch_prices.py --ticker MU
         continue-on-error: true
+      - name: Diagnose XBRL tags
+        run: python3 scripts/diagnose_xbrl_tags.py --ticker MU
+        continue-on-error: true
+      - name: Fetch financials (XBRL)
+        run: python3 scripts/fetch_financials.py --ticker MU
+        continue-on-error: true
       - name: Secondary (optional)
         run: python3 scripts/fetch_secondary.py --ticker MU
         continue-on-error: true
@@ -38,6 +44,8 @@ jobs:
         run: |
           python3 scripts/build_history.py --ticker MU
           python3 scripts/build_page_consensus.py --ticker MU
+          python3 scripts/build_page_financials.py --ticker MU
+          python3 scripts/build_page_header.py --ticker MU
       - name: Verify absolute period keys
         run: |
           python3 - <<'PY'

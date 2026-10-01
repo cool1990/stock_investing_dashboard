@@ -12,7 +12,41 @@ backfill_from: FQ1-22
 eps_basis: non_gaap
 ir:
   prepared_remarks_url_pattern: null
-xbrl_map: {}
+# Tag order = fallback preference (from diagnose_xbrl_tags.py / data/raw/MU/xbrl_tags.txt)
+xbrl_map:
+  revenue: [RevenueFromContractWithCustomerExcludingAssessedTax, Revenues]
+  cogs: [CostOfGoodsAndServicesSold, CostOfRevenue]
+  gross_profit: [GrossProfit]
+  rnd: [ResearchAndDevelopmentExpense]
+  sga: [SellingGeneralAndAdministrativeExpense]
+  other_op_expense: [OtherOperatingIncomeExpenseNet]
+  op_income: [OperatingIncomeLoss]
+  interest_other: [OtherNonoperatingIncomeExpense]
+  tax: [IncomeTaxExpenseBenefit]
+  net_income: [NetIncomeLoss]
+  eps_diluted: [EarningsPerShareDiluted]
+  shares_diluted: [WeightedAverageNumberOfDilutedSharesOutstanding]
+  cash: [CashAndCashEquivalentsAtCarryingValue]
+  st_investments: [AvailableForSaleSecuritiesDebtSecuritiesCurrent, ShortTermInvestments]
+  receivables: [AccountsReceivableNetCurrent]
+  inventory: [InventoryNet]
+  lt_securities: [AvailableForSaleSecuritiesDebtSecuritiesNoncurrent, LongTermInvestments]
+  ppe_net:
+    - PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization
+    - PropertyPlantAndEquipmentNet
+  total_assets: [Assets]
+  st_debt: [DebtCurrent, LongTermDebtCurrent]
+  lt_debt: [LongTermDebtAndCapitalLeaseObligations, LongTermDebt, LongTermDebtNoncurrent]
+  contract_liab_noncurrent: [ContractWithCustomerLiability]
+  total_liabilities: [Liabilities]
+  equity: [StockholdersEquity]
+  cfo: [NetCashProvidedByUsedInOperatingActivities]
+  capex_gross: [PaymentsToAcquirePropertyPlantAndEquipment]
+  da: [DepreciationDepletionAndAmortization, DepreciationAndAmortization, Depreciation]
+  sbc: [ShareBasedCompensation, AllocatedShareBasedCompensationExpense]
+  buyback: [PaymentsForRepurchaseOfCommonStock]
+  dividends: [PaymentsOfDividendsCommonStock, PaymentsOfDividends]
+  debt_repay: [RepaymentsOfLongTermDebtAndCapitalSecurities, RepaymentsOfDebt, RepaymentsOfLongTermDebt]
 metrics: {}
 guidance_groups: {}
 guidance:
@@ -20,12 +54,33 @@ guidance:
   FQ1-27: { eps_mid: 38.15, rev_mid: 61.5 }
 overrides:
   actuals: {}
+  # FQ4-26 / FY26: 10-K not yet in companyfacts (max end 2026-05-28 as of P1).
+  # Seeded from earnings acceptance numbers; remove when XBRL catches up.
+  financials:
+    FQ4-26:
+      end: "2026-09-03"
+      q:
+        revenue: 54229
+        cogs: 7182
+        gross_profit: 47047
+        net_income: 37701
+        eps_diluted: 32.87
+        cfo: 43973
+      ytd:
+        revenue: 133188
+        cfo: 89675
+        net_income: 84969   # Q1–Q4 sum until 10-K YTD lands
+        eps_diluted: null   # 年度 EPS 取 10-K 原值，不可加总
+      non_gaap:
+        eps_diluted: 33.42
+        net_income: null
+        op_income: null
 peers: [WDC, SNDK, STX]
 header:
   price: null
   market_cap: null
   ev: null
-  net_cash_b: 68.27
+  net_cash_b: null
   short_interest: null
   next_earnings: null
   dividend_quarterly: 0.15

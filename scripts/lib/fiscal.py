@@ -22,6 +22,9 @@ class FiscalCalendar:
         return self.quarter_end_months[3]
 
 
+FP_TO_FQ = {"Q1": 1, "Q2": 2, "Q3": 3, "Q4": 4, "FY": 4}
+
+
 def _as_date(d: date | datetime | str) -> date:
     if isinstance(d, datetime):
         return d.date()
@@ -71,6 +74,84 @@ def period_label(fy: int, fq: Optional[int] = None) -> str:
     if fq is None:
         return f"FY{yy:02d}"
     return f"FQ{fq}-{yy:02d}"
+
+
+def period_label_from_xbrl(fy: int | str, fp: str, *, annual: bool = False) -> str:
+    """Map SEC XBRL ``fy`` + ``fp`` (Q1/Q2/Q3/FY) to FQn-YY / FYyy.
+
+    Prefer filing ``fp``/``fy`` over end-date heuristics (10-Q/10-K are authoritative).
+    When ``annual=True`` and ``fp=FY``, return ``FY26`` style label.
+    """
+    fy_i = int(fy)
+    fp_u = str(fp).upper()
+    if annual and fp_u == "FY":
+        return period_label(fy_i)
+    fq = FP_TO_FQ.get(fp_u)
+    if fq is None:
+        raise ValueError(f"Unsupported XBRL fp={fp!r}")
+    return period_label(fy_i, fq)
+
+
+def annual_label(fy: int | str) -> str:
+    """Financials page annual column label, e.g. FY2026."""
+    return f"FY{int(fy)}"
+
+
+def parse_period_label(label: str) -> tuple[int, Optional[int]]:
+    """Parse ``FQ1-22`` / ``FY22`` / ``FY2022`` → (fy, fq|None)."""
+    s = label.strip().upper()
+    if s.startswith("FQ") and "-" in s:
+        left, right = s[2:].split("-", 1)
+        fq = int(left)
+        yy = int(right)
+        fy = 2000 + yy if yy < 100 else yy
+        return fy, fq
+    if s.startswith("FY"):
+        yy = int(s[2:])
+        fy = 2000 + yy if yy < 100 else yy
+        return fy, None
+    raise ValueError(f"Bad period label: {label}")
+
+
+def prior_year_period(label: str) -> str:
+    fy, fq = parse_period_label(label)
+    if fq is None:
+        if label.upper().startswith("FY") and len(label) > 4:
+            return annual_label(fy - 1)
+        return period_label(fy - 1)
+    return period_label(fy - 1, fq)
+
+
+def prior_quarter_period(label: str) -> str:
+    fy, fq = parse_period_label(label)
+    if fq is None:
+        raise ValueError(f"No prior quarter for annual label {label}")
+    if fq == 1:
+        return period_label(fy - 1, 4)
+    return period_label(fy, fq - 1)
+
+
+def ytd_months_for_fp(fp: str) -> int:
+    """Cumulative months represented by a YTD duration for Q1/Q2/Q3/FY."""
+    fp_u = str(fp).upper()
+    return {"Q1": 3, "Q2": 6, "Q3": 9, "Q4": 12, "FY": 12}[fp_u]
+
+
+def classify_duration_days(days: int) -> str | None:
+    """Classify a duration fact as ``q`` / ``ytd`` / ``y`` by day span."""
+    if 70 <= days <= 110:
+        return "q"
+    if 150 <= days <= 210:
+        return "ytd"  # ~6M
+    if 240 <= days <= 300:
+        return "ytd"  # ~9M
+    if 330 <= days <= 400:
+        return "y"  # ~12M / FY
+    return None
+
+
+def days_between(start: date | datetime | str, end: date | datetime | str) -> int:
+    return (_as_date(end) - _as_date(start)).days
 
 
 def yahoo_relative_to_absolute(

@@ -1,0 +1,999 @@
+# us-gaap tags for MU (CIK 0000723125)
+# source: data.sec.gov companyfacts
+# columns: n_filings | units | fps | end_min | end_max | tag
+
+  314  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  NetIncomeLoss
+  287  USD/shares            FY,Q1,Q2,Q3           2008-12-04..2026-05-28  EarningsPerShareBasic
+  287  USD/shares            FY,Q1,Q2,Q3           2008-12-04..2026-05-28  EarningsPerShareDiluted
+  287  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  GrossProfit
+  287  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  OperatingIncomeLoss
+  231  USD                   FY,Q1,Q2,Q3           2008-12-04..2022-09-01  ProfitLoss
+  224  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  OtherComprehensiveIncomeLossNetOfTax
+  207  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  CostOfGoodsAndServicesSold
+  207  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments
+  207  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  IncomeTaxExpenseBenefit
+  207  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  OtherNonoperatingIncomeExpense
+  207  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  ResearchAndDevelopmentExpense
+  207  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  SellingGeneralAndAdministrativeExpense
+  207  shares                FY,Q1,Q2,Q3           2008-12-04..2026-05-28  WeightedAverageNumberOfDilutedSharesOutstanding
+  207  shares                FY,Q1,Q2,Q3           2008-12-04..2026-05-28  WeightedAverageNumberOfSharesOutstandingBasic
+  205  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  IncomeLossFromEquityMethodInvestments
+  202  USD                   FY,Q1,Q2,Q3           2009-12-03..2026-05-28  ComprehensiveIncomeNetOfTax
+  196  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  StockholdersEquity
+  192  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  OtherOperatingIncomeExpenseNet
+  184  USD                   FY,Q1,Q2,Q3           2008-08-28..2026-05-28  CashAndCashEquivalentsAtCarryingValue
+  182  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax
+  181  USD                   FY,Q1,Q2,Q3           2008-12-04..2024-05-30  InterestExpense
+  178  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentNetOfTax
+  177  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  ShareBasedCompensation
+  173  shares                FY,Q1,Q2,Q3           2009-12-03..2025-08-28  AntidilutiveSecuritiesExcludedFromComputationOfEarningsPerShareAmount
+  171  USD                   FY,Q1,Q2,Q3           2008-08-28..2021-09-02  StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest
+  166  shares                FY,Q1,Q2,Q3           2009-09-03..2024-08-29  WeightedAverageNumberDilutedSharesOutstandingAdjustment
+  160  USD                   FY,Q1,Q2,Q3           2012-08-30..2026-05-28  InvestmentIncomeNet
+  160  USD                   FY,Q1,Q2,Q3           2012-08-30..2026-05-28  NetIncomeLossAttributableToParentDiluted
+  160  USD                   FY,Q1,Q2,Q3           2010-09-02..2025-08-28  OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax
+  159  USD                   FY,Q1,Q2,Q3           2008-12-04..2018-05-31  SalesRevenueNet
+  148  USD                   FY,Q1,Q2,Q3           2008-12-04..2022-09-01  NetIncomeLossAttributableToNoncontrollingInterest
+  146  USD                   FY,Q1,Q2,Q3           2009-09-03..2022-09-01  ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest
+  144  USD                   FY,Q1,Q2,Q3           2014-08-28..2026-05-28  CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents
+  143  USD                   FY,Q1,Q2,Q3           2009-12-03..2022-09-01  ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest
+  143  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  IncreaseDecreaseInInventories
+  143  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  IncreaseDecreaseInReceivables
+  143  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  PaymentsForProceedsFromOtherInvestingActivities
+  143  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  PaymentsToAcquirePropertyPlantAndEquipment
+  143  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  ProceedsFromPaymentsForOtherFinancingActivities
+  139  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  AdjustmentsToAdditionalPaidInCapitalSharebasedCompensationRequisiteServicePeriodRecognitionValue
+  139  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  StockIssuedDuringPeriodValueShareBasedCompensation
+  137  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  GainsLossesOnExtinguishmentOfDebt
+  135  USD                   FY,Q1,Q2,Q3           2009-09-03..2025-11-27  ForeignCurrencyTransactionGainLossBeforeTax
+  135  USD                   FY,Q1,Q2,Q3           2011-09-01..2025-08-28  RestructuringSettlementAndImpairmentProvisions
+  133  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  ProceedsFromIssuanceOfLongTermDebt
+  132  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  InventoryNet
+  132  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  OtherAssetsCurrent
+  132  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  OtherLiabilitiesNoncurrent
+  132  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  ReceivablesNetCurrent
+  132  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  RetainedEarningsAccumulatedDeficit
+  128  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  AccountsPayableAndAccruedLiabilitiesCurrent
+  128  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  AccumulatedOtherComprehensiveIncomeLossNetOfTax
+  128  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  AdditionalPaidInCapitalCommonStock
+  128  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  Assets
+  128  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  AssetsCurrent
+  128  USD/shares            FY,Q1,Q2,Q3           2009-09-03..2026-05-28  CommonStockParOrStatedValuePerShare
+  128  shares                FY,Q1,Q2,Q3           2009-09-03..2026-05-28  CommonStockSharesAuthorized
+  128  shares                FY,Q1,Q2,Q3           2009-09-03..2026-05-28  CommonStockSharesIssued
+  128  shares                FY,Q1,Q2,Q3           2009-09-03..2026-05-28  CommonStockSharesOutstanding
+  128  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  CommonStockValue
+  128  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  Liabilities
+  128  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  LiabilitiesAndStockholdersEquity
+  128  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  LiabilitiesCurrent
+  128  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  OtherAssetsNoncurrent
+  126  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  AccountsPayableOtherCurrent
+  126  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  AccountsPayableTradeCurrent
+  126  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  AccountsReceivableNetCurrent
+  126  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  EmployeeRelatedLiabilitiesCurrent
+  126  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  IncomeTaxesReceivable
+  126  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  InventoryFinishedGoodsNetOfReserves
+  126  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  InventoryRawMaterialsAndSuppliesNetOfReserves
+  126  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  InventoryWorkInProcessNetOfReserves
+  126  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  TaxesPayableCurrent
+  125  USD                   FY,Q1,Q2,Q3           2010-09-02..2025-08-28  IncomeTaxHolidayAggregateDollarAmount
+  125  USD/shares            FY,Q1,Q2,Q3           2010-09-02..2025-08-28  IncomeTaxHolidayIncomeTaxBenefitsPerShare
+  118  USD                   FY,Q1,Q2,Q3           2010-09-02..2025-08-28  FiniteLivedIntangibleAssetsAccumulatedAmortization
+  117  USD                   FY,Q1,Q2,Q3           2011-09-01..2026-05-28  RepaymentsOfLongTermDebtAndCapitalSecurities
+  117  USD                   FY,Q1,Q2,Q3           2017-08-31..2026-05-28  RevenueFromContractWithCustomerExcludingAssessedTax
+  115  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  DepreciationDepletionAndAmortization
+  107  USD                   FY,Q1,Q2,Q3           2010-09-02..2025-08-28  AmortizationOfIntangibleAssets
+  107  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  NetCashProvidedByUsedInFinancingActivities
+  107  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  NetCashProvidedByUsedInInvestingActivities
+  107  USD                   FY,Q1,Q2,Q3           2008-12-04..2026-05-28  NetCashProvidedByUsedInOperatingActivities
+  106  USD                   FY,Q1,Q2,Q3           2010-09-02..2025-08-28  FiniteLivedIntangibleAssetsGross
+  104  USD                   FY,Q1,Q2,Q3           2012-08-30..2026-05-28  DebtAndCapitalLeaseObligations
+  104  USD                   FY,Q1,Q2,Q3           2012-08-30..2026-05-28  DebtCurrent
+  104  USD                   FY,Q1,Q2,Q3           2012-08-30..2026-05-28  LongTermDebtAndCapitalLeaseObligations
+  102  USD                   FY,Q1,Q2,Q3           2010-09-02..2025-08-28  Depreciation
+  102  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  PaymentsForRepurchaseOfCommonStock
+  100  USD                   FY,Q1,Q2,Q3           2013-11-28..2026-05-28  OtherOperatingActivitiesCashFlowStatement
+   97  USD                   FY,Q1,Q2,Q3           2009-09-03..2021-09-02  AmortizationOfFinancingCostsAndDiscounts
+   95  USD                   FY,Q1,Q2,Q3           2017-08-31..2026-05-28  AllocatedShareBasedCompensationExpense
+   92  USD                   FY,Q1,Q2,Q3           2014-08-28..2026-05-28  IncreaseDecreaseInAccountsPayableAndAccruedLiabilities
+   91  USD                   FY,Q1,Q2,Q3           2017-08-31..2026-05-28  OtherComprehensiveIncomeLossCashFlowHedgeGainLossAfterReclassificationAndTax
+   91  USD                   FY,Q1,Q2,Q3           2010-09-02..2019-05-30  OtherComprehensiveIncomeLossDerivativesQualifyingAsHedgesNetOfTax
+   88  USD                   FY,Q1,Q2,Q3           2009-09-03..2025-08-28  DeferredForeignIncomeTaxExpenseBenefit
+   88  USD                   FY,Q1,Q2,Q3           2009-09-03..2026-05-28  IntangibleAssetsNetExcludingGoodwill
+   85  USD                   FY,Q1,Q2,Q3           2014-08-28..2026-05-28  DeferredIncomeTaxAssetsNet
+   84  pure                  FY,Q1,Q2,Q3           2016-09-01..2026-05-28  EffectiveIncomeTaxRateContinuingOperations
+   83  USD                   FY,Q1,Q2,Q3           2009-09-03..2020-05-28  PropertyPlantAndEquipmentNet
+   82  USD                   FY,Q1,Q2,Q3           2009-09-03..2021-12-02  IncreaseDecreaseInDeferredIncomeTaxes
+   82  USD                   FY,Q1,Q2,Q3           2009-09-03..2020-09-03  MinorityInterest
+   81  USD                   FY,Q1,Q2,Q3           2015-09-03..2026-05-28  CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect
+   81  USD                   FY,Q1,Q2,Q3           2015-09-03..2026-05-28  EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents
+   80  shares                FY,Q1,Q2,Q3           2015-09-03..2026-05-28  TreasuryStockCommonShares
+   80  USD                   FY,Q1,Q2,Q3           2015-09-03..2026-05-28  TreasuryStockCommonValue
+   78  USD                   FY,Q1,Q2,Q3           2010-09-02..2020-05-28  AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment
+   78  USD                   FY,Q1,Q2,Q3           2010-09-02..2020-05-28  PropertyPlantAndEquipmentGross
+   78  USD                   FY,Q1,Q2,Q3           2009-09-03..2024-08-29  StockRepurchasedAndRetiredDuringPeriodValue
+   76  USD                   FY,Q1,Q2,Q3           2016-09-01..2026-05-28  Goodwill
+   76  USD                   FY,Q1,Q2,Q3           2016-09-01..2026-05-28  OtherReceivablesNetCurrent
+   74  USD                   FY,Q1,Q2,Q3           2011-09-01..2024-08-29  GainLossOnDispositionOfAssets
+   74  USD                   FY,Q1,Q2,Q3           2010-09-02..2026-05-28  ProceedsFromSaleAndMaturityOfAvailableForSaleSecurities
+   74  USD                   FY,Q1,Q2,Q3           2008-08-28..2025-08-28  UnrecognizedTaxBenefits
+   72  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  FinanceLeaseInterestExpense
+   72  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  FinanceLeaseRightOfUseAssetAmortization
+   72  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  LeaseCost
+   72  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  OperatingLeaseCost
+   67  USD                   FY,Q1,Q2,Q3           2017-08-31..2026-05-28  DerivativeFairValueOfDerivativeLiability
+   67  USD                   FY,Q1,Q2,Q3           2017-08-31..2026-05-28  PaymentsToAcquireAvailableForSaleSecuritiesDebt
+   66  USD                   FY,Q1,Q2,Q3           2009-09-03..2018-08-30  DeferredRevenueCurrent
+   66  USD                   FY,Q1,Q2,Q3           2018-08-30..2026-05-28  OtherLiabilitiesCurrent
+   63  shares                FY,Q1,Q2,Q3           2010-12-02..2026-05-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardNumberOfSharesAvailableForGrant
+   62  USD                   FY,Q1,Q2,Q3           2008-12-04..2017-06-01  CashAndCashEquivalentsPeriodIncreaseDecrease
+   62  USD                   FY,Q1,Q2,Q3           2010-09-02..2025-08-28  FiniteLivedIntangibleAssetsNet
+   61  USD                   FY,Q1,Q2,Q3           2020-09-03..2026-05-28  PaymentsOfDividendsCommonStock
+   61  USD                   FY,Q1,Q2,Q3           2010-09-02..2018-11-29  PaymentsToAcquireAvailableForSaleSecurities
+   60  USD                   FY,Q1,Q2,Q3           2018-08-30..2026-05-28  AvailableForSaleSecuritiesDebtSecuritiesCurrent
+   60  USD                   FY,Q1,Q2,Q3           2018-08-30..2026-05-28  AvailableForSaleSecuritiesDebtSecuritiesNoncurrent
+   60  USD                   FY,Q1,Q2,Q3           2018-08-30..2026-05-28  DerivativeFairValueOfDerivativeAsset
+   59  USD                   FY,Q1,Q2,Q3           2011-12-01..2026-05-28  EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized
+   59  USD                   FY,Q1,Q2,Q3           2008-12-04..2025-08-28  IncomeTaxesPaidNet
+   59  USD                   FY,Q1,Q2,Q3           2008-12-04..2025-08-28  InterestPaidNet
+   59  USD                   FY,Q1,Q2,Q3           2008-12-04..2023-08-31  ProceedsFromMaturitiesPrepaymentsAndCallsOfAvailableForSaleSecurities
+   58  USD                   FY,Q1,Q2,Q3           2021-09-02..2026-05-28  DividendsCommonStockCash
+   58  USD                   FY,Q1,Q2,Q3           2009-09-03..2017-08-31  EquityMethodInvestments
+   57  USD                   FY,Q1,Q2,Q3           2014-08-28..2021-09-02  AdjustmentsToAdditionalPaidInCapitalEquityComponentOfConvertibleDebtSubsequentAdjustments
+   57  USD/shares            FY,Q1,Q2,Q3           2021-08-02..2026-05-28  CommonStockDividendsPerShareDeclared
+   56  USD                   FY,Q1,Q2,Q3           2010-09-02..2017-08-31  AccountsPayableRelatedPartiesCurrent
+   56  USD                   FY,Q1,Q2,Q3           2008-12-04..2022-09-01  PaymentsToMinorityShareholders
+   55  USD                   FY,Q1,Q2,Q3           2009-09-03..2025-08-28  CurrentForeignTaxExpenseBenefit
+   55  USD                   FY,Q1,Q2,Q3           2019-08-29..2026-05-28  OperatingLeaseRightOfUseAsset
+   54  USD                   FY,Q1,Q2,Q3           2011-09-01..2018-11-29  AvailableForSaleSecuritiesCurrent
+   54  USD                   FY,Q1,Q2,Q3           2011-09-01..2018-11-29  AvailableForSaleSecuritiesNoncurrent
+   54  USD                   FY,Q1,Q2,Q3           2018-11-29..2026-05-28  ContractWithCustomerRefundLiabilityCurrent
+   54  USD                   FY,Q1,Q2,Q3           2019-08-29..2026-05-28  FinanceLeaseLiability
+   54  USD                   FY,Q1,Q2,Q3           2019-08-29..2026-05-28  FinanceLeaseLiabilityCurrent
+   54  USD                   FY,Q1,Q2,Q3           2019-08-29..2026-05-28  FinanceLeaseLiabilityNoncurrent
+   54  USD                   FY,Q1,Q2,Q3           2019-08-29..2026-05-28  OperatingLeaseLiabilityNoncurrent
+   53  USD                   FY,Q1,Q2,Q3           2008-12-04..2025-08-28  CapitalExpendituresIncurredButNotYetPaid
+   53  USD                   FY,Q1,Q2,Q3           2012-08-30..2025-08-28  FiniteLivedIntangibleAssetsAmortizationExpenseYearFour
+   53  USD                   FY,Q1,Q2,Q3           2012-08-30..2025-08-28  FiniteLivedIntangibleAssetsAmortizationExpenseYearThree
+   53  USD                   FY,Q1,Q2,Q3           2012-08-30..2025-08-28  FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo
+   53  USD                   FY,Q1,Q2,Q3           2011-09-01..2020-09-03  ProceedsFromIssuanceOrSaleOfEquity
+   53  USD                   FY,Q1,Q2,Q3           2012-08-30..2018-11-29  ProceedsFromSaleOfAvailableForSaleSecurities
+   52  USD                   FY,Q1,Q2,Q3           2019-11-28..2026-05-28  RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability
+   52  pure                  FY,Q1,Q2,Q3           2009-09-03..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsRiskFreeInterestRate
+   52  pure                  FY,Q1,Q2,Q3           2009-09-03..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsWeightedAverageVolatilityRate
+   52  USD/shares            FY,Q1,Q2,Q3           2009-09-03..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsGrantsInPeriodWeightedAverageGrantDateFairValue
+   51  USD                   FY,Q1,Q2,Q3           2008-12-04..2016-03-03  IncreaseDecreaseInOtherAccountsPayableAndAccruedLiabilities
+   50  USD                   FY,Q1,Q2,Q3           2016-09-01..2025-08-28  EmployeeServiceShareBasedCompensationTaxBenefitFromCompensationExpense
+   50  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  FinanceLeaseInterestPaymentOnLiability
+   50  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  FinanceLeasePrincipalPayments
+   50  USD                   FY,Q1,Q2,Q3           2010-09-02..2016-12-01  OtherReceivables
+   50  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability
+   50  USD/shares            FY,Q1,Q2,Q3           2009-09-03..2024-11-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriodWeightedAverageGrantDateFairValue
+   48  USD                   FY,Q1,Q2              2009-09-03..2025-08-28  CurrentFederalTaxExpenseBenefit
+   48  USD                   FY,Q3                 2009-09-03..2025-08-28  CurrentIncomeTaxExpenseBenefit
+   48  pure                  FY,Q1,Q2,Q3           2019-11-28..2026-05-28  FinanceLeaseWeightedAverageDiscountRatePercent
+   48  USD                   FY,Q1,Q2,Q3           2010-03-04..2020-09-03  MinorityInterestDecreaseFromRedemptions
+   48  USD                   FY,Q1,Q2,Q3           2019-08-29..2026-05-28  PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAccumulatedDepreciationAndAmortization
+   48  USD                   FY,Q1,Q2,Q3           2019-08-29..2026-05-28  PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization
+   48  USD                   FY,Q1,Q2,Q3           2019-08-29..2026-05-28  PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetBeforeAccumulatedDepreciationAndAmortization
+   47  USD                   FY,Q1,Q2,Q3           2008-12-04..2014-02-27  InvestmentIncomeInterest
+   46  USD                   FY,Q1,Q2,Q3           2011-09-01..2018-08-30  CustomerAdvancesCurrent
+   46  pure                  FY,Q1,Q2,Q3           2019-11-28..2025-11-27  OperatingLeaseWeightedAverageDiscountRatePercent
+   46  USD                   FY,Q1,Q2,Q3           2009-09-03..2016-12-01  ProceedsFromMinorityShareholders
+   46  USD                   FY,Q3                 2009-09-03..2025-08-28  UnrecognizedTaxBenefitsIncreasesResultingFromCurrentPeriodTaxPositions
+   45  USD                   FY                    2009-09-03..2025-08-28  CurrentStateAndLocalTaxExpenseBenefit
+   45  USD                   FY                    2009-09-03..2025-08-28  DeferredFederalIncomeTaxExpenseBenefit
+   45  USD                   FY                    2009-09-03..2025-08-28  IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic
+   45  USD                   FY                    2009-09-03..2025-08-28  IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign
+   45  USD                   FY                    2009-09-03..2025-08-28  IncomeTaxReconciliationChangeInDeferredTaxAssetsValuationAllowance
+   45  USD                   FY                    2009-09-03..2025-08-28  IncomeTaxReconciliationForeignIncomeTaxRateDifferential
+   45  USD                   FY                    2009-09-03..2025-08-28  IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate
+   45  USD                   FY                    2009-09-03..2025-08-28  IncomeTaxReconciliationOtherAdjustments
+   44  USD                   FY,Q1,Q2,Q3           2012-08-30..2018-11-29  AvailableForSaleSecurities
+   44  USD                   FY,Q1,Q2,Q3           2020-05-28..2025-11-27  FinanceLeaseRightOfUseAsset
+   44  USD                   FY,Q1,Q2,Q3           2009-09-03..2016-09-01  MinorityInterestDecreaseFromDistributionsToNoncontrollingInterestHolders
+   44  integer,pure,segment  FY,Q1,Q2,Q3           2015-09-03..2026-05-28  NumberOfReportableSegments
+   43  USD                   FY,Q1,Q2,Q3           2008-12-04..2015-12-03  IncreaseDecreaseInOtherOperatingCapitalNet
+   43  USD                   FY,Q1,Q2,Q3           2017-08-31..2023-08-31  ProceedsFromSaleOfAvailableForSaleSecuritiesDebt
+   43  USD                   FY,Q1,Q2,Q3           2015-03-05..2026-05-28  TreasuryStockValueAcquiredCostMethod
+   42  USD/shares            FY,Q1,Q2,Q3           2021-12-02..2026-05-28  CommonStockDividendsPerShareCashPaid
+   42  USD                   FY,Q1,Q2,Q3           2014-08-28..2026-05-28  DebtInstrumentIncreaseDecreaseForPeriodNet
+   42  USD                   FY                    2009-09-03..2025-08-28  DeferredIncomeTaxExpenseBenefit
+   42  USD                   FY                    2009-09-03..2025-08-28  UnrecognizedTaxBenefitsDecreasesResultingFromPriorPeriodTaxPositions
+   42  USD                   FY                    2009-09-03..2025-08-28  UnrecognizedTaxBenefitsIncreasesResultingFromPriorPeriodTaxPositions
+   41  USD                   FY,Q1,Q2,Q3           2012-08-30..2025-08-28  FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths
+   41  USD                   FY,Q1,Q2,Q3           2010-09-02..2025-11-27  LongTermDebt
+   40  USD                   FY,Q1,Q2,Q3           2017-08-31..2022-09-01  DilutiveSecuritiesEffectOnBasicEarningsPerShareOther
+   40  USD                   FY,Q1,Q2,Q3           2008-12-04..2016-09-01  IncreaseDecreaseInRestrictedCash
+   40  USD                   Q1,Q2,Q3              2015-12-03..2020-05-28  OtherTaxExpenseBenefit
+   39  USD                   FY                    2009-09-03..2025-08-28  IncomeTaxReconciliationStateAndLocalIncomeTaxes
+   38  USD                   FY,Q1,Q2,Q3           2012-08-30..2025-08-28  FiniteLivedIntangibleAssetsAmortizationExpenseYearFive
+   38  USD                   FY,Q1,Q2,Q3           2021-09-02..2026-05-28  RestrictedCash
+   36  USD                   FY,Q1,Q2,Q3           2018-11-29..2024-08-29  FiniteLivedIntangibleAssetsPeriodIncreaseDecrease
+   36  USD                   FY,Q1,Q2,Q3           2009-09-03..2013-05-30  GainLossOnDispositionOfProperty
+   36  USD                   FY,Q1,Q2,Q3           2011-09-01..2023-08-31  GainLossOnInvestments
+   36  USD                   FY,Q1,Q2,Q3           2011-09-01..2017-06-01  NetCashProvidedByUsedInFinancingActivitiesContinuingOperations
+   36  USD                   FY,Q1,Q2,Q3           2011-09-01..2017-06-01  NetCashProvidedByUsedInInvestingActivitiesContinuingOperations
+   36  USD                   FY,Q1,Q2,Q3           2011-09-01..2017-06-01  NetCashProvidedByUsedInOperatingActivitiesContinuingOperations
+   36  USD                   FY,Q1,Q2,Q3           2020-09-03..2025-11-27  OperatingLeaseLiabilityCurrent
+   36  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  OperatingLeasePayments
+   36  USD                   FY,Q1,Q2,Q3           2011-09-01..2023-08-31  RestructuringCostsAndAssetImpairmentCharges
+   36  USD                   FY                    2009-09-03..2025-08-28  UnrecognizedTaxBenefitsDecreasesResultingFromSettlementsWithTaxingAuthorities
+   35  USD                   FY,Q1,Q2,Q3           2018-08-31..2026-05-28  ContractWithCustomerLiability
+   35  USD                   FY,Q1,Q2,Q3           2011-09-01..2018-08-30  NoncontrollingInterestIncreaseFromSubsidiaryEquityIssuance
+   34  USD                   FY                    2009-09-03..2025-08-28  DefinedContributionPlanCostRecognized
+   34  USD                   FY,Q1,Q2,Q3           2016-09-01..2021-09-02  RestrictedCashNoncurrent
+   33  USD                   FY                    2013-08-29..2025-08-28  DeferredStateAndLocalIncomeTaxExpenseBenefit
+   33  USD                   FY                    2012-08-30..2025-08-28  IncomeTaxReconciliationTaxContingencies
+   33  USD                   FY                    2009-09-03..2025-08-28  InterestCostsCapitalized
+   32  USD                   FY,Q1,Q2,Q3           2010-09-02..2014-08-28  AllowanceForDoubtfulAccountsReceivableCurrent
+   32  USD                   FY,Q1,Q2,Q3           2008-12-04..2017-08-31  IncreaseDecreaseInDeferredRevenue
+   32  USD                   FY,Q1,Q2,Q3           2015-09-03..2019-08-29  IntangibleAssetsGrossExcludingGoodwill
+   31  shares                FY,Q1,Q2,Q3           2023-03-02..2026-05-28  IncrementalCommonSharesAttributableToShareBasedPaymentArrangements
+   31  USD                   FY,Q1,Q2,Q3           2009-09-03..2014-05-29  SaleLeasebackTransactionGrossProceeds
+   30  USD                   FY                    2010-09-02..2025-08-28  DeferredTaxAssetsGross
+   30  USD                   FY                    2010-09-02..2025-08-28  DeferredTaxAssetsNet
+   30  USD                   FY                    2010-09-02..2025-08-28  DeferredTaxAssetsOther
+   30  USD                   FY                    2010-09-02..2025-08-28  DeferredTaxAssetsTaxDeferredExpenseCompensationAndBenefits
+   30  USD                   FY                    2010-09-02..2025-08-28  DeferredTaxAssetsValuationAllowance
+   30  USD                   FY                    2010-09-02..2025-08-28  DeferredTaxLiabilitiesOther
+   30  USD                   FY,Q1,Q2,Q3           2018-11-29..2020-09-03  NetIncomeLossIncludingPortionAttributableToNonredeemableNoncontrollingInterest
+   30  USD                   Q1,Q2,Q3              2010-03-04..2015-12-03  StockholdersEquityOther
+   29  USD                   FY,Q1,Q2,Q3           2015-12-03..2019-05-30  DeferredOtherTaxExpenseBenefit
+   29  USD                   FY,Q1,Q2,Q3           2012-08-30..2017-06-01  EffectOfExchangeRateOnCashAndCashEquivalentsContinuingOperations
+   29  USD                   FY,Q1,Q2,Q3           2008-12-04..2013-08-29  ProceedsFromSaleOfPropertyPlantAndEquipment
+   28  USD/shares            FY,Q1,Q2,Q3           2012-08-30..2017-08-31  BusinessAcquisitionProFormaEarningsPerShareBasic
+   28  USD/shares            FY,Q1,Q2,Q3           2012-08-30..2017-08-31  BusinessAcquisitionProFormaEarningsPerShareDiluted
+   28  USD                   FY,Q1,Q2,Q3           2012-08-30..2017-08-31  BusinessAcquisitionsProFormaNetIncomeLoss
+   28  USD                   FY,Q1,Q2,Q3           2012-08-30..2017-08-31  BusinessAcquisitionsProFormaRevenue
+   28  USD                   FY                    2010-09-02..2025-08-28  DeferredTaxAssetsLiabilitiesNet
+   28  pure                  FY,Q2,Q3              2016-09-01..2025-08-28  EffectiveIncomeTaxRateReconciliationAtFederalStatutoryIncomeTaxRate
+   28  USD                   FY                    2009-09-03..2019-08-29  LeaseAndRentalExpense
+   28  USD                   FY,Q1,Q2,Q3           2008-12-04..2013-05-30  RepaymentsOfLongTermDebt
+   27  USD                   FY,Q1,Q2,Q3           2010-09-02..2016-06-02  DeferredTaxAssetsNetNoncurrent
+   27  USD                   Q1,Q2,Q3              2016-12-01..2025-05-29  FiniteLivedIntangibleAssetsAmortizationExpenseRemainderOfFiscalYear
+   27  USD                   FY,Q2,Q3              2012-08-30..2018-08-30  SaleLeasebackTransactionGrossProceedsFinancingActivities
+   27  USD                   FY,Q2,Q3              2009-09-03..2025-08-28  UnrecognizedTaxBenefitsThatWouldImpactEffectiveTaxRate
+   26  USD                   FY,Q1,Q2,Q3           2010-09-02..2014-05-29  AvailableForSaleSecuritiesGrossRealizedGainsLossesSaleProceeds
+   26  USD                   FY,Q1,Q2,Q3           2008-12-04..2016-09-01  GainLossOnSaleOfPreviouslyUnissuedStockBySubsidiaryOrEquityInvesteeNonoperatingIncome
+   26  USD                   FY,Q1,Q2,Q3           2022-09-01..2026-05-28  InterestExpenseNonoperating
+   26  USD                   FY,Q1,Q2,Q3           2009-09-03..2012-08-30  InterestOnConvertibleDebtNetOfTax
+   26  USD                   FY,Q1,Q2,Q3           2009-09-03..2012-08-30  NetIncomeLossAvailableToCommonStockholdersDiluted
+   26  USD                   FY,Q1,Q2,Q3           2019-08-30..2025-11-27  OperatingLeaseLiability
+   26  USD                   FY,Q1,Q2,Q3           2015-09-03..2019-08-29  TemporaryEquityCarryingAmountAttributableToParent
+   25  USD                   FY,Q1,Q2,Q3           2023-08-31..2026-05-28  AdjustmentsRelatedToTaxWithholdingForShareBasedCompensation
+   25  USD                   FY,Q2,Q3              2015-09-03..2019-08-29  BusinessCombinationStepAcquisitionEquityInterestInAcquireeRemeasurementGain
+   25  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  FinanceLeaseLiabilityPaymentsDueYearFour
+   25  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  FinanceLeaseLiabilityPaymentsDueYearThree
+   25  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  FinanceLeaseLiabilityPaymentsDueYearTwo
+   25  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  FinanceLeaseLiabilityUndiscountedExcessAmount
+   25  USD                   FY,Q1,Q2,Q3           2012-08-30..2016-09-01  GainLossRelatedToLitigationSettlement
+   25  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  LesseeOperatingLeaseLiabilityPaymentsDueYearFour
+   25  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  LesseeOperatingLeaseLiabilityPaymentsDueYearThree
+   25  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  LesseeOperatingLeaseLiabilityPaymentsDueYearTwo
+   25  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-11-27  LesseeOperatingLeaseLiabilityUndiscountedExcessAmount
+   25  USD                   FY,Q2,Q3              2021-09-02..2025-08-28  OtherRestructuringCosts
+   25  USD                   FY,Q1,Q2,Q3           2008-12-04..2014-08-28  PaymentsToAcquireEquityMethodInvestments
+   25  USD                   FY,Q2,Q3              2021-09-02..2025-08-28  SeveranceCosts1
+   25  USD/shares            FY,Q1,Q2,Q3           2012-08-30..2021-06-03  SharePrice
+   24  USD                   FY,Q1,Q2,Q3           2010-09-02..2013-08-29  AccountsReceivableRelatedPartiesCurrent
+   24  USD                   FY                    2013-08-29..2025-08-28  DeferredIncomeTaxLiabilities
+   24  USD                   FY                    2010-09-02..2022-09-01  DeferredTaxLiabilitiesGoodwillAndIntangibleAssetsIntangibleAssets
+   24  USD                   FY                    2013-08-29..2025-08-28  DefinedBenefitPlanBenefitObligation
+   24  USD                   FY                    2013-08-29..2025-08-28  DefinedBenefitPlanFairValueOfPlanAssets
+   24  pure                  FY                    2016-09-01..2025-08-28  EffectiveIncomeTaxRateReconciliationChangeInDeferredTaxAssetsValuationAllowance
+   24  pure                  FY                    2016-09-01..2025-08-28  EffectiveIncomeTaxRateReconciliationForeignIncomeTaxRateDifferential
+   24  pure                  FY                    2016-09-01..2025-08-28  EffectiveIncomeTaxRateReconciliationOtherAdjustments
+   24  USD                   FY,Q1,Q2,Q3           2020-09-03..2026-05-28  EquitySecuritiesWithoutReadilyDeterminableFairValueAmount
+   24  USD                   FY                    2009-09-03..2018-08-30  IncomeTaxReconciliationTaxCredits
+   24  USD                   FY,Q1,Q2,Q3           2022-09-01..2026-05-28  IncreaseDecreaseInOtherCurrentLiabilities
+   24  USD                   FY,Q1,Q2,Q3           2008-12-04..2025-08-28  InventoryWriteDown
+   24  USD                   FY,Q1,Q2,Q3           2009-09-03..2013-05-30  LongTermDebtCurrent
+   24  USD                   FY,Q1,Q2,Q3           2009-09-03..2013-05-30  LongTermDebtNoncurrent
+   23  USD                   FY,Q1,Q2,Q3           2009-09-03..2012-05-31  FiniteLivedIntangibleAssetsAmortizationExpense
+   23  USD                   FY,Q1,Q2,Q3           2012-08-30..2026-05-28  IncreaseDecreaseInOtherNoncurrentLiabilities
+   23  USD                   FY,Q1,Q2,Q3           2009-09-03..2012-05-31  OtherComprehensiveIncomeAvailableForSaleSecuritiesAdjustmentNetOfTaxPeriodIncreaseDecrease
+   23  USD                   FY,Q1,Q2,Q3           2009-09-03..2012-05-31  OtherComprehensiveIncomeDefinedBenefitPlansAdjustmentNetOfTaxPeriodIncreaseDecrease
+   23  USD                   FY,Q1,Q2,Q3           2009-09-03..2012-05-31  OtherComprehensiveIncomeForeignCurrencyTransactionAndTranslationAdjustmentNetOfTaxPeriodIncreaseDecrease
+   23  Decimal,decimal,pure  FY,Q1,Q2,Q3           2009-09-03..2012-05-31  ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExpectedTerm
+   23  shares                FY,Q1,Q2,Q3           2010-12-02..2016-06-02  ShareBasedCompensationArrangementByShareBasedPaymentAwardNumberOfSharesAuthorized
+   23  shares                FY,Q1,Q2,Q3           2011-12-01..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsGrantsInPeriodGross
+   22  USD                   FY                    2010-09-02..2025-08-28  DeferredTaxLiabilitiesPropertyPlantAndEquipment
+   22  USD                   FY,Q1,Q2,Q3           2020-09-03..2025-11-27  FinanceLeaseLiabilityPaymentsDueNextTwelveMonths
+   22  USD                   FY,Q1,Q2,Q3           2020-09-03..2025-11-27  LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths
+   22  USD                   FY,Q1,Q2,Q3           2009-12-03..2012-05-31  OtherComprehensiveIncomeDerivativesQualifyingAsHedgesNetOfTaxPeriodIncreaseDecrease
+   21  pure                  FY                    2017-08-31..2025-08-28  EffectiveIncomeTaxRateReconciliationStateAndLocalIncomeTaxes
+   21  pure                  FY                    2016-09-01..2025-08-28  EffectiveIncomeTaxRateReconciliationTaxContingencies
+   21  pure                  FY                    2017-08-31..2025-08-28  EffectiveIncomeTaxRateReconciliationTaxCreditsResearch
+   21  USD                   FY                    2009-09-03..2017-08-31  EquityMethodInvestmentSummarizedFinancialInformationGrossProfitLoss
+   21  USD                   FY                    2009-09-03..2017-08-31  EquityMethodInvestmentSummarizedFinancialInformationNetIncomeLoss
+   21  USD                   FY                    2017-08-31..2025-08-28  IncomeTaxReconciliationTaxCreditsResearch
+   21  USD                   FY,Q1,Q2,Q3           2020-09-03..2024-08-29  ProceedsFromSaleOfOtherAssetsInvestingActivities
+   21  shares                FY,Q1,Q2,Q3           2009-12-03..2012-05-31  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsGrantsInPeriod
+   21  USD                   FY                    2010-09-02..2019-08-29  UnrecognizedTaxBenefitsIncreasesResultingFromAcquisition
+   21  USD                   FY                    2009-09-03..2025-08-28  UnrecognizedTaxBenefitsReductionsResultingFromLapseOfApplicableStatuteOfLimitations
+   20  USD                   FY,Q1,Q2,Q3           2010-09-02..2013-02-28  AssetsHeldForSaleLongLived
+   20  USD                   FY,Q1,Q2,Q3           2011-03-03..2016-12-01  ForeignCurrencyCashFlowHedgeGainLossToBeReclassifiedDuringNext12Months
+   20  USD                   FY,Q1,Q2,Q3           2010-09-02..2014-05-29  IncreaseDecreaseInCustomerAdvances
+   20  USD                   Q1,Q2,Q3              2009-12-03..2012-05-31  OtherComprehensiveIncomeLossNetOfTaxPeriodIncreaseDecrease
+   20  USD                   FY,Q1,Q2,Q3           2010-09-02..2012-08-30  RoyaltyRevenue
+   19  USD                   FY,Q1,Q2,Q3           2018-11-29..2025-08-28  ContractWithCustomerLiabilityRevenueRecognized
+   19  USD                   Q1,Q2,Q3              2019-11-28..2025-11-27  FinanceLeaseLiabilityPaymentsRemainderOfFiscalYear
+   19  USD                   Q1,Q2,Q3              2019-11-28..2025-11-27  LesseeOperatingLeaseLiabilityPaymentsRemainderOfFiscalYear
+   19  USD                   FY,Q1,Q2,Q3           2020-09-03..2025-11-27  LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths
+   19  USD                   FY,Q1,Q2,Q3           2020-09-03..2025-11-27  LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour
+   19  USD                   FY,Q1,Q2,Q3           2020-09-03..2025-11-27  LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree
+   19  USD                   FY,Q1,Q2,Q3           2020-09-03..2025-11-27  LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo
+   19  USD                   FY,Q1,Q2,Q3           2014-02-27..2024-08-29  OtherComprehensiveIncomeLossBeforeReclassificationsBeforeTax
+   19  USD                   FY,Q1,Q2,Q3           2014-02-27..2024-08-29  OtherComprehensiveIncomeLossTax
+   19  USD                   FY,Q1,Q2,Q3           2014-02-27..2024-08-29  ReclassificationFromAccumulatedOtherComprehensiveIncomeCurrentPeriodBeforeTax
+   19  shares                FY,Q1,Q2,Q3           2010-09-02..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber
+   18  USD                   FY,Q1,Q2,Q3           2021-09-02..2025-08-28  ContractWithCustomerLiabilityCurrent
+   18  USD                   FY,Q1,Q2,Q3           2011-09-01..2016-09-01  DerivativeGainLossOnDerivativeNet
+   18  USD                   FY                    2010-09-02..2017-08-31  EquityMethodInvestmentSummarizedFinancialInformationIncomeLossFromContinuingOperationsBeforeExtraordinaryItems
+   18  USD                   FY                    2010-09-02..2017-08-31  EquityMethodInvestmentSummarizedFinancialInformationRevenue
+   18  USD                   FY,Q1,Q2,Q3           2017-08-31..2020-09-03  RedeemableNoncontrollingInterestEquityPreferredCarryingAmount
+   17  USD                   FY,Q3                 2009-09-03..2013-08-29  BusinessCombinationBargainPurchaseGainRecognizedAmount
+   17  USD                   FY                    2010-09-02..2019-08-29  DeferredTaxLiabilitiesUndistributedForeignEarnings
+   17  USD                   FY,Q2,Q3              2021-09-02..2025-08-28  OtherAssetImpairmentCharges
+   17  USD                   FY,Q2,Q3              2015-09-03..2019-08-29  PaymentsToAcquireBusinessesNetOfCashAcquired
+   17  USD                   FY,Q1,Q2,Q3           2008-12-04..2018-11-29  RestructuringCharges
+   16  USD                   FY                    2017-08-31..2025-08-28  DeferredIncomeTaxLiabilitiesNet
+   16  USD                   FY                    2012-08-30..2023-08-31  DeferredTaxAssetsPropertyPlantAndEquipment
+   16  USD                   FY                    2010-09-02..2018-08-30  DeferredTaxLiabilitiesFinancingArrangements
+   16  USD                   FY,Q1,Q2,Q3           2023-08-31..2026-05-28  GovernmentAssistanceLiabilityNoncurrent
+   16  USD                   FY,Q1,Q2,Q3           2017-08-31..2019-11-28  VariableInterestEntityNonconsolidatedCarryingAmountAssets
+   16  USD                   FY,Q1,Q2,Q3           2017-08-31..2019-11-28  VariableInterestEntityNonconsolidatedCarryingAmountLiabilities
+   15  USD                   FY,Q1,Q2,Q3           2015-06-04..2018-11-29  AvailableForSaleSecuritiesContinuousUnrealizedLossPositionTwelveMonthsOrLongerFairValue
+   15  USD                   FY,Q1,Q2,Q3           2011-12-01..2013-05-30  DerivativeInstrumentsGainLossReclassifiedFromAccumulatedOCIIntoIncomeEffectivePortionNet
+   15  USD                   FY,Q3                 2009-09-03..2012-08-30  DisposalGroupNotDiscontinuedOperationGainLossOnDisposal
+   15  USD                   FY,Q1,Q2,Q3           2010-09-02..2014-08-28  PaymentsOfDividendsMinorityInterest
+   15  USD                   FY,Q1,Q2,Q3           2020-09-03..2026-05-28  PaymentsRelatedToTaxWithholdingForShareBasedCompensation
+   15  USD                   FY                    2009-09-03..2016-09-01  ProceedsFromSaleOfEquityMethodInvestments
+   14  USD                   FY,Q1,Q2,Q3           2011-09-01..2013-11-28  AvailableForSaleSecuritiesAmortizedCost
+   14  USD                   FY,Q1,Q2,Q3           2011-09-01..2013-05-30  AvailableForSaleSecuritiesFairValueDisclosure
+   14  USD                   FY,Q1,Q2,Q3           2015-09-03..2025-11-27  DebtInstrumentUnamortizedDiscountPremiumAndDebtIssuanceCostsNet
+   14  USD                   FY                    2010-09-02..2017-08-31  EquityMethodInvestmentSummarizedFinancialInformationCurrentAssets
+   14  USD                   FY                    2010-09-02..2017-08-31  EquityMethodInvestmentSummarizedFinancialInformationCurrentLiabilities
+   14  USD                   FY                    2010-09-02..2017-08-31  EquityMethodInvestmentSummarizedFinancialInformationNoncurrentAssets
+   14  USD                   FY                    2010-09-02..2017-08-31  EquityMethodInvestmentSummarizedFinancialInformationNoncurrentLiabilities
+   14  USD                   FY                    2009-03-05..2025-08-28  GoodwillImpairmentLoss
+   14  USD                   FY,Q1,Q2,Q3           2021-12-02..2025-02-27  HedgedLiabilityFairValueHedgeCumulativeIncreaseDecrease
+   14  USD                   FY                    2010-09-02..2025-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisesInPeriodTotalIntrinsicValue
+   14  USD                   FY                    2010-09-02..2015-09-03  UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued
+   14  USD                   FY                    2010-09-02..2018-08-30  UnrecognizedTaxBenefitsIncreasesResultingFromForeignCurrencyTranslation
+   13  USD                   FY,Q1,Q2,Q3           2009-09-03..2011-09-01  AccumulatedDepreciationDepletionAndAmortizationExpensePropertyPlantAndEquipmentCurrentCharge
+   13  USD                   FY,Q1,Q2,Q3           2010-12-02..2013-08-29  AdjustmentsToAdditionalPaidInCapitalEquityComponentOfConvertibleDebt
+   13  USD                   FY,Q1,Q2,Q3           2022-12-01..2025-08-28  EquitySecuritiesWithoutReadilyDeterminableFairValueImpairmentLossAnnualAmount
+   13  USD                   Q1,Q2,Q3              2021-12-02..2025-11-27  LongTermDebtMaturitiesRepaymentsOfPrincipalRemainderOfFiscalYear
+   13  USD                   FY,Q1,Q2,Q3           2011-09-01..2019-08-29  OperatingLeasesFutureMinimumPaymentsDueCurrent
+   13  USD                   FY,Q1,Q2,Q3           2011-09-01..2019-08-29  OperatingLeasesFutureMinimumPaymentsDueInFiveYears
+   13  USD                   FY,Q1,Q2,Q3           2011-09-01..2019-08-29  OperatingLeasesFutureMinimumPaymentsDueInFourYears
+   13  USD                   FY,Q1,Q2,Q3           2011-09-01..2019-08-29  OperatingLeasesFutureMinimumPaymentsDueInThreeYears
+   13  USD                   FY,Q1,Q2,Q3           2011-09-01..2019-08-29  OperatingLeasesFutureMinimumPaymentsDueInTwoYears
+   13  USD                   FY,Q1,Q2,Q3           2011-09-01..2019-08-29  OperatingLeasesFutureMinimumPaymentsDueThereafter
+   13  USD                   FY,Q1,Q2,Q3           2018-11-29..2020-05-28  TaxCutsAndJobsActOf2017MeasurementPeriodAdjustmentIncomeTaxExpenseBenefit
+   13  USD                   FY                    2012-08-30..2025-08-28  UndistributedEarningsOfForeignSubsidiaries
+   12  USD                   FY                    2013-02-28..2014-08-28  InterestAndDebtExpense
+   12  USD                   FY                    2019-08-29..2025-08-28  NoncurrentAssets
+   12  USD                   FY                    2014-08-28..2025-08-28  OperatingLossCarryforwards
+   12  USD                   FY                    2010-09-02..2015-09-03  OtherAmortizationOfDeferredCharges
+   12  USD                   FY,Q2,Q3              2009-09-03..2012-03-01  PaymentsToAcquireAdditionalInterestInSubsidiaries
+   12  USD                   FY                    2009-09-03..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodTotalFairValue
+   12  USD                   FY                    2014-08-28..2025-08-28  TaxCreditCarryforwardAmount
+   12  USD                   FY,Q1,Q2,Q3           2014-08-28..2016-06-02  TreasuryStockValue
+   11  USD                   FY,Q1,Q2,Q3           2012-05-31..2014-12-04  AvailableForSaleSecuritiesDebtMaturitiesWithinOneYearFairValue
+   11  USD                   FY,Q1,Q2,Q3           2012-05-31..2014-12-04  AvailableForSaleSecuritiesDebtMaturitiesWithoutSingleMaturityDateFairValue
+   11  USD                   FY,Q1,Q2,Q3           2012-05-31..2014-12-04  AvailableForSaleSecuritiesDebtSecurities
+   11  pure                  FY                    2012-08-30..2025-08-28  DefinedContributionPlanEmployerMatchingContributionPercent
+   11  USD                   FY,Q3                 2020-05-28..2022-09-01  EquitySecuritiesWithoutReadilyDeterminableFairValueUpwardPriceAdjustmentAnnualAmount
+   11  USD                   FY,Q1,Q2,Q3           2023-08-31..2025-05-29  GrantsReceivableCurrent
+   11  USD                   FY                    2016-09-01..2018-08-30  Revenues
+   11  shares                FY,Q1,Q2,Q3           2010-09-02..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingNumber
+   11  USD                   FY,Q3                 2010-09-02..2016-09-01  ValuationAllowanceDeferredTaxAssetChangeInAmount
+   10  USD                   FY,Q1,Q2,Q3           2011-09-01..2013-05-30  AvailableForSaleSecuritiesGrossUnrealizedLosses1
+   10  USD                   FY,Q1,Q2,Q3           2011-09-01..2013-05-30  AvailableforsaleSecuritiesGrossUnrealizedGain
+   10  USD                   FY                    2014-08-28..2019-08-29  DebtInstrumentCarryingAmount
+   10  USD                   FY                    2010-09-02..2025-08-28  DeferredTaxAssetsInventory
+   10  USD                   FY                    2013-08-29..2018-08-30  DeferredTaxAssetsTaxDeferredExpenseReservesAndAccrualsAccruedLiabilities
+   10  pure                  FY                    2013-08-29..2025-08-28  DefinedContributionPlanMaximumAnnualContributionsPerEmployeePercent
+   10  USD                   FY,Q2,Q3              2009-09-03..2012-08-30  FairValueOfAssetsAcquired
+   10  USD                   FY,Q1                 2011-09-01..2019-08-29  OperatingLeasesFutureMinimumPaymentsDue
+   10  USD                   FY,Q1,Q2,Q3           2012-08-30..2014-08-28  RestrictedCashAndCashEquivalentsAtCarryingValue
+    9  USD                   FY,Q1,Q2,Q3           2014-08-28..2022-12-01  DebtInstrumentUnamortizedDiscount
+    9  pure                  FY                    2016-09-01..2020-09-03  EffectiveIncomeTaxRateReconciliationChangeInEnactedTaxRate
+    9  USD                   FY                    2012-08-30..2016-09-01  EquityMethodInvestmentRealizedGainLossOnDisposal
+    9  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-08-28  FinanceLeaseLiabilityPaymentsDueAfterYearFive
+    9  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-08-28  FinanceLeaseLiabilityPaymentsDueYearFive
+    9  USD                   FY                    2012-08-30..2016-09-01  GainOrLossOnSaleOfPreviouslyUnissuedStockByEquityInvestee
+    9  USD                   FY,Q1,Q2,Q3           2024-08-29..2026-05-28  GovernmentAssistanceAmountCumulativeCurrent
+    9  USD                   FY                    2016-09-01..2020-09-03  IncomeTaxReconciliationChangeInEnactedTaxRate
+    9  USD                   FY                    2013-08-29..2017-08-31  IncomeTaxReconciliationDispositionOfAssets
+    9  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-08-28  LesseeOperatingLeaseLiabilityPaymentsDueAfterYearFive
+    9  USD                   FY,Q1,Q2,Q3           2019-11-28..2025-08-28  LesseeOperatingLeaseLiabilityPaymentsDueYearFive
+    9  USD                   FY,Q1,Q2,Q3           2009-09-03..2018-08-30  ProceedsFromIssuanceOfCommonStock
+    9  USD                   FY,Q1,Q2,Q3           2015-06-04..2017-06-01  PropertyPlantAndEquipmentAdditions
+    9  USD                   FY,Q1,Q2,Q3           2018-08-30..2026-05-28  RepaymentsOfDebt
+    8  USD                   FY,Q1,Q2,Q3           2015-09-03..2019-08-29  CapitalLeaseObligations
+    8  USD                   FY,Q1,Q2,Q3           2015-09-03..2019-08-29  CapitalLeasesFutureMinimumPaymentsDueInFiveYears
+    8  USD                   FY,Q1,Q2,Q3           2015-09-03..2019-08-29  CapitalLeasesFutureMinimumPaymentsDueInFourYears
+    8  USD                   FY,Q1,Q2,Q3           2015-09-03..2019-08-29  CapitalLeasesFutureMinimumPaymentsDueInThreeYears
+    8  USD                   FY,Q1,Q2,Q3           2015-09-03..2019-08-29  CapitalLeasesFutureMinimumPaymentsDueInTwoYears
+    8  USD                   FY,Q1,Q2,Q3           2015-09-03..2019-08-29  CapitalLeasesFutureMinimumPaymentsDueThereafter
+    8  USD                   FY,Q1,Q2,Q3           2015-09-03..2019-08-29  CapitalLeasesFutureMinimumPaymentsInterestIncludedInPayments
+    8  USD                   FY                    2015-09-03..2019-08-29  CapitalLeasesLesseeBalanceSheetAssetsByMajorClassAccumulatedDeprecation
+    8  USD                   FY,Q3                 2009-09-03..2012-08-30  CashAcquiredFromAcquisition
+    8  USD                   Q1,Q2,Q3              2011-06-02..2014-05-29  DebtConversionConvertedInstrumentAmount1
+    8  USD                   FY,Q1,Q2,Q3           2010-09-02..2011-09-01  DerivativeAssetDesignatedAsHedgingInstrumentFairValue
+    8  USD                   FY,Q1,Q2,Q3           2010-09-02..2011-09-01  DerivativeAssetNotDesignatedAsHedgingInstrumentFairValue
+    8  USD                   FY,Q1,Q2,Q3           2010-09-02..2011-09-01  DerivativeLiabilityDesignatedAsHedgingInstrumentFairValue
+    8  USD                   FY,Q1,Q2,Q3           2010-09-02..2011-09-01  DerivativeLiabilityNotDesignatedAsHedgingInstrumentFairValue
+    8  USD                   FY,Q1,Q2              2017-11-30..2020-09-03  ExtinguishmentOfDebtAmount
+    8  USD                   Q1,Q2,Q3              2008-12-04..2011-06-02  IncreaseDecreaseInCustomerDeposits
+    8  USD                   Q2,Q3                 2023-03-02..2025-05-29  IncreaseDecreaseInOtherCurrentAssets
+    8  USD                   FY,Q1,Q2,Q3           2010-09-02..2011-09-01  NotionalAmountOfCashFlowHedgeInstruments
+    8  USD                   FY,Q1,Q2,Q3           2010-09-02..2011-09-01  NotionalAmountOfOtherDerivativesNotDesignatedAsHedgingInstruments
+    8  USD                   FY,Q1,Q2,Q3           2010-09-02..2011-09-01  RestrictedCashAndCashEquivalentsNoncurrent
+    8  USD/shares            FY                    2010-09-02..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValue
+    8  USD/shares            FY                    2010-09-02..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingWeightedAverageExercisePrice
+    8  USD                   FY,Q3                 2009-09-03..2017-08-31  StockIssuedDuringPeriodValueAcquisitions
+    8  USD                   FY,Q3                 2011-06-02..2021-09-02  StockIssuedDuringPeriodValueConversionOfConvertibleSecurities
+    8  shares                FY,Q1,Q2,Q3           2014-08-28..2016-06-02  TreasuryStockShares
+    7  USD                   FY,Q1,Q2,Q3           2012-05-31..2013-11-28  AvailableForSaleSecuritiesDebtMaturitiesAmortizedCost
+    7  USD                   FY,Q1,Q2,Q3           2012-05-31..2013-11-28  AvailableForSaleSecuritiesDebtMaturitiesWithinOneYearAmortizedCost
+    7  USD                   FY,Q1,Q2,Q3           2012-05-31..2013-11-28  AvailableForSaleSecuritiesDebtMaturitiesWithoutSingleMaturityDateAmortizedCost
+    7  USD                   FY,Q2,Q3              2012-03-01..2012-08-30  AvailableForSaleSecuritiesGrossRealizedGains
+    7  USD                   FY,Q1,Q2,Q3           2019-02-28..2020-09-03  DebtSecuritiesAvailableForSaleContinuousUnrealizedLossPosition12MonthsOrLonger
+    7  USD                   FY,Q1,Q2,Q3           2010-12-02..2012-05-31  FutureAmortizationExpenseYearFive
+    7  USD                   FY,Q1,Q2,Q3           2010-12-02..2012-05-31  FutureAmortizationExpenseYearFour
+    7  USD                   FY,Q1,Q2,Q3           2010-12-02..2012-05-31  FutureAmortizationExpenseYearOne
+    7  USD                   FY,Q1,Q2,Q3           2010-12-02..2012-05-31  FutureAmortizationExpenseYearThree
+    7  USD                   FY,Q1,Q2,Q3           2010-12-02..2012-05-31  FutureAmortizationExpenseYearTwo
+    7  USD                   FY,Q3                 2010-09-02..2012-08-30  GainLossOnContractTermination
+    7  USD                   FY,Q3                 2021-09-02..2024-05-30  LitigationSettlementExpense
+    7  USD                   FY,Q2,Q3              2020-02-27..2020-09-03  PaymentsForProceedsFromTenantAllowance
+    7  USD                   FY,Q2,Q3              2023-08-31..2025-08-28  ProceedsFromRepaymentsOfDebt
+    7  pure                  FY,Q1,Q2,Q3           2009-08-31..2011-09-01  SaleOfStockPercentageOfOwnershipAfterTransaction
+    7  USD                   FY,Q1,Q2,Q3           2009-09-03..2018-08-30  StockIssuedDuringPeriodValueNewIssues
+    7  USD                   FY                    2012-08-30..2016-09-01  UnrecognizedTaxBenefitsDecreasesResultingFromForeignCurrencyTranslation
+    6  USD                   Q1,Q2,Q3              2025-08-28..2026-05-28  AccruedIncomeTaxesNoncurrent
+    6  USD                   FY,Q1,Q2              2010-09-02..2013-02-28  AccumulatedOtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax
+    6  USD                   FY,Q1,Q2              2010-09-02..2013-02-28  AccumulatedOtherComprehensiveIncomeLossCumulativeChangesInNetGainLossFromCashFlowHedgesEffectNetOfTax
+    6  USD                   FY,Q1,Q2              2010-09-02..2013-02-28  AccumulatedOtherComprehensiveIncomeLossDefinedBenefitPensionAndOtherPostretirementPlansNetOfTax
+    6  USD                   FY,Q1,Q2              2010-09-02..2013-02-28  AccumulatedOtherComprehensiveIncomeLossForeignCurrencyTranslationAdjustmentNetOfTax
+    6  USD                   FY                    2010-09-02..2013-08-29  DeferredTaxAssetsDeferredIncome
+    6  USD                   FY                    2010-09-02..2013-08-29  DeferredTaxLiabilities
+    6  USD                   FY                    2022-09-01..2025-08-28  EffectiveIncomeTaxRateReconciliationCrossBorderTaxEffectAmount
+    6  pure                  FY                    2022-09-01..2025-08-28  EffectiveIncomeTaxRateReconciliationCrossBorderTaxEffectPercent
+    6  USD                   FY                    2017-08-31..2020-09-03  EffectiveIncomeTaxRateReconciliationTaxCutsAndJobsActOf2017TransitionTaxOnAccumulatedForeignEarningsAmount
+    6  pure                  FY                    2017-08-31..2020-09-03  EffectiveIncomeTaxRateReconciliationTaxCutsAndJobsActOf2017TransitionTaxOnAccumulatedForeignEarningsPercent
+    6  USD                   Q1,Q2,Q3              2012-11-29..2014-05-29  GainsLossesOnRestructuringOfDebt
+    6  USD                   FY                    2022-09-01..2025-08-28  LitigationSettlementLoss
+    6  USD                   FY                    2020-09-03..2025-08-28  LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive
+    6  USD                   FY                    2020-09-03..2025-08-28  LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive
+    6  USD                   Q1,Q2,Q3              2011-12-01..2013-05-30  MinorityInterestIncreaseFromStockIssuance
+    6  USD                   FY                    2010-09-02..2013-08-29  ProceedsFromEquityMethodInvestmentDividendsOrDistributionsReturnOfCapital
+    6  USD                   FY,Q1,Q2,Q3           2015-09-03..2016-12-01  RetainedEarningsUndistributedEarningsFromEquityMethodInvestees
+    6  USD                   FY,Q1,Q2,Q3           2020-05-28..2026-05-28  RevenueRemainingPerformanceObligation
+    6  pure                  FY,Q2,Q3              2010-03-04..2011-09-01  SaleOfStockPercentageOfOwnershipBeforeTransaction
+    6  shares                FY,Q1                 2011-09-01..2024-11-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriod
+    6  USD/shares            FY,Q1,Q2,Q3           2017-10-31..2018-08-30  SharesIssuedPricePerShare
+    6  shares                FY,Q1,Q2,Q3           2017-10-31..2018-08-30  StockIssuedDuringPeriodSharesNewIssues
+    6  USD                   FY                    2011-09-01..2023-08-31  UnrecordedUnconditionalPurchaseObligationBalanceSheetAmount
+    6  shares                Q1,Q2                 2011-12-01..2013-02-28  WeightedAverageNumberOfShareOutstandingBasicAndDiluted
+    5  USD                   Q2                    2010-03-04..2011-03-03  AdjustmentsToAdditionalPaidInCapitalReallocationOfMinorityInterest
+    5  USD                   FY                    2015-09-03..2019-08-29  CapitalLeasesFutureMinimumPaymentsDueCurrent
+    5  USD                   FY,Q1,Q2,Q3           2018-08-30..2018-08-31  CumulativeEffectOfNewAccountingPrincipleInPeriodOfAdoption
+    5  USD                   FY,Q2,Q3              2023-03-02..2023-08-31  RestructuringAndRelatedCostIncurredCost
+    5  USD                   FY,Q1                 2008-12-04..2011-09-01  RestructuringCosts
+    5  USD                   FY,Q2,Q3              2012-02-24..2012-02-29  SignificantAcquisitionsAndDisposalsAcquisitionCostsOrSaleProceeds
+    4  USD                   Q1,Q2                 2011-09-01..2012-03-01  AssetsFairValueDisclosure
+    4  USD                   Q1,Q2                 2011-09-01..2012-03-01  AssetsHeldForSaleLongLivedFairValueDisclosure
+    4  USD                   FY,Q1,Q2,Q3           2010-12-02..2011-09-01  DeferredRevenue
+    4  USD                   FY                    2010-09-02..2012-08-30  DeferredTaxLiabilitiesDeferredExpenseOtherCapitalizedCosts
+    4  USD                   FY                    2023-08-31..2025-08-28  DeferredTaxLiabilitiesLeasingArrangements
+    4  USD                   Q2,Q3                 2012-03-01..2013-05-30  DerivativeInstrumentsGainLossRecognizedInIncomeNet
+    4  USD                   Q1,Q2                 2012-11-29..2014-02-27  EffectOfExchangeRateOnCashAndCashEquivalents
+    4  USD                   FY,Q1,Q2,Q3           2010-12-02..2011-09-01  EmployeeServiceShareBasedCompensationUnrecognizedCompensationCostsOnNonvestedAwards
+    4  USD                   FY,Q1,Q2,Q3           2010-12-02..2011-09-01  EquityMethodInvestmentDifferenceBetweenCarryingAmountAndUnderlyingEquity
+    4  USD                   FY,Q1,Q2,Q3           2010-12-02..2011-09-01  EquityMethodInvestmentQuotedMarketValue
+    4  USD                   FY,Q2                 2019-02-28..2020-09-03  FairValueAssetsMeasuredOnRecurringBasisChangeInUnrealizedGainLoss
+    4  USD                   FY                    2017-08-31..2019-08-29  GainLossOnSalesOfAssetsAndAssetImpairmentCharges
+    4  USD                   Q2                    2012-03-01..2013-02-28  ImpairmentOfLongLivedAssetsToBeDisposedOf
+    4  USD                   FY,Q3                 2018-08-30..2019-08-29  IndefiniteLivedIntangibleAssetsExcludingGoodwill
+    4  USD                   Q3                    2022-06-02..2023-06-01  LossContingencyLossInPeriod
+    4  USD                   Q2                    2011-03-03..2013-02-28  PaymentsToAcquireNotesReceivable
+    4  USD                   FY,Q2,Q3              2023-03-02..2023-08-31  ProceedsFromInsuranceSettlementOperatingActivities
+    4  USD                   Q2,Q3                 2014-02-27..2015-06-04  ProceedsFromIssuanceOfSharesUnderIncentiveAndShareBasedCompensationPlansIncludingStockOptions
+    4  USD                   Q1,Q2                 2010-12-02..2012-03-01  ProceedsFromPaymentsToMinorityShareholders
+    4  pure                  FY,Q2,Q3              2023-12-31..2023-12-31  RestructuringAndRelatedCostNumberOfPositionsEliminatedPeriodPercent
+    4  USD                   FY,Q1                 2013-08-29..2023-08-31  RestructuringReserve
+    4  USD                   Q2,Q3                 2018-08-30..2019-05-30  RestructuringReserveCurrent
+    4  shares                FY                    2011-09-01..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsForfeitedInPeriod
+    4  shares                FY                    2011-09-01..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriod
+    4  USD/shares            FY                    2011-09-01..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodWeightedAverageGrantDateFairValue
+    4  shares                FY                    2011-09-01..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisableNumber
+    4  USD/shares            FY                    2011-09-01..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisableWeightedAverageExercisePrice
+    4  shares                FY                    2011-09-01..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsForfeituresAndExpirationsInPeriod
+    4  USD/shares            FY                    2011-09-01..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsForfeituresAndExpirationsInPeriodWeightedAverageExercisePrice
+    4  USD                   FY                    2011-09-01..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingIntrinsicValue
+    4  USD                   FY,Q1,Q2,Q3           2014-08-28..2015-06-04  SignificantChangeInUnrecognizedTaxBenefitsIsReasonablyPossibleEstimatedRangeOfChangeLowerBound
+    4  USD                   FY,Q1,Q2,Q3           2014-08-28..2015-06-04  SignificantChangeInUnrecognizedTaxBenefitsIsReasonablyPossibleEstimatedRangeOfChangeUpperBound
+    4  shares                Q2,Q3                 2014-02-27..2015-06-04  StockRepurchasedAndRetiredDuringPeriodShares
+    4  USD                   Q3                    2016-06-02..2016-06-02  TaxAdjustmentsSettlementsAndUnusualProvisions
+    3  USD                   Q1,Q2,Q3              2015-12-03..2016-06-02  CapitalLeasesFutureMinimumPaymentsRemainderOfFiscalYear
+    3  USD                   FY                    2011-09-01..2013-08-29  CashAcquiredInExcessOfPaymentsToAcquireBusiness
+    3  USD                   FY                    2009-09-03..2010-09-02  ConsolidationLessThanWhollyOwnedSubsidiaryParentOwnershipInterestChangesPurchaseOfInterestByParent
+    3  USD                   Q1,Q2,Q3              2010-11-03..2010-11-03  DebtInstrumentFaceAmount
+    3  USD                   FY                    2020-09-03..2022-09-01  EffectiveIncomeTaxRateReconciliationFdiiAmount
+    3  pure                  FY                    2020-09-03..2022-09-01  EffectiveIncomeTaxRateReconciliationFdiiPercent
+    3  pure                  FY                    2016-09-01..2018-08-30  EffectiveIncomeTaxRateReconciliationTaxCredits
+    3  Years                 Q1,Q2,Q3              2011-12-01..2012-05-31  EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognizedPeriodForRecognition
+    3  USD                   FY                    2009-09-03..2011-09-01  EquityMethodInvestmentSummarizedFinancialInformationNetSalesOrGrossRevenue
+    3  USD                   FY                    2009-09-03..2011-09-01  GainLossOnSaleOfPropertyPlantEquipment
+    3  USD                   FY                    2013-08-29..2013-08-29  NoncontrollingInterestIncreaseFromBusinessCombination
+    3  USD                   FY                    2014-08-28..2016-09-01  NotesIssued1
+    3  USD                   FY                    2011-09-01..2012-08-30  OperatingLeasesIncomeStatementSubleaseRevenue
+    3  USD                   FY,Q2,Q3              2012-03-01..2012-08-30  OtherComprehensiveIncomeLossReclassificationAdjustmentForSaleOfSecuritiesIncludedInNetIncomeBeforeTax
+    3  USD                   FY                    2023-08-31..2025-08-28  OtherNonoperatingExpense
+    3  USD                   FY                    2010-09-02..2012-08-30  OtherSignificantNoncashTransactionValueOfConsiderationGiven1
+    3  USD                   FY,Q1,Q2              2022-12-01..2023-08-31  ProceedsFromDebtNetOfIssuanceCosts
+    3  USD                   FY                    2015-09-03..2017-08-31  ProceedsFromStockOptionsExercised
+    3  USD                   FY,Q2,Q3              2010-03-04..2010-09-02  SaleOfStockConsiderationReceivedPerTransaction
+    3  USD                   FY                    2009-09-03..2011-09-01  SegmentReportingInformationDepreciationDepletionAndAmortizationExpense
+    3  USD/shares            FY                    2012-08-30..2014-08-28  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsForfeituresWeightedAverageGrantDateFairValue
+    3  USD/shares            FY                    2012-08-30..2014-08-28  ShareBasedCompensationArrangementsByShareBasedPaymentAwardOptionsExercisesInPeriodWeightedAverageExercisePrice
+    3  USD/shares            FY                    2012-08-30..2014-08-28  ShareBasedCompensationArrangementsByShareBasedPaymentAwardOptionsGrantsInPeriodWeightedAverageExercisePrice
+    3  USD                   FY                    2012-08-30..2014-08-28  SharebasedCompensationArrangementBySharebasedPaymentAwardOptionsExercisableIntrinsicValue1
+    3  shares                FY                    2012-08-30..2014-08-28  StockIssuedDuringPeriodSharesStockOptionsExercised
+    3  USD                   FY,Q2,Q3              2015-03-05..2018-05-31  StockRepurchaseProgramAuthorizedAmount1
+    3  USD                   FY                    2021-09-02..2023-08-31  UnrecordedUnconditionalPurchaseObligationBalanceOnFirstAnniversary
+    2  USD                   FY,Q1                 2013-07-31..2013-07-31  BusinessCombinationAcquisitionOfLessThan100PercentNoncontrollingInterestFairValue
+    2  USD                   FY                    2013-08-29..2013-08-29  BusinessCombinationProFormaInformationEarningsOrLossOfAcquireeSinceAcquisitionDateActual
+    2  USD                   FY                    2013-08-29..2013-08-29  BusinessCombinationProFormaInformationRevenueOfAcquireeSinceAcquisitionDateActual
+    2  USD                   FY,Q1                 2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedNet
+    2  USD                   Q1,Q2                 2022-11-03..2022-11-03  DeferredFinanceCostsGross
+    2  USD                   FY                    2010-09-02..2011-09-01  DeferredTaxAssetsEquityMethodInvestments
+    2  USD                   FY                    2010-09-02..2011-09-01  DeferredTaxAssetsNetCurrent
+    2  USD                   FY                    2010-09-02..2011-09-01  DeferredTaxLiabilitiesNoncurrent
+    2  USD                   Q3                    2010-06-03..2010-06-03  DeferredTaxesBusinessCombinationValuationAllowanceAvailableToReduceIncomeTaxExpense
+    2  USD                   FY                    2024-08-29..2025-08-28  GovernmentAssistanceAmountCumulativeNoncurrent
+    2  USD                   FY                    2024-08-29..2025-08-28  GovernmentAssistanceOperatingExpense
+    2  USD                   FY,Q3                 2010-05-07..2010-05-07  GuaranteeObligationsMaximumExposure
+    2  USD                   FY                    2010-09-02..2011-09-01  IncomeTaxExaminationPenaltiesAndInterestAccrued
+    2  USD                   Q3                    2011-06-02..2011-06-02  IncomeTaxReconciliationDispositionOfBusiness
+    2  USD                   FY                    2010-09-02..2011-09-01  OperatingLeasesIncomeStatementLeaseRevenue
+    2  USD                   FY                    2012-08-30..2012-08-30  OtherComprehensiveIncomeLossReclassificationAdjustmentFromAOCIForSaleOfSecuritiesBeforeTax
+    2  USD                   FY                    2010-09-02..2011-09-01  PropertySubjectToOrAvailableForOperatingLeaseNet
+    2  USD                   FY,Q3                 2010-05-07..2010-05-07  RestrictedCashAndCashEquivalents
+    2  USD                   Q2,Q3                 2023-03-02..2023-06-01  RestructuringAndRelatedCostExpectedCost1
+    2  USD                   Q1                    2009-12-03..2010-12-02  RevenueFromGrants
+    2  shares                FY                    2011-09-01..2012-08-30  ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeNumberOfExercisableOptions
+    2  shares                FY                    2011-09-01..2012-08-30  ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeNumberOfOutstandingOptions
+    2  shares                Q2                    2020-01-31..2021-01-31  StockIssuedDuringPeriodSharesEmployeeStockPurchasePlans
+    2  USD                   Q2,Q3                 2015-03-05..2015-06-04  StockRepurchaseProgramRemainingAuthorizedRepurchaseAmount1
+    2  shares                Q2,Q3                 2015-03-05..2015-03-05  TreasuryStockSharesAcquired
+    1  USD                   Q1                    2018-11-29..2018-11-29  AssetImpairmentCharges
+    1  USD                   FY                    2013-08-29..2013-08-29  BusinessAcquisitionCostOfAcquiredEntityTransactionCosts
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedCashAndEquivalents
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedCurrentAssetsOther
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedCurrentAssetsReceivables
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedCurrentLiabilitiesLongTermDebt
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedDeferredTaxAssetsNoncurrent
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedIntangibleAssetsOtherThanGoodwill
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedInventory
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedNoncurrentLiabilitiesLongTermDebt
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedNoncurrentLiabilitiesOther
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedOtherNoncurrentAssets
+    1  USD                   FY                    2013-07-31..2013-07-31  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedPropertyPlantAndEquipment
+    1  USD                   FY                    2019-08-29..2019-08-29  CapitalLeasesBalanceSheetAssetsByMajorClassNet
+    1  USD                   Q1                    2018-11-29..2018-11-29  ContractWithCustomerLiabilityCumulativeCatchUpAdjustmentToRevenueChangeInEstimateOfTransactionPrice
+    1  USD                   Q3                    2012-04-06..2012-04-06  CustomerAdvancesAndDeposits
+    1  USD                   Q3                    2011-06-02..2011-06-02  DebtInstrumentConvertibleConversionPrice
+    1  integer               Q3                    2011-06-02..2011-06-02  DebtInstrumentConvertibleConversionRatio
+    1  USD                   Q3                    2011-06-02..2011-06-02  DisposalGroupIncludingDiscontinuedOperationInventory
+    1  USD                   Q3                    2011-06-02..2011-06-02  DisposalGroupIncludingDiscontinuedOperationOtherNoncurrentAssets
+    1  USD                   Q3                    2011-06-02..2011-06-02  DisposalGroupIncludingDiscontinuedOperationOtherNoncurrentLiabilities
+    1  USD                   Q2                    2021-03-04..2021-03-04  DisposalGroupIncludingDiscontinuedOperationPropertyPlantAndEquipmentCurrent
+    1  USD                   Q3                    2011-06-02..2011-06-02  DisposalGroupIncludingDiscontinuedOperationPropertyPlantAndEquipmentNet
+    1  USD                   FY                    2011-09-01..2011-09-01  EntityWideDisclosureOnGeographicAreasRevenueFromExternalCustomersAttributedToForeignCountries
+    1  USD                   Q1                    2011-03-03..2011-03-03  EquityMethodInvestmentDividendsOrDistributions
+    1  USD                   FY                    2012-07-31..2012-07-31  EscrowDeposit
+    1  USD                   FY                    2025-08-28..2025-08-28  FiniteLivedIntangibleAssetsAmortizationExpenseAfterYearFive
+    1  USD                   FY                    2023-06-01..2023-06-01  GoodwillAcquiredDuringPeriod
+    1  USD                   FY                    2023-08-31..2023-08-31  GovernmentAssistanceAmount
+    1  USD                   FY                    2025-08-28..2025-08-28  GovernmentAssistanceAssetDecreaseNoncurrent
+    1  USD                   FY                    2023-08-31..2023-08-31  GrantsReceivableNoncurrent
+    1  USD                   FY                    2011-09-01..2011-09-01  InvestmentsInAffiliatesSubsidiariesAssociatesAndJointVenturesFairValueDisclosure
+    1  pure                  Q1                    2010-12-02..2010-12-02  MinorityInterestOwnershipPercentageByNoncontrollingOwners
+    1  pure                  Q1                    2010-12-02..2010-12-02  MinorityInterestOwnershipPercentageByParent
+    1  USD                   FY                    2009-05-31..2009-05-31  OperatingLeasesFutureMinimumPaymentsReceivable
+    1  USD                   Q1                    2013-11-28..2013-11-28  OtherComprehensiveIncomeLossBeforeReclassificationsNetOfTax
+    1  USD                   Q3                    2012-03-01..2012-03-01  OtherComprehensiveIncomeReclassificationAdjustmentForSaleOfSecuritiesIncludedInNetIncomeBeforeTax
+    1  USD                   FY                    2020-08-31..2020-08-31  PaymentsForRepurchaseOfRedeemableNoncontrollingInterest
+    1  USD                   FY                    2023-08-31..2023-08-31  PaymentsForRestructuring
+    1  USD                   FY                    2013-07-31..2013-07-31  PaymentsToAcquireBusinessesGross
+    1  shares                Q1                    2009-08-31..2009-08-31  SaleOfStockNumberOfSharesIssuedInTransaction
+    1  decimal               FY                    2011-09-01..2011-09-01  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisableWeightedAverageRemainingContractualTerm
+    1  shares                FY                    2011-09-01..2011-09-01  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisesInPeriod
+    1  decimal               FY                    2011-09-01..2011-09-01  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingWeightedAverageRemainingContractualTerm
+    1  USD                   FY                    2011-09-01..2011-09-01  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsVestedAndExpectedToVestExercisableAggregateIntrinsicValue
+    1  USD                   FY                    2011-09-01..2011-09-01  ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeExercisableOptionsWeightedAverageExercisePrice
+    1  USD                   FY                    2011-09-01..2011-09-01  ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeOutstandingOptionsWeightedAverageExercisePriceBeginningBalance
+    1  decimal               FY                    2011-09-01..2011-09-01  ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeOutstandingOptionsWeightedAverageRemainingContractualTerm
+    1  USD/shares            FY                    2012-08-30..2012-08-30  SharebasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeExercisableOptionsWeightedAverageExercisePrice1
+    1  USD/shares            FY                    2012-08-30..2012-08-30  SharebasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeOutstandingOptionsWeightedAverageExercisePriceBeginningBalance1
+    1  shares                FY                    2018-08-30..2018-08-30  StockIssuedDuringPeriodSharesConversionOfConvertibleSecurities
+    1  shares                FY                    2018-08-30..2018-08-30  StockIssuedDuringPeriodSharesTreasuryStockReissued
+    1  USD                   FY                    2018-08-30..2018-08-30  TaxCutsAndJobsActOf2017IncompleteAccountingTransitionTaxForAccumulatedForeignEarningsProvisionalIncomeTaxExpense
+    1  USD                   FY                    2023-08-31..2023-08-31  UnrecordedUnconditionalPurchaseObligationBalanceOnFifthAnniversary
+    1  USD                   FY                    2023-08-31..2023-08-31  UnrecordedUnconditionalPurchaseObligationBalanceOnFourthAnniversary
+    1  USD                   FY                    2023-08-31..2023-08-31  UnrecordedUnconditionalPurchaseObligationBalanceOnSecondAnniversary
+    1  USD                   FY                    2023-08-31..2023-08-31  UnrecordedUnconditionalPurchaseObligationBalanceOnThirdAnniversary
+    1  USD                   FY                    2023-08-31..2023-08-31  UnrecordedUnconditionalPurchaseObligationDueAfterFiveYears
+
+# --- candidates matching financials keywords ---
+#   314  NetIncomeLoss  (USD; FY,Q1,Q2,Q3)
+#   287  EarningsPerShareBasic  (USD/shares; FY,Q1,Q2,Q3)
+#   287  EarningsPerShareDiluted  (USD/shares; FY,Q1,Q2,Q3)
+#   287  GrossProfit  (USD; FY,Q1,Q2,Q3)
+#   287  OperatingIncomeLoss  (USD; FY,Q1,Q2,Q3)
+#   207  CostOfGoodsAndServicesSold  (USD; FY,Q1,Q2,Q3)
+#   207  IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments  (USD; FY,Q1,Q2,Q3)
+#   207  IncomeTaxExpenseBenefit  (USD; FY,Q1,Q2,Q3)
+#   207  OtherNonoperatingIncomeExpense  (USD; FY,Q1,Q2,Q3)
+#   207  ResearchAndDevelopmentExpense  (USD; FY,Q1,Q2,Q3)
+#   207  SellingGeneralAndAdministrativeExpense  (USD; FY,Q1,Q2,Q3)
+#   207  WeightedAverageNumberOfDilutedSharesOutstanding  (shares; FY,Q1,Q2,Q3)
+#   207  WeightedAverageNumberOfSharesOutstandingBasic  (shares; FY,Q1,Q2,Q3)
+#   196  StockholdersEquity  (USD; FY,Q1,Q2,Q3)
+#   192  OtherOperatingIncomeExpenseNet  (USD; FY,Q1,Q2,Q3)
+#   184  CashAndCashEquivalentsAtCarryingValue  (USD; FY,Q1,Q2,Q3)
+#   182  OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax  (USD; FY,Q1,Q2,Q3)
+#   181  InterestExpense  (USD; FY,Q1,Q2,Q3)
+#   177  ShareBasedCompensation  (USD; FY,Q1,Q2,Q3)
+#   173  AntidilutiveSecuritiesExcludedFromComputationOfEarningsPerShareAmount  (shares; FY,Q1,Q2,Q3)
+#   171  StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest  (USD; FY,Q1,Q2,Q3)
+#   166  WeightedAverageNumberDilutedSharesOutstandingAdjustment  (shares; FY,Q1,Q2,Q3)
+#   160  NetIncomeLossAttributableToParentDiluted  (USD; FY,Q1,Q2,Q3)
+#   159  SalesRevenueNet  (USD; FY,Q1,Q2,Q3)
+#   148  NetIncomeLossAttributableToNoncontrollingInterest  (USD; FY,Q1,Q2,Q3)
+#   146  ComprehensiveIncomeNetOfTaxIncludingPortionAttributableToNoncontrollingInterest  (USD; FY,Q1,Q2,Q3)
+#   143  ComprehensiveIncomeNetOfTaxAttributableToNoncontrollingInterest  (USD; FY,Q1,Q2,Q3)
+#   143  PaymentsToAcquirePropertyPlantAndEquipment  (USD; FY,Q1,Q2,Q3)
+#   139  AdjustmentsToAdditionalPaidInCapitalSharebasedCompensationRequisiteServicePeriodRecognitionValue  (USD; FY,Q1,Q2,Q3)
+#   139  StockIssuedDuringPeriodValueShareBasedCompensation  (USD; FY,Q1,Q2,Q3)
+#   137  GainsLossesOnExtinguishmentOfDebt  (USD; FY,Q1,Q2,Q3)
+#   133  ProceedsFromIssuanceOfLongTermDebt  (USD; FY,Q1,Q2,Q3)
+#   132  InventoryNet  (USD; FY,Q1,Q2,Q3)
+#   132  OtherAssetsCurrent  (USD; FY,Q1,Q2,Q3)
+#   132  OtherLiabilitiesNoncurrent  (USD; FY,Q1,Q2,Q3)
+#   128  AccountsPayableAndAccruedLiabilitiesCurrent  (USD; FY,Q1,Q2,Q3)
+#   128  Assets  (USD; FY,Q1,Q2,Q3)
+#   128  AssetsCurrent  (USD; FY,Q1,Q2,Q3)
+#   128  Liabilities  (USD; FY,Q1,Q2,Q3)
+#   128  LiabilitiesAndStockholdersEquity  (USD; FY,Q1,Q2,Q3)
+#   128  LiabilitiesCurrent  (USD; FY,Q1,Q2,Q3)
+#   128  OtherAssetsNoncurrent  (USD; FY,Q1,Q2,Q3)
+#   126  AccountsReceivableNetCurrent  (USD; FY,Q1,Q2,Q3)
+#   126  EmployeeRelatedLiabilitiesCurrent  (USD; FY,Q1,Q2,Q3)
+#   126  IncomeTaxesReceivable  (USD; FY,Q1,Q2,Q3)
+#   126  InventoryFinishedGoodsNetOfReserves  (USD; FY,Q1,Q2,Q3)
+#   126  InventoryRawMaterialsAndSuppliesNetOfReserves  (USD; FY,Q1,Q2,Q3)
+#   126  InventoryWorkInProcessNetOfReserves  (USD; FY,Q1,Q2,Q3)
+#   125  IncomeTaxHolidayAggregateDollarAmount  (USD; FY,Q1,Q2,Q3)
+#   125  IncomeTaxHolidayIncomeTaxBenefitsPerShare  (USD/shares; FY,Q1,Q2,Q3)
+#   118  FiniteLivedIntangibleAssetsAccumulatedAmortization  (USD; FY,Q1,Q2,Q3)
+#   117  RepaymentsOfLongTermDebtAndCapitalSecurities  (USD; FY,Q1,Q2,Q3)
+#   117  RevenueFromContractWithCustomerExcludingAssessedTax  (USD; FY,Q1,Q2,Q3)
+#   115  DepreciationDepletionAndAmortization  (USD; FY,Q1,Q2,Q3)
+#   107  AmortizationOfIntangibleAssets  (USD; FY,Q1,Q2,Q3)
+#   107  NetCashProvidedByUsedInOperatingActivities  (USD; FY,Q1,Q2,Q3)
+#   106  FiniteLivedIntangibleAssetsGross  (USD; FY,Q1,Q2,Q3)
+#   104  DebtAndCapitalLeaseObligations  (USD; FY,Q1,Q2,Q3)
+#   104  DebtCurrent  (USD; FY,Q1,Q2,Q3)
+#   104  LongTermDebtAndCapitalLeaseObligations  (USD; FY,Q1,Q2,Q3)
+#   102  Depreciation  (USD; FY,Q1,Q2,Q3)
+#   102  PaymentsForRepurchaseOfCommonStock  (USD; FY,Q1,Q2,Q3)
+#    95  AllocatedShareBasedCompensationExpense  (USD; FY,Q1,Q2,Q3)
+#    92  IncreaseDecreaseInAccountsPayableAndAccruedLiabilities  (USD; FY,Q1,Q2,Q3)
+#    88  DeferredForeignIncomeTaxExpenseBenefit  (USD; FY,Q1,Q2,Q3)
+#    88  IntangibleAssetsNetExcludingGoodwill  (USD; FY,Q1,Q2,Q3)
+#    85  DeferredIncomeTaxAssetsNet  (USD; FY,Q1,Q2,Q3)
+#    84  EffectiveIncomeTaxRateContinuingOperations  (pure; FY,Q1,Q2,Q3)
+#    83  PropertyPlantAndEquipmentNet  (USD; FY,Q1,Q2,Q3)
+#    82  IncreaseDecreaseInDeferredIncomeTaxes  (USD; FY,Q1,Q2,Q3)
+#    82  MinorityInterest  (USD; FY,Q1,Q2,Q3)
+#    78  AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment  (USD; FY,Q1,Q2,Q3)
+#    78  PropertyPlantAndEquipmentGross  (USD; FY,Q1,Q2,Q3)
+#    74  GainLossOnDispositionOfAssets  (USD; FY,Q1,Q2,Q3)
+#    74  ProceedsFromSaleAndMaturityOfAvailableForSaleSecurities  (USD; FY,Q1,Q2,Q3)
+#    72  FinanceLeaseInterestExpense  (USD; FY,Q1,Q2,Q3)
+#    67  PaymentsToAcquireAvailableForSaleSecuritiesDebt  (USD; FY,Q1,Q2,Q3)
+#    66  DeferredRevenueCurrent  (USD; FY,Q1,Q2,Q3)
+#    66  OtherLiabilitiesCurrent  (USD; FY,Q1,Q2,Q3)
+#    63  ShareBasedCompensationArrangementByShareBasedPaymentAwardNumberOfSharesAvailableForGrant  (shares; FY,Q1,Q2,Q3)
+#    62  CashAndCashEquivalentsPeriodIncreaseDecrease  (USD; FY,Q1,Q2,Q3)
+#    62  FiniteLivedIntangibleAssetsNet  (USD; FY,Q1,Q2,Q3)
+#    61  PaymentsOfDividendsCommonStock  (USD; FY,Q1,Q2,Q3)
+#    61  PaymentsToAcquireAvailableForSaleSecurities  (USD; FY,Q1,Q2,Q3)
+#    60  AvailableForSaleSecuritiesDebtSecuritiesCurrent  (USD; FY,Q1,Q2,Q3)
+#    60  AvailableForSaleSecuritiesDebtSecuritiesNoncurrent  (USD; FY,Q1,Q2,Q3)
+#    59  EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized  (USD; FY,Q1,Q2,Q3)
+#    59  IncomeTaxesPaidNet  (USD; FY,Q1,Q2,Q3)
+#    59  InterestPaidNet  (USD; FY,Q1,Q2,Q3)
+#    59  ProceedsFromMaturitiesPrepaymentsAndCallsOfAvailableForSaleSecurities  (USD; FY,Q1,Q2,Q3)
+#    57  AdjustmentsToAdditionalPaidInCapitalEquityComponentOfConvertibleDebtSubsequentAdjustments  (USD; FY,Q1,Q2,Q3)
+#    54  AvailableForSaleSecuritiesCurrent  (USD; FY,Q1,Q2,Q3)
+#    54  AvailableForSaleSecuritiesNoncurrent  (USD; FY,Q1,Q2,Q3)
+#    53  FiniteLivedIntangibleAssetsAmortizationExpenseYearFour  (USD; FY,Q1,Q2,Q3)
+#    53  FiniteLivedIntangibleAssetsAmortizationExpenseYearThree  (USD; FY,Q1,Q2,Q3)
+#    53  FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo  (USD; FY,Q1,Q2,Q3)
+#    53  ProceedsFromSaleOfAvailableForSaleSecurities  (USD; FY,Q1,Q2,Q3)
+#    52  ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsRiskFreeInterestRate  (pure; FY,Q1,Q2,Q3)
+#    52  ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsWeightedAverageVolatilityRate  (pure; FY,Q1,Q2,Q3)
+#    52  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsGrantsInPeriodWeightedAverageGrantDateFairValue  (USD/shares; FY,Q1,Q2,Q3)
+#    51  IncreaseDecreaseInOtherAccountsPayableAndAccruedLiabilities  (USD; FY,Q1,Q2,Q3)
+#    50  EmployeeServiceShareBasedCompensationTaxBenefitFromCompensationExpense  (USD; FY,Q1,Q2,Q3)
+#    50  FinanceLeaseInterestPaymentOnLiability  (USD; FY,Q1,Q2,Q3)
+#    50  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriodWeightedAverageGrantDateFairValue  (USD/shares; FY,Q1,Q2,Q3)
+#    48  CurrentIncomeTaxExpenseBenefit  (USD; FY,Q3)
+#    48  FinanceLeaseWeightedAverageDiscountRatePercent  (pure; FY,Q1,Q2,Q3)
+#    48  MinorityInterestDecreaseFromRedemptions  (USD; FY,Q1,Q2,Q3)
+#    48  PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAccumulatedDepreciationAndAmortization  (USD; FY,Q1,Q2,Q3)
+#    48  PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization  (USD; FY,Q1,Q2,Q3)
+#    48  PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetBeforeAccumulatedDepreciationAndAmortization  (USD; FY,Q1,Q2,Q3)
+#    47  InvestmentIncomeInterest  (USD; FY,Q1,Q2,Q3)
+#    46  OperatingLeaseWeightedAverageDiscountRatePercent  (pure; FY,Q1,Q2,Q3)
+#    45  DeferredFederalIncomeTaxExpenseBenefit  (USD; FY)
+#    45  IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic  (USD; FY)
+#    45  IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign  (USD; FY)
+#    45  IncomeTaxReconciliationChangeInDeferredTaxAssetsValuationAllowance  (USD; FY)
+#    45  IncomeTaxReconciliationForeignIncomeTaxRateDifferential  (USD; FY)
+#    45  IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate  (USD; FY)
+#    45  IncomeTaxReconciliationOtherAdjustments  (USD; FY)
+#    44  AvailableForSaleSecurities  (USD; FY,Q1,Q2,Q3)
+#    44  MinorityInterestDecreaseFromDistributionsToNoncontrollingInterestHolders  (USD; FY,Q1,Q2,Q3)
+#    43  ProceedsFromSaleOfAvailableForSaleSecuritiesDebt  (USD; FY,Q1,Q2,Q3)
+#    42  DebtInstrumentIncreaseDecreaseForPeriodNet  (USD; FY,Q1,Q2,Q3)
+#    42  DeferredIncomeTaxExpenseBenefit  (USD; FY)
+#    41  FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths  (USD; FY,Q1,Q2,Q3)
+#    41  LongTermDebt  (USD; FY,Q1,Q2,Q3)
+#    40  DilutiveSecuritiesEffectOnBasicEarningsPerShareOther  (USD; FY,Q1,Q2,Q3)
+#    39  IncomeTaxReconciliationStateAndLocalIncomeTaxes  (USD; FY)
+#    38  FiniteLivedIntangibleAssetsAmortizationExpenseYearFive  (USD; FY,Q1,Q2,Q3)
+#    36  FiniteLivedIntangibleAssetsPeriodIncreaseDecrease  (USD; FY,Q1,Q2,Q3)
+#    36  NetCashProvidedByUsedInOperatingActivitiesContinuingOperations  (USD; FY,Q1,Q2,Q3)
+#    35  ContractWithCustomerLiability  (USD; FY,Q1,Q2,Q3)
+#    35  NoncontrollingInterestIncreaseFromSubsidiaryEquityIssuance  (USD; FY,Q1,Q2,Q3)
+#    33  DeferredStateAndLocalIncomeTaxExpenseBenefit  (USD; FY)
+#    33  IncomeTaxReconciliationTaxContingencies  (USD; FY)
+#    33  InterestCostsCapitalized  (USD; FY)
+#    32  AllowanceForDoubtfulAccountsReceivableCurrent  (USD; FY,Q1,Q2,Q3)
+#    32  IncreaseDecreaseInDeferredRevenue  (USD; FY,Q1,Q2,Q3)
+#    32  IntangibleAssetsGrossExcludingGoodwill  (USD; FY,Q1,Q2,Q3)
+#    30  DeferredTaxAssetsGross  (USD; FY)
+#    30  DeferredTaxAssetsNet  (USD; FY)
+#    30  DeferredTaxAssetsOther  (USD; FY)
+#    30  DeferredTaxAssetsTaxDeferredExpenseCompensationAndBenefits  (USD; FY)
+#    30  DeferredTaxAssetsValuationAllowance  (USD; FY)
+#    30  DeferredTaxLiabilitiesOther  (USD; FY)
+#    30  NetIncomeLossIncludingPortionAttributableToNonredeemableNoncontrollingInterest  (USD; FY,Q1,Q2,Q3)
+#    30  StockholdersEquityOther  (USD; Q1,Q2,Q3)
+#    29  EffectOfExchangeRateOnCashAndCashEquivalentsContinuingOperations  (USD; FY,Q1,Q2,Q3)
+#    29  ProceedsFromSaleOfPropertyPlantAndEquipment  (USD; FY,Q1,Q2,Q3)
+#    28  BusinessAcquisitionProFormaEarningsPerShareBasic  (USD/shares; FY,Q1,Q2,Q3)
+#    28  BusinessAcquisitionProFormaEarningsPerShareDiluted  (USD/shares; FY,Q1,Q2,Q3)
+#    28  BusinessAcquisitionsProFormaNetIncomeLoss  (USD; FY,Q1,Q2,Q3)
+#    28  BusinessAcquisitionsProFormaRevenue  (USD; FY,Q1,Q2,Q3)
+#    28  DeferredTaxAssetsLiabilitiesNet  (USD; FY)
+#    28  EffectiveIncomeTaxRateReconciliationAtFederalStatutoryIncomeTaxRate  (pure; FY,Q2,Q3)
+#    28  RepaymentsOfLongTermDebt  (USD; FY,Q1,Q2,Q3)
+#    27  DeferredTaxAssetsNetNoncurrent  (USD; FY,Q1,Q2,Q3)
+#    27  FiniteLivedIntangibleAssetsAmortizationExpenseRemainderOfFiscalYear  (USD; Q1,Q2,Q3)
+#    26  AvailableForSaleSecuritiesGrossRealizedGainsLossesSaleProceeds  (USD; FY,Q1,Q2,Q3)
+#    26  GainLossOnSaleOfPreviouslyUnissuedStockBySubsidiaryOrEquityInvesteeNonoperatingIncome  (USD; FY,Q1,Q2,Q3)
+#    26  InterestExpenseNonoperating  (USD; FY,Q1,Q2,Q3)
+#    26  InterestOnConvertibleDebtNetOfTax  (USD; FY,Q1,Q2,Q3)
+#    26  NetIncomeLossAvailableToCommonStockholdersDiluted  (USD; FY,Q1,Q2,Q3)
+#    25  AdjustmentsRelatedToTaxWithholdingForShareBasedCompensation  (USD; FY,Q1,Q2,Q3)
+#    25  BusinessCombinationStepAcquisitionEquityInterestInAcquireeRemeasurementGain  (USD; FY,Q2,Q3)
+#    24  AccountsReceivableRelatedPartiesCurrent  (USD; FY,Q1,Q2,Q3)
+#    24  DeferredIncomeTaxLiabilities  (USD; FY)
+#    24  DeferredTaxLiabilitiesGoodwillAndIntangibleAssetsIntangibleAssets  (USD; FY)
+#    24  DefinedBenefitPlanFairValueOfPlanAssets  (USD; FY)
+#    24  EffectiveIncomeTaxRateReconciliationChangeInDeferredTaxAssetsValuationAllowance  (pure; FY)
+#    24  EffectiveIncomeTaxRateReconciliationForeignIncomeTaxRateDifferential  (pure; FY)
+#    24  EffectiveIncomeTaxRateReconciliationOtherAdjustments  (pure; FY)
+#    24  IncomeTaxReconciliationTaxCredits  (USD; FY)
+#    24  IncreaseDecreaseInOtherCurrentLiabilities  (USD; FY,Q1,Q2,Q3)
+#    24  InventoryWriteDown  (USD; FY,Q1,Q2,Q3)
+#    24  LongTermDebtCurrent  (USD; FY,Q1,Q2,Q3)
+#    24  LongTermDebtNoncurrent  (USD; FY,Q1,Q2,Q3)
+#    23  FiniteLivedIntangibleAssetsAmortizationExpense  (USD; FY,Q1,Q2,Q3)
+#    23  IncreaseDecreaseInOtherNoncurrentLiabilities  (USD; FY,Q1,Q2,Q3)
+#    23  OtherComprehensiveIncomeAvailableForSaleSecuritiesAdjustmentNetOfTaxPeriodIncreaseDecrease  (USD; FY,Q1,Q2,Q3)
+#    23  ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExpectedTerm  (Decimal,decimal,pure; FY,Q1,Q2,Q3)
+#    23  ShareBasedCompensationArrangementByShareBasedPaymentAwardNumberOfSharesAuthorized  (shares; FY,Q1,Q2,Q3)
+#    23  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsGrantsInPeriodGross  (shares; FY,Q1,Q2,Q3)
+#    22  DeferredTaxLiabilitiesPropertyPlantAndEquipment  (USD; FY)
+#    21  EffectiveIncomeTaxRateReconciliationStateAndLocalIncomeTaxes  (pure; FY)
+#    21  EffectiveIncomeTaxRateReconciliationTaxContingencies  (pure; FY)
+#    21  EffectiveIncomeTaxRateReconciliationTaxCreditsResearch  (pure; FY)
+#    21  EquityMethodInvestmentSummarizedFinancialInformationGrossProfitLoss  (USD; FY)
+#    21  EquityMethodInvestmentSummarizedFinancialInformationNetIncomeLoss  (USD; FY)
+#    21  IncomeTaxReconciliationTaxCreditsResearch  (USD; FY)
+#    21  ProceedsFromSaleOfOtherAssetsInvestingActivities  (USD; FY,Q1,Q2,Q3)
+#    21  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsGrantsInPeriod  (shares; FY,Q1,Q2,Q3)
+#    20  AssetsHeldForSaleLongLived  (USD; FY,Q1,Q2,Q3)
+#    20  RoyaltyRevenue  (USD; FY,Q1,Q2,Q3)
+#    19  ContractWithCustomerLiabilityRevenueRecognized  (USD; FY,Q1,Q2,Q3)
+#    19  LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths  (USD; FY,Q1,Q2,Q3)
+#    19  LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour  (USD; FY,Q1,Q2,Q3)
+#    19  LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree  (USD; FY,Q1,Q2,Q3)
+#    19  LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo  (USD; FY,Q1,Q2,Q3)
+#    19  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber  (shares; FY,Q1,Q2,Q3)
+#    18  ContractWithCustomerLiabilityCurrent  (USD; FY,Q1,Q2,Q3)
+#    18  EquityMethodInvestmentSummarizedFinancialInformationRevenue  (USD; FY)
+#    18  RedeemableNoncontrollingInterestEquityPreferredCarryingAmount  (USD; FY,Q1,Q2,Q3)
+#    17  DeferredTaxLiabilitiesUndistributedForeignEarnings  (USD; FY)
+#    16  DeferredIncomeTaxLiabilitiesNet  (USD; FY)
+#    16  DeferredTaxAssetsPropertyPlantAndEquipment  (USD; FY)
+#    16  DeferredTaxLiabilitiesFinancingArrangements  (USD; FY)
+#    16  VariableInterestEntityNonconsolidatedCarryingAmountAssets  (USD; FY,Q1,Q2,Q3)
+#    16  VariableInterestEntityNonconsolidatedCarryingAmountLiabilities  (USD; FY,Q1,Q2,Q3)
+#    15  AvailableForSaleSecuritiesContinuousUnrealizedLossPositionTwelveMonthsOrLongerFairValue  (USD; FY,Q1,Q2,Q3)
+#    15  PaymentsOfDividendsMinorityInterest  (USD; FY,Q1,Q2,Q3)
+#    15  PaymentsRelatedToTaxWithholdingForShareBasedCompensation  (USD; FY,Q1,Q2,Q3)
+#    14  AvailableForSaleSecuritiesAmortizedCost  (USD; FY,Q1,Q2,Q3)
+#    14  AvailableForSaleSecuritiesFairValueDisclosure  (USD; FY,Q1,Q2,Q3)
+#    14  DebtInstrumentUnamortizedDiscountPremiumAndDebtIssuanceCostsNet  (USD; FY,Q1,Q2,Q3)
+#    14  EquityMethodInvestmentSummarizedFinancialInformationCurrentAssets  (USD; FY)
+#    14  EquityMethodInvestmentSummarizedFinancialInformationCurrentLiabilities  (USD; FY)
+#    14  EquityMethodInvestmentSummarizedFinancialInformationNoncurrentAssets  (USD; FY)
+#    14  EquityMethodInvestmentSummarizedFinancialInformationNoncurrentLiabilities  (USD; FY)
+#    14  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisesInPeriodTotalIntrinsicValue  (USD; FY)
+#    14  UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued  (USD; FY)
+#    13  AccumulatedDepreciationDepletionAndAmortizationExpensePropertyPlantAndEquipmentCurrentCharge  (USD; FY,Q1,Q2,Q3)
+#    13  AdjustmentsToAdditionalPaidInCapitalEquityComponentOfConvertibleDebt  (USD; FY,Q1,Q2,Q3)
+#    13  LongTermDebtMaturitiesRepaymentsOfPrincipalRemainderOfFiscalYear  (USD; Q1,Q2,Q3)
+#    13  TaxCutsAndJobsActOf2017MeasurementPeriodAdjustmentIncomeTaxExpenseBenefit  (USD; FY,Q1,Q2,Q3)
+#    12  InterestAndDebtExpense  (USD; FY)
+#    12  NoncurrentAssets  (USD; FY)
+#    12  PaymentsToAcquireAdditionalInterestInSubsidiaries  (USD; FY,Q2,Q3)
+#    12  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodTotalFairValue  (USD; FY)
+#    11  AvailableForSaleSecuritiesDebtMaturitiesWithinOneYearFairValue  (USD; FY,Q1,Q2,Q3)
+#    11  AvailableForSaleSecuritiesDebtMaturitiesWithoutSingleMaturityDateFairValue  (USD; FY,Q1,Q2,Q3)
+#    11  AvailableForSaleSecuritiesDebtSecurities  (USD; FY,Q1,Q2,Q3)
+#    11  Revenues  (USD; FY)
+#    11  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingNumber  (shares; FY,Q1,Q2,Q3)
+#    10  AvailableForSaleSecuritiesGrossUnrealizedLosses1  (USD; FY,Q1,Q2,Q3)
+#    10  AvailableforsaleSecuritiesGrossUnrealizedGain  (USD; FY,Q1,Q2,Q3)
+#    10  DebtInstrumentCarryingAmount  (USD; FY)
+#    10  DeferredTaxAssetsInventory  (USD; FY)
+#    10  DeferredTaxAssetsTaxDeferredExpenseReservesAndAccrualsAccruedLiabilities  (USD; FY)
+#    10  FairValueOfAssetsAcquired  (USD; FY,Q2,Q3)
+#    10  RestrictedCashAndCashEquivalentsAtCarryingValue  (USD; FY,Q1,Q2,Q3)
+#     9  DebtInstrumentUnamortizedDiscount  (USD; FY,Q1,Q2,Q3)
+#     9  EffectiveIncomeTaxRateReconciliationChangeInEnactedTaxRate  (pure; FY)
+#     9  IncomeTaxReconciliationChangeInEnactedTaxRate  (USD; FY)
+#     9  IncomeTaxReconciliationDispositionOfAssets  (USD; FY)
+#     9  PropertyPlantAndEquipmentAdditions  (USD; FY,Q1,Q2,Q3)
+#     9  RepaymentsOfDebt  (USD; FY,Q1,Q2,Q3)
+#     8  CapitalLeasesFutureMinimumPaymentsInterestIncludedInPayments  (USD; FY,Q1,Q2,Q3)
+#     8  CapitalLeasesLesseeBalanceSheetAssetsByMajorClassAccumulatedDeprecation  (USD; FY)
+#     8  DebtConversionConvertedInstrumentAmount1  (USD; Q1,Q2,Q3)
+#     8  ExtinguishmentOfDebtAmount  (USD; FY,Q1,Q2)
+#     8  IncreaseDecreaseInOtherCurrentAssets  (USD; Q2,Q3)
+#     8  RestrictedCashAndCashEquivalentsNoncurrent  (USD; FY,Q1,Q2,Q3)
+#     8  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValue  (USD/shares; FY)
+#     8  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingWeightedAverageExercisePrice  (USD/shares; FY)
+#     7  AvailableForSaleSecuritiesDebtMaturitiesAmortizedCost  (USD; FY,Q1,Q2,Q3)
+#     7  AvailableForSaleSecuritiesDebtMaturitiesWithinOneYearAmortizedCost  (USD; FY,Q1,Q2,Q3)
+#     7  AvailableForSaleSecuritiesDebtMaturitiesWithoutSingleMaturityDateAmortizedCost  (USD; FY,Q1,Q2,Q3)
+#     7  AvailableForSaleSecuritiesGrossRealizedGains  (USD; FY,Q2,Q3)
+#     7  DebtSecuritiesAvailableForSaleContinuousUnrealizedLossPosition12MonthsOrLonger  (USD; FY,Q1,Q2,Q3)
+#     7  ProceedsFromRepaymentsOfDebt  (USD; FY,Q2,Q3)
+#     6  AccruedIncomeTaxesNoncurrent  (USD; Q1,Q2,Q3)
+#     6  AccumulatedOtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax  (USD; FY,Q1,Q2)
+#     6  DeferredTaxAssetsDeferredIncome  (USD; FY)
+#     6  DeferredTaxLiabilities  (USD; FY)
+#     6  EffectiveIncomeTaxRateReconciliationCrossBorderTaxEffectAmount  (USD; FY)
+#     6  EffectiveIncomeTaxRateReconciliationCrossBorderTaxEffectPercent  (pure; FY)
+#     6  EffectiveIncomeTaxRateReconciliationTaxCutsAndJobsActOf2017TransitionTaxOnAccumulatedForeignEarningsAmount  (USD; FY)
+#     6  EffectiveIncomeTaxRateReconciliationTaxCutsAndJobsActOf2017TransitionTaxOnAccumulatedForeignEarningsPercent  (pure; FY)
+#     6  GainsLossesOnRestructuringOfDebt  (USD; Q1,Q2,Q3)
+#     6  LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive  (USD; FY)
+#     6  LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive  (USD; FY)
+#     6  MinorityInterestIncreaseFromStockIssuance  (USD; Q1,Q2,Q3)
+#     6  RevenueRemainingPerformanceObligation  (USD; FY,Q1,Q2,Q3)
+#     6  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriod  (shares; FY,Q1)
+#     6  WeightedAverageNumberOfShareOutstandingBasicAndDiluted  (shares; Q1,Q2)
+#     5  AdjustmentsToAdditionalPaidInCapitalReallocationOfMinorityInterest  (USD; Q2)
+#     4  AssetsFairValueDisclosure  (USD; Q1,Q2)
+#     4  AssetsHeldForSaleLongLivedFairValueDisclosure  (USD; Q1,Q2)
+#     4  DeferredRevenue  (USD; FY,Q1,Q2,Q3)
+#     4  DeferredTaxLiabilitiesDeferredExpenseOtherCapitalizedCosts  (USD; FY)
+#     4  DeferredTaxLiabilitiesLeasingArrangements  (USD; FY)
+#     4  EffectOfExchangeRateOnCashAndCashEquivalents  (USD; Q1,Q2)
+#     4  EmployeeServiceShareBasedCompensationUnrecognizedCompensationCostsOnNonvestedAwards  (USD; FY,Q1,Q2,Q3)
+#     4  FairValueAssetsMeasuredOnRecurringBasisChangeInUnrealizedGainLoss  (USD; FY,Q2)
+#     4  GainLossOnSalesOfAssetsAndAssetImpairmentCharges  (USD; FY)
+#     4  ImpairmentOfLongLivedAssetsToBeDisposedOf  (USD; Q2)
+#     4  IndefiniteLivedIntangibleAssetsExcludingGoodwill  (USD; FY,Q3)
+#     4  ProceedsFromIssuanceOfSharesUnderIncentiveAndShareBasedCompensationPlansIncludingStockOptions  (USD; Q2,Q3)
+#     4  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsForfeitedInPeriod  (shares; FY)
+#     4  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriod  (shares; FY)
+#     4  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodWeightedAverageGrantDateFairValue  (USD/shares; FY)
+#     4  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisableNumber  (shares; FY)
+#     4  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisableWeightedAverageExercisePrice  (USD/shares; FY)
+#     4  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsForfeituresAndExpirationsInPeriod  (shares; FY)
+#     4  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsForfeituresAndExpirationsInPeriodWeightedAverageExercisePrice  (USD/shares; FY)
+#     4  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingIntrinsicValue  (USD; FY)
+#     3  ConsolidationLessThanWhollyOwnedSubsidiaryParentOwnershipInterestChangesPurchaseOfInterestByParent  (USD; FY)
+#     3  DebtInstrumentFaceAmount  (USD; Q1,Q2,Q3)
+#     3  EffectiveIncomeTaxRateReconciliationFdiiAmount  (USD; FY)
+#     3  EffectiveIncomeTaxRateReconciliationFdiiPercent  (pure; FY)
+#     3  EffectiveIncomeTaxRateReconciliationTaxCredits  (pure; FY)
+#     3  EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognizedPeriodForRecognition  (Years; Q1,Q2,Q3)
+#     3  EquityMethodInvestmentSummarizedFinancialInformationNetSalesOrGrossRevenue  (USD; FY)
+#     3  NoncontrollingInterestIncreaseFromBusinessCombination  (USD; FY)
+#     3  OperatingLeasesIncomeStatementSubleaseRevenue  (USD; FY)
+#     3  OtherComprehensiveIncomeLossReclassificationAdjustmentForSaleOfSecuritiesIncludedInNetIncomeBeforeTax  (USD; FY,Q2,Q3)
+#     3  ProceedsFromDebtNetOfIssuanceCosts  (USD; FY,Q1,Q2)
+#     3  SegmentReportingInformationDepreciationDepletionAndAmortizationExpense  (USD; FY)
+#     3  ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsForfeituresWeightedAverageGrantDateFairValue  (USD/shares; FY)
+#     3  ShareBasedCompensationArrangementsByShareBasedPaymentAwardOptionsExercisesInPeriodWeightedAverageExercisePrice  (USD/shares; FY)
+#     3  ShareBasedCompensationArrangementsByShareBasedPaymentAwardOptionsGrantsInPeriodWeightedAverageExercisePrice  (USD/shares; FY)
+#     3  SharebasedCompensationArrangementBySharebasedPaymentAwardOptionsExercisableIntrinsicValue1  (USD; FY)
+#     2  BusinessCombinationAcquisitionOfLessThan100PercentNoncontrollingInterestFairValue  (USD; FY,Q1)
+#     2  BusinessCombinationProFormaInformationRevenueOfAcquireeSinceAcquisitionDateActual  (USD; FY)
+#     2  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedNet  (USD; FY,Q1)
+#     2  DeferredTaxAssetsEquityMethodInvestments  (USD; FY)
+#     2  DeferredTaxAssetsNetCurrent  (USD; FY)
+#     2  DeferredTaxLiabilitiesNoncurrent  (USD; FY)
+#     2  DeferredTaxesBusinessCombinationValuationAllowanceAvailableToReduceIncomeTaxExpense  (USD; Q3)
+#     2  IncomeTaxExaminationPenaltiesAndInterestAccrued  (USD; FY)
+#     2  IncomeTaxReconciliationDispositionOfBusiness  (USD; Q3)
+#     2  OperatingLeasesIncomeStatementLeaseRevenue  (USD; FY)
+#     2  RestrictedCashAndCashEquivalents  (USD; FY,Q3)
+#     2  RevenueFromGrants  (USD; Q1)
+#     2  ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeNumberOfExercisableOptions  (shares; FY)
+#     2  ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeNumberOfOutstandingOptions  (shares; FY)
+#     1  BusinessAcquisitionCostOfAcquiredEntityTransactionCosts  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedCashAndEquivalents  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedCurrentAssetsOther  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedCurrentAssetsReceivables  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedCurrentLiabilitiesLongTermDebt  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedDeferredTaxAssetsNoncurrent  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedIntangibleAssetsOtherThanGoodwill  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedInventory  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedNoncurrentLiabilitiesLongTermDebt  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedNoncurrentLiabilitiesOther  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedOtherNoncurrentAssets  (USD; FY)
+#     1  BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedPropertyPlantAndEquipment  (USD; FY)
+#     1  CapitalLeasesBalanceSheetAssetsByMajorClassNet  (USD; FY)
+#     1  ContractWithCustomerLiabilityCumulativeCatchUpAdjustmentToRevenueChangeInEstimateOfTransactionPrice  (USD; Q1)
+#     1  DebtInstrumentConvertibleConversionPrice  (USD; Q3)
+#     1  DebtInstrumentConvertibleConversionRatio  (integer; Q3)
+#     1  DisposalGroupIncludingDiscontinuedOperationInventory  (USD; Q3)
+#     1  DisposalGroupIncludingDiscontinuedOperationOtherNoncurrentAssets  (USD; Q3)
+#     1  DisposalGroupIncludingDiscontinuedOperationOtherNoncurrentLiabilities  (USD; Q3)
+#     1  DisposalGroupIncludingDiscontinuedOperationPropertyPlantAndEquipmentCurrent  (USD; Q2)
+#     1  DisposalGroupIncludingDiscontinuedOperationPropertyPlantAndEquipmentNet  (USD; Q3)
+#     1  EntityWideDisclosureOnGeographicAreasRevenueFromExternalCustomersAttributedToForeignCountries  (USD; FY)
+#     1  FiniteLivedIntangibleAssetsAmortizationExpenseAfterYearFive  (USD; FY)
+#     1  MinorityInterestOwnershipPercentageByNoncontrollingOwners  (pure; Q1)
+#     1  MinorityInterestOwnershipPercentageByParent  (pure; Q1)
+#     1  OtherComprehensiveIncomeReclassificationAdjustmentForSaleOfSecuritiesIncludedInNetIncomeBeforeTax  (USD; Q3)
+#     1  PaymentsForRepurchaseOfRedeemableNoncontrollingInterest  (USD; FY)
+#     1  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisableWeightedAverageRemainingContractualTerm  (decimal; FY)
+#     1  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisesInPeriod  (shares; FY)
+#     1  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingWeightedAverageRemainingContractualTerm  (decimal; FY)
+#     1  ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsVestedAndExpectedToVestExercisableAggregateIntrinsicValue  (USD; FY)
+#     1  ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeExercisableOptionsWeightedAverageExercisePrice  (USD; FY)
+#     1  ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeOutstandingOptionsWeightedAverageExercisePriceBeginningBalance  (USD; FY)
+#     1  ShareBasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeOutstandingOptionsWeightedAverageRemainingContractualTerm  (decimal; FY)
+#     1  SharebasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeExercisableOptionsWeightedAverageExercisePrice1  (USD/shares; FY)
+#     1  SharebasedCompensationSharesAuthorizedUnderStockOptionPlansExercisePriceRangeOutstandingOptionsWeightedAverageExercisePriceBeginningBalance1  (USD/shares; FY)
+#     1  TaxCutsAndJobsActOf2017IncompleteAccountingTransitionTaxForAccumulatedForeignEarningsProvisionalIncomeTaxExpense  (USD; FY)

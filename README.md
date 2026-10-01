@@ -7,19 +7,29 @@
 ## 本地运行
 
 ```bash
-# 前端（P0 读 web/public/sample/*.json）
+# 前端
 cd web
 npm install
 npm run dev          # http://127.0.0.1:43123/stock_investing_dashboard/
 ```
 
+财务报表与 StockHeader 优先读 `data/pages/MU/*.json`（无则回退 sample）。
+
 ```bash
 # Python 数据管道
 cp .env.example .env   # 填入 SEC_USER_AGENT（本地用）
 python3 -m pip install -r requirements.txt
+
+# P1：XBRL 财务报表 + 股价页头
+python3 scripts/diagnose_xbrl_tags.py --ticker MU
+python3 scripts/fetch_financials.py --ticker MU
+python3 scripts/fetch_prices.py --ticker MU
+python3 scripts/build_page_financials.py --ticker MU
+python3 scripts/build_page_header.py --ticker MU
+
+# 共识（P0/P2）
 python3 scripts/fetch_consensus.py --ticker MU
 python3 scripts/fetch_actuals.py --ticker MU
-python3 scripts/fetch_prices.py --ticker MU
 python3 scripts/build_history.py --ticker MU
 python3 scripts/build_page_consensus.py --ticker MU
 ```
@@ -30,7 +40,7 @@ GitHub Actions：Settings → Variables → `SEC_USER_AGENT`（Variable，不是
 ## 测试
 
 ```bash
-pytest
+python3 -m pytest
 cd web && npm test
 ```
 
@@ -38,7 +48,7 @@ cd web && npm test
 
 1. 仓库 Settings → Pages → Source 选 **GitHub Actions**。
 2. push 到 `main` 触发 `pages.yml`。
-3. `data.yml` 工作日定时抓取共识/实际/股价；共识按**绝对财期名**（如 `FQ1-27`）写入 `data/snapshots/`。可在 Actions 里手动 Run workflow。
+3. `data.yml` 工作日定时抓取共识 / 实际 / 股价 / XBRL 财务报表；共识按**绝对财期名**（如 `FQ1-27`）写入 `data/snapshots/`。可在 Actions 里手动 Run workflow。
 
 线上：`https://cool1990.github.io/stock_investing_dashboard/`
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch daily close prices."""
+"""Fetch daily close prices + key quote info for StockHeader."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts.lib.io import read_json, retry, update_status, write_json  # noqa: E402
+from scripts.lib.io import retry, update_status, write_json  # noqa: E402
 
 
 def fetch_prices(ticker: str) -> dict:
@@ -27,11 +27,61 @@ def fetch_prices(ticker: str) -> dict:
             except Exception:  # noqa: BLE001
                 d = str(idx)[:10]
             closes[d] = round(float(row["Close"]), 4)
+
+    info: dict = {}
+    try:
+        raw = retry(lambda: t.info) or {}
+        shares = raw.get("sharesOutstanding") or raw.get("impliedSharesOutstanding")
+        mcap = raw.get("marketCap")
+        info = {
+            "shares_outstanding": int(shares) if shares else None,
+            "market_cap": float(mcap) if mcap else None,
+            "currency": raw.get("currency"),
+            "dividend_yield": None,
+            "target_price": (
+                round(float(raw["targetMeanPrice"]), 2) if raw.get("targetMeanPrice") else None
+            ),
+            "next_earnings": None,
+        }
+        # Dividend yield: prefer trailing rate / price (Yahoo dividendYield units vary)
+        try:
+            px = None
+            if closes:
+                px = closes[sorted(closes.keys())[-1]]
+            trail = raw.get("trailingAnnualDividendRate")
+            if trail and px:
+                info["dividend_yield"] = round(float(trail) / float(px) * 100, 2)
+            elif raw.get("dividendYield") not in (None, 0):
+                y = float(raw["dividendYield"])
+                info["dividend_yield"] = round(y * 100, 2) if y <= 1 else round(y, 2)
+        except Exception:  # noqa: BLE001
+            pass
+        # earnings date
+        try:
+            cal = t.calendar
+            if cal is not None:
+                if hasattr(cal, "get"):
+                    ed = cal.get("Earnings Date")
+                    if isinstance(ed, (list, tuple)) and ed:
+                        info["next_earnings"] = str(ed[0])[:10]
+                    elif ed is not None:
+                        info["next_earnings"] = str(ed)[:10]
+        except Exception:  # noqa: BLE001
+            pass
+        # analyst ratings summary if present
+        rec = raw.get("recommendationKey")
+        n_analysts = raw.get("numberOfAnalystOpinions")
+        if rec or n_analysts:
+            info["ratings"] = f"{rec or '—'} · {n_analysts or '[ ]'} 家"
+    except Exception as e:  # noqa: BLE001
+        info = {"error": str(e)}
+
     return {
         "ticker": ticker.upper(),
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source": "yahoo",
         "closes": closes,
+        "info": info,
     }
 
 
@@ -50,7 +100,6 @@ def main() -> int:
         print(f"wrote {out}")
         return 0
     except Exception as e:  # noqa: BLE001
-        # Keep previous file
         update_status("yahoo_prices", False, str(e))
         print(f"ERROR (kept old data): {e}", file=sys.stderr)
         return 0 if out.exists() else 1

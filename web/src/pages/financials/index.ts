@@ -2,8 +2,7 @@ import { createSegmented, el } from '../../components/segmented';
 import { createToggleChip } from '../../components/toggleChip';
 import { renderDataTable, type Row } from '../../components/dataTable';
 import { renderFooterNote } from '../../components/footerNote';
-import { renderBanner } from '../../components/banner';
-import { formatAmtMillions, formatTablePct, MISSING } from '../../lib/fmt';
+import { formatAmtMillions, MISSING } from '../../lib/fmt';
 
 type FinRow = {
   id?: string;
@@ -13,17 +12,18 @@ type FinRow = {
   fmt?: string;
   values?: Array<number | null>;
   v?: Array<number | null>;
-  yoy?: Array<number | null>;
-  qoq?: Array<number | null>;
-  yoy_tone?: string[];
-  qoq_tone?: string[];
+  yoy?: Array<number | null | string> | null;
+  qoq?: Array<number | null | string> | null;
+  yoy_tone?: Array<string | null> | null;
+  qoq_tone?: Array<string | null> | null;
   formula?: string | null;
 };
 
 type FinTable = {
   title: string;
   cols: string[];
-  col_end?: string[];
+  col_labels?: string[];
+  col_end?: Array<string | null>;
   rows: FinRow[];
   note?: string;
 };
@@ -31,6 +31,7 @@ type FinTable = {
 export interface FinancialsPage {
   tables: Record<string, Partial<Record<'q' | 'ytd' | 'y', FinTable>>>;
   mode_notes?: Record<string, string>;
+  ticker?: string;
 }
 
 const STATEMENTS = [
@@ -51,6 +52,41 @@ function rowValues(r: FinRow): Array<number | null> {
   return r.values ?? r.v ?? [];
 }
 
+function formatCell(r: FinRow, v: number | null | undefined, unit: 'M' | 'B'): string {
+  if (v == null) return MISSING;
+  if (r.fmt === 'eps') return `$${v.toFixed(2)}`;
+  if (r.fmt === 'days' || r.unit === '天') return String(Math.round(v));
+  if (r.fmt === 'pct' || r.fmt === 'ratio' || r.unit === '%') {
+    const pct = Math.abs(v) <= 1.5 ? v * 100 : v;
+    return `${pct.toFixed(1)}%`;
+  }
+  return formatAmtMillions(v, unit);
+}
+
+function formatChangeCell(v: number | string | null | undefined): string {
+  if (v == null) return MISSING;
+  if (typeof v === 'string') return v;
+  const p = v * 100;
+  const sign = p >= 0 ? '+' : '−';
+  const abs = Math.abs(p);
+  const body = abs >= 1000 ? String(Math.round(abs)) : abs.toFixed(1);
+  return `${sign}${body}%`;
+}
+
+function todayStamp(): string {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+function isRowAllEmpty(r: FinRow, start: number, n: number): boolean {
+  if (r.kind === 's' || r.kind === 'group' || r.kind === 'sec' || r.kind === 'h') return false;
+  const vals = rowValues(r).slice(start, start + n);
+  return vals.length > 0 && vals.every((v) => v == null);
+}
+
 export function renderFinancialsPage(data: FinancialsPage): HTMLElement {
   let stmt = 'is';
   let mode: 'q' | 'ytd' | 'y' = 'q';
@@ -58,20 +94,26 @@ export function renderFinancialsPage(data: FinancialsPage): HTMLElement {
   let unit: 'M' | 'B' = 'M';
   let showYoy = true;
   let showQoq = false;
+  let hideEmpty = true;
   const root = el('main', { className: 'main financials-page' });
+  const ticker = data.ticker ?? 'MU';
 
   const paint = () => {
     root.replaceChildren();
-    root.appendChild(
-      renderBanner('财务报表 P0 样例：单位与同比/环比切换可用；完整 XBRL 回填在 P1。'),
-    );
+    const qoqDisabled = mode !== 'q';
+    if (qoqDisabled) showQoq = false;
+
+    const modeNote =
+      (stmt === 'bs' || stmt === 'eq') && mode === 'ytd'
+        ? (data.mode_notes?.bs_ytd ?? data.mode_notes?.ytd)
+        : data.mode_notes?.[mode];
 
     const head = el('div', { className: 'section__head' }, [
       el('div', {}, [
         el('h2', { text: '财务报表' }),
         el('div', {
           className: 'section__sub',
-          text: data.mode_notes?.[mode] ?? '金额默认百万美元；比率类变化用 pp',
+          text: modeNote ?? '金额默认百万美元；比率类变化用 pp',
         }),
       ]),
       el('div', { className: 'toolbar' }, [
@@ -94,20 +136,6 @@ export function renderFinancialsPage(data: FinancialsPage): HTMLElement {
           mode,
           (v) => {
             mode = v as typeof mode;
-            if (mode === 'y') showQoq = false;
-            paint();
-          },
-        ),
-        createSegmented(
-          '范围',
-          [
-            { value: '5', label: '近 5 期' },
-            { value: '12', label: '近 12 期' },
-            { value: 'all', label: '全部' },
-          ],
-          range,
-          (v) => {
-            range = v as typeof range;
             paint();
           },
         ),
@@ -123,6 +151,19 @@ export function renderFinancialsPage(data: FinancialsPage): HTMLElement {
             paint();
           },
         ),
+        createSegmented(
+          '范围',
+          [
+            { value: '5', label: '最近 5 期' },
+            { value: '12', label: '最近 12 期' },
+            { value: 'all', label: '全部' },
+          ],
+          range,
+          (v) => {
+            range = v as typeof range;
+            paint();
+          },
+        ),
         createToggleChip('同比', showYoy, (n) => {
           showYoy = n;
           paint();
@@ -134,8 +175,12 @@ export function renderFinancialsPage(data: FinancialsPage): HTMLElement {
             showQoq = n;
             paint();
           },
-          mode === 'y',
+          qoqDisabled,
         ),
+        createToggleChip('隐藏全空行', hideEmpty, (n) => {
+          hideEmpty = n;
+          paint();
+        }),
         el('button', {
           className: 'toggle-chip',
           type: 'button',
@@ -151,46 +196,74 @@ export function renderFinancialsPage(data: FinancialsPage): HTMLElement {
       card.appendChild(
         el('p', {
           className: 'faint',
-          text:
-            mode === 'ytd' && (stmt === 'bs' || stmt === 'eq')
-              ? data.mode_notes?.bs_ytd ?? '资产负债表 / 权益表无累计视图'
-              : '该视图暂无样例数据',
+          text: '该视图暂无数据',
         }),
       );
       root.appendChild(card);
-      root.appendChild(renderFooterNote(['来源：SEC EDGAR XBRL（P1 接入）']));
+      root.appendChild(renderFooterNote(['来源：SEC EDGAR XBRL']));
       return;
     }
 
     const { cols, start } = sliceCols(table.cols, range);
+    const labels = (table.col_labels ?? table.cols).slice(start, start + cols.length);
     const headers = [
       { label: '项目', align: 'left' as const },
-      ...cols.map((c, i) => {
+      ...labels.map((c, i) => {
         const end = table.col_end?.[start + i];
-        return { label: end ? `${c} · ${String(end).slice(5)}` : c };
+        const endPart =
+          mode === 'q' && end && stmt === 'bs'
+            ? ` · ${String(end).slice(5, 10).replace('-', '-')}`
+            : mode === 'q' && end
+              ? ''
+              : '';
+        // BS: show end date MM-DD
+        let label = c;
+        if (stmt === 'bs' && end) {
+          const md = String(end).slice(5).replace('-', '-');
+          label = `${table.cols[start + i]} · ${md}`;
+        } else if (table.col_labels) {
+          label = c;
+        }
+        return { label: label + endPart };
       }),
     ];
 
     const rows: Row[] = [];
-    for (const r of table.rows) {
+    const visibleRows = table.rows.filter((r) => !hideEmpty || !isRowAllEmpty(r, start, cols.length));
+
+    for (const r of visibleRows) {
       const vals = rowValues(r).slice(start, start + cols.length);
-      const isRatio = r.unit === '%' || r.fmt === 'pct' || r.fmt === 'ratio' || r.kind === 'ratio';
       const isBold = r.kind === 'total' || r.kind === 'b' || r.kind === 't';
-      const isGroup = r.kind === 'group' || r.kind === 'sec' || r.kind === 'h';
+      const isGroup = r.kind === 'group' || r.kind === 'sec' || r.kind === 's' || r.kind === 'h';
+      const isDerived = r.kind === 'd';
+      const isIndent = r.kind === 'i' || isDerived;
+
+      if (isGroup) {
+        rows.push({
+          kind: 'sec',
+          cells: [{ text: r.name, bold: true }, ...cols.map(() => ({ text: '' }))],
+        });
+        continue;
+      }
+
       rows.push({
-        kind: isGroup ? 'group' : 'normal',
+        kind: 'normal',
         cells: [
-          { text: r.name, bold: isBold },
-          ...vals.map((v) => ({
-            text: isRatio
-              ? v == null
-                ? MISSING
-                : `${(v * (Math.abs(v) <= 1.5 ? 100 : 1)).toFixed(1)}%`
-              : formatAmtMillions(v, unit),
+          {
+            text: r.name,
             bold: isBold,
+            className: isIndent ? 'indent' : '',
+            title: r.formula ?? undefined,
+          },
+          ...vals.map((v) => ({
+            text: formatCell(r, v, unit),
+            bold: isBold,
+            className: isDerived ? 'derived' : '',
+            title: r.formula ?? undefined,
           })),
         ],
       });
+
       if (showYoy && r.yoy) {
         const yoy = r.yoy.slice(start, start + cols.length);
         rows.push({
@@ -198,49 +271,79 @@ export function renderFinancialsPage(data: FinancialsPage): HTMLElement {
           cells: [
             { text: '↳ 同比' },
             ...yoy.map((v, i) => ({
-              text: formatTablePct(v),
-              color: r.yoy_tone?.[start + i],
+              text: formatChangeCell(v),
+              color: r.yoy_tone?.[start + i] ?? undefined,
             })),
           ],
         });
       }
-      if (showQoq && r.qoq && mode !== 'y') {
+      if (showQoq && !qoqDisabled && r.qoq) {
         const qoq = r.qoq.slice(start, start + cols.length);
         rows.push({
           kind: 'sub',
           cells: [
             { text: '↳ 环比' },
             ...qoq.map((v, i) => ({
-              text: formatTablePct(v),
-              color: r.qoq_tone?.[start + i],
+              text: formatChangeCell(v),
+              color: r.qoq_tone?.[start + i] ?? undefined,
             })),
           ],
         });
       }
     }
 
-    card.appendChild(el('div', { className: 'card__title', text: table.title }));
+    const unitLabel = unit === 'M' ? '百万美元' : '十亿美元';
+    card.appendChild(
+      el('div', {
+        className: 'card__title',
+        text: `${table.title}　单位：$ ${unitLabel}${stmt === 'is' ? '，EPS 为 $' : ''}`,
+      }),
+    );
     card.appendChild(renderDataTable({ headers, rows, stickyFirst: true }));
     if (table.note) card.appendChild(el('div', { className: 'footnote', text: table.note }));
 
     const exportBtn = head.querySelector('button.toggle-chip:last-child') as HTMLButtonElement | null;
     if (exportBtn) {
       exportBtn.onclick = () => {
-        const lines = [
-          ['项目', ...cols].join(','),
-          ...table.rows.map((r) =>
+        const stmtLabel = STATEMENTS.find((s) => s.id === stmt)?.label ?? stmt;
+        const modeLabel = mode === 'q' ? '单季' : mode === 'ytd' ? '累计' : '年度';
+        const headerLine = `# ${ticker} ${stmtLabel} ${modeLabel}；单位：$ ${unitLabel}；含同比=${showYoy} 环比=${showQoq}`;
+        const lines: string[] = [headerLine, ['项目', ...labels].join(',')];
+        for (const r of visibleRows) {
+          if (r.kind === 's' || r.kind === 'sec' || r.kind === 'group') {
+            lines.push([JSON.stringify(r.name), ...cols.map(() => '')].join(','));
+            continue;
+          }
+          lines.push(
             [
               JSON.stringify(r.name),
               ...rowValues(r)
                 .slice(start, start + cols.length)
-                .map((v) => (v == null ? '' : v)),
+                .map((v) => (v == null ? '' : formatCell(r, v, unit))),
             ].join(','),
-          ),
-        ];
-        const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8' });
+          );
+          if (showYoy && r.yoy) {
+            lines.push(
+              [
+                JSON.stringify('↳ 同比'),
+                ...r.yoy.slice(start, start + cols.length).map((v) => formatChangeCell(v)),
+              ].join(','),
+            );
+          }
+          if (showQoq && !qoqDisabled && r.qoq) {
+            lines.push(
+              [
+                JSON.stringify('↳ 环比'),
+                ...r.qoq.slice(start, start + cols.length).map((v) => formatChangeCell(v)),
+              ].join(','),
+            );
+          }
+        }
+        const bom = '\uFEFF';
+        const blob = new Blob([bom + lines.join('\n')], { type: 'text/csv;charset=utf-8' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = `${stmt}-${mode}.csv`;
+        a.download = `${ticker}_${stmtLabel}_${modeLabel}_${todayStamp()}.csv`;
         a.click();
         URL.revokeObjectURL(a.href);
       };
@@ -250,7 +353,8 @@ export function renderFinancialsPage(data: FinancialsPage): HTMLElement {
     root.appendChild(
       renderFooterNote([
         '第一列固定；窄屏下表格在卡片内横向滚动。',
-        'Non-GAAP 与派生指标在后续阶段并入；P0 仅还原结构与主要交互。',
+        '同比 / 环比颜色：蓝=增加，橙=减少，灰=n.m. / 缺失。',
+        '来源：SEC EDGAR companyfacts（GAAP）；Non-GAAP 来自新闻稿覆盖。',
       ]),
     );
   };

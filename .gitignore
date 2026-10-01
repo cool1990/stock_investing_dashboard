@@ -12,3 +12,4 @@ venv/
 uploads/
 .env
 .env.local
+data/raw/**/companyfacts.json

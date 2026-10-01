@@ -419,6 +419,19 @@ table.data tr.row-group td {
 
 .up { color: var(--up); }
 .down { color: var(--down); }
+.flat { color: var(--ink); }
+.faint { color: var(--faint); }
+
+table.data td.indent,
+table.data td.derived {
+  font-style: italic;
+  color: var(--muted);
+  padding-left: 18px;
+}
+table.data td.indent:first-child,
+table.data td.derived:first-child {
+  padding-left: 18px;
+}
 
 @media (max-width: 900px) {
   .watchlist-lower {
