@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>MU 财务报表</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F5F7}
+a{color:#1D4ED8;text-decoration:none}a:hover{color:#1E3A8A}
+summary::-webkit-details-marker{display:none}
+summary{list-style:none}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F4F5F7; color: #15181D; font-family: 'Noto Sans SC', system-ui, sans-serif; font-size: 14px; line-height: 1.5">
+<header style="background: #15181D; color: #FFFFFF">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; gap: 28px">
+<a href="Watchlist.dc.html" style="color: #FFFFFF; font-weight: 700; font-size: 16px; letter-spacing: 0.02em">财报台</a>
+<nav aria-label="全站" style="display: flex; gap: 4px">
+<a href="Watchlist.dc.html" style="padding: 6px 12px; border-radius: 6px; font-size: 14px; background: #2A3039; color: #FFFFFF; font-weight: 500">观察池</a>
+<a href="Sources.dc.html" style="padding: 6px 12px; border-radius: 6px; font-size: 14px; color: #C9CED6">数据说明</a>
+</nav>
+<div style="flex-grow: 1"></div>
+<label style="display: flex; align-items: center; gap: 8px; background: #262B33; border-radius: 6px; padding: 0 12px; height: 36px; width: 260px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A93A0" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input type="text" placeholder="输入代码进入个股，如 NVDA" aria-label="搜索股票代码" style="background: transparent; border: none; outline: none; color: #FFFFFF; font-size: 14px; width: 100%; font-family: inherit">
+</label>
+</div>
+</header>
+<section style="background: #FFFFFF; border-bottom: 1px solid #E2E5EA">
+<div style="max-width: 1360px; margin: 0 auto; padding: 14px 24px 0 24px">
+<div style="font-size: 12px; color: #5B6370"><a href="Watchlist.dc.html">观察池</a> <span style="margin: 0 4px">/</span> MU</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-top: 4px">
+<div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap">
+<h1 style="margin: 0; font-size: 26px; font-weight: 700">MU</h1>
+<span style="font-size: 16px; color: #3A414C">Micron Technology 美光科技</span>
+<span style="font-size: 12px; color: #5B6370; border: 1px solid #E2E5EA; border-radius: 4px; padding: 0 8px">纳斯达克 · 存储</span>
+</div>
+<div style="font-size: 12px; color: #5B6370; text-align: right">最新财报 <b style="color: #15181D; font-weight: 500">FQ4-26</b> · 2026-09-30 盘后发布<br>数据更新 [2026-10-01 07:00 北京]</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)) auto; margin-top: 12px; border: 1px solid #EEF0F3; border-radius: 8px; background: #FBFBFC">
+<div style="padding: 8px 14px"><div style="font-size: 11px; color: #5B6370">股价</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxx.xx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">1D [±x%] · YTD [±x%]</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">市值</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxxB]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股价 × 总股本</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">EV 企业价值</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxxB]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">市值 − 净现金 $68.27B</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">Forward PE（NTM）</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股价 ÷ 未来 4 季共识 EPS</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">做空比例</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x%]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">占流通股 · 半月更新</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">下次财报</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[2026-12-xx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">隐含波动 [±x%]</div></div>
+<details style="border-left: 1px solid #EEF0F3; padding: 8px 14px; position: relative">
+<summary style="cursor: pointer; font-size: 12px; color: #1D4ED8; padding-top: 14px; white-space: nowrap">更多指标 ▾</summary>
+<div style="position: absolute; right: 0; top: 64px; z-index: 5; width: 760px; background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 8px 0">
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">52 周区间</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[xx – xxx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">距高点 [−x%]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">EV / EBITDA（NTM）</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370"></div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">股息</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">$0.15 / 季</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股息率 [x.x%]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">分析师目标价</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">买入 [x] · 持有 [x] · 卖出 [x]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">机构 / 内部人持股</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[xx%] / [x%]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">90 天内部人净买入 [ ]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">空头回补天数</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">上期 [x.x]</div></div>
+<div style="grid-column: 1 / -1; padding: 8px 14px 4px 14px; font-size: 11px; color: #5B6370; border-top: 1px solid #EEF0F3; margin-top: 4px">字段在 config/companies/MU.yaml 中增减</div>
+</div>
+</details>
+</div>
+<nav aria-label="个股页面" style="margin-top: 8px; display: flex; gap: 4px; overflow-x: auto">
+<a href="Main.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">财报解读</a>
+<a href="Results.dc.html" style="padding: 10px 18px; color: #15181D; font-weight: 500; border-bottom: 2px solid #1D4ED8">财务报表</a>
+<a href="Call.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">电话会</a>
+<a href="Consensus.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">分析师预期</a>
+<a href="Price.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">股价反应</a>
+</nav>
+</div>
+</section>
+
+<main style="max-width: 1360px; margin: 0 auto; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+
+<div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap">
+<div role="tablist" aria-label="报表" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+<button type="button" role="tab" onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button>
+</sc-for>
+</div>
+<div role="group" aria-label="期间口径" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px">
+<button type="button" onClick="{{ toQ }}" style="{{ qBtn }}">单季</button>
+<button type="button" onClick="{{ toYtd }}" style="{{ ytdBtn }}">累计</button>
+<button type="button" onClick="{{ toY }}" style="{{ yBtn }}">年度</button>
+</div>
+<div role="group" aria-label="单位" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px">
+<button type="button" onClick="{{ toM }}" style="{{ mBtn }}">$M</button>
+<button type="button" onClick="{{ toB }}" style="{{ bBtn }}">$B</button>
+</div>
+<div role="group" aria-label="显示变化" style="display: flex; gap: 6px; align-items: center">
+<span style="font-size: 13px; color: #5B6370">显示</span>
+<button type="button" aria-pressed="{{ yoyPressed }}" onClick="{{ toggleYoy }}" style="{{ yoyBtn }}">
+<span style="{{ yoyBox }}">✓</span>同比
+</button>
+<button type="button" aria-pressed="{{ qoqPressed }}" onClick="{{ toggleQoq }}" disabled="{{ qoqDisabled }}" style="{{ qoqBtn }}">
+<span style="{{ qoqBox }}">✓</span>环比
+</button>
+</div>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #5B6370">范围
+<select style="height: 34px; border: 1px solid #D5D9E0; border-radius: 6px; padding: 0 8px; font-family: inherit; font-size: 13px; background: #FFFFFF">
+<option>最近 5 期</option><option>最近 12 期</option><option>全部（FQ1-22 起）</option>
+</select>
+</label>
+<label style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #3A414C; cursor: pointer"><input type="checkbox" checked="{{ hideEmpty }}" onChange="{{ toggleHide }}" style="width: 16px; height: 16px"> 隐藏全空行</label>
+<div style="flex-grow: 1"></div>
+<button type="button" style="height: 34px; border: 1px solid #D5D9E0; border-radius: 6px; padding: 0 12px; font-family: inherit; font-size: 13px; background: #FFFFFF; cursor: pointer">导出 CSV</button>
+</div>
+
+<div style="font-size: 12px; color: #5B6370; margin-top: -4px">{{ modeNote }}</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 20px; overflow-x: auto">
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 8px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 700">{{ tbl.title }}</h2>
+<div style="display: flex; gap: 14px; align-items: center; font-size: 12px; color: #5B6370">
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; border-radius: 2px; background: #1D4ED8"></span>增加</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; border-radius: 2px; background: #C2410C"></span>减少</span>
+<span>{{ tbl.unit }}</span>
+</div>
+</div>
+<table style="width: 100%; min-width: 980px; border-collapse: collapse; font-size: 13px">
+<thead>
+<tr style="color: #5B6370; text-align: right; font-size: 12px">
+<th style="text-align: left; font-weight: 500; padding: 10px 0; border-bottom: 1px solid #D5D9E0; width: 280px">项目</th>
+<sc-for list="{{ tbl.cols }}" as="h" hint-placeholder-count="5">
+<th style="font-weight: 500; padding: 10px 12px; border-bottom: 1px solid #D5D9E0; white-space: nowrap">{{ h }}</th>
+</sc-for>
+</tr>
+</thead>
+<tbody style="font-family: 'IBM Plex Mono', monospace; text-align: right">
+<sc-for list="{{ tbl.rows }}" as="r" hint-placeholder-count="14">
+<tr style="{{ r.trStyle }}">
+<td style="{{ r.nameStyle }}">{{ r.name }}</td>
+<sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="5">
+<td style="{{ c.style }}">{{ c.v }}</td>
+</sc-for>
+</tr>
+</sc-for>
+</tbody>
+</table>
+<div style="font-size: 12px; color: #5B6370; margin-top: 12px">{{ tbl.note }}</div>
+</div>
+
+<div style="font-size: 12px; color: #5B6370">规则：同比 = 与去年同期比，环比 = 与上一期比（年度视图只有同比）；金额类用 %，比率类（毛利率、利润率、FCF 率）用 pp；基数 ≤ 0 显示 n.m.，缺少基数显示「—」。斜体灰字为推算项。样式稿中 [ ] 为待接入数据。</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1700}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 'is', period: 'q', yoy: true, qoq: false, unit: 'm', hide: true }; }
+  renderVals() {
+    var self = this, st = this.state;
+    var seg = function (on) { return 'border: none; border-radius: 6px; padding: 0 14px; height: 32px; font-size: 13px; font-family: inherit; cursor: pointer; ' + (on ? 'background: #FFFFFF; color: #15181D; font-weight: 500; box-shadow: 0 1px 2px rgba(0,0,0,0.08)' : 'background: transparent; color: #5B6370'); };
+    var tog = function (on, dis) { return 'display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px; border-radius: 6px; font-family: inherit; font-size: 13px; cursor: ' + (dis ? 'not-allowed' : 'pointer') + '; ' + (dis ? 'opacity: 0.45; ' : '') + (on ? 'background: #EEF2FD; border: 1.5px solid #1D4ED8; color: #1E3A8A; font-weight: 500' : 'background: #FFFFFF; border: 1px solid #D5D9E0; color: #3A414C'); };
+    var box = function (on) { return 'width: 14px; height: 14px; border-radius: 3px; font-size: 10px; line-height: 14px; text-align: center; ' + (on ? 'background: #1D4ED8; color: #FFFFFF' : 'background: #FFFFFF; color: transparent; border: 1px solid #B0B6C0'); };
+    var N = null;
+    var Q = st.period === 'q'; var YTD = st.period === 'ytd'; var UB = st.unit === 'b';
+    var showY = st.yoy, showQ = st.qoq && Q;
+
+    var fmtV = function (v, t) {
+      if (v === null || v === undefined) return '[ ]';
+      if (t === 'pct') return v.toFixed(1) + '%';
+      if (t === 'eps') return v.toFixed(2);
+      if (t === 'days') return String(Math.round(v));
+      var s = UB ? (Math.abs(v) / 1000).toFixed(2) : Math.round(Math.abs(v)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return (v < 0 ? '−' : '') + s;
+    };
+    var chg = function (cur, base, t) {
+      if (cur === null || cur === undefined || base === null || base === undefined) return { v: '—', s: 0 };
+      if (t === 'pct') { var d = cur - base; return { v: (d >= 0 ? '+' : '−') + Math.abs(d).toFixed(1) + 'pp', s: d === 0 ? 0 : (d > 0 ? 1 : -1) }; }
+      if (t === 'days') { var dd = cur - base; return { v: (dd >= 0 ? '+' : '−') + Math.abs(dd) + ' 天', s: dd === 0 ? 0 : (dd > 0 ? 1 : -1) }; }
+      if (base <= 0) return { v: 'n.m.', s: 0 };
+      var p = (cur / base - 1) * 100;
+      var txt = Math.abs(p) >= 1000 ? Math.round(Math.abs(p)).toString() : Math.abs(p).toFixed(1);
+      return { v: (p >= 0 ? '+' : '−') + txt + '%', s: p === 0 ? 0 : (p > 0 ? 1 : -1) };
+    };
+
+    // 行定义：[类型, 名称, 数值数组, 数据类型, 去年同期基数数组(可选), 上一期基数(首列环比用,可选)]
+    // 类型：b 合计行 / '' 普通 / d 推算 / s 分组标题 / i 缩进
+    var build = function (title, unit, cols, defs, note, lag) {
+      var rows = [];
+      defs.filter(function (d) { if (!st.hide || d[0] === 's') return true; return (d[2] || []).some(function (v) { return v !== null && v !== undefined; }); }).forEach(function (d) {
+        var kind = d[0], name = d[1], vals = d[2] || [], t = d[3] || 'amt', yb = d[4], qb = d[5];
+        var sec = kind === 's', bold = kind === 'b', der = kind === 'd', ind = kind === 'i';
+        rows.push({
+          name: name, trStyle: sec ? 'background: #FBFBFC' : '',
+          nameStyle: 'text-align: left; font-family: Noto Sans SC, sans-serif; padding: 9px 0 9px ' + (ind || der ? '18px' : '0') + '; border-bottom: 1px solid #EEF0F3; ' + (bold ? 'font-weight: 700; ' : '') + (sec ? 'font-weight: 700; color: #1E3A8A; font-size: 12px; ' : '') + (der ? 'font-style: italic; color: #5B6370; ' : ''),
+          cells: cols.map(function (c, i) {
+            if (sec) return { v: '', style: 'border-bottom: 1px solid #EEF0F3' };
+            var v = vals[i];
+            return { v: fmtV(v, t), style: 'padding: 9px 12px; border-bottom: 1px solid #EEF0F3; white-space: nowrap; ' + (v === null || v === undefined ? 'color: #B0B6C0; ' : (der ? 'color: #5B6370; font-style: italic; ' : 'color: #15181D; ')) + (bold ? 'font-weight: 600' : '') };
+          })
+        });
+        if (sec) return;
+        var sub = function (label, baseFn) {
+          rows.push({
+            name: '↳ ' + label, trStyle: 'background: #F9FAFB',
+            nameStyle: 'text-align: left; font-family: Noto Sans SC, sans-serif; padding: 5px 0 5px ' + (ind || der ? '34px' : '16px') + '; border-bottom: 1px solid #F1F3F6; font-size: 12px; color: #5B6370',
+            cells: cols.map(function (c, i) {
+              var r = chg(vals[i], baseFn(i), t);
+              var color = r.s > 0 ? '#1D4ED8' : (r.s < 0 ? '#C2410C' : '#8A93A0');
+              return { v: r.v, style: 'padding: 5px 12px; border-bottom: 1px solid #F1F3F6; white-space: nowrap; font-size: 12px; color: ' + color };
+            })
+          });
+        };
+        if (showY) sub('同比', function (i) { if (yb && yb[i] !== undefined && yb[i] !== null) return yb[i]; return i - lag >= 0 ? vals[i - lag] : null; });
+        if (showQ) sub('环比', function (i) { return i > 0 ? vals[i - 1] : (qb === undefined ? null : qb); });
+      });
+      return { title: title, unit: unit, cols: cols, rows: rows, note: note };
+    };
+
+    var U_IS = UB ? '单位：$ 十亿，EPS 为 $' : '单位：$ 百万，EPS 为 $'; var U_M = UB ? '单位：$ 十亿' : '单位：$ 百万';
+    var QC = ['FQ4-25', 'FQ1-26', 'FQ2-26', 'FQ3-26', 'FQ4-26'];
+    var YC = ['FY2022', 'FY2023', 'FY2024', 'FY2025', 'FY2026'];
+    var QB = ['FQ4-25 · 08-28', 'FQ1-26', 'FQ2-26', 'FQ3-26 · 05-28', 'FQ4-26 · 09-03'];
+    // 去年同期基数：FQ4-24, FQ1-25, FQ2-25, FQ3-25（FQ4-26 的基数 FQ4-25 在表内）
+    var T = {
+      is: {
+        q: build('利润表（季度）', U_IS, QC, [
+          ['b', '营业收入', [11315, 13643, 23860, 41456, 54229], 'amt', [7750, 8709, 8053, 9301, N], 9301],
+          ['', '销售成本', [6261, N, N, 6400, 7182]],
+          ['b', '毛利', [5054, N, N, 35056, 47047]],
+          ['d', '毛利率', [44.7, 56.0, 74.4, 84.6, 86.8], 'pct', [N, N, 36.8, N, N]],
+          ['', '研发费用', [1047, 1171, 1250, 1316, 1913], 'amt', [N, N, 898, N, N]],
+          ['', '销售及管理费用', [314, 337, 344, 407, 859], 'amt', [N, N, 285, N, N]],
+          ['d', '其他营业费用（推算）', [39, N, N, 15, 524]],
+          ['b', '营业利润', [3654, 6136, 16135, 33318, 43751], 'amt', [N, N, 1773, N, N]],
+          ['d', '营业利润率', [32.3, 45.0, 67.6, 80.4, 80.7], 'pct', [N, N, 22.0, N, N]],
+          ['', '利息及其他收支', [N, N, N, N, N]],
+          ['', '所得税', [N, N, N, N, N]],
+          ['b', '净利润', [3201, 5240, 13785, 28243, 37701], 'amt', [N, N, 1583, N, N]],
+          ['d', '净利润率', [28.3, 38.4, 57.8, 68.1, 69.5], 'pct', [N, N, 19.7, N, N]],
+          ['b', '摊薄 EPS', [2.83, 4.60, 12.07, 24.67, 32.87], 'eps', [N, N, 1.41, N, N]],
+          ['s', 'Non-GAAP'],
+          ['i', '营业利润', [3955, N, N, 33681, 44636]],
+          ['i', '净利润', [3469, 5482, 14021, 28857, 38398], 'amt', [N, N, 1783, N, N]],
+          ['i', '摊薄 EPS', [3.03, 4.78, 12.20, 25.11, 33.42], 'eps', [1.18, 1.79, 1.56, 1.91, N], 1.91]
+        ], '同比基数取自往年同期新闻稿；FQ1-26 / FQ2-26 的销售成本和 FY2025 部分季度数据待从 XBRL 回填后，空白处自动补齐。', 4),
+        y: build('利润表（年度）', U_IS, YC, [
+          ['b', '营业收入', [30758, 15540, 25111, 37378, 133188], 'amt', [27705, N, N, N, N]],
+          ['', '销售成本', [N, N, N, 22505, 25684]],
+          ['b', '毛利', [N, N, N, 14873, 107504]],
+          ['d', '毛利率', [N, N, N, 39.8, 80.7], 'pct'],
+          ['', '研发费用', [N, N, N, 3798, 5650]],
+          ['', '销售及管理费用', [N, N, N, 1205, 1947]],
+          ['b', '营业利润', [N, N, N, 9770, 99340]],
+          ['d', '营业利润率', [N, N, N, 26.1, 74.6], 'pct'],
+          ['b', '净利润', [N, N, N, 8539, 84969]],
+          ['b', '摊薄 EPS', [N, N, N, 7.59, 74.33], 'eps'],
+          ['s', 'Non-GAAP'],
+          ['i', '净利润', [N, N, N, 9470, 86758]],
+          ['i', '摊薄 EPS', [N, N, N, 8.29, 75.52], 'eps']
+        ], 'FY2023 为亏损年度，以它为基数的同比显示 n.m.。', 1)
+      },
+      bs: {
+        q: build('资产负债表（季度末）', U_M, QB, [
+          ['s', '资产'],
+          ['', '现金及现金等价物', [9642, N, N, 24995, 38364]],
+          ['', '短期投资', [665, N, N, 1027, 5070]],
+          ['', '应收账款', [9265, N, N, 31025, 36197]],
+          ['', '存货', [8355, N, N, 8567, 10372]],
+          ['', '长期有价证券', [1629, N, N, 4106, 30019]],
+          ['', '固定资产净值', [46590, N, N, 56426, 63310]],
+          ['b', '总资产', [N, N, N, N, N]],
+          ['s', '负债与权益'],
+          ['', '短期债务', [560, N, N, 582, 491]],
+          ['', '长期债务', [14017, N, N, 5140, 4688]],
+          ['', '客户合同负债（非流动）', [142, N, N, 568, 12895]],
+          ['b', '总负债', [N, N, N, N, N]],
+          ['b', '股东权益', [54165, N, N, 100724, 138378]],
+          ['s', '关键衍生指标'],
+          ['d', '现金及投资合计', [11936, N, N, 30128, 73453]],
+          ['d', '有息债务合计', [14577, N, N, 5722, 5179]],
+          ['d', '净现金', [-2641, N, N, 24406, 68274]],
+          ['d', '存货天数 (DIO)', [N, N, N, 120, 129], 'days']
+        ], 'FQ1-26 / FQ2-26 期末数待回填；回填后中间各季的同比、环比自动生成。净现金 = 现金及投资合计 − 有息债务合计。', 4),
+        y: build('资产负债表（财年末）', U_M, YC, [
+          ['', '现金及现金等价物', [N, N, N, 9642, 38364]],
+          ['', '应收账款', [N, N, N, 9265, 36197]],
+          ['', '存货', [N, N, N, 8355, 10372]],
+          ['', '固定资产净值', [N, N, N, 46590, 63310]],
+          ['', '有息债务合计', [N, N, N, 14577, 5179]],
+          ['', '客户合同负债（非流动）', [N, N, N, 142, 12895]],
+          ['b', '股东权益', [N, N, N, 54165, 138378]],
+          ['d', '净现金', [N, N, N, -2641, 68274]]
+        ], '财年末 = 第四财季末。', 1)
+      },
+      cf: {
+        q: build('现金流量表（季度）', U_M, QC, [
+          ['s', '经营活动'],
+          ['', '净利润', [3201, 5240, 13785, 28243, 37701], 'amt', [N, N, 1583, N, N]],
+          ['', '折旧及摊销', [N, N, N, N, N]],
+          ['', '股权激励', [N, N, N, N, N]],
+          ['', '营运资本变动', [N, N, N, N, N]],
+          ['b', '经营活动现金流', [5730, 8411, 11903, 25388, 43973], 'amt', [N, N, 3942, N, N]],
+          ['s', '投资活动'],
+          ['', '购建固定资产', [N, N, N, N, N]],
+          ['', '政府补贴与合作方出资', [N, N, N, N, N]],
+          ['d', '净 Capex（支出，公司口径）', [4927, 4505, 5004, 7084, 10774], 'amt', [N, N, 3085, N, N]],
+          ['s', '筹资活动'],
+          ['', '偿还债务', [N, N, N, N, N]],
+          ['', '回购', [N, N, N, N, N]],
+          ['', '股息', [N, N, N, N, N]],
+          ['s', '自由现金流'],
+          ['b', '调整后 FCF（公司口径）', [803, 3906, 6899, 18304, 33199], 'amt', [N, N, 857, N, N]],
+          ['d', 'FCF 率', [7.1, 28.6, 28.9, 44.2, 61.2], 'pct', [N, N, 10.6, N, N]]
+        ], '调整后 FCF = 经营现金流 − 净 Capex。', 4),
+        y: build('现金流量表（年度）', U_M, YC, [
+          ['b', '经营活动现金流', [N, N, N, 17525, 89675]],
+          ['d', '净 Capex（支出，公司口径）', [N, N, N, 13804, 27367]],
+          ['b', '调整后 FCF', [N, N, N, 3721, 62308]],
+          ['d', 'FCF 率', [N, N, N, 10.0, 46.8], 'pct']
+        ], '', 1)
+      },
+      eq: {
+        q: build('股东权益变动表（季度）', U_M, QC, [
+          ['b', '期初股东权益', [N, N, N, N, 100724]],
+          ['', '净利润', [3201, 5240, 13785, 28243, 37701], 'amt', [N, N, 1583, N, N]],
+          ['', '股权激励', [N, N, N, N, N]],
+          ['', '回购', [N, N, N, N, N]],
+          ['', '股息', [N, N, N, N, N]],
+          ['', '其他综合收益', [N, N, N, N, N]],
+          ['d', '其他合计（推算）', [N, N, N, N, -47]],
+          ['b', '期末股东权益', [54165, N, N, 100724, 138378]],
+          ['d', '年化 ROE', [N, N, N, N, N], 'pct']
+        ], '其他合计 = 期末 − 期初 − 净利润；接入 XBRL 后按科目展示。', 4),
+        y: build('股东权益变动表（年度）', U_M, YC, [
+          ['b', '期初股东权益', [N, N, N, N, 54165]],
+          ['', '净利润', [N, N, N, 8539, 84969]],
+          ['', '回购', [N, N, N, N, N]],
+          ['', '股息', [N, N, N, N, N]],
+          ['b', '期末股东权益', [N, N, N, 54165, 138378]]
+        ], '', 1)
+      }
+    };
+
+    var YC2 = ['FQ1-26 · 3M', 'FQ2-26 · 6M', 'FQ3-26 · 9M', 'FQ4-26 · 12M'];
+    T.is.ytd = build('利润表（年初至今累计）', U_IS, YC2, [
+      ['b', '营业收入', [13643, 37503, 78959, 133188], 'amt', [8709, 16762, 26063, 37378]],
+      ['', '研发费用', [1171, 2421, 3737, 5650], 'amt', [N, N, N, 3798]],
+      ['', '销售及管理费用', [337, 681, 1088, 1947], 'amt', [N, N, N, 1205]],
+      ['b', '营业利润', [6136, 22271, 55589, 99340], 'amt', [N, N, N, 9770]],
+      ['b', '净利润', [5240, 19025, 47268, 84969], 'amt', [N, N, N, 8539]],
+      ['b', '摊薄 EPS', [N, N, N, 74.33], 'eps', [N, N, N, 7.59]]
+    ], '10-Q 按年初至今累计列报；单季视图由相邻累计数相减得到，相减失败的格子留空。EPS 不可相加，累计 EPS 取报表原值。', 99);
+    T.cf.ytd = build('现金流量表（年初至今累计）', U_M, YC2, [
+      ['b', '经营活动现金流', [8411, 20314, 45702, 89675], 'amt', [N, N, N, 17525]],
+      ['d', '净 Capex（支出，公司口径）', [4505, 9509, 16593, 27367], 'amt', [N, N, N, 13804]],
+      ['b', '调整后 FCF', [3906, 10805, 29109, 62308], 'amt', [N, N, N, 3721]]
+    ], '美股现金流量表在 10-Q 中只有累计数，FQ4 单季 = 10-K 全年 − 前三季累计。', 99);
+    T.bs.ytd = T.bs.q; T.eq.ytd = T.eq.q;
+    var names = { is: '利润表', bs: '资产负债表', cf: '现金流量表', eq: '股东权益表' };
+    var tabs = ['is', 'bs', 'cf', 'eq'].map(function (k) { return { label: names[k], style: seg(st.tab === k), pick: function () { self.setState({ tab: k }); } }; });
+    return {
+      tabs: tabs, tbl: T[st.tab][st.period],
+      qBtn: seg(Q), ytdBtn: seg(YTD), yBtn: seg(st.period === 'y'), mBtn: seg(!UB), bBtn: seg(UB),
+      toQ: function () { self.setState({ period: 'q' }); }, toYtd: function () { self.setState({ period: 'ytd' }); }, toY: function () { self.setState({ period: 'y' }); },
+      toM: function () { self.setState({ unit: 'm' }); }, toB: function () { self.setState({ unit: 'b' }); },
+      hideEmpty: st.hide, toggleHide: function () { self.setState({ hide: !self.state.hide }); },
+      modeNote: YTD ? (st.tab === 'bs' || st.tab === 'eq' ? '资产负债表、权益表是时点数，累计视图与单季相同。' : '累计 = 财年初至该季末。同比与上年同期累计相比。') : (Q ? '单季：流量科目由 10-Q 累计数相减得到；资产负债表取季末余额，环比为较上季末。' : '年度：财年（截至 8 月底 / 9 月初）。'),
+      yoyPressed: st.yoy ? 'true' : 'false', qoqPressed: showQ ? 'true' : 'false', qoqDisabled: !Q,
+      yoyBtn: tog(st.yoy, false), qoqBtn: tog(showQ, !Q), yoyBox: box(st.yoy), qoqBox: box(showQ),
+      toggleYoy: function () { self.setState({ yoy: !self.state.yoy }); },
+      toggleQoq: function () { if (self.state.period === 'q') self.setState({ qoq: !self.state.qoq }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

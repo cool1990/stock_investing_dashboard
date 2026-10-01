@@ -17,6 +17,13 @@ describe('formatGrowth', () => {
   it('missing → [ ]', () => {
     expect(formatGrowth(null, 1)).toBe(MISSING);
   });
+  it('base <= 0 → n.m.', () => {
+    expect(formatGrowth(1, -1)).toBe(NM);
+    expect(formatGrowth(-1, -2)).toBe(NM);
+  });
+  it('sign flip (current < 0, base > 0) → n.m.', () => {
+    expect(formatGrowth(-0.5, 1)).toBe(NM);
+  });
 });
 
 describe('formatPct / PE', () => {

@@ -1,22 +1,26 @@
 ticker: MU
+cik: 723125
 name_en: Micron Technology
 name_zh: 美光科技
 exchange: 纳斯达克
 sector: 存储
-cik: 723125
 fiscal:
-  # 美光财年截至 8 月底/9 月初；财季结束月份
-  quarter_end_months: [11, 2, 5, 8]   # Q1..Q4
-  fy_label_rule: "FY = 财年结束所在的日历年"   # FY26 = 截至 2026-08
-release_timing: after_close             # 盘后发布 → 次日涨跌 = T+1 收盘 / T 收盘 − 1
+  quarter_end_months: [11, 2, 5, 8]   # Q1..Q4 大致结束月份
+  fy_label: end_year                   # FY26 = 截至 2026 年的财年
+release_timing: after_close
 backfill_from: FQ1-22
-eps_basis: non_gaap                     # 页面全部使用调整后 EPS
-guidance:                               # 手工录入，来自上一季新闻稿
+eps_basis: non_gaap
+ir:
+  prepared_remarks_url_pattern: null
+xbrl_map: {}
+metrics: {}
+guidance_groups: {}
+guidance:
   FQ3-26: { eps_mid: 19.15, rev_mid: 33.5 }
   FQ1-27: { eps_mid: 38.15, rev_mid: 61.5 }
-overrides:                              # 手工修正自动数据（以新闻稿为准）
+overrides:
   actuals: {}
-peers: [WDC, SNDK, STX]                 # 暂不用于本页
+peers: [WDC, SNDK, STX]
 header:
   price: null
   market_cap: null

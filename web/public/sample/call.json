@@ -1,0 +1,120 @@
+{
+  "period": "FQ4-26",
+  "date_et": "2026-09-30 16:30",
+  "duration_min": null,
+  "status": "official_transcript",
+  "links": {
+    "remarks_pdf": "https://investors.micron.com/",
+    "webcast": "https://investors.micron.com/",
+    "third_party": null
+  },
+  "executives": [
+    {
+      "ini": "SM",
+      "name": "Sanjay Mehrotra",
+      "role_zh": "董事长、总裁兼 CEO"
+    },
+    {
+      "ini": "MM",
+      "name": "Mark Murphy",
+      "role_zh": "执行副总裁兼 CFO"
+    }
+  ],
+  "guidance": [
+    {
+      "label": "营收",
+      "v": "$61.5B ±1.5B"
+    }
+  ],
+  "prev_period": "FQ3-26",
+  "speakers": [
+    {
+      "ini": "SM",
+      "name": "Sanjay Mehrotra",
+      "role": "CEO",
+      "rel": "相对上一场：供需、长约表述变化",
+      "cols": [
+        {
+          "title": "业绩回顾与变动分析",
+          "items": [
+            {
+              "topic": "全年",
+              "text": "FY26 创纪录。",
+              "tag": null,
+              "prev": null,
+              "src": [
+                "p5"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "未来展望（含指引）",
+          "items": [
+            {
+              "topic": "供需",
+              "text": "2027–28 更紧。",
+              "tag": "变化",
+              "prev": "[上一场]",
+              "src": [
+                "p18"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "qa_topics": [
+    {
+      "topic": "资本回报",
+      "n": 2
+    }
+  ],
+  "qa": [
+    {
+      "analyst": "Timothy Arcuri",
+      "firm": "UBS",
+      "ts": "[mm:ss]",
+      "topic": "资本回报",
+      "turns": [
+        {
+          "kind": "提问",
+          "q": "超额现金如何回报？",
+          "who": "Mark Murphy",
+          "a": "回购为主，12 月 9 日起。",
+          "src": [
+            "p40"
+          ]
+        }
+      ]
+    }
+  ],
+  "transcript": {
+    "sources": [
+      "official",
+      "remarks"
+    ],
+    "paras": [
+      {
+        "id": "p1",
+        "src": "official",
+        "ts": "00:00",
+        "who": "Operator",
+        "role": "主持人",
+        "en": "[Operator opening]",
+        "zh": null
+      }
+    ]
+  },
+  "corrections": [
+    "Timothy Curie → Timothy Arcuri（UBS）"
+  ],
+  "ai": {
+    "model": "cursor-manual",
+    "prompts": {
+      "points": "call_points_v3",
+      "diff": "call_diff_v2"
+    }
+  }
+}

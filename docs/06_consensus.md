@@ -1,6 +1,10 @@
 # Cursor 实现说明：个股「分析师预期」页（MU 首发）
 
-> 把本文件、`docs/design/bloomberg-eeb-reference.png`、`docs/design/consensus-mockup.dc.html` 一起放进仓库，然后在 Cursor 里说：「按 docs/CURSOR_PROMPT_consensus.md 实现，按第 10 节的顺序一步一步做，每完成一步停下来让我确认」。
+> 本页的通用约定（技术栈、目录、配色、公共组件、数据管道基础设施）见 `docs/01_common.md`，两者冲突时以本文件为准。设计参考：`docs/design/consensus-mockup.dc.html`、`docs/design/bloomberg-eeb-reference.png`。
+>
+> 全站推进时，本页属于 P2 阶段：外壳、公共组件和样例渲染已在 P0 完成。第 2 节的目录结构和第 6 节的配色以 `01_common.md` 为准，本文件只补充本页需要的部分（例如 `data/actuals/`、`data/history/`）。第 10 节的步骤从第 2 步开始执行即可。
+>
+> **n.m. 口径以 `01_common.md` 第 6 节为准**：基数 ≤ 0，或者当期 < 0 且基数 > 0（符号翻转）时显示 `n.m.`；基数缺失时显示 `[ ]`。本页四宫格增速仍按 Bloomberg 风格统一取整。
 
 ---
 
@@ -14,7 +18,7 @@
 3. **过去谁更准**：历史上分析师共识、公司指引与实际值之间的偏差。
 
 **设计参考（务必先看）：**
-- `docs/design/consensus-mockup.dc.html`：设计稿的完整源码，包括所有颜色、间距、字号和 MU 样例数据。它是设计工具专用的组件格式（`<x-dc>`、`{{ }}`、`<sc-for>`、`class Component extends DCLogic`），**不能直接运行**。请把它当作样式和数据的参考，用普通 HTML/TS 重新实现。`renderVals()` 里的计算逻辑可以直接参考。
+- `docs/design/consensus-mockup.dc.html`（全站总纲见 `docs/01_common.md`）：设计稿的完整源码，包括所有颜色、间距、字号和 MU 样例数据。它是设计工具专用的组件格式（`<x-dc>`、`{{ }}`、`<sc-for>`、`class Component extends DCLogic`），**不能直接运行**。请把它当作样式和数据的参考，用普通 HTML/TS 重新实现。`renderVals()` 里的计算逻辑可以直接参考。
 - `docs/design/bloomberg-eeb-reference.png`：Bloomberg 的 EPS 预期页截图。「未来预期」区块的四宫格布局来自这里：左上是数值，右上是增速，左下是图，右下是估值。
 
 ---
@@ -194,7 +198,7 @@ peers: [WDC, SNDK, STX]                 # 暂不用于本页
 |---|---|
 | 同比 YoY | 当期 ÷ 去年同期 − 1；年度行用上一财年 |
 | 环比 PoP | 季度：当季 ÷ 上一季 − 1（Q1 对比上一财年的 Q4）；年度行与同比相同 |
-| n.m. | **基数 ≤ 0，或当期 < 0** 时显示 `n.m.`；基数缺失时显示 `[ ]` |
+| n.m. | **基数 ≤ 0，或者当期 < 0 且基数 > 0（符号翻转）** 时显示 `n.m.`；基数缺失时显示 `[ ]`（与 `01_common.md` 第 6 节一致） |
 | 增速格式 | 取整百分比，带符号：`+1003%`、`−13%`。负号用 Unicode `−`（U+2212），不用连字符 |
 | 数值格式 | EPS 保留 2 位（`−1.91`）；营收用十亿美元、保留 2 位；表格内部不加 `$`，单位写在卡片标题 |
 | 共识修正 | 当前共识 ÷ N 天前共识 − 1，保留 1 位小数 |

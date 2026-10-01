@@ -4,6 +4,11 @@
       "ok": true,
       "message": "Initial MU page seeded from design sample (Appendix A)",
       "updated_at_utc": "2026-10-01T00:00:00Z"
+    },
+    "yahoo_consensus": {
+      "ok": true,
+      "message": "MU periods=4",
+      "updated_at_utc": "2026-10-01T12:58:32Z"
     }
   }
 }

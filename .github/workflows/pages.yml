@@ -25,6 +25,9 @@ jobs:
           cache-dependency-path: web/package-lock.json
       - name: Install & build
         working-directory: web
+        env:
+          # 「添加股票」链接：用 GITHUB_REPOSITORY 拼接，避免写死
+          VITE_ADD_STOCK_URL: https://github.com/${{ github.repository }}/blob/main/config/watchlist.yaml
         run: |
           npm ci
           npm run build

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>MU 电话会</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F5F7}
+a{color:#1D4ED8;text-decoration:none}a:hover{color:#1E3A8A}
+summary::-webkit-details-marker{display:none}
+summary{list-style:none}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F4F5F7; color: #15181D; font-family: 'Noto Sans SC', system-ui, sans-serif; font-size: 14px; line-height: 1.5">
+<header style="background: #15181D; color: #FFFFFF">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; gap: 28px">
+<a href="Watchlist.dc.html" style="color: #FFFFFF; font-weight: 700; font-size: 16px; letter-spacing: 0.02em">财报台</a>
+<nav aria-label="全站" style="display: flex; gap: 4px">
+<a href="Watchlist.dc.html" style="padding: 6px 12px; border-radius: 6px; font-size: 14px; background: #2A3039; color: #FFFFFF; font-weight: 500">观察池</a>
+<a href="Sources.dc.html" style="padding: 6px 12px; border-radius: 6px; font-size: 14px; color: #C9CED6">数据说明</a>
+</nav>
+<div style="flex-grow: 1"></div>
+<label style="display: flex; align-items: center; gap: 8px; background: #262B33; border-radius: 6px; padding: 0 12px; height: 36px; width: 260px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A93A0" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input type="text" placeholder="输入代码进入个股，如 NVDA" aria-label="搜索股票代码" style="background: transparent; border: none; outline: none; color: #FFFFFF; font-size: 14px; width: 100%; font-family: inherit">
+</label>
+</div>
+</header>
+<section style="background: #FFFFFF; border-bottom: 1px solid #E2E5EA">
+<div style="max-width: 1360px; margin: 0 auto; padding: 14px 24px 0 24px">
+<div style="font-size: 12px; color: #5B6370"><a href="Watchlist.dc.html">观察池</a> <span style="margin: 0 4px">/</span> MU</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-top: 4px">
+<div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap">
+<h1 style="margin: 0; font-size: 26px; font-weight: 700">MU</h1>
+<span style="font-size: 16px; color: #3A414C">Micron Technology 美光科技</span>
+<span style="font-size: 12px; color: #5B6370; border: 1px solid #E2E5EA; border-radius: 4px; padding: 0 8px">纳斯达克 · 存储</span>
+</div>
+<div style="font-size: 12px; color: #5B6370; text-align: right">最新财报 <b style="color: #15181D; font-weight: 500">FQ4-26</b> · 2026-09-30 盘后发布<br>数据更新 [2026-10-01 07:00 北京]</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)) auto; margin-top: 12px; border: 1px solid #EEF0F3; border-radius: 8px; background: #FBFBFC">
+<div style="padding: 8px 14px"><div style="font-size: 11px; color: #5B6370">股价</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxx.xx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">1D [±x%] · YTD [±x%]</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">市值</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxxB]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股价 × 总股本</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">EV 企业价值</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxxB]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">市值 − 净现金 $68.27B</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">Forward PE（NTM）</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股价 ÷ 未来 4 季共识 EPS</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">做空比例</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x%]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">占流通股 · 半月更新</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">下次财报</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[2026-12-xx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">隐含波动 [±x%]</div></div>
+<details style="border-left: 1px solid #EEF0F3; padding: 8px 14px; position: relative">
+<summary style="cursor: pointer; font-size: 12px; color: #1D4ED8; padding-top: 14px; white-space: nowrap">更多指标 ▾</summary>
+<div style="position: absolute; right: 0; top: 64px; z-index: 5; width: 760px; background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 8px 0">
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">52 周区间</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[xx – xxx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">距高点 [−x%]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">EV / EBITDA（NTM）</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370"></div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">股息</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">$0.15 / 季</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股息率 [x.x%]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">分析师目标价</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">买入 [x] · 持有 [x] · 卖出 [x]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">机构 / 内部人持股</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[xx%] / [x%]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">90 天内部人净买入 [ ]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">空头回补天数</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">上期 [x.x]</div></div>
+<div style="grid-column: 1 / -1; padding: 8px 14px 4px 14px; font-size: 11px; color: #5B6370; border-top: 1px solid #EEF0F3; margin-top: 4px">字段在 config/companies/MU.yaml 中增减</div>
+</div>
+</details>
+</div>
+<nav aria-label="个股页面" style="margin-top: 8px; display: flex; gap: 4px; overflow-x: auto">
+<a href="Main.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">财报解读</a>
+<a href="Results.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">财务报表</a>
+<a href="Call.dc.html" style="padding: 10px 18px; color: #15181D; font-weight: 500; border-bottom: 2px solid #1D4ED8">电话会</a>
+<a href="Consensus.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">分析师预期</a>
+<a href="Price.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">股价反应</a>
+</nav>
+</div>
+</section>
+
+<main style="max-width: 1360px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 20px; align-items: start">
+
+<aside aria-label="历史电话会议" style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 12px; position: sticky; top: 16px">
+<div style="font-weight: 700; font-size: 14px">历史电话会议</div>
+<label style="display: flex; align-items: center; gap: 8px; border: 1px solid #D5D9E0; border-radius: 6px; padding: 0 10px; height: 36px">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8A93A0" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input type="text" placeholder="搜索全部会议，如 HBM" aria-label="搜索历史电话会议" style="border: none; outline: none; font-family: inherit; font-size: 13px; width: 100%">
+</label>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<sc-for list="{{ calls }}" as="c" hint-placeholder-count="8">
+<a href="#" style="{{ c.style }}">
+<span style="font-family: 'IBM Plex Mono', monospace; font-weight: 500">{{ c.q }}</span>
+<span style="font-size: 11px; color: #5B6370; text-align: right">{{ c.meta }}</span>
+</a>
+</sc-for>
+</div>
+<div style="font-size: 11px; color: #5B6370; border-top: 1px solid #EEF0F3; padding-top: 10px">共 20 场（FQ1-22 起）。搜索会在全部会议的原文中匹配，并按季度列出命中段落。</div>
+</aside>
+
+<div style="display: flex; flex-direction: column; gap: 16px; min-width: 0">
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 20px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+<div>
+<h2 style="margin: 0; font-size: 18px; font-weight: 700">FQ4-26 财报电话会议</h2>
+<div style="font-size: 13px; color: #5B6370; margin-top: 4px">2026-09-30 美东 16:30 · 时长 [xx] 分钟</div>
+<div style="display: flex; gap: 16px; margin-top: 10px; font-size: 13px; flex-wrap: wrap">
+<span><b style="font-weight: 500">Sanjay Mehrotra</b> <span style="color: #5B6370">董事长、总裁兼 CEO</span></span>
+<span><b style="font-weight: 500">Mark Murphy</b> <span style="color: #5B6370">执行副总裁兼 CFO</span></span>
+<span><b style="font-weight: 500">Satya Kumar</b> <span style="color: #5B6370">投资者关系与财务副总裁</span></span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; align-items: flex-end">
+<a href="#">准备稿 PDF（官网）</a>
+<a href="#">Webcast 回放（官网）</a>
+<a href="#">第三方文字稿（校对用）</a>
+</div>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<div role="tablist" aria-label="会议内容" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+<button type="button" role="tab" onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button>
+</sc-for>
+</div>
+<sc-if value="{{ isMgmt }}" hint-placeholder-val="{{ true }}">
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer">
+<input type="checkbox" checked="{{ showDiff }}" onChange="{{ toggleDiff }}" style="width: 18px; height: 18px">
+显示与上季（FQ3-26）的表述变化
+</label>
+</sc-if>
+</div>
+
+<sc-if value="{{ isMgmt }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 16px 20px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px"><span style="font-weight: 700; font-size: 14px">本场给出的指引 · FQ1-27</span><a href="Main.dc.html#guide" style="font-size: 12px">在财报解读中查看与共识对比 →</a></div>
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px">
+<div style="background: #F7F8FA; border-radius: 8px; padding: 10px 12px"><div style="font-size: 12px; color: #5B6370">营收</div><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">$61.5B ±1.5B</div></div>
+<div style="background: #F7F8FA; border-radius: 8px; padding: 10px 12px"><div style="font-size: 12px; color: #5B6370">毛利率 NG / GAAP</div><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">86.25% / 85.95%</div></div>
+<div style="background: #F7F8FA; border-radius: 8px; padding: 10px 12px"><div style="font-size: 12px; color: #5B6370">Opex NG / GAAP</div><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">$2.06B / $2.31B</div></div>
+<div style="background: #F7F8FA; border-radius: 8px; padding: 10px 12px"><div style="font-size: 12px; color: #5B6370">EPS NG</div><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">$38.15 ±1.00</div></div>
+<div style="background: #F7F8FA; border-radius: 8px; padding: 10px 12px"><div style="font-size: 12px; color: #5B6370">EPS GAAP</div><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">$37.84 ±1.00</div></div>
+<div style="background: #F7F8FA; border-radius: 8px; padding: 10px 12px"><div style="font-size: 12px; color: #5B6370">净 Capex</div><div style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">≈ $11.5B</div></div>
+</div>
+</div>
+<sc-for list="{{ speakers }}" as="s" hint-placeholder-count="2">
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 20px">
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px">
+<span style="width: 34px; height: 34px; border-radius: 50%; background: #E8EEFC; color: #1E3A8A; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px">{{ s.ini }}</span>
+<div><div style="font-weight: 700; font-size: 15px">{{ s.name }}</div><div style="font-size: 12px; color: #5B6370">{{ s.role }}</div></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<sc-for list="{{ s.cols }}" as="col" hint-placeholder-count="2">
+<div>
+<div style="font-weight: 700; font-size: 13px; color: #1E3A8A; margin-bottom: 8px">{{ col.title }}</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{ col.items }}" as="it" hint-placeholder-count="4">
+<div style="font-size: 13px; line-height: 1.65">
+<div style="display: flex; gap: 8px; align-items: flex-start">
+<sc-if value="{{ it.showTag }}" hint-placeholder-val="{{ false }}"><span style="{{ it.tagStyle }}">{{ it.tag }}</span></sc-if>
+<span><b style="font-weight: 500">{{ it.topic }}</b> {{ it.text }}</span>
+</div>
+<sc-if value="{{ it.showPrev }}" hint-placeholder-val="{{ false }}">
+<div style="margin: 4px 0 0 0; padding: 6px 10px; background: #F7F8FA; border-radius: 6px; font-size: 12px; color: #5B6370">上一场：{{ it.prev }}</div>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #EEF0F3; margin-top: 14px; padding-top: 10px; font-size: 12px; color: #5B6370">
+<span>{{ s.rel }}</span><a href="#" style="font-size: 12px">定位原文</a>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isQA }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 6px; flex-wrap: wrap; font-size: 12px">
+<span style="border: 1px solid #1D4ED8; background: #EEF2FD; color: #1E3A8A; border-radius: 999px; padding: 3px 10px">全部 10</span>
+<span style="border: 1px solid #D5D9E0; border-radius: 999px; padding: 3px 10px">资本回报 2</span>
+<span style="border: 1px solid #D5D9E0; border-radius: 999px; padding: 3px 10px">HBM 2</span>
+<span style="border: 1px solid #D5D9E0; border-radius: 999px; padding: 3px 10px">Capex 2</span>
+<span style="border: 1px solid #D5D9E0; border-radius: 999px; padding: 3px 10px">毛利率 1</span>
+<span style="border: 1px solid #D5D9E0; border-radius: 999px; padding: 3px 10px">价格/周期 1</span>
+<span style="border: 1px solid #D5D9E0; border-radius: 999px; padding: 3px 10px">SCA 1</span>
+<span style="border: 1px solid #D5D9E0; border-radius: 999px; padding: 3px 10px">NAND 1</span>
+</div>
+<sc-for list="{{ qa }}" as="x" hint-placeholder-count="5">
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 18px 20px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px">
+<div><span style="font-weight: 700">{{ x.analyst }}</span><span style="font-size: 12px; color: #5B6370; margin-left: 8px">{{ x.firm }}</span></div>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5B6370">{{ x.ts }}</span>
+</div>
+<sc-for list="{{ x.turns }}" as="t" hint-placeholder-count="2">
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; padding: 10px 0; border-top: 1px solid #EEF0F3">
+<div><div style="font-size: 12px; color: #5B6370; margin-bottom: 2px">{{ t.qlabel }}</div><div style="font-size: 13px; line-height: 1.7">{{ t.q }}</div></div>
+<div><div style="font-size: 12px; color: #5B6370; margin-bottom: 2px">回答 · {{ t.who }}</div><div style="font-size: 13px; line-height: 1.7">{{ t.a }}</div></div>
+</div>
+</sc-for>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isRaw }}" hint-placeholder-val="{{ false }}">
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap">
+<div role="group" aria-label="原文来源" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px">
+<button type="button" style="border: none; border-radius: 6px; padding: 0 12px; height: 30px; font-size: 13px; font-family: inherit; background: #FFFFFF; color: #15181D; font-weight: 500">官方回放转写</button>
+<button type="button" style="border: none; border-radius: 6px; padding: 0 12px; height: 30px; font-size: 13px; font-family: inherit; background: transparent; color: #5B6370">准备稿 PDF</button>
+<button type="button" style="border: none; border-radius: 6px; padding: 0 12px; height: 30px; font-size: 13px; font-family: inherit; background: transparent; color: #5B6370">第三方文字稿</button>
+</div>
+<label style="display: flex; align-items: center; gap: 8px; border: 1px solid #D5D9E0; border-radius: 6px; padding: 0 10px; height: 34px; flex-grow: 1; max-width: 360px">
+<input type="text" placeholder="在本场会议原文中搜索" aria-label="搜索原文" style="border: none; outline: none; font-family: inherit; font-size: 13px; width: 100%">
+</label>
+<label style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #5B6370"><input type="checkbox" checked> 显示中文对照</label>
+</div>
+<div style="display: flex; gap: 10px; align-items: flex-start; background: #FDF6EC; color: #7C3A0A; border-radius: 8px; padding: 10px 12px; font-size: 12px">
+<span>转写校对：第三方文字稿写作「Timothy Curie」，已按券商名单校正为「Timothy Arcuri（UBS）」。</span>
+</div>
+<sc-for list="{{ raw }}" as="r" hint-placeholder-count="5">
+<div style="display: grid; grid-template-columns: 56px 180px minmax(0, 1fr); gap: 12px; padding: 10px 0; border-top: 1px solid #EEF0F3; font-size: 13px">
+<span style="font-family: 'IBM Plex Mono', monospace; color: #5B6370">{{ r.ts }}</span>
+<div><div style="font-weight: 500">{{ r.who }}</div><div style="font-size: 12px; color: #5B6370">{{ r.role }}</div></div>
+<div><div style="line-height: 1.7">{{ r.en }}</div><div style="line-height: 1.7; color: #5B6370; margin-top: 4px">{{ r.zh }}</div></div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<div style="font-size: 12px; color: #5B6370">样式稿：发言要点来自 FQ4-26 准备稿与电话会文字稿；「新增 / 措辞变化」标签与上季原话为样式示例，正式版由逐句对比生成；原文区只示意版式。</div>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 'mgmt', diff: true }; }
+  renderVals() {
+    var self = this, st = this.state;
+    var seg = function (on) { return 'border: none; border-radius: 6px; padding: 0 16px; height: 34px; font-size: 13px; font-family: inherit; cursor: pointer; ' + (on ? 'background: #FFFFFF; color: #15181D; font-weight: 500; box-shadow: 0 1px 2px rgba(0,0,0,0.08)' : 'background: transparent; color: #5B6370'); };
+    var tabs = [['mgmt', '管理层发言'], ['qa', '分析师问答'], ['raw', '原文']].map(function (t) { return { label: t[1], style: seg(st.tab === t[0]), pick: function () { self.setState({ tab: t[0] }); } }; });
+    var cs = function (on) { return 'display: flex; justify-content: space-between; align-items: baseline; padding: 8px 10px; border-radius: 6px; font-size: 13px; color: #15181D; ' + (on ? 'background: #EEF2FD; box-shadow: inset 2px 0 0 #1D4ED8' : ''); };
+    var calls = [['FQ4-26', '2026-09-30 · 官方回放转写', true], ['FQ3-26', '2026-06-24 · 原文可查', false], ['FQ2-26', '2026-03-18 · 原文可查', false], ['FQ1-26', '2025-12-17 · 原文可查', false], ['FQ4-25', '2025-09-23 · 第三方文字稿', false], ['FQ3-25', '2025-06-25 · 第三方文字稿', false], ['FQ2-25', '2025-03-20 · 解析中', false], ['…', '至 FQ1-22', false]].map(function (c) { return { q: c[0], meta: c[1], style: cs(c[2]) }; });
+    var D = st.diff;
+    var tagS = function (kind) { var m = { '新增': ['#E8EEFC', '#1E3A8A'], '变化': ['#FDF0E6', '#9A3412'] }; var c = m[kind]; return 'flex-shrink: 0; font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; margin-top: 2px; background: ' + c[0] + '; color: ' + c[1]; };
+    var I = function (topic, text, tag, prev) { return { topic: topic, text: text, tag: tag || '', showTag: D && !!tag, tagStyle: tag ? tagS(tag) : '', prev: prev || '', showPrev: D && !!prev }; };
+    var parts = [
+      { no: '01', title: '业绩回顾与变动分析', desc: '本季发生了什么、为什么 · 按讲话人列出', hasGuide: false, speakers: [
+        { ini: 'SM', name: 'Sanjay Mehrotra', role: 'CEO', items: [
+          I('全年：', 'FY26 收入、毛利率、EPS 均创纪录，AI 推动整个内存层级的需求。'),
+          I('HBM：', '本季 HBM 收入增速快于公司整体。'),
+          I('技术：', '1-gamma DRAM 与 G9 NAND 推进；与 NVIDIA 开发定制 HBM4E（NVHBM）。', '新增'),
+          I('长约：', '已签 26 份战略客户协议（SCA），预计覆盖 2030 年前超过 35% 的收入。', '变化', '[上季的 SCA 数量与覆盖率表述]'),
+          I('组织：', '宣布管理层任命，强调执行与创新。')
+        ] },
+        { ini: 'MM', name: 'Mark Murphy', role: 'CFO', items: [
+          I('收入：', '$54.2B，环比 +31%、同比 +379%。'),
+          I('DRAM：', '$39.8B，出货环比中个位数增长，价格环比上涨 high-teens %。'),
+          I('NAND：', '$14.1B，出货环比约 +10%，价格环比约 +30%。'),
+          I('利润：', 'Non-GAAP 毛利率 87.0%；FY26 全年 81.1%，EPS $75.52。'),
+          I('现金流：', '经营现金流约 $44B，调整后 FCF $33.2B。'),
+          I('需求可见度：', 'RPO 约 $150B，客户财务承诺 $32B（主要为现金押金）。', '新增'),
+          I('存货：', 'DIO 129 天（环比 +9 天），供给仍极度紧张。', '变化', '[上季的存货与供给表述]')
+        ] }
+      ] },
+      { no: '02', title: '未来展望（含业绩指引）', desc: '管理层对后续季度与行业的判断 · 按讲话人列出', hasGuide: true, speakers: [
+        { ini: 'SM', name: 'Sanjay Mehrotra', role: 'CEO', items: [
+          I('供需：', '2027–28 年的内存与存储供需将比 2026 年更紧；看不到供需恢复平衡的时点。', '变化', '[上季的供需展望]'),
+          I('HBM：', '2027 年 HBM 供给已大部分签约，价格同比显著上涨，与普通 DRAM 的毛利差在收窄。', '新增'),
+          I('产能：', '新加坡 HBM 封装 2027 年初、爱达荷 ID1 2027 年中、台湾铜锣 2027 年中、ID2 与日本 2028 年底、纽约 2030 年出片。')
+        ] },
+        { ini: 'MM', name: 'Mark Murphy', role: 'CFO', items: [
+          I('FY27：', '又一个创纪录年份，每个季度收入环比增长。'),
+          I('毛利率：', 'FQ1 是 FY27 的毛利率底部；FQ1 之后营业利润率继续扩张，尽管价格涨幅趋于温和。', '新增'),
+          I('费用与税：', 'FY27 Opex 增加约 $2.5B（研发、激励薪酬）；税率约 15.5%。'),
+          I('Capex：', 'FQ1 约 $11.5B、上半年约 $25B，全年明显更高；建设类增速高于设备类。', '变化', '[上季的 FY27 capex 表述]'),
+          I('资本回报：', '12 月 9 日起以回购为主返还超额现金。', '新增')
+        ] }
+      ] }
+    ];
+    var qa = [
+      { analyst: 'Timothy Arcuri', firm: 'UBS', ts: '[mm:ss]', turns: [
+        { qlabel: '提问', q: '目标现金水平是多少、何时达到？超额现金如何回报？', who: 'Mark Murphy', a: '预计 FQ1 末达到目标现金水平，FQ1 FCF 将显著高于本季 $33.2B；超额现金以回购为主，12 月 9 日起开始，现有授权 $2.2B，将申请追加。' },
+        { qlabel: '追问', q: '未来几年的资本密集度？', who: 'Mark Murphy', a: 'Capex 会更多转向建设类；资本密集度保持纪律，确保产能投资回报。' } ] },
+      { analyst: 'C.J. Muse', firm: 'Cantor Fitzgerald', ts: '[mm:ss]', turns: [
+        { qlabel: '提问', q: 'FQ1 毛利率指引中，高成本存货等因素的影响有多大？', who: 'Mark Murphy', a: 'FQ1 约有 $1B 额外成本，来自计入存货的 FY26 激励薪酬和新厂启动成本；FQ2 会部分改善，但被 FY27 激励薪酬抵消。' },
+        { qlabel: '追问', q: 'HBM 价格走势？', who: 'Sanjay Mehrotra', a: '2027 年 HBM 大部分已按显著高于 2026 年的价格售出，与普通 DRAM 的毛利差在收窄；HBM 需求增速继续高于 DRAM 整体。' } ] },
+      { analyst: 'Vivek Arya', firm: 'BofA Securities', ts: '[mm:ss]', turns: [
+        { qlabel: '提问', q: 'FY27 现金回报的规模？', who: 'Mark Murphy', a: '有能力也有意愿提高回报，近期会追加授权，按 CHIPS 协议安排从 12 月 9 日起开始。' },
+        { qlabel: '追问', q: '到 2028 年的价格走势？', who: 'Sanjay Mehrotra', a: '2027–28 年供需比 2026 年更紧：新产能爬坡慢、HBM 消耗更多晶圆；服务器出货 high-teens 增长支撑需求。' } ] },
+      { analyst: 'Krish Sankar', firm: 'TD Cowen', ts: '[mm:ss]', turns: [
+        { qlabel: '提问', q: '客户下调 HBM 规格会怎样影响需求？', who: 'Sanjay Mehrotra', a: '行业 HBM 需求依然强劲；客户优化的目的是多出货，而不是减少内存用量。' },
+        { qlabel: '追问', q: '设备类 capex 是否受限？', who: 'Mark Murphy', a: '建设类 capex 提高反映新厂建设周期；设备投入按 SCA 带来的需求可见度同步安排。' } ] },
+      { analyst: 'Harlan Sur', firm: 'JPMorgan', ts: '[mm:ss]', turns: [
+        { qlabel: '提问', q: '未来 SCA 覆盖的收入比例还能提高多少？', who: 'Sanjay Mehrotra', a: '2027 年产出已有超过 75% 被承诺（含非 SCA 客户）；SCA 目标约覆盖 2030 年前 50% 的收入。' },
+        { qlabel: '追问', q: 'NAND 的研发和 capex 策略？', who: 'Sanjay Mehrotra', a: '数据中心 SSD 份额全球第二，连续五年提升；新加坡 NAND 新厂 2028 年底投产，支持 G9。' } ] }
+    ];
+    var raw = [
+      { ts: '00:00', who: 'Operator', role: '主持人', en: '[Operator opening remarks]', zh: '[主持人开场]' },
+      { ts: '[mm:ss]', who: 'Satya Kumar', role: '投资者关系', en: '[Safe-harbor statement and agenda]', zh: '[前瞻性声明与议程]' },
+      { ts: '[mm:ss]', who: 'Sanjay Mehrotra', role: 'CEO', en: '[CEO prepared remarks, paragraph by paragraph]', zh: '[逐段中文对照]' },
+      { ts: '[mm:ss]', who: 'Mark Murphy', role: 'CFO', en: '[CFO prepared remarks, paragraph by paragraph]', zh: '[逐段中文对照]' },
+      { ts: '[mm:ss]', who: 'Timothy Arcuri', role: 'UBS', en: '[Question]', zh: '[问题]' }
+    ];
+    var rels = ['相对上一场：[供需判断、长约表述的变化，由逐句对比生成]', '相对上一场：[毛利率底部、资本开支、资本回报表述的变化]'];
+    var speakers = parts[0].speakers.map(function (sp, i) {
+      return { ini: sp.ini, name: sp.name, role: sp.role, rel: rels[i], cols: [ { title: '业绩回顾与变动分析', items: sp.items }, { title: '未来展望（含指引）', items: parts[1].speakers[i].items } ] };
+    });
+    return {
+      speakers: speakers,
+      tabs: tabs, calls: calls, parts: parts, qa: qa, raw: raw,
+      isMgmt: st.tab === 'mgmt', isQA: st.tab === 'qa', isRaw: st.tab === 'raw',
+      showDiff: st.diff, toggleDiff: function () { self.setState({ diff: !self.state.diff }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

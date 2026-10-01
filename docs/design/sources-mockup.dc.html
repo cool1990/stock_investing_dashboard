@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>数据说明</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F5F7}
+a{color:#1D4ED8;text-decoration:none}a:hover{color:#1E3A8A}
+summary::-webkit-details-marker{display:none}
+summary{list-style:none}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F4F5F7; color: #15181D; font-family: 'Noto Sans SC', system-ui, sans-serif; font-size: 14px; line-height: 1.5">
+<header style="background: #15181D; color: #FFFFFF">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; gap: 28px">
+<a href="Watchlist.dc.html" style="color: #FFFFFF; font-weight: 700; font-size: 16px; letter-spacing: 0.02em">财报台</a>
+<nav aria-label="全站" style="display: flex; gap: 4px">
+<a href="Watchlist.dc.html" style="padding: 6px 12px; border-radius: 6px; font-size: 14px; color: #C9CED6">观察池</a>
+<a href="Sources.dc.html" style="padding: 6px 12px; border-radius: 6px; font-size: 14px; background: #2A3039; color: #FFFFFF; font-weight: 500">数据说明</a>
+</nav>
+<div style="flex-grow: 1"></div>
+<label style="display: flex; align-items: center; gap: 8px; background: #262B33; border-radius: 6px; padding: 0 12px; height: 36px; width: 260px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A93A0" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input type="text" placeholder="输入代码进入个股，如 NVDA" aria-label="搜索股票代码" style="background: transparent; border: none; outline: none; color: #FFFFFF; font-size: 14px; width: 100%; font-family: inherit">
+</label>
+</div>
+</header>
+
+<main style="max-width: 1100px; margin: 0 auto; padding: 32px 24px; display: flex; flex-direction: column; gap: 20px">
+<div>
+<h1 style="margin: 0; font-size: 26px; font-weight: 700">数据说明</h1>
+<p style="margin: 8px 0 0 0; font-size: 14px; color: #3A414C; line-height: 1.8; max-width: 760px">每个数字从哪里来、有多可靠、拿不到时怎么显示。原则：数字只来自结构化来源或规则解析；AI 只做文本理解并附原文；<b style="font-weight: 500">缺数据就留空或写「不可得」，不拿另一个来源的数默默补上。</b></p>
+</div>
+
+<div style="display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px">
+<span style="display: flex; align-items: center; gap: 6px"><span style="font-size: 11px; font-weight: 500; padding: 1px 8px; border-radius: 999px; background: #E6F4EA; color: #22543D">稳定</span>官方、结构化，几乎不变</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="font-size: 11px; font-weight: 500; padding: 1px 8px; border-radius: 999px; background: #FDF3E1; color: #7B4A0E">有条件</span>非官方接口、推算或需要自建积累</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="font-size: 11px; font-weight: 500; padding: 1px 8px; border-radius: 999px; background: #FDE8E8; color: #8A1C1C">不稳定</span>AI 生成或网页抓取，易变，必须附原文</span>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; overflow: hidden">
+<div style="display: grid; grid-template-columns: 170px 90px minmax(0, 1.3fr) 110px minmax(0, 1fr); gap: 14px; padding: 12px 20px; background: #F7F8FA; border-bottom: 1px solid #E2E5EA; font-size: 12px; color: #5B6370">
+<span>数据</span><span>可靠性</span><span>来源</span><span>更新</span><span>缺失时</span>
+</div>
+<sc-for list="{{ rows }}" as="r" hint-placeholder-count="12">
+<div style="display: grid; grid-template-columns: 170px 90px minmax(0, 1.3fr) 110px minmax(0, 1fr); gap: 14px; padding: 12px 20px; border-bottom: 1px solid #EEF0F3; font-size: 13px; line-height: 1.6; align-items: start">
+<div><div style="font-weight: 500">{{ r.n }}</div><div style="font-size: 11px; color: #5B6370">{{ r.used }}</div></div>
+<span><span style="{{ r.bS }}">{{ r.b }}</span></span>
+<span style="color: #3A414C">{{ r.src }}</span>
+<span style="color: #5B6370; font-size: 12px">{{ r.freq }}</span>
+<span style="color: #3A414C">{{ r.miss }}</span>
+</div>
+</sc-for>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 18px 20px; font-size: 13px; line-height: 1.8; color: #3A414C">
+<div style="font-weight: 700; font-size: 15px; color: #15181D; margin-bottom: 6px">显示约定</div>
+<div>颜色：蓝 = 增加 / 好于预期，橙 = 减少 / 差于预期，灰 = 无数据。全站统一，不使用红绿。</div>
+<div>口径：美光为非自然年财年（截至 8 月底 / 9 月初），期间写作 FQ4-26；比较同行时按期末日期对齐。</div>
+<div>同比 / 环比：金额用 %，比率用 pp；基数 ≤ 0 显示 n.m.；缺基数显示「—」。</div>
+<div>历史回填：统一从期末落在自然年 2021Q4 的财季开始。</div>
+</div>
+<footer style="font-size: 12px; color: #5B6370; padding: 0 0 24px 0">本页由 config/sources.yaml 生成，新增数据源时同步更新。</footer>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var bs = function (k) { var c = { '稳定': ['#E6F4EA', '#22543D'], '有条件': ['#FDF3E1', '#7B4A0E'], '不稳定': ['#FDE8E8', '#8A1C1C'] }[k]; return 'font-size: 11px; font-weight: 500; padding: 1px 8px; border-radius: 999px; white-space: nowrap; background: ' + c[0] + '; color: ' + c[1]; };
+    var rows = [
+      ['三大报表（GAAP）', '财务报表 · 分项拆解', '稳定', 'SEC EDGAR XBRL（companyfacts），免费、无需密钥', '10-Q / 10-K 提交后', '留空；不从第三方补'],
+      ['Non-GAAP、分部、指引', '财报解读', '稳定', '8-K 附件 EX-99.1 新闻稿，规则解析 + 数字反查', '发布当日', '标「未披露」'],
+      ['单季流量科目', '财务报表', '有条件', '由 10-Q 年初至今累计数相减；Q4 = 全年 − 前三季', '季度', '相减失败的格子留空'],
+      ['管理层准备稿', '电话会 · 表述变化', '稳定', '公司 IR 网站 Prepared Remarks PDF', '发布当日', '用第三方文字稿的发言部分'],
+      ['电话会问答', '电话会 · 分析师问题', '有条件', '官网 webcast 回放转写；第三方文字稿（MarketBeat / Benzinga 等）校对与补缺', 'T+1 内', '标「原文解析中 / 无逐字稿」'],
+      ['表述变化、问题聚类、原因', '财报解读', '不稳定', 'AI（DeepSeek）生成，每条附原句与出处，prompt 带版本号', '每次财报', '写「管理层未解释」，不推测'],
+      ['一致预期（EPS、收入）', '分析师预期 · 回顾', '有条件', 'Nasdaq 公开接口为主，Yahoo 交叉校验，MarketBeat 历史回填', '每日快照', '两源差异 > 3% 标黄；缺失写「无一致预期」'],
+      ['预期修正轨迹', '分析师预期', '有条件', '自建每日快照（2026-10-01 起积累）', '每日', '写「不可得」，不伪造上调 / 下调家数'],
+      ['股价、市值、股本', '观察池 · 基础信息 · 股价反应', '有条件', 'yfinance（Yahoo），备份 Stooq 日线', '每日收盘后', '显示上一次快照并标时间'],
+      ['盘后 / 盘前价格', '股价反应', '有条件', 'yfinance 分钟线，仅能回溯约 30–60 天，需在财报日当晚快照', '财报日', '历史用次日开盘跳空近似'],
+      ['期权隐含波动', '基础信息 · 股价反应', '不稳定', 'yfinance 期权链，发布前一日快照', '财报前一日', '留空'],
+      ['做空比例', '观察池 · 基础信息', '有条件', 'FINRA 半月披露（经 yfinance / Nasdaq 获取）', '每月两次', '显示最近一期并标日期'],
+      ['公告与内部人交易', '观察池', '稳定', 'EDGAR 8-K、Form 4（复用现有抓取任务）', '每日', '—'],
+      ['分析师评级、目标价', '分析师预期', '有条件', 'yfinance 汇总值', '每日快照', '家数明细不可得']
+    ].map(function (r) { return { n: r[0], used: r[1], b: r[2], bS: bs(r[2]), src: r[3], freq: r[4], miss: r[5] }; });
+    return { rows: rows };
+  }
+}
+</script>
+</body>
+</html>

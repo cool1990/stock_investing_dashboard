@@ -1,0 +1,156 @@
+{
+  "intro": "本页列出财报台各功能模块的数据来源、更新频率与可靠性。运行状态由每日管道写入；某源失败时保留上一份页面数据，并在此标出错误摘要。",
+  "legend": [
+    { "k": "稳定", "desc": "官方、结构化，几乎不变" },
+    { "k": "有条件", "desc": "依赖抓取或推算，可能缺失或延迟" },
+    { "k": "不稳定", "desc": "第三方或 AI，需人工校验" }
+  ],
+  "rows": [
+    {
+      "id": "xbrl",
+      "name": "三大报表（GAAP）",
+      "used": "财务报表",
+      "reliability": "稳定",
+      "source": "SEC EDGAR 10-Q / 10-K，XBRL 解析",
+      "freq": "季度",
+      "missing": "单季由累计相减；失败格子留空",
+      "status": { "state": "ok", "last_ok": "2026-10-01T22:41:00Z", "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "press_release",
+      "name": "Non-GAAP、分部、指引",
+      "used": "财报解读",
+      "reliability": "稳定",
+      "source": "8-K 附件 EX-99.1 新闻稿，规则解析 + 数字反查",
+      "freq": "发布当日",
+      "missing": "标「未披露」",
+      "status": { "state": "ok", "last_ok": "2026-09-30T23:00:00Z", "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "xbrl_q_diff",
+      "name": "单季流量科目",
+      "used": "财务报表",
+      "reliability": "有条件",
+      "source": "由 10-Q 年初至今累计数相减；Q4 = 全年 − 前三季",
+      "freq": "季度",
+      "missing": "相减失败的格子留空",
+      "status": { "state": "ok", "last_ok": "2026-10-01T22:41:00Z", "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "prepared_remarks",
+      "name": "管理层准备稿",
+      "used": "电话会 · 表述变化",
+      "reliability": "稳定",
+      "source": "公司 IR 网站 Prepared Remarks PDF",
+      "freq": "发布当日",
+      "missing": "用第三方文字稿的发言部分",
+      "status": { "state": "ok", "last_ok": "2026-09-30T23:30:00Z", "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "call_transcript",
+      "name": "电话会问答",
+      "used": "电话会 · 分析师问题",
+      "reliability": "有条件",
+      "source": "官网 webcast 回放转写；第三方文字稿（MarketBeat / Benzinga 等）校对与补缺",
+      "freq": "T+1 内",
+      "missing": "标「原文解析中 / 无逐字稿」",
+      "status": { "state": "ok", "last_ok": "2026-10-01T06:00:00Z", "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "ai_review",
+      "name": "表述变化、问题聚类、原因",
+      "used": "财报解读",
+      "reliability": "不稳定",
+      "source": "AI（DeepSeek）生成，每条附原句与出处，prompt 带版本号",
+      "freq": "每次财报",
+      "missing": "写「管理层未解释」，不推测",
+      "status": { "state": "stale", "last_ok": null, "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "consensus",
+      "name": "一致预期（EPS、收入）",
+      "used": "分析师预期 · 回顾",
+      "reliability": "有条件",
+      "source": "Nasdaq 公开接口为主，Yahoo 交叉校验，MarketBeat 历史回填",
+      "freq": "每日快照",
+      "missing": "两源差异 > 3% 标黄；缺失写「无一致预期」",
+      "status": { "state": "ok", "last_ok": "2026-10-01T06:30:00Z", "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "consensus_trend",
+      "name": "预期修正轨迹",
+      "used": "分析师预期",
+      "reliability": "有条件",
+      "source": "自建每日快照（2026-10-01 起积累）",
+      "freq": "每日",
+      "missing": "写「不可得」，不伪造上调 / 下调家数",
+      "status": { "state": "ok", "last_ok": "2026-10-01T06:30:00Z", "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "prices",
+      "name": "股价、市值、股本",
+      "used": "观察池 · 基础信息 · 股价反应",
+      "reliability": "有条件",
+      "source": "yfinance（Yahoo），备份 Stooq 日线",
+      "freq": "每日收盘后",
+      "missing": "显示上一次快照并标时间",
+      "status": { "state": "stale", "last_ok": null, "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "ah_prices",
+      "name": "盘后 / 盘前价格",
+      "used": "股价反应",
+      "reliability": "有条件",
+      "source": "yfinance 分钟线，仅能回溯约 30–60 天，需在财报日当晚快照",
+      "freq": "财报日",
+      "missing": "历史用次日开盘跳空近似",
+      "status": { "state": "stale", "last_ok": null, "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "options_iv",
+      "name": "期权隐含波动",
+      "used": "基础信息 · 股价反应",
+      "reliability": "不稳定",
+      "source": "yfinance 期权链，发布前一日快照",
+      "freq": "财报前一日",
+      "missing": "留空",
+      "status": { "state": "stale", "last_ok": null, "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "short_interest",
+      "name": "做空比例",
+      "used": "观察池 · 基础信息",
+      "reliability": "有条件",
+      "source": "FINRA 半月披露（经 yfinance / Nasdaq 获取）",
+      "freq": "每月两次",
+      "missing": "显示最近一期并标日期",
+      "status": { "state": "stale", "last_ok": null, "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "filings",
+      "name": "公告与内部人交易",
+      "used": "观察池",
+      "reliability": "稳定",
+      "source": "EDGAR 8-K、Form 4（复用现有抓取任务）",
+      "freq": "每日",
+      "missing": "—",
+      "status": { "state": "ok", "last_ok": "2026-10-01T07:00:00Z", "last_err": null, "err_msg": null }
+    },
+    {
+      "id": "analyst_ratings",
+      "name": "分析师评级、目标价",
+      "used": "分析师预期",
+      "reliability": "有条件",
+      "source": "yfinance 汇总值",
+      "freq": "每日快照",
+      "missing": "家数明细不可得",
+      "status": { "state": "stale", "last_ok": null, "last_err": null, "err_msg": null }
+    }
+  ],
+  "conventions": [
+    "时间戳存储为 UTC，页面展示为北京时间并标注「北京」。",
+    "缺失数值在 JSON 中用 null；页面显示为 [ ] 或 —。",
+    "颜色类别 up / down / flat / na 由 Python 管道计算，前端不自行判断符号。",
+    "某数据源失败时不覆盖已有页面 JSON，并在本页对应行标为 fail 或 stale。"
+  ]
+}

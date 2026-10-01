@@ -1,0 +1,414 @@
+{
+  "period": "FQ4-26",
+  "release": {
+    "date": "2026-09-30",
+    "timing": "after_close",
+    "press_url": "https://investors.micron.com/",
+    "remarks_url": "https://investors.micron.com/"
+  },
+  "verdict": {
+    "label": "超预期",
+    "line": {
+      "rev_surp": 0.056,
+      "rev_surp_tone": "up",
+      "eps_surp": 0.054,
+      "eps_surp_tone": "up",
+      "guide_vs_cons": [
+        0.082,
+        0.092
+      ],
+      "guide_vs_cons_tone": [
+        "up",
+        "up"
+      ]
+    },
+    "summary": {
+      "text": "价格驱动的全面超预期：收入 $54.2B，环比 +31%；利润率继续创新高，但费用开始加速，现金流中约 28% 来自客户预付款。",
+      "refs": [
+        {
+          "src": "press",
+          "quote": "Revenue of $54.23 billion"
+        }
+      ],
+      "prompt_version": "review_summary_v2"
+    },
+    "watch": [
+      {
+        "title": "毛利率是否见顶",
+        "text": "下季指引 86.25% 低于本季 87.0%",
+        "confirmed": true,
+        "resolved": false
+      },
+      {
+        "title": "现金流质量",
+        "text": "剔除预付款后 FCF 约 $20.9B",
+        "confirmed": true,
+        "resolved": false
+      },
+      {
+        "title": "资本开支加速",
+        "text": "FY27 明显高于 $27.4B",
+        "confirmed": true,
+        "resolved": false
+      }
+    ]
+  },
+  "cards": [
+    {
+      "key": "rev",
+      "label": "营收",
+      "basis": "GAAP",
+      "value": 54.23,
+      "unit": "B",
+      "yoy": 3.793,
+      "yoy_tone": "up",
+      "qoq": 0.308,
+      "qoq_tone": "up",
+      "vs_cons": 0.056,
+      "vs_cons_tone": "up",
+      "why": {
+        "text": "价格驱动：DRAM 价格环比 high-teens %、NAND 约 30%。",
+        "refs": []
+      }
+    },
+    {
+      "key": "gm",
+      "label": "毛利率",
+      "basis": "Non-GAAP",
+      "value": 87.0,
+      "unit": "%",
+      "yoy": 0.413,
+      "yoy_tone": "up",
+      "qoq": 0.021,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "GAAP 86.8%。",
+        "refs": []
+      }
+    },
+    {
+      "key": "opm",
+      "label": "营业利润率",
+      "basis": "GAAP",
+      "value": 80.7,
+      "unit": "%",
+      "yoy": 0.484,
+      "yoy_tone": "up",
+      "qoq": 0.003,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "SG&A 环比翻倍、研发 +45%。",
+        "refs": []
+      }
+    },
+    {
+      "key": "npm",
+      "label": "净利润率",
+      "basis": "GAAP",
+      "value": 69.5,
+      "unit": "%",
+      "yoy": 0.412,
+      "yoy_tone": "up",
+      "qoq": 0.014,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "Non-GAAP 净利润率 70.8%。",
+        "refs": []
+      }
+    },
+    {
+      "key": "eps",
+      "label": "摊薄 EPS",
+      "basis": "Non-GAAP",
+      "value": 33.42,
+      "unit": "$",
+      "yoy": 10.03,
+      "yoy_tone": "up",
+      "qoq": 0.331,
+      "qoq_tone": "up",
+      "vs_cons": 0.054,
+      "vs_cons_tone": "up",
+      "why": {
+        "text": "共识 $31.72。",
+        "refs": []
+      }
+    },
+    {
+      "key": "fcf",
+      "label": "自由现金流",
+      "basis": "经营现金流 − 资本开支",
+      "value": 33.2,
+      "unit": "B",
+      "yoy": 40.34,
+      "yoy_tone": "up",
+      "qoq": 0.814,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "约 $12.3B 来自客户预付款。",
+        "refs": []
+      }
+    }
+  ],
+  "metrics": {
+    "rev": {
+      "label": "营收",
+      "basis": "GAAP · $B",
+      "q": {
+        "labels": [
+          "FQ4-25",
+          "FQ1-26",
+          "FQ2-26",
+          "FQ3-26",
+          "FQ4-26"
+        ],
+        "v": [
+          11.32,
+          13.64,
+          23.86,
+          41.46,
+          54.23
+        ],
+        "yoy": [
+          0.46,
+          0.566,
+          1.963,
+          3.458,
+          3.793
+        ],
+        "qoq": [
+          0.217,
+          0.206,
+          0.749,
+          0.738,
+          0.308
+        ]
+      },
+      "y": {
+        "labels": [
+          "FY22",
+          "FY23",
+          "FY24",
+          "FY25",
+          "FY26"
+        ],
+        "v": [
+          30.76,
+          15.54,
+          25.11,
+          37.38,
+          133.19
+        ],
+        "yoy": [
+          0.11,
+          -0.495,
+          0.616,
+          0.489,
+          2.563
+        ],
+        "qoq": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "hist_note": "变化率超过 400% 的点在图上封顶显示。",
+      "struct": [
+        {
+          "title": "按业务单元",
+          "src": "FQ4-26 新闻稿",
+          "rows": [
+            {
+              "label": "CDBU 核心数据中心",
+              "val": "$18.00B",
+              "sub": "占 33.2% · 同比 +1042% · 环比 +56.2%",
+              "pct": 100,
+              "tone": 1
+            }
+          ],
+          "note": {
+            "text": "CDBU 环比 +56%。",
+            "refs": []
+          }
+        }
+      ]
+    },
+    "gm": {
+      "label": "毛利率",
+      "basis": "Non-GAAP · %",
+      "q": {
+        "labels": [
+          "FQ4-25",
+          "FQ1-26",
+          "FQ2-26",
+          "FQ3-26",
+          "FQ4-26"
+        ],
+        "v": [
+          45.7,
+          56.8,
+          74.9,
+          84.9,
+          87.0
+        ],
+        "yoy": [
+          0.092,
+          0.173,
+          0.37,
+          0.459,
+          0.413
+        ],
+        "qoq": [
+          0.067,
+          0.111,
+          0.181,
+          0.1,
+          0.021
+        ]
+      },
+      "y": {
+        "labels": [
+          "FY25",
+          "FY26"
+        ],
+        "v": [
+          40.9,
+          81.1
+        ],
+        "yoy": [
+          null,
+          0.402
+        ],
+        "qoq": [
+          null,
+          null
+        ]
+      },
+      "hist_note": "GAAP FQ4-26 86.8%。",
+      "struct": []
+    },
+    "eps": {
+      "label": "摊薄 EPS",
+      "basis": "Non-GAAP · $",
+      "q": {
+        "labels": [
+          "FQ4-25",
+          "FQ1-26",
+          "FQ2-26",
+          "FQ3-26",
+          "FQ4-26"
+        ],
+        "v": [
+          3.03,
+          4.78,
+          12.2,
+          25.11,
+          33.42
+        ],
+        "yoy": [
+          null,
+          null,
+          6.82,
+          null,
+          10.03
+        ],
+        "qoq": [
+          null,
+          0.578,
+          1.552,
+          1.058,
+          0.331
+        ]
+      },
+      "y": {
+        "labels": [
+          "FY25",
+          "FY26"
+        ],
+        "v": [
+          8.29,
+          75.52
+        ],
+        "yoy": [
+          null,
+          8.11
+        ],
+        "qoq": [
+          null,
+          null
+        ]
+      },
+      "hist_note": "GAAP $32.87。",
+      "struct": []
+    }
+  },
+  "guidance": {
+    "groups": [
+      {
+        "title": "下季度 · FQ1-27",
+        "rows": [
+          {
+            "name": "营收",
+            "v": "$61.5B ± 1.5B",
+            "mid": 61.5,
+            "qoq": 0.134,
+            "qoq_tone": "up",
+            "yoy": 3.51,
+            "yoy_tone": "up",
+            "vs_cons": 0.082,
+            "vs_cons_tone": "up",
+            "derived": false
+          },
+          {
+            "name": "摊薄 EPS（Non-GAAP）",
+            "v": "$38.15 ± 1.00",
+            "mid": 38.15,
+            "qoq": 0.142,
+            "qoq_tone": "up",
+            "yoy": 6.98,
+            "yoy_tone": "up",
+            "vs_cons": 0.092,
+            "vs_cons_tone": "up",
+            "derived": false
+          }
+        ]
+      }
+    ],
+    "reasons": {
+      "text": "FQ1 毛利率受约 $1B 额外成本拖累，称 FQ1 为 FY27 毛利率底部。",
+      "refs": []
+    }
+  },
+  "talk": {
+    "mgmt": [
+      {
+        "topic": "供需",
+        "tag": "强化",
+        "who": "CEO",
+        "now": "2027–28 年供需比 2026 年更紧。",
+        "prev": null,
+        "ref": "call:FQ4-26#p12"
+      }
+    ],
+    "qa": [
+      {
+        "topic": "资本回报",
+        "who": "Timothy Arcuri",
+        "firm": "UBS",
+        "q": "超额现金如何返还？",
+        "by": "CFO",
+        "a": "12 月 9 日起以回购为主。",
+        "ref": "call:FQ4-26#qa1"
+      }
+    ]
+  }
+}

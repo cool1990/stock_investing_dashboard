@@ -11,6 +11,9 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    env:
+      # Settings → Variables → SEC_USER_AGENT (Variable, not Secret)
+      SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -20,21 +23,36 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
       - name: Fetch consensus snapshot
-        run: python scripts/fetch_consensus.py --ticker MU
+        run: python3 scripts/fetch_consensus.py --ticker MU
         continue-on-error: true
       - name: Fetch actuals
-        run: python scripts/fetch_actuals.py --ticker MU
+        run: python3 scripts/fetch_actuals.py --ticker MU
         continue-on-error: true
       - name: Fetch prices
-        run: python scripts/fetch_prices.py --ticker MU
+        run: python3 scripts/fetch_prices.py --ticker MU
         continue-on-error: true
       - name: Secondary (optional)
-        run: python scripts/fetch_secondary.py --ticker MU
+        run: python3 scripts/fetch_secondary.py --ticker MU
         continue-on-error: true
       - name: Build history + page JSON
         run: |
-          python scripts/build_history.py --ticker MU
-          python scripts/build_page_consensus.py --ticker MU
+          python3 scripts/build_history.py --ticker MU
+          python3 scripts/build_page_consensus.py --ticker MU
+      - name: Verify absolute period keys
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re, sys
+          snaps = sorted(Path("data/snapshots/MU").glob("*.json"))
+          if not snaps:
+              print("WARN: no snapshots yet"); sys.exit(0)
+          d = json.loads(snaps[-1].read_text())
+          keys = list((d.get("periods") or {}).keys())
+          print("latest", snaps[-1].name, "keys", keys)
+          bad = [k for k in keys if not re.fullmatch(r"(FQ[1-4]|FY)\d{2}", k)]
+          if bad:
+              raise SystemExit(f"non-absolute period keys: {bad}")
+          PY
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"

@@ -1,0 +1,31 @@
+{
+  "ticker": "MU",
+  "name_en": "Micron Technology",
+  "name_zh": "美光科技",
+  "exchange": "纳斯达克",
+  "sector": "存储",
+  "updated_at_bj": "2026-10-01 07:00",
+  "latest_report": "FQ4-26",
+  "latest_report_date": "2026-09-30",
+  "release_timing": "after_close",
+  "header": {
+    "price": null,
+    "price_1d": null,
+    "price_ytd": null,
+    "market_cap": null,
+    "ev": null,
+    "net_cash_b": 68.27,
+    "forward_pe_ntm": null,
+    "short_interest": null,
+    "next_earnings": null,
+    "implied_move": null,
+    "week52": null,
+    "ev_ebitda_ntm": null,
+    "dividend_quarterly": 0.15,
+    "dividend_yield": null,
+    "target_price": null,
+    "ratings": null,
+    "inst_insider": null,
+    "days_to_cover": null
+  }
+}

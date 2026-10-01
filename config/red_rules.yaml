@@ -1,0 +1,32 @@
+# 观察池「红色公告」规则（见 docs/02_watchlist.md）
+rules:
+  - id: 8k_202
+    label: 业绩发布
+    match: { form: 8-K, items: ["2.02"] }
+  - id: 8k_101
+    label: 重大协议
+    match: { form: 8-K, items: ["1.01"] }
+  - id: 8k_502
+    label: 高管变动
+    match: { form: 8-K, items: ["5.02"] }
+  - id: 8k_205
+    label: 退出成本 / 重组
+    match: { form: 8-K, items: ["2.05"] }
+  - id: 8k_206
+    label: 减值
+    match: { form: 8-K, items: ["2.06"] }
+  - id: 8k_402
+    label: 财务重述
+    match: { form: 8-K, items: ["4.02"] }
+  - id: guide_vs_cons
+    label: 指引显著偏离共识
+    match: { source: release, guidance_vs_consensus_abs_gt: 0.05 }
+  - id: insider_buy
+    label: 内部人公开市场买入
+    match: { form: "4", transaction_code: P, value_usd_gt: 100000 }
+  - id: rating_change
+    label: 评级变化
+    match: { source: rating, action: [up, down] }
+  - id: legal
+    label: 监管 / 诉讼
+    match: { form: 8-K, items: ["8.01"], keywords_any: [SEC, subpoena, lawsuit, investigation] }

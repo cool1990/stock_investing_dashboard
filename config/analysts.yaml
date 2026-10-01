@@ -1,0 +1,8 @@
+# 分析师姓名 / 机构校正表（电话会问答发言人归一化）
+# key: 原始字符串（大小写不敏感） → 规范显示名
+aliases:
+  "Timothy Arcuri": { name: Timothy Arcuri, firm: UBS }
+  "C.J. Muse": { name: C.J. Muse, firm: Cantor Fitzgerald }
+  "Harlan Sur": { name: Harlan Sur, firm: JPMorgan }
+  "Aaron Rakers": { name: Aaron Rakers, firm: Wells Fargo }
+  "Vivek Arya": { name: Vivek Arya, firm: Bank of America }

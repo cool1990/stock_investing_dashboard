@@ -1,0 +1,1537 @@
+{
+  "tables": {
+    "is": {
+      "q": {
+        "title": "利润表（季度）",
+        "cols": [
+          "FQ4-25",
+          "FQ1-26",
+          "FQ2-26",
+          "FQ3-26",
+          "FQ4-26"
+        ],
+        "col_end": [
+          "2025-08-28",
+          "2025-11-27",
+          "2026-02-26",
+          "2026-05-28",
+          "2026-09-03"
+        ],
+        "rows": [
+          {
+            "kind": "b",
+            "name": "营业收入",
+            "fmt": "amt",
+            "v": [
+              11315,
+              13643,
+              23860,
+              41456,
+              54229
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              0.206,
+              0.749,
+              0.738,
+              0.308
+            ],
+            "formula": null
+          },
+          {
+            "kind": "",
+            "name": "销售成本",
+            "fmt": "amt",
+            "v": [
+              6261,
+              null,
+              null,
+              6400,
+              7182
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "毛利",
+            "fmt": "amt",
+            "v": [
+              5054,
+              null,
+              null,
+              35056,
+              47047
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "毛利率",
+            "fmt": "pct",
+            "v": [
+              44.7,
+              56.0,
+              74.4,
+              84.6,
+              86.8
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "",
+            "name": "研发费用",
+            "fmt": "amt",
+            "v": [
+              1047,
+              1171,
+              1250,
+              1316,
+              1913
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "",
+            "name": "销售及管理费用",
+            "fmt": "amt",
+            "v": [
+              314,
+              337,
+              344,
+              407,
+              859
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "其他营业费用（推算）",
+            "fmt": "amt",
+            "v": [
+              39,
+              null,
+              null,
+              15,
+              524
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "营业利润",
+            "fmt": "amt",
+            "v": [
+              3654,
+              6136,
+              16135,
+              33318,
+              43751
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "营业利润率",
+            "fmt": "pct",
+            "v": [
+              32.3,
+              45.0,
+              67.6,
+              80.4,
+              80.7
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "净利润",
+            "fmt": "amt",
+            "v": [
+              3201,
+              5240,
+              13785,
+              28243,
+              37701
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "净利润率",
+            "fmt": "pct",
+            "v": [
+              28.3,
+              38.4,
+              57.8,
+              68.1,
+              69.5
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "摊薄 EPS",
+            "fmt": "eps",
+            "v": [
+              2.83,
+              4.6,
+              12.07,
+              24.67,
+              32.87
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "s",
+            "name": "Non-GAAP",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "i",
+            "name": "净利润",
+            "fmt": "amt",
+            "v": [
+              3469,
+              5482,
+              14021,
+              28857,
+              38398
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "i",
+            "name": "摊薄 EPS",
+            "fmt": "eps",
+            "v": [
+              3.03,
+              4.78,
+              12.2,
+              25.11,
+              33.42
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          }
+        ],
+        "note": "同比基数取自往年同期新闻稿；FQ1-26 / FQ2-26 的销售成本和 FY2025 部分季度数据待从 XBRL 回填后，空白处自动补齐。"
+      },
+      "ytd": {
+        "title": "利润表（年初至今累计）",
+        "cols": [
+          "FQ1-26 · 3M",
+          "FQ2-26 · 6M",
+          "FQ3-26 · 9M",
+          "FQ4-26 · 12M"
+        ],
+        "col_end": [
+          "2025-11-27",
+          "2026-02-26",
+          "2026-05-28",
+          "2026-09-03"
+        ],
+        "rows": [
+          {
+            "kind": "b",
+            "name": "营业收入",
+            "fmt": "amt",
+            "v": [
+              13643,
+              37503,
+              78959,
+              133188
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "营业利润",
+            "fmt": "amt",
+            "v": [
+              6136,
+              22271,
+              55589,
+              99340
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "净利润",
+            "fmt": "amt",
+            "v": [
+              5240,
+              19025,
+              47268,
+              84969
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "摊薄 EPS",
+            "fmt": "eps",
+            "v": [
+              null,
+              null,
+              null,
+              74.33
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          }
+        ],
+        "note": "10-Q 按年初至今累计列报；单季视图由相邻累计数相减得到，相减失败的格子留空。EPS 不可相加，累计 EPS 取报表原值。"
+      },
+      "y": {
+        "title": "利润表（年度）",
+        "cols": [
+          "FY2022",
+          "FY2023",
+          "FY2024",
+          "FY2025",
+          "FY2026"
+        ],
+        "col_end": [
+          "2022-09-01",
+          "2023-08-31",
+          "2024-08-29",
+          "2025-08-28",
+          "2026-09-03"
+        ],
+        "rows": [
+          {
+            "kind": "b",
+            "name": "营业收入",
+            "fmt": "amt",
+            "v": [
+              30758,
+              15540,
+              25111,
+              37378,
+              133188
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "毛利",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              14873,
+              107504
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "毛利率",
+            "fmt": "pct",
+            "v": [
+              null,
+              null,
+              null,
+              39.8,
+              80.7
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "营业利润",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              9770,
+              99340
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "净利润",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              8539,
+              84969
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "摊薄 EPS",
+            "fmt": "eps",
+            "v": [
+              null,
+              null,
+              null,
+              7.59,
+              74.33
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "i",
+            "name": "摊薄 EPS",
+            "fmt": "eps",
+            "v": [
+              null,
+              null,
+              null,
+              8.29,
+              75.52
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          }
+        ],
+        "note": "FY2023 为亏损年度，以它为基数的同比显示 n.m.。Non-GAAP 行在分组标题下。"
+      }
+    },
+    "bs": {
+      "q": {
+        "title": "资产负债表（季度末）",
+        "cols": [
+          "FQ4-25 · 08-28",
+          "FQ1-26",
+          "FQ2-26",
+          "FQ3-26 · 05-28",
+          "FQ4-26 · 09-03"
+        ],
+        "col_end": [
+          "2025-08-28",
+          null,
+          null,
+          "2026-05-28",
+          "2026-09-03"
+        ],
+        "rows": [
+          {
+            "kind": "s",
+            "name": "资产",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "",
+            "name": "现金及现金等价物",
+            "fmt": "amt",
+            "v": [
+              9642,
+              null,
+              null,
+              24995,
+              38364
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "",
+            "name": "应收账款",
+            "fmt": "amt",
+            "v": [
+              9265,
+              null,
+              null,
+              31025,
+              36197
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "",
+            "name": "存货",
+            "fmt": "amt",
+            "v": [
+              8355,
+              null,
+              null,
+              8567,
+              10372
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "股东权益",
+            "fmt": "amt",
+            "v": [
+              54165,
+              null,
+              null,
+              100724,
+              138378
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "净现金",
+            "fmt": "amt",
+            "v": [
+              -2641,
+              null,
+              null,
+              24406,
+              68274
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "存货天数 (DIO)",
+            "fmt": "days",
+            "v": [
+              null,
+              null,
+              null,
+              120,
+              129
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          }
+        ],
+        "note": "FQ1-26 / FQ2-26 期末数待回填；净现金 = 现金及投资合计 − 有息债务合计。"
+      },
+      "ytd": {},
+      "y": {
+        "title": "资产负债表（财年末）",
+        "cols": [
+          "FY2022",
+          "FY2023",
+          "FY2024",
+          "FY2025",
+          "FY2026"
+        ],
+        "col_end": [],
+        "rows": [
+          {
+            "kind": "",
+            "name": "现金及现金等价物",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              9642,
+              38364
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "股东权益",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              54165,
+              138378
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "净现金",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              -2641,
+              68274
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          }
+        ],
+        "note": "财年末 = 第四财季末。"
+      }
+    },
+    "cf": {
+      "q": {
+        "title": "现金流量表（季度）",
+        "cols": [
+          "FQ4-25",
+          "FQ1-26",
+          "FQ2-26",
+          "FQ3-26",
+          "FQ4-26"
+        ],
+        "col_end": [],
+        "rows": [
+          {
+            "kind": "b",
+            "name": "经营活动现金流",
+            "fmt": "amt",
+            "v": [
+              5730,
+              8411,
+              11903,
+              25388,
+              43973
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "净 Capex（支出，公司口径）",
+            "fmt": "amt",
+            "v": [
+              4927,
+              4505,
+              5004,
+              7084,
+              10774
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "调整后 FCF（公司口径）",
+            "fmt": "amt",
+            "v": [
+              803,
+              3906,
+              6899,
+              18304,
+              33199
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "FCF 率",
+            "fmt": "pct",
+            "v": [
+              7.1,
+              28.6,
+              28.9,
+              44.2,
+              61.2
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          }
+        ],
+        "note": "调整后 FCF = 经营现金流 − 净 Capex。FQ4-26 单季经营现金流 43,973 = FY26 全年 89,675 − 9 个月累计 45,702。"
+      },
+      "ytd": {
+        "title": "现金流量表（年初至今累计）",
+        "cols": [
+          "FQ1-26 · 3M",
+          "FQ2-26 · 6M",
+          "FQ3-26 · 9M",
+          "FQ4-26 · 12M"
+        ],
+        "col_end": [],
+        "rows": [
+          {
+            "kind": "b",
+            "name": "经营活动现金流",
+            "fmt": "amt",
+            "v": [
+              8411,
+              20314,
+              45702,
+              89675
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "净 Capex（支出，公司口径）",
+            "fmt": "amt",
+            "v": [
+              4505,
+              9509,
+              16593,
+              27367
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "调整后 FCF",
+            "fmt": "amt",
+            "v": [
+              3906,
+              10805,
+              29109,
+              62308
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          }
+        ],
+        "note": "美股现金流量表在 10-Q 中只有累计数，FQ4 单季 = 10-K 全年 − 前三季累计。"
+      },
+      "y": {
+        "title": "现金流量表（年度）",
+        "cols": [
+          "FY2022",
+          "FY2023",
+          "FY2024",
+          "FY2025",
+          "FY2026"
+        ],
+        "col_end": [],
+        "rows": [
+          {
+            "kind": "b",
+            "name": "经营活动现金流",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              17525,
+              89675
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "调整后 FCF",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              3721,
+              62308
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "FCF 率",
+            "fmt": "pct",
+            "v": [
+              null,
+              null,
+              null,
+              10.0,
+              46.8
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          }
+        ],
+        "note": ""
+      }
+    },
+    "eq": {
+      "q": {
+        "title": "股东权益变动表（季度）",
+        "cols": [
+          "FQ4-25",
+          "FQ1-26",
+          "FQ2-26",
+          "FQ3-26",
+          "FQ4-26"
+        ],
+        "col_end": [],
+        "rows": [
+          {
+            "kind": "b",
+            "name": "期初股东权益",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              null,
+              100724
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "",
+            "name": "净利润",
+            "fmt": "amt",
+            "v": [
+              3201,
+              5240,
+              13785,
+              28243,
+              37701
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "d",
+            "name": "其他合计（推算）",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              null,
+              -47
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          },
+          {
+            "kind": "b",
+            "name": "期末股东权益",
+            "fmt": "amt",
+            "v": [
+              54165,
+              null,
+              null,
+              100724,
+              138378
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          }
+        ],
+        "note": "其他合计 = 期末 − 期初 − 净利润；接入 XBRL 后按科目展示。"
+      },
+      "ytd": {},
+      "y": {
+        "title": "股东权益变动表（年度）",
+        "cols": [
+          "FY2022",
+          "FY2023",
+          "FY2024",
+          "FY2025",
+          "FY2026"
+        ],
+        "col_end": [],
+        "rows": [
+          {
+            "kind": "b",
+            "name": "期末股东权益",
+            "fmt": "amt",
+            "v": [
+              null,
+              null,
+              null,
+              54165,
+              138378
+            ],
+            "yoy": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "qoq": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "formula": null
+          }
+        ],
+        "note": ""
+      }
+    }
+  },
+  "mode_notes": {
+    "q": "单季：流量科目由 10-Q 累计数相减得到；资产负债表取季末余额，环比为较上季末。",
+    "ytd": "累计 = 财年初至该季末。同比与上年同期累计相比。",
+    "y": "年度：财年（截至 8 月底 / 9 月初）。",
+    "bs_ytd": "资产负债表、权益表是时点数，累计视图与单季相同。"
+  }
+}

@@ -1,0 +1,541 @@
+{
+  "meta": {
+    "ticker": "MU",
+    "name_en": "Micron Technology",
+    "name_zh": "美光科技",
+    "exchange": "纳斯达克",
+    "sector": "存储",
+    "updated_at_bj": "2026-10-01 07:00",
+    "latest_report": "FQ4-26",
+    "latest_report_date": "2026-09-30",
+    "release_timing": "after_close",
+    "snapshot_note": "共识快照：财报发布前（Yahoo，2026-10-01 抓取）。FQ4-26 已公布，数据源滚动后会补上 FQ2–FQ4-27 和 FY28 的共识，FQ1-27 共识预计向指引 $38.15 靠拢。",
+    "quarter_labels": [
+      "Q1 · 11月",
+      "Q2 · 2月",
+      "Q3 · 5月",
+      "Q4 · 8月",
+      "全年"
+    ],
+    "header": {
+      "price": null,
+      "price_1d": null,
+      "price_ytd": null,
+      "market_cap": null,
+      "ev": null,
+      "net_cash_b": 68.27,
+      "forward_pe_ntm": null,
+      "short_interest": null,
+      "next_earnings": null,
+      "implied_move": null,
+      "week52": null,
+      "ev_ebitda_ntm": null,
+      "dividend_quarterly": 0.15,
+      "dividend_yield": null,
+      "target_price": null,
+      "ratings": null,
+      "inst_insider": null,
+      "days_to_cover": null
+    }
+  },
+  "future": {
+    "years": [
+      "FY23",
+      "FY24",
+      "FY25",
+      "FY26",
+      "FY27",
+      "FY28"
+    ],
+    "est_years": [
+      "FY27",
+      "FY28"
+    ],
+    "eps": {
+      "FY23": [
+        0.04,
+        -1.91,
+        -1.43,
+        -1.07,
+        -4.45
+      ],
+      "FY24": [
+        -0.95,
+        0.42,
+        0.62,
+        1.18,
+        1.3
+      ],
+      "FY25": [
+        1.79,
+        1.56,
+        1.91,
+        3.03,
+        8.29
+      ],
+      "FY26": [
+        4.78,
+        12.2,
+        25.11,
+        33.42,
+        75.52
+      ],
+      "FY27": [
+        34.95,
+        null,
+        null,
+        null,
+        156.53
+      ],
+      "FY28": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "rev": {
+      "FY23": [
+        4.09,
+        3.69,
+        3.75,
+        4.01,
+        15.54
+      ],
+      "FY24": [
+        4.73,
+        5.82,
+        6.81,
+        7.75,
+        25.11
+      ],
+      "FY25": [
+        8.71,
+        8.05,
+        9.3,
+        11.32,
+        37.38
+      ],
+      "FY26": [
+        13.64,
+        23.86,
+        41.46,
+        54.23,
+        133.19
+      ],
+      "FY27": [
+        56.85,
+        null,
+        null,
+        null,
+        245.57
+      ],
+      "FY28": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "detail": {
+      "eps": [
+        {
+          "period": "FQ1-27",
+          "end": "2026-11",
+          "avg": 34.95,
+          "low": 25.64,
+          "high": 47.81,
+          "n": 32,
+          "year_ago": 4.78,
+          "trend": {
+            "d7": 34.84,
+            "d30": 34.83,
+            "d60": 34.83,
+            "d90": 27.61
+          },
+          "revisions": {
+            "up30": 1,
+            "down30": 1
+          },
+          "guide": 38.15
+        },
+        {
+          "period": "FY27",
+          "end": "2027-08",
+          "avg": 156.53,
+          "low": 106.89,
+          "high": 221.27,
+          "n": 36,
+          "year_ago": 75.52,
+          "trend": {
+            "d7": 155.8,
+            "d30": 155.57,
+            "d60": 150.58,
+            "d90": 117.86
+          },
+          "revisions": {
+            "up30": 2,
+            "down30": 2
+          },
+          "guide": null
+        }
+      ],
+      "rev": [
+        {
+          "period": "FQ1-27",
+          "end": "2026-11",
+          "avg": 56.85,
+          "low": 45.5,
+          "high": 75.37,
+          "n": 32,
+          "year_ago": 13.64,
+          "trend": {
+            "d7": null,
+            "d30": null,
+            "d60": null,
+            "d90": null
+          },
+          "revisions": {
+            "up30": null,
+            "down30": null
+          },
+          "guide": 61.5
+        },
+        {
+          "period": "FY27",
+          "end": "2027-08",
+          "avg": 245.57,
+          "low": 131.96,
+          "high": 290.09,
+          "n": 43,
+          "year_ago": 133.19,
+          "trend": {
+            "d7": null,
+            "d30": null,
+            "d60": null,
+            "d90": null
+          },
+          "revisions": {
+            "up30": null,
+            "down30": null
+          },
+          "guide": null
+        }
+      ],
+      "eps_note": "最低–最高的区间很宽（FQ1-27：$25.64–$47.81），说明分析师对价格周期的判断分歧大；共识低于指引 8.4%，发布后预计上修。",
+      "rev_note": "营收共识的修正轨迹与上调 / 下调家数，免费源不提供，显示「不可得」，由每日快照自行积累。FQ1-27 营收共识低于指引 7.6%。"
+    },
+    "pe": {
+      "ttm_eps": 75.52,
+      "ntm_eps": null,
+      "ntm_method": "blend",
+      "fy": {
+        "FY26": 75.52,
+        "FY27": 156.53,
+        "FY28": null
+      },
+      "last_close": null,
+      "note": "FY27 盈利共识约为 FY26 的 2.1 倍，同一股价下 FY27 PE 只有 TTM PE 的 48%，所以「看哪一年的 PE」对结论影响很大。NTM 需要 FQ2–FQ4-27 的季度共识，数据源滚动后补上。存储是周期股，盈利高点时 PE 天然偏低。"
+    }
+  },
+  "revision": {
+    "FQ1-27": {
+      "points": [
+        [
+          90,
+          27.61
+        ],
+        [
+          60,
+          34.83
+        ],
+        [
+          30,
+          34.83
+        ],
+        [
+          7,
+          34.84
+        ],
+        [
+          0,
+          34.95
+        ]
+      ],
+      "guide": 38.15,
+      "up30": 1,
+      "down30": 1,
+      "n": 32,
+      "note": "大部分上修发生在 60–90 天前（$27.61 → $34.83），之后一直贴着 $34.8 不动，而公司指引给到 $38.15：说明共识还没消化最新指引。当前只有 Yahoo「EPS Trend」的 5 个时点，每日快照开始后曲线逐日变密，并叠加股价与财报日竖线。"
+    },
+    "FY27": {
+      "points": [
+        [
+          90,
+          117.86
+        ],
+        [
+          60,
+          150.58
+        ],
+        [
+          30,
+          155.57
+        ],
+        [
+          7,
+          155.8
+        ],
+        [
+          0,
+          156.53
+        ]
+      ],
+      "guide": null,
+      "up30": 2,
+      "down30": 2,
+      "n": 36,
+      "note": "FY27 共识 90 天内从 $117.86 上调到 $156.53，同样集中在 60–90 天前；近 30 天仅 +0.6%。修正放缓本身是信号：上修动能减弱时，股价对「超预期」的奖励通常也会变小。"
+    }
+  },
+  "history": {
+    "eps": {
+      "q": [
+        {
+          "period": "FQ1-25",
+          "release_date": "2024-12-18",
+          "consensus": 1.6,
+          "actual": 1.79,
+          "guide": null,
+          "next_day": null,
+          "secondary": null,
+          "pre_release_source": "marketbeat"
+        },
+        {
+          "period": "FQ2-25",
+          "release_date": "2025-03-20",
+          "consensus": 1.43,
+          "actual": 1.56,
+          "guide": null,
+          "next_day": null,
+          "secondary": null,
+          "pre_release_source": "marketbeat"
+        },
+        {
+          "period": "FQ3-25",
+          "release_date": "2025-06-25",
+          "consensus": 1.57,
+          "actual": 1.91,
+          "guide": null,
+          "next_day": null,
+          "secondary": null,
+          "pre_release_source": "marketbeat"
+        },
+        {
+          "period": "FQ4-25",
+          "release_date": "2025-09-23",
+          "consensus": 2.86,
+          "actual": 3.03,
+          "guide": null,
+          "next_day": null,
+          "secondary": 2.86,
+          "pre_release_source": "marketbeat"
+        },
+        {
+          "period": "FQ1-26",
+          "release_date": "2025-12-17",
+          "consensus": 3.77,
+          "actual": 4.78,
+          "guide": null,
+          "next_day": null,
+          "secondary": 3.96,
+          "pre_release_source": "marketbeat"
+        },
+        {
+          "period": "FQ2-26",
+          "release_date": "2026-03-18",
+          "consensus": 9.19,
+          "actual": 12.2,
+          "guide": null,
+          "next_day": null,
+          "secondary": 9.16,
+          "pre_release_source": "marketbeat"
+        },
+        {
+          "period": "FQ3-26",
+          "release_date": "2026-06-24",
+          "consensus": 21.39,
+          "actual": 25.11,
+          "guide": 19.15,
+          "next_day": null,
+          "secondary": 20.69,
+          "pre_release_source": "marketbeat"
+        },
+        {
+          "period": "FQ4-26",
+          "release_date": "2026-09-30",
+          "consensus": 31.72,
+          "actual": 33.42,
+          "guide": null,
+          "next_day": null,
+          "secondary": 31.35,
+          "pre_release_source": "marketbeat"
+        }
+      ],
+      "y": [
+        {
+          "period": "FY25",
+          "release_date": "2025-09-23",
+          "consensus": null,
+          "actual": 8.29,
+          "guide": null,
+          "next_day": null,
+          "secondary": null
+        },
+        {
+          "period": "FY26",
+          "release_date": "2026-09-30",
+          "consensus": 73.46,
+          "actual": 75.52,
+          "guide": null,
+          "next_day": null,
+          "secondary": null
+        }
+      ],
+      "stats_q": {
+        "beat_count": "8 / 8",
+        "beat_sub": "近 8 季 EPS 全部高于共识",
+        "avg_surprise": "+16.4%",
+        "avg_surprise_sub": "最近一季 +5.4%，为 8 季最小",
+        "vs_guide": "+31.1%",
+        "vs_guide_sub": "仅 FQ3-26 已录入（指引 $19.15）",
+        "cons_vs_guide": "+11.7%",
+        "cons_vs_guide_sub": "FQ3-26 共识 $21.39 已高于指引 $19.15"
+      },
+      "stats_y": {
+        "fy26_vs_cons": "+2.8%",
+        "fy26_sub": "共识为 FQ4 发布前快照",
+        "fy25_vs_cons": null,
+        "fy25_sub": "待回填"
+      },
+      "note_q": "⚠ = 两个数据源的共识相差 > 3%（如 FQ1-26：MarketBeat $3.77 vs Yahoo $3.96，差约 5%；FQ3-26：$21.39 vs $20.69，差 3.4%），悬停显示两者。指引为上一季财报给出的本季指引中值，样式稿仅 FQ3-26 已录入。",
+      "note_y": "年度：美光不提供全年 EPS / 营收指引，「相对指引」为空。FY26 共识取 FQ4 发布前快照。"
+    },
+    "rev": {
+      "q": [
+        {
+          "period": "FQ1-25",
+          "release_date": "2024-12-18",
+          "consensus": 8.71,
+          "actual": 8.71,
+          "guide": null,
+          "next_day": null,
+          "secondary": null
+        },
+        {
+          "period": "FQ2-25",
+          "release_date": "2025-03-20",
+          "consensus": 7.93,
+          "actual": 8.05,
+          "guide": null,
+          "next_day": null,
+          "secondary": null
+        },
+        {
+          "period": "FQ3-25",
+          "release_date": "2025-06-25",
+          "consensus": 8.83,
+          "actual": 9.3,
+          "guide": null,
+          "next_day": null,
+          "secondary": null
+        },
+        {
+          "period": "FQ4-25",
+          "release_date": "2025-09-23",
+          "consensus": 11.05,
+          "actual": 11.32,
+          "guide": null,
+          "next_day": null,
+          "secondary": null
+        },
+        {
+          "period": "FQ1-26",
+          "release_date": "2025-12-17",
+          "consensus": 12.62,
+          "actual": 13.64,
+          "guide": null,
+          "next_day": null,
+          "secondary": null
+        },
+        {
+          "period": "FQ2-26",
+          "release_date": "2026-03-18",
+          "consensus": 19.97,
+          "actual": 23.86,
+          "guide": null,
+          "next_day": null,
+          "secondary": null
+        },
+        {
+          "period": "FQ3-26",
+          "release_date": "2026-06-24",
+          "consensus": 35.91,
+          "actual": 41.46,
+          "guide": 33.5,
+          "next_day": null,
+          "secondary": null
+        },
+        {
+          "period": "FQ4-26",
+          "release_date": "2026-09-30",
+          "consensus": 51.33,
+          "actual": 54.23,
+          "guide": null,
+          "next_day": null,
+          "secondary": 50.97
+        }
+      ],
+      "y": [
+        {
+          "period": "FY25",
+          "release_date": "2025-09-23",
+          "consensus": null,
+          "actual": 37.38,
+          "guide": null,
+          "next_day": null,
+          "secondary": null
+        },
+        {
+          "period": "FY26",
+          "release_date": "2026-09-30",
+          "consensus": 129.86,
+          "actual": 133.19,
+          "guide": null,
+          "next_day": null,
+          "secondary": null
+        }
+      ],
+      "stats_q": {
+        "beat_count": "7 / 8",
+        "beat_sub": "FQ1-25 持平共识",
+        "avg_surprise": "+7.2%",
+        "avg_surprise_sub": "最近一季 +5.6%",
+        "vs_guide": "+23.8%",
+        "vs_guide_sub": "仅 FQ3-26 已录入（指引 $33.5B）",
+        "cons_vs_guide": "+7.2%",
+        "cons_vs_guide_sub": "FQ3-26 共识 $35.91B 高于指引 $33.5B"
+      },
+      "stats_y": {
+        "fy26_vs_cons": "+2.6%",
+        "fy26_sub": "共识为 FQ4 发布前快照",
+        "fy25_vs_cons": "[ ]",
+        "fy25_sub": "待回填"
+      },
+      "note_q": "指引为上一季财报给出的本季指引中值；次日股价待接入。",
+      "note_y": "年度：美光不提供全年 EPS / 营收指引，「相对指引」为空。"
+    }
+  }
+}

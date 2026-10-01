@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>MU 股价反应</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F5F7}
+a{color:#1D4ED8;text-decoration:none}a:hover{color:#1E3A8A}
+summary::-webkit-details-marker{display:none}
+summary{list-style:none}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F4F5F7; color: #15181D; font-family: 'Noto Sans SC', system-ui, sans-serif; font-size: 14px; line-height: 1.5">
+<header style="background: #15181D; color: #FFFFFF">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; gap: 28px">
+<a href="Watchlist.dc.html" style="color: #FFFFFF; font-weight: 700; font-size: 16px; letter-spacing: 0.02em">财报台</a>
+<nav aria-label="全站" style="display: flex; gap: 4px">
+<a href="Watchlist.dc.html" style="padding: 6px 12px; border-radius: 6px; font-size: 14px; background: #2A3039; color: #FFFFFF; font-weight: 500">观察池</a>
+<a href="Sources.dc.html" style="padding: 6px 12px; border-radius: 6px; font-size: 14px; color: #C9CED6">数据说明</a>
+</nav>
+<div style="flex-grow: 1"></div>
+<label style="display: flex; align-items: center; gap: 8px; background: #262B33; border-radius: 6px; padding: 0 12px; height: 36px; width: 260px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A93A0" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input type="text" placeholder="输入代码进入个股，如 NVDA" aria-label="搜索股票代码" style="background: transparent; border: none; outline: none; color: #FFFFFF; font-size: 14px; width: 100%; font-family: inherit">
+</label>
+</div>
+</header>
+<section style="background: #FFFFFF; border-bottom: 1px solid #E2E5EA">
+<div style="max-width: 1360px; margin: 0 auto; padding: 14px 24px 0 24px">
+<div style="font-size: 12px; color: #5B6370"><a href="Watchlist.dc.html">观察池</a> <span style="margin: 0 4px">/</span> MU</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-top: 4px">
+<div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap">
+<h1 style="margin: 0; font-size: 26px; font-weight: 700">MU</h1>
+<span style="font-size: 16px; color: #3A414C">Micron Technology 美光科技</span>
+<span style="font-size: 12px; color: #5B6370; border: 1px solid #E2E5EA; border-radius: 4px; padding: 0 8px">纳斯达克 · 存储</span>
+</div>
+<div style="font-size: 12px; color: #5B6370; text-align: right">最新财报 <b style="color: #15181D; font-weight: 500">FQ4-26</b> · 2026-09-30 盘后发布<br>数据更新 [2026-10-01 07:00 北京]</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)) auto; margin-top: 12px; border: 1px solid #EEF0F3; border-radius: 8px; background: #FBFBFC">
+<div style="padding: 8px 14px"><div style="font-size: 11px; color: #5B6370">股价</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxx.xx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">1D [±x%] · YTD [±x%]</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">市值</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxxB]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股价 × 总股本</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">EV 企业价值</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxxB]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">市值 − 净现金 $68.27B</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">Forward PE（NTM）</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股价 ÷ 未来 4 季共识 EPS</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">做空比例</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x%]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">占流通股 · 半月更新</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">下次财报</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[2026-12-xx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">隐含波动 [±x%]</div></div>
+<details style="border-left: 1px solid #EEF0F3; padding: 8px 14px; position: relative">
+<summary style="cursor: pointer; font-size: 12px; color: #1D4ED8; padding-top: 14px; white-space: nowrap">更多指标 ▾</summary>
+<div style="position: absolute; right: 0; top: 64px; z-index: 5; width: 760px; background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 8px 0">
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">52 周区间</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[xx – xxx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">距高点 [−x%]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">EV / EBITDA（NTM）</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370"></div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">股息</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">$0.15 / 季</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股息率 [x.x%]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">分析师目标价</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">买入 [x] · 持有 [x] · 卖出 [x]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">机构 / 内部人持股</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[xx%] / [x%]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">90 天内部人净买入 [ ]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">空头回补天数</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">上期 [x.x]</div></div>
+<div style="grid-column: 1 / -1; padding: 8px 14px 4px 14px; font-size: 11px; color: #5B6370; border-top: 1px solid #EEF0F3; margin-top: 4px">字段在 config/companies/MU.yaml 中增减</div>
+</div>
+</details>
+</div>
+<nav aria-label="个股页面" style="margin-top: 8px; display: flex; gap: 4px; overflow-x: auto">
+<a href="Main.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">财报解读</a>
+<a href="Results.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">财务报表</a>
+<a href="Call.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">电话会</a>
+<a href="Consensus.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">分析师预期</a>
+<a href="Price.dc.html" style="padding: 10px 18px; color: #15181D; font-weight: 500; border-bottom: 2px solid #1D4ED8">股价反应</a>
+</nav>
+</div>
+</section>
+
+<main style="max-width: 1360px; margin: 0 auto; padding: 24px; display: flex; flex-direction: column; gap: 20px">
+
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap">
+<div><h2 style="margin: 0; font-size: 20px; font-weight: 700">财报与股价</h2><div style="font-size: 13px; color: #5B6370; margin-top: 2px">每次财报发布后市场怎么定价：用于复盘「超预期」和「指引」哪个更影响股价</div></div>
+<div style="display: flex; gap: 8px; align-items: center">
+<div role="group" aria-label="反应窗口" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px">
+<sc-for list="{{ wins }}" as="w" hint-placeholder-count="3"><button type="button" onClick="{{ w.pick }}" style="{{ w.style }}">{{ w.label }}</button></sc-for>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 14px 16px"><div style="font-size: 12px; color: #5B6370">本次（FQ4-26）{{ winLabel }}</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 600; color: #8A93A0">[±x.x%]</div><div style="font-size: 12px; color: #5B6370">反应日 2026-10-01（盘后发布 → 次日）</div></div>
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 14px 16px"><div style="font-size: 12px; color: #5B6370">近 8 次平均 {{ winLabel }}</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 600; color: #8A93A0">[±x.x%]</div><div style="font-size: 12px; color: #5B6370">上涨 [x] 次 / 8</div></div>
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 14px 16px"><div style="font-size: 12px; color: #5B6370">实际波动 vs 期权隐含波动</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 600; color: #8A93A0">[x.x%] / [x.x%]</div><div style="font-size: 12px; color: #5B6370">平均绝对涨跌 / 发布前隐含</div></div>
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 14px 16px"><div style="font-size: 12px; color: #5B6370">「超预期却下跌」次数</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 600; color: #8A93A0">[x] / 8</div><div style="font-size: 12px; color: #5B6370">近 8 季 EPS 全部超预期</div></div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 20px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap">
+<h3 style="margin: 0; font-size: 16px; font-weight: 700">股价走势与财报日</h3>
+<div role="group" aria-label="区间" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px">
+<button type="button" style="border: none; border-radius: 6px; padding: 0 12px; height: 30px; font-size: 13px; font-family: inherit; background: transparent; color: #5B6370">1 年</button>
+<button type="button" style="border: none; border-radius: 6px; padding: 0 12px; height: 30px; font-size: 13px; font-family: inherit; background: #FFFFFF; color: #15181D; font-weight: 500">2 年</button>
+<button type="button" style="border: none; border-radius: 6px; padding: 0 12px; height: 30px; font-size: 13px; font-family: inherit; background: transparent; color: #5B6370">全部（2021Q4 起）</button>
+</div>
+</div>
+<div style="position: relative; height: 260px; border-bottom: 1px solid #D5D9E0; border-left: 1px solid #D5D9E0; background: #FAFBFC">
+<div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #8A93A0">日线收盘价 · 待接入（yfinance）</div>
+<sc-for list="{{ marks }}" as="k" hint-placeholder-count="8">
+<div style="{{ k.line }}"></div>
+<div style="{{ k.pin }}">E</div>
+<div style="{{ k.lab }}">{{ k.q }}</div>
+</sc-for>
+</div>
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370; padding-top: 6px"><span>2024-10</span><span>2025-04</span><span>2025-10</span><span>2026-04</span><span>2026-10</span></div>
+<div style="font-size: 12px; color: #5B6370; margin-top: 8px">E = 财报发布日；悬停显示当次超预期幅度与次日涨跌，点击跳到该期「财报解读」。</div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 20px; overflow-x: auto">
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px"><h3 style="margin: 0; font-size: 16px; font-weight: 700">逐次复盘</h3><span style="font-size: 12px; color: #5B6370">涨跌均相对发布前最后一个常规交易时段收盘价</span></div>
+<table style="width: 100%; min-width: 1240px; border-collapse: collapse; font-size: 13px">
+<thead><tr style="color: #5B6370; font-size: 12px; text-align: right">
+<th style="text-align: left; font-weight: 500; padding: 8px 0; border-bottom: 1px solid #D5D9E0">季度</th>
+<th style="text-align: left; font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">发布</th>
+<th style="text-align: left; font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">反应日</th>
+<th style="font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">发布前收盘</th>
+<th style="font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">盘后 / 盘前</th>
+<th style="font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">次日开盘</th>
+<th style="font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">次日收盘</th>
+<th style="font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">T+5</th>
+<th style="font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">隐含波动</th>
+<th style="font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">EPS 超预期</th>
+<th style="font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">收入超预期</th>
+<th style="font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #D5D9E0">指引 vs 共识</th>
+<th style="text-align: left; font-weight: 500; padding: 8px 0 8px 12px; border-bottom: 1px solid #D5D9E0">复盘笔记</th>
+</tr></thead>
+<tbody style="font-family: 'IBM Plex Mono', monospace; text-align: right">
+<sc-for list="{{ rows }}" as="r" hint-placeholder-count="8">
+<tr>
+<td style="text-align: left; padding: 9px 0; border-bottom: 1px solid #EEF0F3; font-weight: 600">{{ r.q }}</td>
+<td style="text-align: left; padding: 9px 8px; border-bottom: 1px solid #EEF0F3; white-space: nowrap"><span style="color: #3A414C">{{ r.d }}</span> <span style="font-family: 'Noto Sans SC', sans-serif; font-size: 11px; background: #EEF0F3; color: #3A414C; border-radius: 4px; padding: 0 6px">盘后</span></td>
+<td style="text-align: left; padding: 9px 8px; border-bottom: 1px solid #EEF0F3; color: #5B6370">{{ r.rd }}</td>
+<td style="padding: 9px 8px; border-bottom: 1px solid #EEF0F3; color: #B0B6C0">[$xxx]</td>
+<td style="padding: 9px 8px; border-bottom: 1px solid #EEF0F3; color: #B0B6C0">{{ r.ah }}</td>
+<td style="padding: 9px 8px; border-bottom: 1px solid #EEF0F3; color: #B0B6C0">[±x%]</td>
+<td style="padding: 9px 8px; border-bottom: 1px solid #EEF0F3; color: #B0B6C0; font-weight: 600">[±x%]</td>
+<td style="padding: 9px 8px; border-bottom: 1px solid #EEF0F3; color: #B0B6C0">[±x%]</td>
+<td style="padding: 9px 8px; border-bottom: 1px solid #EEF0F3; color: #B0B6C0">[±x%]</td>
+<td style="padding: 9px 8px; border-bottom: 1px solid #EEF0F3; color: #1D4ED8; font-weight: 600">{{ r.es }}</td>
+<td style="{{ r.rsS }}">{{ r.rs }}</td>
+<td style="padding: 9px 8px; border-bottom: 1px solid #EEF0F3; color: #B0B6C0">[±x%]</td>
+<td style="text-align: left; padding: 9px 0 9px 12px; border-bottom: 1px solid #EEF0F3; font-family: 'Noto Sans SC', sans-serif; color: #8A93A0; font-size: 12px">[一句话：市场在交易什么]</td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px">
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 20px">
+<h3 style="margin: 0 0 4px 0; font-size: 16px; font-weight: 700">超预期幅度 vs 次日涨跌</h3>
+<div style="font-size: 12px; color: #5B6370; margin-bottom: 12px">每个点是一次财报；可切换横轴为「收入超预期」或「指引 vs 共识」</div>
+<div style="position: relative; height: 220px; border-left: 1px solid #D5D9E0; border-bottom: 1px solid #D5D9E0; background: #FAFBFC; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #8A93A0">接入股价后生成</div>
+<div style="display: flex; justify-content: space-between; font-size: 11px; color: #5B6370; padding-top: 6px"><span>EPS 超预期 0%</span><span>+35%</span></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 20px; font-size: 13px; line-height: 1.8">
+<h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: 700">口径说明</h3>
+<div><b style="font-weight: 500">时段</b>：盘后发布（美东 16:00 后）→ 反应日为下一交易日；盘前发布（09:30 前）→ 反应日为当日。美光固定在盘后发布。</div>
+<div><b style="font-weight: 500">盘后 / 盘前</b>：免费分钟线只能回溯约 30–60 天，所以从现在起在每个财报日当晚记录盘后价；更早的历史用「次日开盘跳空」近似。</div>
+<div><b style="font-weight: 500">隐含波动</b>：发布前一日、最近到期的平值跨式期权价格 ÷ 股价，同样需要提前快照。</div>
+<div><b style="font-weight: 500">复盘笔记</b>：AI 预填一句「市场在交易什么」，你来校准。</div>
+</div>
+</div>
+
+<footer style="font-size: 12px; color: #5B6370; padding: 0 0 24px 0">样式稿：发布日期与超预期幅度为实际数据（MarketBeat）；股价、盘后、隐含波动待接入。</footer>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { win: 'd1' }; }
+  renderVals() {
+    var self = this, st = this.state;
+    var seg = function (on) { return 'border: none; border-radius: 6px; padding: 0 12px; height: 32px; font-size: 13px; font-family: inherit; cursor: pointer; ' + (on ? 'background: #FFFFFF; color: #15181D; font-weight: 500; box-shadow: 0 1px 2px rgba(0,0,0,0.08)' : 'background: transparent; color: #5B6370'); };
+    var W = { ah: '盘后', d1: '次日', d5: 'T+5' };
+    var wins = ['ah', 'd1', 'd5'].map(function (k) { return { label: W[k], style: seg(st.win === k), pick: function () { self.setState({ win: k }); } }; });
+    var H = [
+      ['FQ4-26', '2026-09-30', '2026-10-01', '+5.4%', '+5.6%'],
+      ['FQ3-26', '2026-06-24', '2026-06-25', '+17.4%', '+15.5%'],
+      ['FQ2-26', '2026-03-18', '2026-03-19', '+32.8%', '+19.5%'],
+      ['FQ1-26', '2025-12-17', '2025-12-18', '+26.8%', '+8.1%'],
+      ['FQ4-25', '2025-09-23', '2025-09-24', '+5.9%', '+2.4%'],
+      ['FQ3-25', '2025-06-25', '2025-06-26', '+21.7%', '+5.3%'],
+      ['FQ2-25', '2025-03-20', '2025-03-21', '+9.1%', '+1.5%'],
+      ['FQ1-25', '2024-12-18', '2024-12-19', '+11.9%', '0.0%']
+    ];
+    var rows = H.map(function (h, i) { return { q: h[0], d: h[1], rd: h[2], es: h[3], rs: h[4], ah: i < 1 ? '[±x%]' : '历史无分钟线', rsS: 'padding: 9px 8px; border-bottom: 1px solid #EEF0F3; font-weight: 600; color: ' + (h[4] === '0.0%' ? '#5B6370' : '#1D4ED8') }; });
+    // 时间轴：2024-10-01 → 2026-10-31 共约 25 个月
+    var t0 = Date.UTC(2024, 9, 1), t1 = Date.UTC(2026, 9, 31);
+    var marks = H.map(function (h) {
+      var p = h[1].split('-'); var t = Date.UTC(+p[0], +p[1] - 1, +p[2]);
+      var x = (t - t0) / (t1 - t0) * 100;
+      return { q: h[0],
+        line: 'position: absolute; top: 18px; bottom: 0; left: ' + x + '%; border-left: 1px dashed #9DB5F2',
+        pin: 'position: absolute; top: 0; left: calc(' + x + '% - 9px); width: 18px; height: 18px; border-radius: 50%; background: #1D4ED8; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center',
+        lab: 'position: absolute; bottom: 4px; left: ' + x + '%; transform: translateX(-50%); font-family: IBM Plex Mono, monospace; font-size: 10px; color: #5B6370; background: #FAFBFC; padding: 0 2px' };
+    });
+    return { wins: wins, winLabel: W[st.win], rows: rows, marks: marks };
+  }
+}
+</script>
+</body>
+</html>

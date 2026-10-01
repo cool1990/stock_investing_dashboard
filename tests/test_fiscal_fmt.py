@@ -42,8 +42,11 @@ def test_yahoo_relative_with_end_date():
 
 
 def test_growth_acceptance_cases():
+    # 01_common: base<=0, or current<0 and base>0 → n.m.
     assert format_growth(-0.95, 0.04) == NM
     assert format_growth(8.29, 1.30) == "+538%"
     assert format_growth(33.42, 3.03) == "+1003%"
     assert format_growth(0.62, 0.42) == "+48%"
     assert format_growth(0.5, 1.0) == f"{MINUS}50%"
+    assert format_growth(1.0, -1.0) == NM  # base <= 0
+    assert format_growth(-1.0, -2.0) == NM  # base <= 0

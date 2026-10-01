@@ -1,7 +1,26 @@
 # 全站实施计划（P0–P6）
 
 > 基于 `docs/00_README.md`、`docs/01_common.md` 与 `docs/02–08` 通读后的计划。  
-> **尚未写业务代码**；确认后再从 P0 开始。每阶段完成后按对应页面验收清单自查并停下来等确认。
+> 计划已确认；按阶段推进，每阶段完成后验收并停下来等确认。
+
+---
+
+## 已决事项（2026-10-01）
+
+1. **颜色**：全站由 Python 后端给出色类 `up` / `down` / `flat` / `na`，前端只按色类渲染。已改 `02_watchlist.md` §5。前端唯一例外：Forward PE 股价输入框。
+2. **百分比精度**：按各页规则执行；同一数字在不同页精度不同是允许的。
+3. **n.m.**：以 `01_common.md` 为准——基数 ≤ 0，或者当期 < 0 且基数 > 0（符号翻转）时显示 `n.m.`。据此修改 consensus 测试与实现；已同步 `06_consensus.md` §5。
+4. **准备稿缺失**：不得把第三方文字稿当作官方准备稿静默填入。准备稿缺失时显示「准备稿未获取」；原文 tab 可切换第三方来源但必须明确标注。已改 `08_sources.md` / `config/sources.yaml` 中 remarks 的 `missing`。
+5. **公告抓取**：P5 在本仓库新建 EDGAR 抓取（8-K / Form 4），股票池以 `config/watchlist.yaml` 为准。已改 `02_watchlist.md`「复用已有任务」表述。
+6. **文档唯一来源**：以 `01_common.md` 为准；删除 `CURSOR_PROMPT_consensus.md` / `CURSOR_PROMPT_site.md`，只保留 `00`–`08`。
+7. **SEC User-Agent**：值为 `stock_investing_dashboard raycao2023@gmail.com`，从环境变量 `SEC_USER_AGENT` 读取（GitHub Actions Variable，非 Secret；本地 `.env`，且 `.env` 进 `.gitignore`）。
+8. **「添加股票」链接**：构建时用 `GITHUB_REPOSITORY` 拼接；本地回退到 config 默认值，不写死。
+
+**补充调整**
+
+- **A**：每日共识快照尽早积累。P0 即确认 `fetch_consensus.py` + `data.yml` 在线上运行，并按绝对财期名存储（01 §7.2、06 §4.2）。不必等页面全部完成。
+- **B**：P0 只做「结构 + 主要交互 + 样例数据」；细节差异写入 `docs/P0_DIFF.md`（标注页面与优先级），真数据阶段再打磨。
+- **C**：P4 先完整跑通最新一场 FQ4-26 的「任务包 → Cursor → ai_check → 页面」；历史场次待确认后再分批回填。
 
 ---
 

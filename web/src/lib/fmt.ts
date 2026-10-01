@@ -8,10 +8,10 @@ export function isNullish(v: unknown): v is null | undefined {
   return v === null || v === undefined;
 }
 
-/** YoY / PoP growth: n.m. when base <= 0 or current < 0; [ ] when missing. */
+/** YoY / PoP growth per 01_common: n.m. when base<=0 or (current<0 && base>0); [ ] when missing. */
 export function formatGrowth(current: number | null | undefined, base: number | null | undefined): string {
   if (isNullish(current) || isNullish(base)) return MISSING;
-  if (base <= 0 || current < 0) return NM;
+  if (base <= 0 || (current < 0 && base > 0)) return NM;
   const p = (current / base - 1) * 100;
   const sign = p >= 0 ? '+' : MINUS;
   return `${sign}${Math.round(Math.abs(p))}%`;
@@ -65,4 +65,34 @@ export function peMultiple(price: number | null | undefined, eps: number | null 
 export function ttmShare(ttm: number, eps: number | null | undefined): string {
   if (isNullish(eps) || eps === 0) return MISSING;
   return `${Math.round((ttm / eps) * 100)}%`;
+}
+
+/** Precomputed change ratio (e.g. 0.056 → +5.6%). */
+export function formatRatioChange(
+  r: number | null | undefined,
+  opts: { asPp?: boolean; digits?: number } = {},
+): string {
+  if (isNullish(r)) return MISSING;
+  const { asPp = false, digits = 1 } = opts;
+  if (asPp) {
+    const pp = r * 100;
+    const sign = pp >= 0 ? '+' : MINUS;
+    return `${sign}${Math.abs(pp).toFixed(digits)}pp`;
+  }
+  const p = r * 100;
+  const sign = p >= 0 ? '+' : MINUS;
+  const abs = Math.abs(p);
+  const body = abs >= 1000 ? String(Math.round(abs)) : abs.toFixed(digits);
+  return `${sign}${body}%`;
+}
+
+export function formatAmtMillions(v: number | null | undefined, unit: 'M' | 'B'): string {
+  if (isNullish(v)) return MISSING;
+  if (unit === 'B') return (v / 1000).toFixed(2);
+  return Math.round(v).toLocaleString('en-US');
+}
+
+export function formatTablePct(v: number | null | undefined): string {
+  if (isNullish(v)) return MISSING;
+  return formatRatioChange(v);
 }

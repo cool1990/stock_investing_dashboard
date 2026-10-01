@@ -1,0 +1,75 @@
+# 数据源清单 → 生成数据说明页 web/public/data/pages/sources.json
+updated_note: 浏览器只读同源 JSON；第三方 API 仅在 GitHub Actions 管道中调用。
+
+sources:
+  - id: yahoo_consensus
+    name: Yahoo Finance 共识
+    used: 分析师预期 · 观察池 Forward PE
+    reliability: 中（机构覆盖不全时会跳变）
+    source: yfinance earnings_estimate / revenue_estimate / eps_trend / eps_revisions
+    freq: 每日（工作日）
+    missing: 保留上一日快照；页面显示 [ ] 并在 _status.json 记失败
+
+  - id: yahoo_eps
+    name: Yahoo Reported EPS
+    used: 已公布 Non-GAAP EPS
+    reliability: 中高（以新闻稿为准时可 overrides）
+    source: yfinance earnings history
+    freq: 财报日后
+    missing: 显示 [ ]；可用 YAML overrides 手工覆盖并注明来源
+
+  - id: edgar_xbrl
+    name: SEC EDGAR XBRL
+    used: 财务报表 · 营收实际
+    reliability: 高
+    source: data.sec.gov companyfacts / submissions
+    freq: 申报后
+    missing: 显示 [ ] 或「未披露」；不跨来源静默补齐
+
+  - id: edgar_filings
+    name: SEC EDGAR 公告
+    used: 观察池红色公告 · Form 4 / 8-K
+    reliability: 高
+    source: submissions API（本仓库 P5 新建抓取，股票池=watchlist.yaml）
+    freq: 每日
+    missing: 列表为空；失败写入 _status.json
+
+  - id: press
+    name: 公司新闻稿
+    used: 财报解读 · 指引 · Non-GAAP 校验
+    reliability: 高
+    source: 公司 IR / EX-99.1
+    freq: 发布当日
+    missing: 相关段落显示「未获取」
+
+  - id: remarks
+    name: 管理层准备稿
+    used: 电话会 · 表述变化
+    reliability: 稳定
+    source: 公司 IR 网站 Prepared Remarks PDF
+    freq: 发布当日
+    missing: 准备稿未获取；原文 tab 可切换到第三方文字稿，但必须明确标注来源，不得静默顶替官方准备稿
+
+  - id: transcript
+    name: 电话会文字稿
+    used: 电话会全文 · 检索
+    reliability: 中（第三方转写）
+    source: 第三方文字稿（标注来源）
+    freq: 发布后 1–2 日
+    missing: 原文区显示「文字稿未获取」
+
+  - id: prices
+    name: 行情与期权
+    used: 股价反应 · StockHeader
+    reliability: 中高
+    source: yfinance 日线 / 期权链（隐含波动尽力而为）
+    freq: 每日；财报夜加密
+    missing: 对应窗口显示 [ ]
+
+  - id: guidance_yaml
+    name: 指引（手工）
+    used: 分析师预期 · 财报解读
+    reliability: 高（人工录入）
+    source: config/companies/<T>.yaml guidance
+    freq: 每季手工
+    missing: 指引列显示 [ ]

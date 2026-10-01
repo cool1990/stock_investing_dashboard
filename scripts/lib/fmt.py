@@ -10,9 +10,14 @@ NM = "n.m."
 
 
 def format_growth(current: Optional[float], base: Optional[float]) -> str:
+    """YoY/PoP growth per 01_common.md §6.
+
+    n.m. when base <= 0, or current < 0 and base > 0 (sign flip).
+    [ ] when either side is missing.
+    """
     if current is None or base is None:
         return MISSING
-    if base <= 0 or current < 0:
+    if base <= 0 or (current < 0 and base > 0):
         return NM
     p = (current / base - 1) * 100
     sign = "+" if p >= 0 else MINUS

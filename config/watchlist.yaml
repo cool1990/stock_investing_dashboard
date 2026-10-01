@@ -1,0 +1,26 @@
+# 观察池股票列表。新增股票：加一行 + 新建 config/companies/<T>.yaml + 跑回填。
+groups:
+  - id: ai_hw
+    name: AI 硬件
+    tickers: [MU, NVDA, AVGO, SNDK, CRWV]
+  - id: software
+    name: 软件
+    tickers: [CDNS, NOW]
+  - id: platform
+    name: 平台
+    tickers: [UBER]
+
+defaults:
+  # 「添加股票」链接：Actions 用 GITHUB_REPOSITORY 覆盖；本地构建回退到此值
+  add_stock_repo: cool1990/stock_investing_dashboard
+  add_stock_path: blob/main/config/watchlist.yaml
+
+tickers:
+  MU:   { name_en: Micron Technology, name_zh: 美光科技, exchange: 纳斯达克, sector: 存储, group: AI 硬件 }
+  NVDA: { name_en: NVIDIA, name_zh: 英伟达, exchange: 纳斯达克, sector: AI 芯片, group: AI 硬件 }
+  AVGO: { name_en: Broadcom, name_zh: 博通, exchange: 纳斯达克, sector: AI 芯片 / 网络, group: AI 硬件 }
+  SNDK: { name_en: SanDisk, name_zh: 闪迪, exchange: 纳斯达克, sector: 存储, group: AI 硬件 }
+  CRWV: { name_en: CoreWeave, name_zh: CoreWeave, exchange: 纳斯达克, sector: AI 云, group: AI 硬件 }
+  CDNS: { name_en: Cadence, name_zh: 铿腾电子, exchange: 纳斯达克, sector: EDA 软件, group: 软件 }
+  NOW:  { name_en: ServiceNow, name_zh: ServiceNow, exchange: 纽交所, sector: 企业软件, group: 软件 }
+  UBER: { name_en: Uber, name_zh: 优步, exchange: 纽交所, sector: 出行平台, group: 平台 }
