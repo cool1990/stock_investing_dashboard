@@ -1,0 +1,48 @@
+name: Daily data refresh
+on:
+  schedule:
+    # Weekdays ~22:30 UTC (after US close; ~06:30 Beijing next day)
+    - cron: "30 22 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Fetch consensus snapshot
+        run: python scripts/fetch_consensus.py --ticker MU
+        continue-on-error: true
+      - name: Fetch actuals
+        run: python scripts/fetch_actuals.py --ticker MU
+        continue-on-error: true
+      - name: Fetch prices
+        run: python scripts/fetch_prices.py --ticker MU
+        continue-on-error: true
+      - name: Secondary (optional)
+        run: python scripts/fetch_secondary.py --ticker MU
+        continue-on-error: true
+      - name: Build history + page JSON
+        run: |
+          python scripts/build_history.py --ticker MU
+          python scripts/build_page_consensus.py --ticker MU
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --staged --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "chore(data): refresh MU snapshots $(date -u +%Y-%m-%d)"
+            git push
+          fi

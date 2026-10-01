@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>MU 分析师预期</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F5F7}
+a{color:#1D4ED8;text-decoration:none}a:hover{color:#1E3A8A}
+summary::-webkit-details-marker{display:none}
+summary{list-style:none}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F4F5F7; color: #15181D; font-family: 'Noto Sans SC', system-ui, sans-serif; font-size: 14px; line-height: 1.5">
+<header style="background: #15181D; color: #FFFFFF">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; gap: 28px">
+<a href="Watchlist.dc.html" style="color: #FFFFFF; font-weight: 700; font-size: 16px; letter-spacing: 0.02em">财报台</a>
+<nav aria-label="全站" style="display: flex; gap: 4px">
+<a href="Watchlist.dc.html" style="padding: 6px 12px; border-radius: 6px; font-size: 14px; background: #2A3039; color: #FFFFFF; font-weight: 500">观察池</a>
+<a href="Sources.dc.html" style="padding: 6px 12px; border-radius: 6px; font-size: 14px; color: #C9CED6">数据说明</a>
+</nav>
+<div style="flex-grow: 1"></div>
+<label style="display: flex; align-items: center; gap: 8px; background: #262B33; border-radius: 6px; padding: 0 12px; height: 36px; width: 260px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A93A0" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input type="text" placeholder="输入代码进入个股，如 NVDA" aria-label="搜索股票代码" style="background: transparent; border: none; outline: none; color: #FFFFFF; font-size: 14px; width: 100%; font-family: inherit">
+</label>
+</div>
+</header>
+<section style="background: #FFFFFF; border-bottom: 1px solid #E2E5EA">
+<div style="max-width: 1360px; margin: 0 auto; padding: 14px 24px 0 24px">
+<div style="font-size: 12px; color: #5B6370"><a href="Watchlist.dc.html">观察池</a> <span style="margin: 0 4px">/</span> MU</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-top: 4px">
+<div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap">
+<h1 style="margin: 0; font-size: 26px; font-weight: 700">MU</h1>
+<span style="font-size: 16px; color: #3A414C">Micron Technology 美光科技</span>
+<span style="font-size: 12px; color: #5B6370; border: 1px solid #E2E5EA; border-radius: 4px; padding: 0 8px">纳斯达克 · 存储</span>
+</div>
+<div style="font-size: 12px; color: #5B6370; text-align: right">最新财报 <b style="color: #15181D; font-weight: 500">FQ4-26</b> · 2026-09-30 盘后发布<br>数据更新 [2026-10-01 07:00 北京]</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)) auto; margin-top: 12px; border: 1px solid #EEF0F3; border-radius: 8px; background: #FBFBFC">
+<div style="padding: 8px 14px"><div style="font-size: 11px; color: #5B6370">股价</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxx.xx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">1D [±x%] · YTD [±x%]</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">市值</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxxB]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股价 × 总股本</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">EV 企业价值</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxxB]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">市值 − 净现金 $68.27B</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">Forward PE（NTM）</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股价 ÷ 未来 4 季共识 EPS</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">做空比例</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x%]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">占流通股 · 半月更新</div></div>
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">下次财报</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[2026-12-xx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">隐含波动 [±x%]</div></div>
+<details style="border-left: 1px solid #EEF0F3; padding: 8px 14px; position: relative">
+<summary style="cursor: pointer; font-size: 12px; color: #1D4ED8; padding-top: 14px; white-space: nowrap">更多指标 ▾</summary>
+<div style="position: absolute; right: 0; top: 64px; z-index: 5; width: 760px; background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 8px 0">
+<div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">52 周区间</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[xx – xxx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">距高点 [−x%]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">EV / EBITDA（NTM）</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370"></div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">股息</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">$0.15 / 季</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">股息率 [x.x%]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">分析师目标价</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[$xxx]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">买入 [x] · 持有 [x] · 卖出 [x]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">机构 / 内部人持股</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[xx%] / [x%]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">90 天内部人净买入 [ ]</div></div><div style="padding: 8px 14px; border-left: 1px solid #EEF0F3"><div style="font-size: 11px; color: #5B6370">空头回补天数</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">[x.x]</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6370">上期 [x.x]</div></div>
+<div style="grid-column: 1 / -1; padding: 8px 14px 4px 14px; font-size: 11px; color: #5B6370; border-top: 1px solid #EEF0F3; margin-top: 4px">字段在 config/companies/MU.yaml 中增减</div>
+</div>
+</details>
+</div>
+<nav aria-label="个股页面" style="margin-top: 8px; display: flex; gap: 4px; overflow-x: auto">
+<a href="Main.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">财报解读</a>
+<a href="Results.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">财务报表</a>
+<a href="Call.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">电话会</a>
+<a href="Consensus.dc.html" style="padding: 10px 18px; color: #15181D; font-weight: 500; border-bottom: 2px solid #1D4ED8">分析师预期</a>
+<a href="Price.dc.html" style="padding: 10px 18px; color: #5B6370; border-bottom: 2px solid transparent">股价反应</a>
+</nav>
+</div>
+</section>
+
+<main style="max-width: 1360px; margin: 0 auto; padding: 24px; display: flex; flex-direction: column; gap: 40px">
+
+<!-- 1 未来预期 -->
+<section style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap">
+<div>
+<h2 style="margin: 0; font-size: 22px; font-weight: 700">1 未来预期</h2>
+<div style="font-size: 13px; color: #5B6370; margin-top: 2px">逐季 / 逐年的已公布值与分析师共识放在一张表里，右侧看增速，下方看走势和 Forward PE</div>
+</div>
+<div style="display: flex; gap: 8px; align-items: center">
+<span style="font-size: 12px; color: #5B6370">指标</span>
+<div role="group" aria-label="指标" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px"><button type="button" onClick="{{ fEps }}" style="{{ fEpsBtn }}">EPS（调整后）</button><button type="button" onClick="{{ fRev }}" style="{{ fRevBtn }}">营收</button></div>
+</div>
+</div>
+
+<div style="display: flex; gap: 10px; align-items: center; background: #FDF6EC; color: #7C3A0A; border-radius: 8px; padding: 10px 14px; font-size: 13px">
+<span>共识快照：财报发布前（Yahoo，2026-10-01 抓取）。FQ4-26 已公布，数据源滚动后会补上 FQ2–FQ4-27 和 FY28 的共识，FQ1-27 共识预计向指引 $38.15 靠拢。</span>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 14px 18px 12px 18px">
+<div style="display: flex; justify-content: space-between; align-items: center; height: 38px">
+<div style="font-size: 14px; font-weight: 700">数值</div>
+<div style="font-size: 12px; color: #5B6370">{{ gUnit }}</div>
+</div>
+<table style="width: 100%; border-collapse: collapse; font-size: 13px">
+<thead><tr style="color: #5B6370; font-size: 12px; text-align: right">
+<sc-for list="{{ gHeads }}" as="h" hint-placeholder-count="7"><th style="{{ h.s }}">{{ h.t }}</th></sc-for>
+</tr></thead>
+<tbody style="font-family: 'IBM Plex Mono', monospace; text-align: right">
+<sc-for list="{{ gvRows }}" as="r" hint-placeholder-count="6">
+<tr>
+<sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="7"><td style="{{ c.s }}">{{ c.v }}</td></sc-for>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 14px 18px 12px 18px">
+<div style="display: flex; justify-content: space-between; align-items: center; height: 38px">
+<div style="font-size: 14px; font-weight: 700">增速</div>
+<div role="group" aria-label="增速口径" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px"><button type="button" onClick="{{ gYoY }}" style="{{ gYoYBtn }}">同比</button><button type="button" onClick="{{ gPoP }}" style="{{ gPoPBtn }}">环比</button></div>
+</div>
+<table style="width: 100%; border-collapse: collapse; font-size: 13px">
+<thead><tr style="color: #5B6370; font-size: 12px; text-align: right">
+<sc-for list="{{ gHeads }}" as="h" hint-placeholder-count="7"><th style="{{ h.s }}">{{ h.t }}</th></sc-for>
+</tr></thead>
+<tbody style="font-family: 'IBM Plex Mono', monospace; text-align: right">
+<sc-for list="{{ ggRows }}" as="r" hint-placeholder-count="6">
+<tr>
+<sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="7"><td style="{{ c.s }}">{{ c.v }}</td></sc-for>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 14px 18px 12px 18px">
+<div style="display: flex; justify-content: space-between; align-items: center; height: 38px">
+<div style="font-size: 14px; font-weight: 700">走势</div>
+<div style="display: flex; gap: 14px; font-size: 12px; color: #5B6370">
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; background: #8A93A0; border-radius: 2px"></span>已公布</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; background: #DCE5FB; border: 1.5px dashed #1D4ED8; border-radius: 2px; box-sizing: border-box"></span>共识</span>
+</div>
+</div>
+<div style="display: flex; gap: 8px">
+<div style="width: 22px; display: flex; flex-direction: column; font-size: 11px; color: #8A93A0">
+<div style="height: 130px; display: flex; align-items: center; justify-content: center"><span style="writing-mode: vertical-rl">全年</span></div>
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><span style="writing-mode: vertical-rl">逐季</span></div>
+</div>
+<div style="flex-grow: 1; display: flex; flex-direction: column">
+<div style="position: relative; height: 130px; border-bottom: 1px solid #EEF0F3">
+<div style="{{ cZeroY }}"></div>
+<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible"><polyline points="{{ cActPts }}" fill="none" stroke="#5B6370" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polyline><polyline points="{{ cEstPts }}" fill="none" stroke="#1D4ED8" stroke-width="2.5" stroke-dasharray="5 4" vector-effect="non-scaling-stroke"></polyline></svg>
+<sc-for list="{{ cYear }}" as="d" hint-placeholder-count="6">
+<div style="{{ d.dot }}"></div>
+<span style="{{ d.lab }}">{{ d.t }}</span>
+</sc-for>
+</div>
+<div style="position: relative; height: 150px; border-bottom: 1px solid #D5D9E0">
+<div style="{{ cZeroQ }}"></div>
+<sc-for list="{{ cBars }}" as="b" hint-placeholder-count="24">
+<div style="{{ b.s }}"></div>
+</sc-for>
+</div>
+<div style="display: flex; padding-top: 6px">
+<sc-for list="{{ cYear }}" as="d" hint-placeholder-count="6">
+<span style="flex-grow: 1; flex-basis: 0; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5B6370">{{ d.y }}</span>
+</sc-for>
+</div>
+</div>
+</div>
+<div style="font-size: 12px; color: #5B6370; margin-top: 8px">每组 4 根柱依次为 Q1–Q4；FY23–FY24 为下行周期亏损，柱体在零线以下</div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 14px 18px 12px 18px; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; align-items: center; height: 38px; gap: 12px">
+<div style="font-size: 14px; font-weight: 700">Forward PE</div>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #5B6370">股价
+<input type="number" step="0.01" min="0" placeholder="输入股价" value="{{ price }}" onChange="{{ onPrice }}" style="width: 120px; height: 32px; box-sizing: border-box; border: 1px solid #D5D9E0; border-radius: 6px; padding: 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #15181D"></label>
+</div>
+<table style="width: 100%; border-collapse: collapse; font-size: 13px">
+<thead><tr style="color: #5B6370; font-size: 12px; text-align: right">
+<sc-for list="{{ peHeads }}" as="h" hint-placeholder-count="7"><th style="{{ h.s }}">{{ h.t }}</th></sc-for>
+</tr></thead>
+<tbody style="font-family: 'IBM Plex Mono', monospace; text-align: right">
+<sc-for list="{{ peRows }}" as="r" hint-placeholder-count="6">
+<tr>
+<sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="7"><td style="{{ c.s }}">{{ c.v }}</td></sc-for>
+</tr>
+</sc-for>
+</tbody>
+</table>
+<div style="font-size: 12px; color: #5B6370; margin-top: 12px; line-height: 1.7">{{ peNote }}</div>
+</div>
+
+</div>
+
+<div style="font-size: 12px; color: #5B6370; display: flex; gap: 18px; flex-wrap: wrap">
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 14px; height: 14px; background: #EEF3FD; border: 1px solid #DCE5FB"></span>底色 = 分析师共识（预估）；无底色 = 已公布</span>
+<span>季度为美光财季，Q1–Q4 分别截至 11 / 2 / 5 / 8 月</span>
+<span>n.m. = 基数为负或为零，增速无意义</span>
+<span>[ ] = 待接入</span>
+</div>
+
+<details style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 12px 20px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 500; color: #1D4ED8">共识明细：区间、机构数、修正与指引 ▾</summary>
+<div style="overflow-x: auto; margin-top: 8px">
+<table style="width: 100%; min-width: 1100px; border-collapse: collapse; font-size: 13px">
+<thead><tr style="color: #5B6370; font-size: 12px; text-align: right">
+<sc-for list="{{ fHeads }}" as="h" hint-placeholder-count="13"><th style="{{ h.s }}">{{ h.t }}</th></sc-for>
+</tr></thead>
+<tbody style="font-family: 'IBM Plex Mono', monospace; text-align: right">
+<sc-for list="{{ frows }}" as="r" hint-placeholder-count="2">
+<tr>
+<sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="13"><td style="{{ c.s }}">{{ c.v }}</td></sc-for>
+</tr>
+</sc-for>
+</tbody>
+</table>
+<div style="font-size: 12px; color: #5B6370; margin-top: 10px; line-height: 1.7">{{ fNote }}</div>
+</div>
+</details>
+</section>
+
+<!-- 2 共识演变 -->
+<section style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap">
+<div>
+<h2 style="margin: 0; font-size: 22px; font-weight: 700">2 共识演变</h2>
+<div style="font-size: 13px; color: #5B6370; margin-top: 2px">共识在过去 90 天被怎样修正：修正的方向和速度，往往比共识水平本身更影响股价</div>
+</div>
+<div style="display: flex; gap: 8px; align-items: center">
+<div role="group" aria-label="期间" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px">
+<button type="button" onClick="{{ eQ }}" style="{{ eQBtn }}">FQ1-27 EPS</button>
+<button type="button" onClick="{{ eY }}" style="{{ eYBtn }}">FY27 EPS</button>
+</div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 12px">
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 20px">
+<div style="display: flex; gap: 18px; font-size: 12px; color: #5B6370; margin-bottom: 14px; flex-wrap: wrap">
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 16px; height: 0; border-top: 3px solid #1D4ED8"></span>共识均值</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 16px; height: 0; border-top: 3px dashed #C2410C"></span>公司指引中值</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 16px; height: 0; border-top: 2px solid #B8BEC8"></span>股价（右轴，待接入）</span>
+</div>
+<div style="position: relative; height: 240px; margin: 12px 48px 0 64px; border-bottom: 1px solid #D5D9E0">
+<sc-for list="{{ evGrid }}" as="g" hint-placeholder-count="5">
+<div style="{{ g.line }}"></div>
+<span style="{{ g.lab }}">{{ g.t }}</span>
+</sc-for>
+<div style="{{ evGuide }}"></div>
+<span style="{{ evGuideLab }}">{{ evGuideTxt }}</span>
+<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible"><polyline points="{{ evPts }}" fill="none" stroke="#1D4ED8" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polyline></svg>
+<sc-for list="{{ evDots }}" as="d" hint-placeholder-count="5">
+<div style="{{ d.dot }}"></div>
+<span style="{{ d.lab }}">{{ d.v }}</span>
+<span style="{{ d.x }}">{{ d.t }}</span>
+</sc-for>
+</div>
+<div style="height: 28px"></div>
+<div style="font-size: 12px; color: #5B6370; line-height: 1.7">{{ evNote }}</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{ evStats }}" as="t" hint-placeholder-count="4">
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 12px 16px">
+<div style="font-size: 12px; color: #5B6370">{{ t.k }}</div>
+<div style="{{ t.vs }}">{{ t.v }}</div>
+<div style="font-size: 12px; color: #5B6370">{{ t.sub }}</div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- 3 历史预期 vs 指引 vs 实际 -->
+<section style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap">
+<div>
+<h2 style="margin: 0; font-size: 22px; font-weight: 700">3 历史：预期、指引与实际</h2>
+<div style="font-size: 13px; color: #5B6370; margin-top: 2px">评估分析师和管理层各自偏离实际多少</div>
+</div>
+<div style="display: flex; gap: 8px; align-items: center">
+<div role="group" aria-label="指标" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px">
+<button type="button" onClick="{{ hEps }}" style="{{ hEpsBtn }}">EPS</button>
+<button type="button" onClick="{{ hRev }}" style="{{ hRevBtn }}">营收</button>
+</div>
+<div role="group" aria-label="期间" style="display: flex; background: #E6E8EC; border-radius: 8px; padding: 3px">
+<button type="button" onClick="{{ hQ }}" style="{{ hQBtn }}">季度</button>
+<button type="button" onClick="{{ hY }}" style="{{ hYBtn }}">年度</button>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+<sc-for list="{{ hTiles }}" as="t" hint-placeholder-count="4">
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 14px 16px">
+<div style="font-size: 12px; color: #5B6370">{{ t.k }}</div>
+<div style="{{ t.vs }}">{{ t.v }}</div>
+<div style="font-size: 12px; color: #5B6370">{{ t.sub }}</div>
+</div>
+</sc-for>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 20px">
+<div style="display: flex; gap: 18px; font-size: 12px; color: #5B6370; margin-bottom: 10px; flex-wrap: wrap">
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; background: #9DB5F2; border-radius: 2px"></span>实际</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 16px; height: 0; border-top: 3px solid #1E3A8A"></span>发布前共识</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 16px; height: 0; border-top: 3px dashed #C2410C"></span>上季给的指引中值</span>
+<span>柱顶数字 = 较共识</span>
+</div>
+<div style="display: flex; gap: 12px; align-items: flex-end; height: 240px; border-bottom: 1px solid #D5D9E0; padding: 0 1%">
+<sc-for list="{{ hcols }}" as="c" hint-placeholder-count="8">
+<div style="flex-grow: 1; flex-basis: 0; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: #1D4ED8; margin-bottom: 4px">{{ c.surp }}</span>
+<div style="{{ c.bar }}">
+<div style="{{ c.cons }}"></div>
+<div style="{{ c.guide }}"></div>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="display: flex; gap: 12px; padding: 8px 1% 0 1%">
+<sc-for list="{{ hcols }}" as="c" hint-placeholder-count="8">
+<span style="flex-grow: 1; flex-basis: 0; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5B6370">{{ c.q }}</span>
+</sc-for>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E2E5EA; border-radius: 10px; padding: 8px 20px 16px 20px; overflow-x: auto">
+<table style="width: 100%; min-width: 1000px; border-collapse: collapse; font-size: 13px">
+<thead><tr style="color: #5B6370; font-size: 12px; text-align: right">
+<sc-for list="{{ hHeads }}" as="h" hint-placeholder-count="8"><th style="{{ h.s }}">{{ h.t }}</th></sc-for>
+</tr></thead>
+<tbody style="font-family: 'IBM Plex Mono', monospace; text-align: right">
+<sc-for list="{{ hrows }}" as="r" hint-placeholder-count="8">
+<tr>
+<sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="8"><td style="{{ c.s }}">{{ c.v }}</td></sc-for>
+</tr>
+</sc-for>
+</tbody>
+</table>
+<div style="font-size: 12px; color: #5B6370; margin-top: 10px; line-height: 1.7">{{ hNote }}</div>
+</div>
+</section>
+
+<footer style="font-size: 12px; color: #5B6370; padding: 0 0 24px 0">样式稿：未来预期与共识修正取自 Yahoo Finance 分析页（财报发布前快照）；已公布值取自公司新闻稿（调整后 EPS）；历史共识取自 MarketBeat，并与 Yahoo 交叉校验；指引来自公司新闻稿；[ ] 为待接入。蓝 = 上调 / 好于预期，橙 = 下调 / 差于预期。</footer>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { fm: 'eps', gg: 'yoy', price: '', hm: 'eps', hp: 'q', ep: 'q' }; }
+  renderVals() {
+    var self = this, st = this.state;
+    var seg = function (on) { return 'border: none; border-radius: 6px; padding: 0 14px; height: 32px; font-size: 13px; font-family: inherit; cursor: pointer; ' + (on ? 'background: #FFFFFF; color: #15181D; font-weight: 500; box-shadow: 0 1px 2px rgba(0,0,0,0.08)' : 'background: transparent; color: #5B6370'); };
+    var N = null;
+    var col = function (v) { if (typeof v !== 'string') return '#15181D'; var ch = v.charAt(0); if (ch === '+') return '#1D4ED8'; if (ch === '−') return '#C2410C'; if (v === '—' || ch === '[' || v === '不可得') return '#8A93A0'; return '#15181D'; };
+    var pct = function (a, b) { if (a === N || b === N || a === undefined || b === undefined) return '—'; var p = (a / b - 1) * 100; return (p >= 0 ? '+' : '−') + (Math.abs(p) >= 100 ? Math.round(Math.abs(p)) : Math.abs(p).toFixed(1)) + '%'; };
+    var eps = function (v) { return v === N ? '[ ]' : '$' + v.toFixed(2); };
+    var rev = function (v) { return v === N ? '[ ]' : '$' + v.toFixed(2) + 'B'; };
+
+    // ---------- 未来预期 ----------
+    var th = function (t, left) { return { t: t, s: 'font-weight: 500; padding: 8px 8px; border-bottom: 1px solid #E2E5EA; white-space: nowrap; ' + (left ? 'text-align: left; padding-left: 0' : '') }; };
+    var td = function (v, opt) { opt = opt || {}; return { v: v, s: 'padding: 10px 8px; border-bottom: 1px solid #EEF0F3; white-space: nowrap; ' + (opt.left ? 'text-align: left; padding-left: 0; font-family: Noto Sans SC, sans-serif; ' : '') + (opt.bold ? 'font-weight: 600; ' : '') + (opt.bg ? 'background: ' + opt.bg + '; ' : '') + 'color: ' + (opt.color || col(v)) }; };
+    var fIsEps = st.fm === 'eps';
+    // 每个财年：[Q1, Q2, Q3, Q4, 全年]；est = 共识
+    var YRS = ['FY23', 'FY24', 'FY25', 'FY26', 'FY27', 'FY28'];
+    var EST = { FY27: true, FY28: true };
+    var G = {
+      eps: { FY23: [0.04, -1.91, -1.43, -1.07, -4.45], FY24: [-0.95, 0.42, 0.62, 1.18, 1.30], FY25: [1.79, 1.56, 1.91, 3.03, 8.29], FY26: [4.78, 12.20, 25.11, 33.42, 75.52], FY27: [34.95, N, N, N, 156.53], FY28: [N, N, N, N, N] },
+      rev: { FY23: [4.09, 3.69, 3.75, 4.01, 15.54], FY24: [4.73, 5.82, 6.81, 7.75, 25.11], FY25: [8.71, 8.05, 9.30, 11.32, 37.38], FY26: [13.64, 23.86, 41.46, 54.23, 133.19], FY27: [56.85, N, N, N, 245.57], FY28: [N, N, N, N, N] }
+    }[st.fm];
+    var gval = function (v) { return v === N ? '[ ]' : (v < 0 ? '−' + Math.abs(v).toFixed(2) : v.toFixed(2)); };
+    var gpct = function (a, b) { if (a === N || b === N || b === undefined) return '[ ]'; if (b <= 0 || a < 0) return 'n.m.'; var p = (a / b - 1) * 100; return (p >= 0 ? '+' : '−') + Math.round(Math.abs(p)) + '%'; };
+    var ESTBG = '#EEF3FD';
+    var gHeads = [th('', true)].concat(YRS.map(function (y) { return th(EST[y] ? y + 'E' : y); }));
+    var RL = ['Q1 · 11月', 'Q2 · 2月', 'Q3 · 5月', 'Q4 · 8月', '全年'];
+    var cellOpt = function (y, v, isTot, extra) { var o = { bg: EST[y] ? ESTBG : '', bold: isTot }; if (extra) o.color = extra; return o; };
+    var gvRows = RL.map(function (lab, k) {
+      var tot = k === 4;
+      return { cells: [td(lab, { left: true, bold: tot, color: '#15181D' })].concat(YRS.map(function (y) { var v = G[y][k]; return td(gval(v), cellOpt(y, v, tot, v === N ? '#8A93A0' : (EST[y] ? '#1E3A8A' : '#15181D'))); })) };
+    });
+    var isYoY = st.gg === 'yoy';
+    var ggRows = RL.map(function (lab, k) {
+      var tot = k === 4;
+      return { cells: [td(lab, { left: true, bold: tot, color: '#15181D' })].concat(YRS.map(function (y, i) {
+        var v = G[y][k], base;
+        if (isYoY || tot) base = i ? YRS[i - 1] && G[YRS[i - 1]][k] : undefined;
+        else base = k ? G[y][k - 1] : (i ? G[YRS[i - 1]][3] : undefined);
+        var t = gpct(v, base);
+        return td(t, cellOpt(y, v, tot, t === 'n.m.' ? '#8A93A0' : undefined));
+      })) };
+    });
+    var gUnit = fIsEps ? '美元 / 股 · 调整后（Non-GAAP）' : '十亿美元';
+
+    // 走势图
+    var allQ = [], allY = [];
+    YRS.forEach(function (y) { G[y].slice(0, 4).forEach(function (v) { if (v !== N) allQ.push(v); }); if (G[y][4] !== N) allY.push(G[y][4]); });
+    var qmax = Math.max.apply(null, allQ), qmin = Math.min(0, Math.min.apply(null, allQ));
+    var ymax = Math.max.apply(null, allY), ymin = Math.min(0, Math.min.apply(null, allY));
+    var QH = 132, YT = function (v) { return 18 + (1 - (v - ymin) / (ymax - ymin)) * 70; };
+    var qz = (0 - qmin) / (qmax - qmin) * QH + 6;
+    var cx = function (i) { return (i + 0.5) / YRS.length * 100; };
+    var act = [], est = [];
+    YRS.forEach(function (y, i) { var v = G[y][4]; if (v === N) return; var pt = cx(i).toFixed(2) + ',' + YT(v).toFixed(2); if (EST[y]) est.push(pt); else act.push(pt); });
+    if (est.length && act.length) est.unshift(act[act.length - 1]);
+    var cYear = YRS.map(function (y, i) { var v = G[y][4], has = v !== N, e = !!EST[y]; return {
+      y: e ? y + 'E' : y,
+      dot: has ? 'position: absolute; left: ' + cx(i) + '%; top: ' + YT(v) + '%; width: 9px; height: 9px; transform: translate(-50%, -50%); border-radius: 50%; box-sizing: border-box; border: 2px solid ' + (e ? '#1D4ED8' : '#5B6370') + '; background: ' + (e ? '#FFFFFF' : '#5B6370') : 'display: none',
+      lab: has ? 'position: absolute; left: ' + cx(i) + '%; top: calc(' + YT(v) + '% - 22px); transform: translateX(-50%); font-family: IBM Plex Mono, monospace; font-size: 11px; font-weight: 600; white-space: nowrap; color: ' + (e ? '#1E3A8A' : '#3A414C') : 'display: none',
+      t: has ? gval(v) : '' }; });
+    var cBars = [];
+    YRS.forEach(function (y, i) { G[y].slice(0, 4).forEach(function (v, k) {
+      var left = (i + 0.12 + k * 0.2) / YRS.length * 100, w = 0.16 / YRS.length * 100, e = !!EST[y];
+      if (v === N) { cBars.push({ s: 'position: absolute; left: ' + left + '%; width: ' + w + '%; bottom: ' + qz + 'px; height: 6px; border: 1px dashed #B8BEC8; border-bottom: none; box-sizing: border-box' }); return; }
+      var h = Math.max(2, Math.abs(v) / (qmax - qmin) * QH);
+      cBars.push({ s: 'position: absolute; left: ' + left + '%; width: ' + w + '%; bottom: ' + (v >= 0 ? qz : qz - h) + 'px; height: ' + h + 'px; box-sizing: border-box; border-radius: ' + (v >= 0 ? '3px 3px 0 0' : '0 0 3px 3px') + '; ' + (e ? 'background: #DCE5FB; border: 1.5px dashed #1D4ED8' : 'background: ' + (v < 0 ? '#C2410C' : '#8A93A0')) });
+    }); });
+    var cZeroQ = 'position: absolute; left: 0; right: 0; bottom: ' + qz + 'px; border-top: 1px solid #B8BEC8';
+    var cZeroY = ymin < 0 ? 'position: absolute; left: 0; right: 0; top: ' + YT(0) + '%; border-top: 1px dashed #D5D9E0' : 'display: none';
+
+    // Forward PE（始终用调整后 EPS）
+    var px = parseFloat(st.price); var hasP = px > 0;
+    var PE = [['近 4 季（TTM）', 75.52, false], ['未来 4 季（NTM）', N, true], ['FY26', 75.52, false], ['FY27E', 156.53, true], ['FY28E', N, true]];
+    var peHeads = [th('', true)].concat(PE.map(function (c) { return th(c[0]); }));
+    var peRows = [
+      { cells: [td('EPS 基数', { left: true, color: '#15181D' })].concat(PE.map(function (c) { return td(c[1] === N ? '[ ]' : c[1].toFixed(2), { bg: c[2] ? ESTBG : '', color: c[1] === N ? '#8A93A0' : '#3A414C' }); })) },
+      { cells: [td('P/E', { left: true, bold: true, color: '#15181D' })].concat(PE.map(function (c) { var ok = hasP && c[1] !== N; return td(ok ? (px / c[1]).toFixed(1) : '[x.x]', { bg: c[2] ? ESTBG : '', bold: ok, color: ok ? '#15181D' : '#8A93A0' }); })) },
+      { cells: [td('相当于 TTM PE 的', { left: true, color: '#15181D' })].concat(PE.map(function (c) { return td(c[1] === N ? '[ ]' : Math.round(75.52 / c[1] * 100) + '%', { bg: c[2] ? ESTBG : '', color: c[1] === N ? '#8A93A0' : '#3A414C' }); })) }
+    ];
+    var peNote = 'FY27 盈利共识约为 FY26 的 2.1 倍，同一股价下 FY27 PE 只有 TTM PE 的 48%，所以「看哪一年的 PE」对结论影响很大。NTM 需要 FQ2–FQ4-27 的季度共识，数据源滚动后补上。存储是周期股，盈利高点时 PE 天然偏低。';
+
+    // 共识明细（区间 / 机构数 / 修正）
+    // [期间, 截止, 均值, 低, 高, 机构数, 去年同期, 7d, 30d, 60d, 90d, 上调30d, 下调30d, 指引中值]
+    var FD = {
+      eps: [['FQ1-27', '2026-11', 34.95, 25.64, 47.81, 32, 4.78, 34.84, 34.83, 34.83, 27.61, 1, 1, 38.15], ['FY27', '2027-08', 156.53, 106.89, 221.27, 36, 75.52, 155.80, 155.57, 150.58, 117.86, 2, 2, N]],
+      rev: [['FQ1-27', '2026-11', 56.85, 45.50, 75.37, 32, 13.64, N, N, N, N, N, N, 61.5], ['FY27', '2027-08', 245.57, 131.96, 290.09, 43, 133.19, N, N, N, N, N, N, N]]
+    }[st.fm];
+    var fmt = fIsEps ? eps : rev;
+    var fHeads = [th('期间', true), th('截止'), th('共识'), th('同比'), th('最低'), th('最高'), th('机构数'), th('较 7 天前'), th('较 30 天前'), th('较 60 天前'), th('较 90 天前'), th('上调 / 下调（30 天）'), th('指引中值'), th('共识 vs 指引')];
+    var frows = FD.map(function (r) {
+      var tr = function (old) { return !fIsEps ? '不可得' : (old === N ? '[ ]' : pct(r[2], old)); };
+      return { cells: [td(r[0], { left: true, bold: true, color: '#15181D' }), td(r[1], { color: '#5B6370' }), td(fmt(r[2]), { bold: true, color: '#15181D' }), td(pct(r[2], r[6])),
+        td(fmt(r[3]), { color: '#3A414C' }), td(fmt(r[4]), { color: '#3A414C' }), td(String(r[5]), { color: '#3A414C' }),
+        td(tr(r[7])), td(tr(r[8])), td(tr(r[9])), td(tr(r[10])),
+        td(!fIsEps ? '不可得' : r[11] + ' / ' + r[12], { color: '#3A414C' }),
+        td(r[13] === N ? '无' : fmt(r[13]), { color: r[13] === N ? '#8A93A0' : '#15181D' }), td(r[13] === N ? '—' : pct(r[2], r[13]), { bold: true }) ] };
+    });
+    var fNote = fIsEps ? '最低–最高的区间很宽（FQ1-27：$25.64–$47.81），说明分析师对价格周期的判断分歧大；共识低于指引 8.4%，发布后预计上修。' : '营收共识的修正轨迹与上调 / 下调家数，免费源不提供，显示「不可得」，由每日快照自行积累。FQ1-27 营收共识低于指引 7.6%。';
+
+    // ---------- 历史 ----------
+    // [期间, 发布日, 共识, 实际, 指引中值, 次日股价, 第二来源共识]
+    var Hd = {
+      eps: {
+        q: [
+          ['FQ1-25', '2024-12-18', 1.60, 1.79, N, N, N],
+          ['FQ2-25', '2025-03-20', 1.43, 1.56, N, N, N],
+          ['FQ3-25', '2025-06-25', 1.57, 1.91, N, N, N],
+          ['FQ4-25', '2025-09-23', 2.86, 3.03, N, N, 2.86],
+          ['FQ1-26', '2025-12-17', 3.77, 4.78, N, N, 3.96],
+          ['FQ2-26', '2026-03-18', 9.19, 12.20, N, N, 9.16],
+          ['FQ3-26', '2026-06-24', 21.39, 25.11, 19.15, N, 20.69],
+          ['FQ4-26', '2026-09-30', 31.72, 33.42, N, N, 31.35]
+        ],
+        y: [
+          ['FY25', '2025-09-23', N, 8.29, N, N, N],
+          ['FY26', '2026-09-30', 73.46, 75.52, N, N, N]
+        ]
+      },
+      rev: {
+        q: [
+          ['FQ1-25', '2024-12-18', 8.71, 8.71, N, N, N],
+          ['FQ2-25', '2025-03-20', 7.93, 8.05, N, N, N],
+          ['FQ3-25', '2025-06-25', 8.83, 9.30, N, N, N],
+          ['FQ4-25', '2025-09-23', 11.05, 11.32, N, N, N],
+          ['FQ1-26', '2025-12-17', 12.62, 13.64, N, N, N],
+          ['FQ2-26', '2026-03-18', 19.97, 23.86, N, N, N],
+          ['FQ3-26', '2026-06-24', 35.91, 41.46, 33.5, N, N],
+          ['FQ4-26', '2026-09-30', 51.33, 54.23, N, N, 50.97]
+        ],
+        y: [
+          ['FY25', '2025-09-23', N, 37.38, N, N, N],
+          ['FY26', '2026-09-30', 129.86, 133.19, N, N, N]
+        ]
+      }
+    };
+    var hIsEps = st.hm === 'eps', hIsY = st.hp === 'y';
+    var hd = Hd[st.hm][st.hp];
+    var hf = hIsEps ? eps : rev;
+    var hmax = 0; hd.forEach(function (r) { [r[2], r[3], r[4]].forEach(function (x) { if (x !== N) hmax = Math.max(hmax, x); }); });
+    var hcols = hd.map(function (r, i) {
+      var hh = r[3] / hmax * 200;
+      return { q: r[0], surp: r[2] === N ? '—' : pct(r[3], r[2]),
+        bar: 'position: relative; width: 56%; max-width: 64px; height: ' + hh + 'px; background: ' + (i === hd.length - 1 ? '#1D4ED8' : '#9DB5F2') + '; border-radius: 4px 4px 0 0',
+        cons: r[2] === N ? 'display: none' : 'position: absolute; left: -8px; right: -8px; bottom: ' + (r[2] / hmax * 200) + 'px; border-top: 3px solid #1E3A8A',
+        guide: r[4] === N ? 'display: none' : 'position: absolute; left: -12px; right: -12px; bottom: ' + (r[4] / hmax * 200) + 'px; border-top: 3px dashed #C2410C' };
+    });
+    var hHeads = [th('期间', true), th('发布日', true), th(hIsEps ? 'EPS 共识' : '营收共识'), th('实际'), th('超预期'), th('指引（中值）'), th('相对指引'), th('次日股价')];
+    var hrows = hd.slice().reverse().map(function (r) {
+      var diff = r[6] !== N && r[2] !== N ? Math.abs(r[2] / r[6] - 1) * 100 : 0;
+      var consTxt = r[2] === N ? '[ ]' : hf(r[2]) + (diff > 3 ? ' ⚠' : '');
+      return { cells: [
+        td(r[0], { left: true, bold: true, color: '#15181D' }), td(r[1], { left: true, color: '#5B6370' }),
+        td(consTxt, { color: diff > 3 ? '#9A6700' : '#15181D' }), td(hf(r[3]), { bold: true, color: '#15181D' }),
+        td(r[2] === N ? '—' : pct(r[3], r[2]), { bold: true }),
+        td(r[4] === N ? (hIsY ? '无年度指引' : '[ ]') : hf(r[4]), { color: r[4] === N ? '#8A93A0' : '#15181D' }),
+        td(r[4] === N ? '—' : pct(r[3], r[4]), { bold: true }),
+        td('[±x%]', { color: '#B0B6C0' })
+      ] };
+    });
+    var hNote = hIsY
+      ? '年度：美光不提供全年 EPS / 营收指引，「相对指引」为空。FY26 共识取 FQ4 发布前快照。'
+      : '⚠ = 两个数据源的共识相差 > 3%（如 FQ1-26：MarketBeat $3.77 vs Yahoo $3.96，差约 5%；FQ3-26：$21.39 vs $20.69，差 3.4%），悬停显示两者。指引为上一季财报给出的本季指引中值，样式稿仅 FQ3-26 已录入。';
+    var big = "font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 600; ";
+    var hTiles = hIsEps && !hIsY ? [
+      { k: '超预期次数', v: '8 / 8', vs: big + 'color: #1D4ED8', sub: '近 8 季 EPS 全部高于共识' },
+      { k: '平均超预期（8 季）', v: '+16.4%', vs: big + 'color: #1D4ED8', sub: '最近一季 +5.4%，为 8 季最小' },
+      { k: '实际 vs 指引中值', v: '+31.1%', vs: big + 'color: #1D4ED8', sub: '仅 FQ3-26 已录入（指引 $19.15）' },
+      { k: '共识 vs 指引', v: '+11.7%', vs: big + 'color: #15181D', sub: 'FQ3-26 共识 $21.39 已高于指引 $19.15' }
+    ] : (!hIsEps && !hIsY ? [
+      { k: '超预期次数', v: '7 / 8', vs: big + 'color: #1D4ED8', sub: 'FQ1-25 持平共识' },
+      { k: '平均超预期（8 季）', v: '+7.2%', vs: big + 'color: #1D4ED8', sub: '最近一季 +5.6%' },
+      { k: '实际 vs 指引中值', v: '+23.8%', vs: big + 'color: #1D4ED8', sub: '仅 FQ3-26 已录入（指引 $33.5B）' },
+      { k: '共识 vs 指引', v: '+7.2%', vs: big + 'color: #15181D', sub: 'FQ3-26 共识 $35.91B 高于指引 $33.5B' }
+    ] : [
+      { k: 'FY26 实际 vs 共识', v: hIsEps ? '+2.8%' : '+2.6%', vs: big + 'color: #1D4ED8', sub: '共识为 FQ4 发布前快照' },
+      { k: 'FY25 实际 vs 共识', v: '[ ]', vs: big + 'color: #8A93A0', sub: '待回填' },
+      { k: '年度指引', v: '无', vs: big + 'color: #8A93A0', sub: '美光只给下季指引' },
+      { k: '次日股价（年报季）', v: '[±x%]', vs: big + 'color: #8A93A0', sub: '见「股价反应」' }
+    ]);
+
+    // ---------- 2 共识演变 ----------
+    var E = {
+      q: { pts: [[90, 27.61], [60, 34.83], [30, 34.83], [7, 34.84], [0, 34.95]], guide: 38.15, up: 1, dn: 1, n: 32 },
+      y: { pts: [[90, 117.86], [60, 150.58], [30, 155.57], [7, 155.80], [0, 156.53]], guide: N, up: 2, dn: 2, n: 36 }
+    };
+    var e = E[st.ep];
+    var evals = e.pts.map(function (p) { return p[1]; }); if (e.guide !== N) evals.push(e.guide);
+    var elo = Math.min.apply(null, evals) * 0.94, ehi = Math.max.apply(null, evals) * 1.03;
+    var ey = function (v) { return (1 - (v - elo) / (ehi - elo)) * 100; };
+    var ex = function (d) { return (90 - d) / 90 * 100; };
+    var evPts = e.pts.map(function (p) { return ex(p[0]).toFixed(2) + ',' + ey(p[1]).toFixed(2); }).join(' ');
+    var evGrid = [0, 1, 2, 3, 4].map(function (k) { var v = elo + (ehi - elo) * k / 4; return {
+      line: 'position: absolute; left: 0; right: 0; top: ' + ey(v) + '%; border-top: 1px solid #F0F1F4',
+      lab: 'position: absolute; left: -64px; width: 56px; text-align: right; top: calc(' + ey(v) + '% - 8px); font-family: IBM Plex Mono, monospace; font-size: 11px; color: #8A93A0',
+      t: '$' + v.toFixed(v < 100 ? 1 : 0) }; });
+    var evDots = e.pts.map(function (p, i) { var last = i === e.pts.length - 1; return {
+      dot: 'position: absolute; left: ' + ex(p[0]) + '%; top: ' + ey(p[1]) + '%; width: ' + (last ? 12 : 9) + 'px; height: ' + (last ? 12 : 9) + 'px; transform: translate(-50%, -50%); border-radius: 50%; background: ' + (last ? '#1D4ED8' : '#FFFFFF') + '; border: 2px solid #1D4ED8; box-sizing: border-box; z-index: 2',
+      lab: 'position: absolute; left: ' + ex(p[0]) + '%; top: calc(' + ey(p[1]) + '% - 26px); transform: translateX(' + (last ? '-90%' : '-50%') + '); font-family: IBM Plex Mono, monospace; font-size: 12px; white-space: nowrap; font-weight: ' + (last ? 700 : 500) + '; color: ' + (last ? '#1E3A8A' : '#3A414C'),
+      v: eps(p[1]),
+      x: 'position: absolute; left: ' + ex(p[0]) + '%; bottom: -24px; transform: translateX(' + (last ? '-80%' : '-50%') + '); font-size: 12px; color: #5B6370; white-space: nowrap',
+      t: p[0] === 0 ? '今天' : p[0] + ' 天前' }; });
+    var hasG = e.guide !== N;
+    var evGuide = hasG ? 'position: absolute; left: 0; right: 0; top: ' + ey(e.guide) + '%; border-top: 2px dashed #C2410C' : 'display: none';
+    var evGuideLab = hasG ? 'position: absolute; right: 0; top: calc(' + ey(e.guide) + '% - 20px); font-family: IBM Plex Mono, monospace; font-size: 12px; font-weight: 600; color: #C2410C' : 'display: none';
+    var cur = e.pts[4][1], big3 = "font-family: 'IBM Plex Mono', monospace; font-size: 20px; font-weight: 600; ";
+    var evStats = [
+      { k: '90 天修正', v: pct(cur, e.pts[0][1]), sub: '自 ' + eps(e.pts[0][1]) },
+      { k: '30 天修正', v: pct(cur, e.pts[2][1]), sub: '近一个月基本走平' },
+      { k: '上调 / 下调（30 天）', v: e.up + ' / ' + e.dn, sub: '覆盖 ' + e.n + ' 家，方向未形成合力' },
+      { k: '共识 vs 指引', v: hasG ? pct(cur, e.guide) : '无指引', sub: hasG ? '共识低于指引，发布后大概率上修' : '美光只给下一季指引' }
+    ].map(function (t) { t.vs = big3 + 'margin: 2px 0; color: ' + col(t.v); return t; });
+    var evNote = st.ep === 'q'
+      ? '大部分上修发生在 60–90 天前（$27.61 → $34.83），之后一直贴着 $34.8 不动，而公司指引给到 $38.15：说明共识还没消化最新指引。当前只有 Yahoo「EPS Trend」的 5 个时点，每日快照开始后曲线逐日变密，并叠加股价与财报日竖线。'
+      : 'FY27 共识 90 天内从 $117.86 上调到 $156.53，同样集中在 60–90 天前；近 30 天仅 +0.6%。修正放缓本身是信号：上修动能减弱时，股价对「超预期」的奖励通常也会变小。';
+
+    
+    return {
+      fEps: function () { self.setState({ fm: 'eps' }); }, fRev: function () { self.setState({ fm: 'rev' }); },
+      fEpsBtn: seg(fIsEps), fRevBtn: seg(!fIsEps),
+      gYoY: function () { self.setState({ gg: 'yoy' }); }, gPoP: function () { self.setState({ gg: 'pop' }); }, gYoYBtn: seg(isYoY), gPoPBtn: seg(!isYoY),
+      gHeads: gHeads, gvRows: gvRows, ggRows: ggRows, gUnit: gUnit,
+      cActPts: act.join(' '), cEstPts: est.join(' '), cYear: cYear, cBars: cBars, cZeroQ: cZeroQ, cZeroY: cZeroY,
+      price: st.price, onPrice: function (ev) { self.setState({ price: ev.target.value }); }, peHeads: peHeads, peRows: peRows, peNote: peNote,
+      fHeads: fHeads, frows: frows, fNote: fNote,
+      hEps: function () { self.setState({ hm: 'eps' }); }, hRev: function () { self.setState({ hm: 'rev' }); },
+      hQ: function () { self.setState({ hp: 'q' }); }, hY: function () { self.setState({ hp: 'y' }); },
+      hEpsBtn: seg(hIsEps), hRevBtn: seg(!hIsEps), hQBtn: seg(!hIsY), hYBtn: seg(hIsY),
+      hcols: hcols, hHeads: hHeads, hrows: hrows, hNote: hNote, hTiles: hTiles,
+      eQ: function () { self.setState({ ep: 'q' }); }, eY: function () { self.setState({ ep: 'y' }); }, eQBtn: seg(st.ep === 'q'), eYBtn: seg(st.ep === 'y'),
+      evPts: evPts, evGrid: evGrid, evDots: evDots, evGuide: evGuide, evGuideLab: evGuideLab, evGuideTxt: hasG ? '指引 ' + eps(e.guide) : '', evStats: evStats, evNote: evNote
+    };
+  }
+}
+</script>
+</body>
+</html>

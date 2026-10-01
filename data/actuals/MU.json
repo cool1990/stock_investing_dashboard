@@ -1,0 +1,17 @@
+{
+  "eps_basis": "non_gaap",
+  "quarters": {
+    "FQ1-25": {"eps": 1.79, "rev": 8.71, "release_date": "2024-12-18", "source": "press"},
+    "FQ2-25": {"eps": 1.56, "rev": 8.05, "release_date": "2025-03-20", "source": "press"},
+    "FQ3-25": {"eps": 1.91, "rev": 9.30, "release_date": "2025-06-25", "source": "press"},
+    "FQ4-25": {"eps": 3.03, "rev": 11.32, "release_date": "2025-09-23", "source": "press"},
+    "FQ1-26": {"eps": 4.78, "rev": 13.64, "release_date": "2025-12-17", "source": "press"},
+    "FQ2-26": {"eps": 12.20, "rev": 23.86, "release_date": "2026-03-18", "source": "press"},
+    "FQ3-26": {"eps": 25.11, "rev": 41.46, "release_date": "2026-06-24", "source": "press"},
+    "FQ4-26": {"eps": 33.42, "rev": 54.23, "release_date": "2026-09-30", "source": "press"}
+  },
+  "years": {
+    "FY25": {"eps": 8.29, "rev": 37.38, "source": "press"},
+    "FY26": {"eps": 75.52, "rev": 133.19, "source": "press"}
+  }
+}
