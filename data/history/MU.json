@@ -1,0 +1,205 @@
+{
+  "eps": {
+    "q": [
+      {
+        "period": "FQ1-25",
+        "release_date": "2024-12-18",
+        "consensus": 1.6,
+        "actual": 1.79,
+        "guide": null,
+        "next_day": -0.16179066993399238,
+        "secondary": null,
+        "pre_release_source": "marketbeat"
+      },
+      {
+        "period": "FQ2-25",
+        "release_date": "2025-03-20",
+        "consensus": 1.43,
+        "actual": 1.56,
+        "guide": null,
+        "next_day": -0.08038910498252028,
+        "secondary": null,
+        "pre_release_source": "marketbeat"
+      },
+      {
+        "period": "FQ3-25",
+        "release_date": "2025-06-25",
+        "consensus": 1.57,
+        "actual": 1.91,
+        "guide": null,
+        "next_day": -0.009823000064604237,
+        "secondary": null,
+        "pre_release_source": "marketbeat"
+      },
+      {
+        "period": "FQ4-25",
+        "release_date": "2025-09-23",
+        "consensus": 2.86,
+        "actual": 3.03,
+        "guide": null,
+        "next_day": -0.028243088947914385,
+        "secondary": 2.86,
+        "pre_release_source": "marketbeat"
+      },
+      {
+        "period": "FQ1-26",
+        "release_date": "2025-12-17",
+        "consensus": 3.77,
+        "actual": 4.78,
+        "guide": null,
+        "next_day": 0.10211957766458535,
+        "secondary": 3.96,
+        "pre_release_source": "marketbeat"
+      },
+      {
+        "period": "FQ2-26",
+        "release_date": "2026-03-18",
+        "consensus": 9.19,
+        "actual": 12.2,
+        "guide": null,
+        "next_day": -0.037814343923299965,
+        "secondary": 9.16,
+        "pre_release_source": "marketbeat"
+      },
+      {
+        "period": "FQ3-26",
+        "release_date": "2026-06-24",
+        "consensus": 21.39,
+        "actual": 25.11,
+        "guide": 19.15,
+        "next_day": 0.15741383020612987,
+        "secondary": 20.69,
+        "pre_release_source": "marketbeat"
+      },
+      {
+        "period": "FQ4-26",
+        "release_date": "2026-09-30",
+        "consensus": 31.72,
+        "actual": 33.42,
+        "guide": null,
+        "next_day": null,
+        "secondary": 31.35,
+        "pre_release_source": "marketbeat"
+      }
+    ],
+    "y": [
+      {
+        "period": "FY25",
+        "release_date": "2025-09-23",
+        "consensus": null,
+        "actual": 8.29,
+        "guide": null,
+        "next_day": -0.028243088947914385,
+        "secondary": null
+      },
+      {
+        "period": "FY26",
+        "release_date": "2026-09-30",
+        "consensus": 73.46,
+        "actual": 75.52,
+        "guide": null,
+        "next_day": null,
+        "secondary": null
+      }
+    ]
+  },
+  "rev": {
+    "q": [
+      {
+        "period": "FQ1-25",
+        "release_date": "2024-12-18",
+        "consensus": 8.71,
+        "actual": 8.71,
+        "guide": null,
+        "next_day": -0.16179066993399238,
+        "secondary": null
+      },
+      {
+        "period": "FQ2-25",
+        "release_date": "2025-03-20",
+        "consensus": 7.93,
+        "actual": 8.05,
+        "guide": null,
+        "next_day": -0.08038910498252028,
+        "secondary": null
+      },
+      {
+        "period": "FQ3-25",
+        "release_date": "2025-06-25",
+        "consensus": 8.83,
+        "actual": 9.3,
+        "guide": null,
+        "next_day": -0.009823000064604237,
+        "secondary": null
+      },
+      {
+        "period": "FQ4-25",
+        "release_date": "2025-09-23",
+        "consensus": 11.05,
+        "actual": 11.32,
+        "guide": null,
+        "next_day": -0.028243088947914385,
+        "secondary": null
+      },
+      {
+        "period": "FQ1-26",
+        "release_date": "2025-12-17",
+        "consensus": 12.62,
+        "actual": 13.64,
+        "guide": null,
+        "next_day": 0.10211957766458535,
+        "secondary": null
+      },
+      {
+        "period": "FQ2-26",
+        "release_date": "2026-03-18",
+        "consensus": 19.97,
+        "actual": 23.86,
+        "guide": null,
+        "next_day": -0.037814343923299965,
+        "secondary": null
+      },
+      {
+        "period": "FQ3-26",
+        "release_date": "2026-06-24",
+        "consensus": 35.91,
+        "actual": 41.46,
+        "guide": 33.5,
+        "next_day": 0.15741383020612987,
+        "secondary": null
+      },
+      {
+        "period": "FQ4-26",
+        "release_date": "2026-09-30",
+        "consensus": 51.33,
+        "actual": 54.23,
+        "guide": null,
+        "next_day": null,
+        "secondary": 50.97
+      }
+    ],
+    "y": [
+      {
+        "period": "FY25",
+        "release_date": "2025-09-23",
+        "consensus": null,
+        "actual": 37.38,
+        "guide": null,
+        "next_day": -0.028243088947914385,
+        "secondary": null
+      },
+      {
+        "period": "FY26",
+        "release_date": "2026-09-30",
+        "consensus": 129.86,
+        "actual": 133.19,
+        "guide": null,
+        "next_day": null,
+        "secondary": null
+      }
+    ]
+  },
+  "meta": {
+    "ticker": "MU"
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "period": "FQ4-26",
+  "release": {
+    "date": "2026-09-03",
+    "timing": "after_close",
+    "press_url": "https://investors.micron.com/",
+    "remarks_url": "https://investors.micron.com/"
+  },
+  "verdict": {
+    "label": "超预期",
+    "line": {
+      "rev_surp": 0.0565,
+      "rev_surp_tone": "up",
+      "eps_surp": 0.0536,
+      "eps_surp_tone": "up",
+      "guide_vs_cons": [
+        0.0034,
+        0.0029
+      ],
+      "guide_vs_cons_tone": [
+        "up",
+        "na"
+      ]
+    },
+    "summary": {
+      "text": null,
+      "refs": [],
+      "prompt_version": "review_summary_v2",
+      "status": "pending_ai",
+      "placeholder": "AI 文案待手动任务包生成（P4）"
+    },
+    "watch": [
+      {
+        "title": "毛利率是否见顶",
+        "text": "下季指引 86.25% 低于本季 87.0%",
+        "confirmed": true,
+        "resolved": false
+      },
+      {
+        "title": "现金流质量",
+        "text": "剔除预付款后 FCF 约 $20.9B",
+        "confirmed": true,
+        "resolved": false
+      },
+      {
+        "title": "资本开支加速",
+        "text": "FY27 明显高于 $27.4B",
+        "confirmed": true,
+        "resolved": false
+      }
+    ]
+  },
+  "cards": [
+    {
+      "key": "rev",
+      "label": "营收",
+      "basis": "GAAP",
+      "value": 54.23,
+      "unit": "B",
+      "yoy": 3.7927,
+      "yoy_tone": "up",
+      "qoq": 0.3081,
+      "qoq_tone": "up",
+      "vs_cons": 0.0565,
+      "vs_cons_tone": "up",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    },
+    {
+      "key": "gm",
+      "label": "毛利率",
+      "basis": "GAAP",
+      "value": 86.8,
+      "unit": "%",
+      "yoy": 0.4209,
+      "yoy_tone": "up",
+      "qoq": 0.0219,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    },
+    {
+      "key": "opm",
+      "label": "营业利润率",
+      "basis": "GAAP",
+      "value": null,
+      "unit": "%",
+      "yoy": null,
+      "yoy_tone": "na",
+      "qoq": null,
+      "qoq_tone": "na",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    },
+    {
+      "key": "nim",
+      "label": "净利润率",
+      "basis": "GAAP",
+      "value": 69.5,
+      "unit": "%",
+      "yoy": 0.4123,
+      "yoy_tone": "up",
+      "qoq": 0.0139,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    },
+    {
+      "key": "eps",
+      "label": "摊薄 EPS",
+      "basis": "Non-GAAP",
+      "value": 33.42,
+      "unit": "$",
+      "yoy": null,
+      "yoy_tone": "na",
+      "qoq": 0.3547,
+      "qoq_tone": "up",
+      "vs_cons": 0.0536,
+      "vs_cons_tone": "up",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    },
+    {
+      "key": "fcf",
+      "label": "自由现金流",
+      "basis": "GAAP 近似",
+      "value": null,
+      "unit": "B",
+      "yoy": null,
+      "yoy_tone": "na",
+      "qoq": null,
+      "qoq_tone": "na",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    }
+  ],
+  "bridge": {
+    "rows": [],
+    "note": "拆解表待新闻稿解析（P3 深化）"
+  },
+  "guidance": {
+    "next_q": "FQ1-27",
+    "rows": [
+      {
+        "metric": "营收",
+        "guide": "$61.5B",
+        "cons": 61.32,
+        "vs": 0.0029,
+        "vs_tone": "up"
+      },
+      {
+        "metric": "EPS",
+        "guide": "$38.15",
+        "cons": 38.02,
+        "vs": 0.0034,
+        "vs_tone": "up"
+      }
+    ],
+    "note": "指引来自 config/companies/MU.yaml；共识对比在快照齐全后填充。"
+  },
+  "talk": {
+    "mgmt": [
+      {
+        "topic": "供需",
+        "tag": "强化",
+        "who": "CEO",
+        "now": "2027–28 年供需比 2026 年更紧。",
+        "prev": null,
+        "ref": "call:FQ4-26#p12"
+      }
+    ],
+    "qa": [
+      {
+        "topic": "资本回报",
+        "who": "Timothy Arcuri",
+        "firm": "UBS",
+        "q": "超额现金如何返还？",
+        "by": "CFO",
+        "a": "12 月 9 日起以回购为主。",
+        "ref": "call:FQ4-26#qa1"
+      }
+    ]
+  },
+  "ai_status": "numbers_ready_copy_pending"
+}

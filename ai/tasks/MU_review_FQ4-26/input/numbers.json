@@ -1,0 +1,127 @@
+{
+  "period": "FQ4-26",
+  "verdict_line": {
+    "rev_surp": 0.0565,
+    "rev_surp_tone": "up",
+    "eps_surp": 0.0536,
+    "eps_surp_tone": "up",
+    "guide_vs_cons": [
+      0.0034,
+      0.0029
+    ],
+    "guide_vs_cons_tone": [
+      "up",
+      "na"
+    ]
+  },
+  "cards": [
+    {
+      "key": "rev",
+      "label": "营收",
+      "basis": "GAAP",
+      "value": 54.23,
+      "unit": "B",
+      "yoy": 3.7927,
+      "yoy_tone": "up",
+      "qoq": 0.3081,
+      "qoq_tone": "up",
+      "vs_cons": 0.0565,
+      "vs_cons_tone": "up",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    },
+    {
+      "key": "gm",
+      "label": "毛利率",
+      "basis": "GAAP",
+      "value": 86.8,
+      "unit": "%",
+      "yoy": 0.4209,
+      "yoy_tone": "up",
+      "qoq": 0.0219,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    },
+    {
+      "key": "opm",
+      "label": "营业利润率",
+      "basis": "GAAP",
+      "value": null,
+      "unit": "%",
+      "yoy": null,
+      "yoy_tone": "na",
+      "qoq": null,
+      "qoq_tone": "na",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    },
+    {
+      "key": "nim",
+      "label": "净利润率",
+      "basis": "GAAP",
+      "value": 69.5,
+      "unit": "%",
+      "yoy": 0.4123,
+      "yoy_tone": "up",
+      "qoq": 0.0139,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    },
+    {
+      "key": "eps",
+      "label": "摊薄 EPS",
+      "basis": "Non-GAAP",
+      "value": 33.42,
+      "unit": "$",
+      "yoy": null,
+      "yoy_tone": "na",
+      "qoq": 0.3547,
+      "qoq_tone": "up",
+      "vs_cons": 0.0536,
+      "vs_cons_tone": "up",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    },
+    {
+      "key": "fcf",
+      "label": "自由现金流",
+      "basis": "GAAP 近似",
+      "value": null,
+      "unit": "B",
+      "yoy": null,
+      "yoy_tone": "na",
+      "qoq": null,
+      "qoq_tone": "na",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": null,
+        "refs": [],
+        "status": "pending_ai"
+      }
+    }
+  ]
+}

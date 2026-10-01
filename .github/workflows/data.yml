@@ -37,15 +37,25 @@ jobs:
       - name: Fetch financials (XBRL)
         run: python3 scripts/fetch_financials.py --ticker MU
         continue-on-error: true
+      - name: Fetch filings (EDGAR)
+        run: python3 scripts/fetch_filings.py --tickers MU
+        continue-on-error: true
       - name: Secondary (optional)
         run: python3 scripts/fetch_secondary.py --ticker MU
         continue-on-error: true
-      - name: Build history + page JSON
+      - name: Build pages
         run: |
           python3 scripts/build_history.py --ticker MU
           python3 scripts/build_page_consensus.py --ticker MU
           python3 scripts/build_page_financials.py --ticker MU
           python3 scripts/build_page_header.py --ticker MU
+          python3 scripts/build_page_price.py --ticker MU
+          python3 scripts/build_page_review.py --ticker MU --period FQ4-26
+          python3 scripts/ai_prepare.py --ticker MU --period FQ4-26 --kind both
+          python3 scripts/build_page_call.py --ticker MU --period FQ4-26
+          python3 scripts/build_page_watchlist.py
+          python3 scripts/build_calendar_ics.py
+          python3 scripts/build_sources.py
       - name: Verify absolute period keys
         run: |
           python3 - <<'PY'
@@ -65,7 +75,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
+          git add data ai/tasks
           if git diff --staged --quiet; then
             echo "No data changes"
           else

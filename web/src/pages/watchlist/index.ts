@@ -258,7 +258,11 @@ export function renderWatchlistPage(
     calCard.appendChild(
       el('div', { className: 'card__head' }, [
         el('span', { className: 'card__title', text: '财报日历' }),
-        el('span', { className: 'card__unit', text: '未来 60 天 · 北京' }),
+        el('a', {
+          className: 'card__unit',
+          href: './data/pages/calendar.ics',
+          text: '导出到日历（.ics）',
+        }),
       ]),
     );
     const calList = el('ul', { className: 'cal-list' });

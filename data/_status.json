@@ -8,7 +8,7 @@
     "yahoo_consensus": {
       "ok": true,
       "message": "MU periods=4",
-      "updated_at_utc": "2026-10-01T12:58:32Z"
+      "updated_at_utc": "2026-10-01T13:42:37Z"
     },
     "sec_companyfacts": {
       "ok": true,
@@ -24,6 +24,16 @@
       "ok": true,
       "message": "10665 days",
       "updated_at_utc": "2026-10-01T13:24:23Z"
+    },
+    "edgar_filings": {
+      "ok": true,
+      "message": "40 filings",
+      "updated_at_utc": "2026-10-01T13:42:37Z"
+    },
+    "watchlist_page": {
+      "ok": true,
+      "message": "8 tickers",
+      "updated_at_utc": "2026-10-01T13:43:29Z"
     }
   }
 }

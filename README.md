@@ -79,3 +79,16 @@ cd web && npm test
 - 缺失显示 `[ ]` /「未获取」，禁止编造或静默用第三方顶替官方准备稿
 - 色类由后端给出（`up` / `down` / `flat` / `na`）；蓝=上调/超预期，橙=下调/低于预期
 - 数字用 IBM Plex Mono，正文用 Noto Sans SC
+
+## 管道阶段（P0–P6）
+
+| 阶段 | 内容 |
+|---|---|
+| P0 | 七页外壳 + 样例 |
+| P1 | XBRL 财务报表 + StockHeader 真数 |
+| P2 | 共识快照刷新 + 观察池 NTM / 修正30D / Forward PE |
+| P3 | 股价反应（次日/T+5）+ 解读数字卡 |
+| P4 | 电话会 / 解读 AI 手动任务包（`ai_prepare` → Cursor → `ai_check --apply`） |
+| P5 | EDGAR 公告 + 红色规则 + `calendar.ics` |
+| P6 | 数据说明页由 `sources.yaml` + `_status.json` 驱动 |
+

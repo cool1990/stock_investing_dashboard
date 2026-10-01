@@ -25,11 +25,8 @@ export function sampleOrPage(page: string, ticker?: string): string[] {
   if (page === 'stockHeader') {
     return [`./data/pages/${t}/stockHeader.json`, `./sample/stockHeader.json`];
   }
-  // P1+: financials prefers formal pages; other pages still sample-first until their phase
-  if (page === 'financials') {
-    return [`./data/pages/${t}/${page}.json`, `./sample/${page}.json`];
-  }
-  return [`./sample/${page}.json`, `./data/pages/${t}/${page}.json`];
+  // Formal pages first for all stock pages after P1+
+  return [`./data/pages/${t}/${page}.json`, `./sample/${page}.json`];
 }
 
 export function addStockUrl(): string {

@@ -1,0 +1,470 @@
+{
+  "updated_at": "2026-10-01T13:42:37Z",
+  "items": [
+    {
+      "t": "MU",
+      "d": "2026-09-30",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "MU 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/mu-20260930.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MU",
+      "d": "2026-08-28",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000179875726000007/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-08-26",
+      "form": "8-K",
+      "type": "8-K · 5.02",
+      "title": "MU 8-K items 5.02,9.01",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926101067/tm2624017d1_8k.htm",
+      "items": [
+        "5.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MU",
+      "d": "2026-08-25",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000015/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-08-20",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000131107926000003/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-07-28",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000014/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-07-28",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000013/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-07-27",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000165214926000005/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-07-17",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000165214926000004/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-07-06",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000163206326000003/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-07-02",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000145336826000001/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-07-02",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000121836326000003/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-07-02",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000205876926000004/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-06-30",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000012/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-06-30",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000011/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-06-24",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "MU 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/mu-20260624.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MU",
+      "d": "2026-06-11",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000179875726000006/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-06-09",
+      "form": "8-K",
+      "type": "8-K · 5.02",
+      "title": "MU 8-K items 5.02,9.01",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926071845/tm2617112d1_8k.htm",
+      "items": [
+        "5.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MU",
+      "d": "2026-06-02",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000010/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-06-02",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000009/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-05-13",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000122409526000001/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-05-05",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000005/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-05-05",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000159319926000003/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000165214926000003/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-04-16",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000120149026000003/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-04-14",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000131107926000002/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-04-13",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000120149026000002/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-04-03",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000163206326000002/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-04-02",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000205876926000003/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-04-02",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000121836326000002/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-04-01",
+      "form": "8-K",
+      "type": "8-K · 8.01",
+      "title": "MU 8-K items 8.01,9.01",
+      "why": "监管 / 诉讼",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926038249/tm2610810d1_8k.htm",
+      "items": [
+        "8.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MU",
+      "d": "2026-03-25",
+      "form": "8-K",
+      "type": "8-K · 8.01",
+      "title": "MU 8-K items 8.01,9.01",
+      "why": "监管 / 诉讼",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926034174/tm269755d1_8k.htm",
+      "items": [
+        "8.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MU",
+      "d": "2026-03-18",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "MU 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/mu-20260318.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MU",
+      "d": "2026-02-04",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000131107926000001/xslF345X05/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-01-29",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000159319926000002/xslF345X05/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-01-26",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000168949826000001/xslF345X05/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-01-26",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000159319926000001/xslF345X05/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-01-21",
+      "form": "8-K",
+      "type": "8-K · 5.03",
+      "title": "MU 8-K items 5.03,5.07,9.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926005366/tm263707d1_8k.htm",
+      "items": [
+        "5.03",
+        "5.07",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MU",
+      "d": "2026-01-20",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000165214926000002/xslF345X05/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MU",
+      "d": "2026-01-15",
+      "form": "4",
+      "type": "4",
+      "title": "MU 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000205876926000002/xslF345X05/primarydocument.xml",
+      "items": []
+    }
+  ]
+}

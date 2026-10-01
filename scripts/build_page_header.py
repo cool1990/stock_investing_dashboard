@@ -132,8 +132,15 @@ def build_header(ticker: str) -> dict:
         ev_b = market_cap_b - net_cash_b
 
     report, report_date = latest_report(financials)
-    # Prefer earnings release date from prices info if present
     hdr_cfg = cfg.get("header") or {}
+
+    # Forward PE from consensus page if available
+    cons = read_json(ROOT / "data" / "pages" / ticker / "consensus.json", default={}) or {}
+    fpe = (cons.get("meta") or {}).get("header", {}).get("forward_pe_ntm")
+    if fpe is None:
+        ntm = ((cons.get("future") or {}).get("pe") or {}).get("ntm_eps")
+        if price is not None and ntm and ntm > 0:
+            fpe = round(price / float(ntm), 1)
 
     header = {
         "price": round(price, 2) if price is not None else None,
@@ -142,7 +149,7 @@ def build_header(ticker: str) -> dict:
         "market_cap": fmt_money_b(market_cap_b),
         "ev": fmt_money_b(ev_b),
         "net_cash_b": round(net_cash_b, 2) if net_cash_b is not None else None,
-        "forward_pe_ntm": hdr_cfg.get("forward_pe_ntm"),
+        "forward_pe_ntm": fpe if fpe is not None else hdr_cfg.get("forward_pe_ntm"),
         "short_interest": hdr_cfg.get("short_interest"),
         "next_earnings": hdr_cfg.get("next_earnings") or info.get("next_earnings"),
         "implied_move": hdr_cfg.get("implied_move"),
