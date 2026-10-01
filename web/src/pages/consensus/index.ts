@@ -81,7 +81,6 @@ export function renderConsensusPage(data: ConsensusPage): HTMLElement {
       renderTrendChart(data, state.fm),
       renderForwardPe(data, state.price, (v) => {
         state.price = v;
-        paint();
       }),
     ]);
     s1.appendChild(grid);

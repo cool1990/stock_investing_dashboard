@@ -15,8 +15,6 @@ export function renderForwardPe(
     ['FY27E', pe.fy.FY27 ?? null, true],
     ['FY28E', pe.fy.FY28 ?? null, true],
   ];
-  const px = parseFloat(price);
-  const hasP = px > 0;
 
   const card = el('div', { className: 'card', style: 'display:flex;flex-direction:column' });
   const input = el('input', {
@@ -28,7 +26,6 @@ export function renderForwardPe(
     style:
       'width:120px;height:32px;box-sizing:border-box;border:1px solid var(--axis);border-radius:6px;padding:0 10px;font-family:var(--font-mono);font-size:13px;color:var(--ink)',
   }) as HTMLInputElement;
-  input.addEventListener('input', () => onPrice(input.value));
 
   const label = el('label', {
     style: 'display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)',
@@ -66,16 +63,24 @@ export function renderForwardPe(
       }),
     ),
   ]);
-  const row2 = el('tr', {}, [
-    el('td', { className: 'left bold', text: 'P/E' }),
-    ...cols.map(([, v, est]) => {
-      const ok = hasP && v !== null && v > 0;
-      return el('td', {
-        className: `${est ? 'est ' : ''}${ok ? 'bold' : 'faint'}`,
-        text: peMultiple(hasP ? px : null, v),
-      });
-    }),
-  ]);
+
+  const peRow = el('tr');
+  const paintPeRow = (priceStr: string) => {
+    const px = parseFloat(priceStr);
+    const hasP = px > 0;
+    peRow.replaceChildren(
+      el('td', { className: 'left bold', text: 'P/E' }),
+      ...cols.map(([, v, est]) => {
+        const ok = hasP && v !== null && v > 0;
+        return el('td', {
+          className: `${est ? 'est ' : ''}${ok ? 'bold' : 'faint'}`,
+          text: peMultiple(hasP ? px : null, v),
+        });
+      }),
+    );
+  };
+  paintPeRow(price);
+
   const row3 = el('tr', {}, [
     el('td', { className: 'left', text: '相当于 TTM PE 的' }),
     ...cols.map(([, v, est]) =>
@@ -85,9 +90,16 @@ export function renderForwardPe(
       }),
     ),
   ]);
-  tbody.append(row1, row2, row3);
+  tbody.append(row1, peRow, row3);
   table.appendChild(tbody);
   card.appendChild(table);
   card.appendChild(el('div', { className: 'footnote', text: pe.note }));
+
+  // Update PE cells in place — do not remount the page (keeps focus while typing).
+  input.addEventListener('input', () => {
+    onPrice(input.value);
+    paintPeRow(input.value);
+  });
+
   return card;
 }
