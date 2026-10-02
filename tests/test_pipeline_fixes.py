@@ -194,3 +194,11 @@ def test_watchlist_price_stats_skip_nan_closes():
     last, d1, ytd = price_stats({"2026-09-29": 100.0, "2026-09-30": 110.0, "2026-10-01": float("nan")})
     assert last == 110.0
     assert abs(d1 - 10.0) < 1e-9
+
+
+def test_next_day_move_skips_non_finite_closes():
+    from scripts.build_history import next_day_move
+
+    closes = {"2026-09-29": 100.0, "2026-09-30": float("nan"), "2026-10-01": 110.0}
+    assert next_day_move(closes, "2026-09-30", "after_close") is None
+    assert abs(next_day_move({"2026-09-30": 100.0, "2026-10-01": 110.0}, "2026-09-30", "after_close") - 0.1) < 1e-9

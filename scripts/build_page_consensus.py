@@ -431,8 +431,15 @@ def main() -> int:
                     block[period] = rows
                 for row in rows:
                     src = by_p.get(row.get("period")) or {}
-                    if src.get("next_day") is not None:
-                        row["next_day"] = src["next_day"]
+                    nd = src.get("next_day", row.get("next_day"))
+                    try:
+                        nd_f = float(nd) if nd is not None else None
+                    except (TypeError, ValueError):
+                        nd_f = None
+                    if nd_f is not None and nd_f == nd_f and abs(nd_f) != float("inf"):
+                        row["next_day"] = nd_f
+                    else:
+                        row["next_day"] = None
     if page.get("history"):
         recompute_history_stats(page)
 

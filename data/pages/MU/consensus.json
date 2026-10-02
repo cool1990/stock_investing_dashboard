@@ -5,7 +5,7 @@
     "name_zh": "美光科技",
     "exchange": "纳斯达克",
     "sector": "存储",
-    "updated_at_bj": "2026-10-02 09:13",
+    "updated_at_bj": "2026-10-02 09:57",
     "latest_report": "FQ4-26",
     "latest_report_date": "2026-09-30",
     "release_timing": "after_close",
@@ -24,7 +24,7 @@
       "market_cap": null,
       "ev": null,
       "net_cash_b": 68.27,
-      "forward_pe_ntm": 5.9,
+      "forward_pe_ntm": 6.1,
       "short_interest": null,
       "next_earnings": null,
       "implied_move": null,
@@ -304,7 +304,7 @@
         "FY27": 176.69,
         "FY28": 205.3
       },
-      "last_close": 1065.11,
+      "last_close": 1097.39,
       "note": "NTM 用当前财年与下一财年共识按剩余月数加权。不足 4 个季度且缺少两个财年共识时不显示，避免把两个季度加总当成一年。"
     }
   },
@@ -505,7 +505,7 @@
           "consensus": 31.72,
           "actual": 33.42,
           "guide": null,
-          "next_day": NaN,
+          "next_day": 0.030306728882462997,
           "secondary": 31.35,
           "pre_release_source": "marketbeat"
         }
@@ -526,7 +526,7 @@
           "consensus": 73.46,
           "actual": 75.52,
           "guide": null,
-          "next_day": NaN,
+          "next_day": 0.030306728882462997,
           "secondary": null
         }
       ],
@@ -622,7 +622,7 @@
           "consensus": 51.33,
           "actual": 54.23,
           "guide": null,
-          "next_day": NaN,
+          "next_day": 0.030306728882462997,
           "secondary": 50.97
         }
       ],
@@ -642,7 +642,7 @@
           "consensus": 129.86,
           "actual": 133.19,
           "guide": null,
-          "next_day": NaN,
+          "next_day": 0.030306728882462997,
           "secondary": null
         }
       ],

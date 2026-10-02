@@ -233,8 +233,9 @@ def main() -> int:
         if hist_q:
             last = hist_q[-1]
             eps_surp, eps_tone = surprise(last)
-            if last.get("next_day") is not None:
-                react = float(last["next_day"])
+            cand = _finite(last.get("next_day"))
+            if cand is not None:
+                react = cand
                 react_tone = tone_pct(react * 100 if abs(react) < 2 else react)
             for row in reversed(hist_q):
                 if not row.get("release_date"):

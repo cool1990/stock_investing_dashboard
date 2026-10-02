@@ -1,5 +1,5 @@
 {
-  "as_of_bj": "2026-10-02 09:13",
+  "as_of_bj": "2026-10-02 09:57",
   "groups": [
     {
       "id": "all",
@@ -47,16 +47,16 @@
       "group": "hw",
       "sub": "存储",
       "has_page": true,
-      "price": 1065.11,
-      "d1": 2.8e-05,
-      "d1_tone": "flat",
-      "ytd": 2.731859,
+      "price": 1097.39,
+      "d1": 0.030307,
+      "d1_tone": "up",
+      "ytd": 2.84496,
       "ytd_tone": "up",
-      "mcap": "$1.20T",
+      "mcap": "$1.24T",
       "ntm_eps": 179.13,
       "rev30": 0.0957,
       "rev30_tone": "up",
-      "fpe": 5.9,
+      "fpe": 6.1,
       "short": null,
       "short_note": "未接入",
       "short_date": null,
@@ -66,8 +66,8 @@
         "eps_surp": 0.0536,
         "eps_surp_tone": "up"
       },
-      "react": NaN,
-      "react_tone": "down",
+      "react": 0.0303,
+      "react_tone": "up",
       "next": {
         "d": null,
         "approx": "2026-12-23",
