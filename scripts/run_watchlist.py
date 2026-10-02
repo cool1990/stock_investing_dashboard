@@ -46,6 +46,8 @@ def main() -> int:
             extra = ["--force"] if script.endswith("fetch_financials.py") else []
             ok = run([sys.executable, script, "--ticker", t, *extra]) and ok
         run([sys.executable, "scripts/fetch_secondary.py", "--ticker", t], optional=True)
+        # Prepared remarks need ir.events_feed; skip quietly when not configured.
+        run([sys.executable, "scripts/fetch_remarks.py", "--ticker", t], optional=True)
         for script in (
             "scripts/build_history.py",
             "scripts/build_page_consensus.py",

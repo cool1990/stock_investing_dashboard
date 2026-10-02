@@ -7,6 +7,8 @@ export interface CallPage {
   date_et: string;
   duration_min: number | null;
   status: string;
+  content_origin?: string;
+  banner?: string;
   links: { remarks_pdf: string | null; webcast: string | null; third_party: string | null };
   executives: Array<{ ini: string; name: string; role_zh: string }>;
   guidance: Array<{ label: string; v: string }>;
@@ -46,7 +48,10 @@ export interface CallPage {
 }
 
 export function renderCallPage(data: CallPage, ticker: string): HTMLElement {
-  let tab: 'points' | 'qa' | 'transcript' = 'points';
+  const hasTranscript = (data.transcript?.paras?.length ?? 0) > 0;
+  const hasPoints = (data.speakers?.length ?? 0) > 0;
+  // Remarks-only pages have no AI points yet — open 原文 first.
+  let tab: 'points' | 'qa' | 'transcript' = !hasPoints && hasTranscript ? 'transcript' : 'points';
   const sources = data.transcript?.sources ?? [];
   let srcId = sources.length
     ? typeof sources[0] === 'string'
@@ -68,13 +73,12 @@ export function renderCallPage(data: CallPage, ticker: string): HTMLElement {
   const paint = () => {
     root.replaceChildren();
     const remarksMissing = !data.links.remarks_pdf;
-    root.appendChild(
-      renderBanner(
-        remarksMissing
-          ? '准备稿未获取。原文 tab 可切换第三方来源，但必须明确标注，不得静默顶替官方准备稿。'
-          : `${data.period} 电话会 · ${data.date_et} ET · 状态 ${data.status}`,
-      ),
-    );
+    const bannerText =
+      data.banner ||
+      (remarksMissing
+        ? '准备稿未获取。原文 tab 可切换第三方来源，但必须明确标注，不得静默顶替官方准备稿。'
+        : `${data.period} 电话会 · ${data.date_et} ET · 状态 ${data.status}`);
+    root.appendChild(renderBanner(bannerText));
 
     const head = el('div', { className: 'section__head' }, [
       el('div', {}, [

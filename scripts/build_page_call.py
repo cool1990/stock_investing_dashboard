@@ -47,6 +47,13 @@ def usable_draft(draft: dict) -> bool:
     return False
 
 
+def usable_remarks(record: dict) -> bool:
+    if str(record.get("content_origin") or "") != "remarks_fetch":
+        return False
+    paras = (record.get("transcript") or {}).get("paras") or []
+    return bool(paras)
+
+
 def latest_period(ticker: str) -> str:
     fin = read_json(ROOT / "data" / "financials" / f"{ticker}.json", default={}) or {}
     periods = [
@@ -71,6 +78,7 @@ def main() -> int:
         return 1
 
     draft_path = ROOT / "ai" / "tasks" / f"{ticker}_call_{period}" / "output" / "draft.json"
+    remarks_path = ROOT / "data" / "calls" / ticker / f"{period}.json"
     page = empty_page(period)
     if draft_path.exists():
         draft = json.loads(draft_path.read_text(encoding="utf-8"))
@@ -80,6 +88,18 @@ def main() -> int:
             page["content_origin"] = "reviewed"
         else:
             page["banner"] = "已有任务包草稿，但 origin 不是 reviewed，因此不展示为电话会原文。"
+
+    if page.get("content_origin") != "reviewed" and remarks_path.exists():
+        record = read_json(remarks_path, default={}) or {}
+        if usable_remarks(record):
+            page = dict(record)
+            page["period"] = period
+            page["content_origin"] = "remarks_fetch"
+            page.setdefault("ai_status", "not_connected")
+            page.setdefault(
+                "banner",
+                f"{period} 已接入官方准备稿。要点 / 问答摘要仍未接入。",
+            )
 
     write_page(f"{ticker}/call.json", page)
     write_json(ROOT / "data" / "pages" / ticker / f"call-{period}.json", page)

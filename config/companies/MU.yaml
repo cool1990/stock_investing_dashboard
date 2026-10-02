@@ -12,6 +12,13 @@ backfill_from: FQ1-22
 eps_basis: non_gaap
 ir:
   prepared_remarks_url_pattern: null
+  # Q4 Event.svc；title 匹配 "Fourth Quarter 2026 Financial Call" 等。
+  events_feed: >-
+    https://investors.micron.com/feed/Event.svc/GetEventList?languageId=1&bodyType=0&pageNumber=0&pageSize=50&tagList=%7B%22exclude%22%3Afalse%2C%22includeTags%22%3A%5B%22earnings-events%22%5D%7D&includeTags=true&year=-1&excludeSelection=1
+executives:
+  - { ini: SK, name: Satya Kumar, role_zh: 投资者关系与财务副总裁 }
+  - { ini: SM, name: Sanjay Mehrotra, role_zh: 董事长、总裁兼 CEO }
+  - { ini: MM, name: Mark Murphy, role_zh: 执行副总裁兼 CFO }
 # Tag order = per-period preference. A later tag fills periods the earlier one missed.
 xbrl_map:
   revenue: [RevenueFromContractWithCustomerExcludingAssessedTax, Revenues]
