@@ -5,6 +5,7 @@ export function renderKpiCard(opts: {
   label: string;
   value: string | number | null | undefined;
   sub?: string | null;
+  why?: string | null;
   color?: string | null;
   large?: boolean;
 }): HTMLElement {
@@ -18,6 +19,9 @@ export function renderKpiCard(opts: {
   card.appendChild(v);
   if (opts.sub) {
     card.appendChild(el('div', { className: 'kpi-card__sub', text: opts.sub }));
+  }
+  if (opts.why) {
+    card.appendChild(el('div', { className: 'kpi-card__why', text: opts.why }));
   }
   return card;
 }

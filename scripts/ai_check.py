@@ -68,9 +68,20 @@ def main() -> int:
                 page.setdefault("verdict", {})["watch"] = draft["watch"]
             if draft.get("talk"):
                 page["talk"] = draft["talk"]
+            if draft.get("guidance_reasons"):
+                page.setdefault("guidance", {})["reasons"] = draft["guidance_reasons"]
+            card_why = draft.get("card_why") or {}
+            if isinstance(card_why, dict) and card_why:
+                for c in page.get("cards") or []:
+                    key = c.get("key")
+                    if key in card_why:
+                        c["why"] = card_why[key]
             page["ai_status"] = "ai_applied"
             write_json(ROOT / "data" / "pages" / ticker / "review.json", page)
             write_json(ROOT / "web" / "public" / "data" / "pages" / ticker / "review.json", page)
+            write_json(
+                ROOT / "data" / "pages" / ticker / f"review-{period}.json", page
+            )
             print("applied review AI fields")
     return 0
 

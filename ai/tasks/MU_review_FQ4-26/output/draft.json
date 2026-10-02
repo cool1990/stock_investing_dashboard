@@ -1,0 +1,170 @@
+{
+  "period": "FQ4-26",
+  "summary": {
+    "text": "价格驱动的全面超预期：收入 $54.2B，环比 +31%；利润率继续创新高，但费用开始加速，现金流中约 28% 来自客户预付款。",
+    "refs": [
+      {
+        "src": "press",
+        "quote": "Revenue of $54.23 billion"
+      }
+    ],
+    "prompt_version": "review_summary_v2",
+    "status": "ok"
+  },
+  "watch": [
+    {
+      "title": "毛利率是否见顶",
+      "text": "下季指引 86.25% 低于本季 87.0%",
+      "confirmed": true,
+      "resolved": false
+    },
+    {
+      "title": "现金流质量",
+      "text": "剔除预付款后 FCF 约 $20.9B",
+      "confirmed": true,
+      "resolved": false
+    },
+    {
+      "title": "资本开支加速",
+      "text": "FY27 明显高于 $27.4B",
+      "confirmed": true,
+      "resolved": false
+    }
+  ],
+  "talk": {
+    "mgmt": [
+      {
+        "topic": "供需",
+        "tag": "强化",
+        "who": "CEO",
+        "now": "2027–28 年供需比 2026 年更紧，看不到恢复平衡的时点。",
+        "prev": null,
+        "ref": "call:FQ4-26#p12"
+      },
+      {
+        "topic": "价格",
+        "tag": "转弱",
+        "who": "CFO",
+        "now": "FQ1 之后营业利润率继续扩张，「尽管价格涨幅趋于温和」。",
+        "prev": null,
+        "ref": "call:FQ4-26#p22"
+      },
+      {
+        "topic": "毛利率",
+        "tag": "新增",
+        "who": "CFO",
+        "now": "FQ1 是 FY27 毛利率的底部。",
+        "prev": "未给出底部判断",
+        "ref": "call:FQ4-26#p24"
+      },
+      {
+        "topic": "长约",
+        "tag": "新增",
+        "who": "CEO / CFO",
+        "now": "26 份 SCA，覆盖 2030 年前超过 35% 收入；RPO 约 $150B。",
+        "prev": null,
+        "ref": "call:FQ4-26#p14"
+      },
+      {
+        "topic": "资本开支",
+        "tag": "上调",
+        "who": "CFO",
+        "now": "上半年约 $25B、全年明显更高；建设类增速高于设备类。",
+        "prev": null,
+        "ref": "call:FQ4-26#p28"
+      },
+      {
+        "topic": "资本回报",
+        "tag": "新增",
+        "who": "CFO",
+        "now": "12 月 9 日起以回购为主返还超额现金，将追加授权。",
+        "prev": null,
+        "ref": "call:FQ4-26#qa1"
+      }
+    ],
+    "qa": [
+      {
+        "topic": "资本回报",
+        "who": "Timothy Arcuri",
+        "firm": "UBS",
+        "q": "目标现金水平是多少？超额现金如何返还？资本密集度怎么变？",
+        "by": "CFO",
+        "a": "FQ1 末达到目标现金水平，FQ1 FCF 将显著高于本季；12 月 9 日起以回购为主，现有授权 $2.2B，将追加。Capex 更多转向建设类。",
+        "ref": "call:FQ4-26#qa1"
+      },
+      {
+        "topic": "毛利率",
+        "who": "C.J. Muse",
+        "firm": "Cantor Fitzgerald",
+        "q": "FQ1 毛利率指引的影响因素？HBM 价格走势？",
+        "by": "CFO / CEO",
+        "a": "FQ1 约 $1B 额外成本（激励薪酬计入存货、新厂启动）。2027 年 HBM 大部分已按显著更高的价格售出，与普通 DRAM 毛利差收窄。",
+        "ref": "call:FQ4-26#qa2"
+      },
+      {
+        "topic": "供需与价格",
+        "who": "Vivek Arya",
+        "firm": "BofA Securities",
+        "q": "FY27 现金回报规模？到 2028 年的价格走势？",
+        "by": "CFO / CEO",
+        "a": "近期追加回购授权。2027–28 年供需比 2026 年更紧：新产能爬坡慢、HBM 消耗更多晶圆；看不到供给追上需求的时点。",
+        "ref": "call:FQ4-26#qa3"
+      },
+      {
+        "topic": "HBM",
+        "who": "Krish Sankar",
+        "firm": "TD Cowen",
+        "q": "客户下调 HBM 规格的影响？设备 capex 是否受限？",
+        "by": "CEO / CFO",
+        "a": "需求依然强劲，客户优化是为了多出货。建设类提高反映新厂周期，设备投入按 SCA 的需求可见度同步安排。",
+        "ref": "call:FQ4-26#qa4"
+      },
+      {
+        "topic": "长约与 NAND",
+        "who": "Harlan Sur",
+        "firm": "JPMorgan",
+        "q": "SCA 覆盖还能提高多少？NAND 策略？",
+        "by": "CEO",
+        "a": "2027 年产出超过 75% 已被承诺；SCA 目标约覆盖 2030 年前 50% 收入。数据中心 SSD 份额全球第二，新加坡 NAND 新厂 2028 年底投产。",
+        "ref": "call:FQ4-26#qa5"
+      }
+    ]
+  },
+  "card_why": {
+    "rev": {
+      "text": "价格驱动：DRAM 价格环比 high-teens %、NAND 约 30%；出货量只增长个位数到约 10%。",
+      "refs": [],
+      "status": "ok"
+    },
+    "gm": {
+      "text": "收入同比 +379%，销售成本只增长 15%：提升几乎全部来自价格。GAAP 86.8%。",
+      "refs": [],
+      "status": "ok"
+    },
+    "opm": {
+      "text": "毛利率提升被费用抵消：SG&A 环比翻倍、研发 +45%。",
+      "refs": [],
+      "status": "ok"
+    },
+    "nim": {
+      "text": "净利润 $37.70B；Non-GAAP 净利润率 70.8%。",
+      "refs": [],
+      "status": "ok"
+    },
+    "eps": {
+      "text": "共识 $31.72；超预期幅度是近几季较小的一次。GAAP $32.87。",
+      "refs": [],
+      "status": "ok"
+    },
+    "fcf": {
+      "text": "经营现金流约 $44B，调整后 FCF $33.2B；其中约 $12.3B 来自客户预付款。",
+      "refs": [],
+      "status": "ok"
+    }
+  },
+  "guidance_reasons": {
+    "text": "价格继续上涨但涨幅趋缓；FQ1 毛利率受约 $1B 额外成本拖累（激励薪酬计入存货、新厂启动），称 FQ1 为 FY27 毛利率底部。",
+    "refs": [],
+    "status": "ok"
+  }
+}

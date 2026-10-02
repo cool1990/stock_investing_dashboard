@@ -32,8 +32,13 @@ def main() -> int:
         page["ai_status"] = "awaiting_ai_prepare"
 
     page.setdefault("links", sample.get("links") or {})
-    # Official remarks missing → explicit flag (decision #4)
-    page["remarks_status"] = "准备稿未获取"
+    # Prefer draft remarks_status; only fall back when missing
+    if not page.get("remarks_status"):
+        page["remarks_status"] = (
+            "准备稿已接入"
+            if (page.get("links") or {}).get("remarks_pdf")
+            else "准备稿未获取"
+        )
     page.setdefault(
         "banner",
         "P4 手动模式：任务包见 ai/tasks/；准备稿未获取时原文 tab 不得静默使用第三方顶替。",

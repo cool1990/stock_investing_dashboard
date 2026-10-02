@@ -12,8 +12,10 @@
     "prompt_version": "review_summary_v2"
   },
   "watch": [{"title": "...", "text": "...", "confirmed": true, "resolved": false}],
-  "talk": {"items": []}
+  "talk": {"mgmt": [], "qa": []}
 }
 ```
 
 规则：不得编造 numbers.json 中不存在的数字；超预期结论须与 surp 符号一致。
+`talk.mgmt` 为管理层表述（topic/tag/who/now/prev/ref）；`talk.qa` 为分析师提问（topic/who/firm/q/by/a/ref）。
+可选字段：`card_why`（按 KPI key 写 why）、`guidance_reasons`。

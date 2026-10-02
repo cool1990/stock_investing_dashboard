@@ -155,6 +155,13 @@ def main() -> int:
         "press_url": "https://investors.micron.com/",
         "remarks_url": "https://investors.micron.com/",
     }
+    prev_verdict = existing.get("verdict") or {}
+    prev_summary = prev_verdict.get("summary") or {}
+    sample_summary = ((sample.get("verdict") or {}).get("summary") or {})
+    keep_summary = bool(prev_summary.get("text")) or prev_summary.get("status") in {
+        "ok",
+        "ai_applied",
+    }
     page["verdict"] = {
         "label": "超预期" if (eps_surp or 0) > 0 or (rev_surp or 0) > 0 else "待判定",
         "line": {
@@ -165,13 +172,18 @@ def main() -> int:
             "guide_vs_cons": [None, None],
             "guide_vs_cons_tone": ["na", "na"],
         },
-        "summary": {
-            "text": None,
-            "refs": [],
-            "prompt_version": "review_summary_v2",
-            "status": "pending_ai",
-        },
-        "watch": (existing.get("verdict") or {}).get("watch")
+        "summary": (
+            prev_summary
+            if keep_summary
+            else {
+                "text": sample_summary.get("text"),
+                "refs": sample_summary.get("refs") or [],
+                "prompt_version": "review_summary_v2",
+                "status": "ok" if sample_summary.get("text") else "pending_ai",
+            }
+        ),
+        "watch": prev_verdict.get("watch")
+        or (sample.get("verdict") or {}).get("watch")
         or [
             {
                 "title": "毛利率走势",
@@ -181,6 +193,22 @@ def main() -> int:
             }
         ],
     }
+    # Preserve per-card AI「为什么」文案（若已有）
+    prev_cards = {
+        c.get("key"): c for c in (existing.get("cards") or []) if isinstance(c, dict)
+    }
+    sample_cards = {
+        c.get("key"): c for c in (sample.get("cards") or []) if isinstance(c, dict)
+    }
+    for c in cards:
+        key = c.get("key")
+        why = (prev_cards.get(key) or {}).get("why") or (sample_cards.get(key) or {}).get(
+            "why"
+        )
+        if isinstance(why, dict) and why.get("text"):
+            c["why"] = why
+        else:
+            c["why"] = {"text": None, "refs": [], "status": "pending_ai"}
     page["cards"] = cards
     page["metrics"] = existing.get("metrics") or sample.get("metrics") or {}
     if not page["metrics"]:
@@ -208,20 +236,35 @@ def main() -> int:
             "vs_cons_tone": "na",
         },
     ]
+    prev_reasons = ((existing.get("guidance") or {}).get("reasons") or {})
+    sample_reasons = ((sample.get("guidance") or {}).get("reasons") or {})
+    keep_reasons = bool(prev_reasons.get("text")) or prev_reasons.get("status") in {
+        "ok",
+        "ai_applied",
+    }
     page["guidance"] = {
         "groups": [{"title": "下季指引 FQ1-27", "rows": g_rows}],
-        "reasons": {
-            "text": None,
-            "refs": [],
-            "status": "pending_ai",
-        },
+        "reasons": (
+            prev_reasons
+            if keep_reasons
+            else {
+                "text": sample_reasons.get("text"),
+                "refs": sample_reasons.get("refs") or [],
+                "status": "ok" if sample_reasons.get("text") else "pending_ai",
+            }
+        ),
     }
-    talk = existing.get("talk") or {}
+    talk = existing.get("talk") or sample.get("talk") or {}
     page["talk"] = {
         "mgmt": talk.get("mgmt") or [],
         "qa": talk.get("qa") or [],
     }
-    page["ai_status"] = "numbers_ready_copy_pending"
+    page["ai_status"] = (
+        existing.get("ai_status")
+        if existing.get("ai_status") == "ai_applied"
+        or (keep_summary and page["talk"]["mgmt"])
+        else "numbers_ready_copy_pending"
+    )
 
     # Enrich guidance vs cons from snapshot
     snap_files = sorted((ROOT / "data" / "snapshots" / ticker).glob("*.json"))

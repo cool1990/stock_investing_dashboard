@@ -69,6 +69,15 @@
   color: var(--muted);
 }
 
+.kpi-card__why {
+  font-size: 13px;
+  color: var(--ink-2, #3a414c);
+  line-height: 1.55;
+  border-top: 1px solid var(--line-soft, #eef0f3);
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
 .kpi-card__value.up { color: var(--up); }
 .kpi-card__value.down { color: var(--down); }
 .kpi-card__value.flat { color: var(--ink); }

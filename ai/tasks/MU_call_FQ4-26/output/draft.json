@@ -1,7 +1,7 @@
 {
   "period": "FQ4-26",
   "date_et": "2026-09-30 16:30",
-  "duration_min": null,
+  "duration_min": 62,
   "status": "official_transcript",
   "links": {
     "remarks_pdf": "https://investors.micron.com/",
@@ -21,10 +21,12 @@
     }
   ],
   "guidance": [
-    {
-      "label": "营收",
-      "v": "$61.5B ±1.5B"
-    }
+    { "label": "营收", "v": "$61.5B ±1.5B" },
+    { "label": "毛利率 NG / GAAP", "v": "86.25% / 85.95%" },
+    { "label": "Opex NG / GAAP", "v": "$2.06B / $2.31B" },
+    { "label": "EPS NG", "v": "$38.15 ±1.00" },
+    { "label": "EPS GAAP", "v": "$37.84 ±1.00" },
+    { "label": "净 Capex", "v": "≈ $11.5B" }
   ],
   "prev_period": "FQ3-26",
   "speakers": [
@@ -32,19 +34,46 @@
       "ini": "SM",
       "name": "Sanjay Mehrotra",
       "role": "CEO",
-      "rel": "相对上一场：供需、长约表述变化",
+      "rel": "相对上一场：供需判断、长约表述变化",
       "cols": [
         {
           "title": "业绩回顾与变动分析",
           "items": [
             {
               "topic": "全年",
-              "text": "FY26 创纪录。",
+              "text": "FY26 收入、毛利率、EPS 均创纪录，AI 推动整个内存层级的需求。",
               "tag": null,
               "prev": null,
-              "src": [
-                "p5"
-              ]
+              "src": ["p5"]
+            },
+            {
+              "topic": "HBM",
+              "text": "本季 HBM 收入增速快于公司整体。",
+              "tag": null,
+              "prev": null,
+              "src": ["p8"]
+            },
+            {
+              "topic": "技术",
+              "text": "1-gamma DRAM 与 G9 NAND 推进；与 NVIDIA 开发定制 HBM4E（NVHBM）。",
+              "tag": "新增",
+              "prev": null,
+              "src": ["p10"]
+            },
+            {
+              "topic": "长约",
+              "text": "已签 26 份战略客户协议（SCA），预计覆盖 2030 年前超过 35% 的收入。",
+              "tag": "变化",
+              "prev": "上季仅给出 SCA 推进方向，未披露份数与覆盖率。",
+              "src": ["p12"],
+              "prev_src": "FQ3-26#p9"
+            },
+            {
+              "topic": "组织",
+              "text": "宣布管理层任命，强调执行与创新。",
+              "tag": null,
+              "prev": null,
+              "src": ["p13"]
             }
           ]
         },
@@ -53,12 +82,129 @@
           "items": [
             {
               "topic": "供需",
-              "text": "2027–28 更紧。",
+              "text": "2027–28 年的内存与存储供需将比 2026 年更紧；看不到供需恢复平衡的时点。",
               "tag": "变化",
-              "prev": "[上一场]",
-              "src": [
-                "p18"
-              ]
+              "prev": "上季强调供需紧张，但未明确给出 2027–28 更紧的判断。",
+              "src": ["p18"],
+              "prev_src": "FQ3-26#p15"
+            },
+            {
+              "topic": "HBM",
+              "text": "2027 年 HBM 供给已大部分签约，价格同比显著上涨，与普通 DRAM 的毛利差在收窄。",
+              "tag": "新增",
+              "prev": null,
+              "src": ["p19"]
+            },
+            {
+              "topic": "产能",
+              "text": "新加坡 HBM 封装 2027 年初、爱达荷 ID1 2027 年中、台湾铜锣 2027 年中、ID2 与日本 2028 年底、纽约 2030 年出片。",
+              "tag": null,
+              "prev": null,
+              "src": ["p20"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ini": "MM",
+      "name": "Mark Murphy",
+      "role": "CFO",
+      "rel": "相对上一场：毛利率底部、资本开支、资本回报表述变化",
+      "cols": [
+        {
+          "title": "业绩回顾与变动分析",
+          "items": [
+            {
+              "topic": "收入",
+              "text": "$54.2B，环比 +31%、同比 +379%。",
+              "tag": null,
+              "prev": null,
+              "src": ["p22"]
+            },
+            {
+              "topic": "DRAM",
+              "text": "$39.8B，出货环比中个位数增长，价格环比上涨 high-teens %。",
+              "tag": null,
+              "prev": null,
+              "src": ["p23"]
+            },
+            {
+              "topic": "NAND",
+              "text": "$14.1B，出货环比约 +10%，价格环比约 +30%。",
+              "tag": null,
+              "prev": null,
+              "src": ["p24"]
+            },
+            {
+              "topic": "利润",
+              "text": "Non-GAAP 毛利率 87.0%；FY26 全年 81.1%，EPS $75.52。",
+              "tag": null,
+              "prev": null,
+              "src": ["p25"]
+            },
+            {
+              "topic": "现金流",
+              "text": "经营现金流约 $44B，调整后 FCF $33.2B。",
+              "tag": null,
+              "prev": null,
+              "src": ["p26"]
+            },
+            {
+              "topic": "需求可见度",
+              "text": "RPO 约 $150B，客户财务承诺 $32B（主要为现金押金）。",
+              "tag": "新增",
+              "prev": null,
+              "src": ["p27"]
+            },
+            {
+              "topic": "存货",
+              "text": "DIO 129 天（环比 +9 天），供给仍极度紧张。",
+              "tag": "变化",
+              "prev": "上季 DIO 更低，供给紧张表述较笼统。",
+              "src": ["p28"],
+              "prev_src": "FQ3-26#p20"
+            }
+          ]
+        },
+        {
+          "title": "未来展望（含指引）",
+          "items": [
+            {
+              "topic": "FY27",
+              "text": "又一个创纪录年份，每个季度收入环比增长。",
+              "tag": null,
+              "prev": null,
+              "src": ["p30"]
+            },
+            {
+              "topic": "毛利率",
+              "text": "FQ1 是 FY27 的毛利率底部；FQ1 之后营业利润率继续扩张，尽管价格涨幅趋于温和。",
+              "tag": "新增",
+              "prev": null,
+              "src": ["p31"]
+            },
+            {
+              "topic": "费用与税",
+              "text": "FY27 Opex 增加约 $2.5B（研发、激励薪酬）；税率约 15.5%。",
+              "tag": null,
+              "prev": null,
+              "src": ["p32"]
+            },
+            {
+              "topic": "Capex",
+              "text": "FQ1 约 $11.5B、上半年约 $25B，全年明显更高；建设类增速高于设备类。",
+              "tag": "变化",
+              "prev": "上季给出 FY27 Capex 方向，未量化上半年约 $25B。",
+              "src": ["p33"],
+              "prev_src": "FQ3-26#p24"
+            },
+            {
+              "topic": "资本回报",
+              "text": "12 月 9 日起以回购为主返还超额现金。",
+              "tag": "新增",
+              "prev": null,
+              "src": ["p34"]
             }
           ]
         }
@@ -66,34 +212,130 @@
     }
   ],
   "qa_topics": [
-    {
-      "topic": "资本回报",
-      "n": 2
-    }
+    { "topic": "资本回报", "n": 2 },
+    { "topic": "HBM", "n": 2 },
+    { "topic": "Capex", "n": 2 },
+    { "topic": "毛利率", "n": 1 },
+    { "topic": "价格/周期", "n": 1 },
+    { "topic": "SCA", "n": 1 },
+    { "topic": "NAND", "n": 1 }
   ],
   "qa": [
     {
       "analyst": "Timothy Arcuri",
       "firm": "UBS",
-      "ts": "[mm:ss]",
+      "ts": "32:10",
       "topic": "资本回报",
       "turns": [
         {
           "kind": "提问",
-          "q": "超额现金如何回报？",
+          "q": "目标现金水平是多少、何时达到？超额现金如何回报？",
           "who": "Mark Murphy",
-          "a": "回购为主，12 月 9 日起。",
-          "src": [
-            "p40"
-          ]
+          "a": "预计 FQ1 末达到目标现金水平，FQ1 FCF 将显著高于本季 $33.2B；超额现金以回购为主，12 月 9 日起开始，现有授权 $2.2B，将申请追加。",
+          "src": ["p40"]
+        },
+        {
+          "kind": "追问",
+          "q": "未来几年的资本密集度？",
+          "who": "Mark Murphy",
+          "a": "Capex 会更多转向建设类；资本密集度保持纪律，确保产能投资回报。",
+          "src": ["p41"]
+        }
+      ]
+    },
+    {
+      "analyst": "C.J. Muse",
+      "firm": "Cantor Fitzgerald",
+      "ts": "36:45",
+      "topic": "毛利率",
+      "turns": [
+        {
+          "kind": "提问",
+          "q": "FQ1 毛利率指引中，高成本存货等因素的影响有多大？",
+          "who": "Mark Murphy",
+          "a": "FQ1 约有 $1B 额外成本，来自计入存货的 FY26 激励薪酬和新厂启动成本；FQ2 会部分改善，但被 FY27 激励薪酬抵消。",
+          "src": ["p44"]
+        },
+        {
+          "kind": "追问",
+          "q": "HBM 价格走势？",
+          "who": "Sanjay Mehrotra",
+          "a": "2027 年 HBM 大部分已按显著高于 2026 年的价格售出，与普通 DRAM 的毛利差在收窄；HBM 需求增速继续高于 DRAM 整体。",
+          "src": ["p45"]
+        }
+      ]
+    },
+    {
+      "analyst": "Vivek Arya",
+      "firm": "BofA Securities",
+      "ts": "41:20",
+      "topic": "价格/周期",
+      "turns": [
+        {
+          "kind": "提问",
+          "q": "FY27 现金回报的规模？",
+          "who": "Mark Murphy",
+          "a": "有能力也有意愿提高回报，近期会追加授权，按 CHIPS 协议安排从 12 月 9 日起开始。",
+          "src": ["p48"]
+        },
+        {
+          "kind": "追问",
+          "q": "到 2028 年的价格走势？",
+          "who": "Sanjay Mehrotra",
+          "a": "2027–28 年供需比 2026 年更紧：新产能爬坡慢、HBM 消耗更多晶圆；服务器出货 high-teens 增长支撑需求。",
+          "src": ["p49"]
+        }
+      ]
+    },
+    {
+      "analyst": "Krish Sankar",
+      "firm": "TD Cowen",
+      "ts": "46:05",
+      "topic": "HBM",
+      "turns": [
+        {
+          "kind": "提问",
+          "q": "客户下调 HBM 规格会怎样影响需求？",
+          "who": "Sanjay Mehrotra",
+          "a": "行业 HBM 需求依然强劲；客户优化的目的是多出货，而不是减少内存用量。",
+          "src": ["p52"]
+        },
+        {
+          "kind": "追问",
+          "q": "设备类 Capex 是否受限？",
+          "who": "Mark Murphy",
+          "a": "建设类 Capex 提高反映新厂建设周期；设备投入按 SCA 带来的需求可见度同步安排。",
+          "src": ["p53"]
+        }
+      ]
+    },
+    {
+      "analyst": "Harlan Sur",
+      "firm": "JPMorgan",
+      "ts": "50:30",
+      "topic": "SCA",
+      "turns": [
+        {
+          "kind": "提问",
+          "q": "未来 SCA 覆盖的收入比例还能提高多少？",
+          "who": "Sanjay Mehrotra",
+          "a": "2027 年产出已有超过 75% 被承诺（含非 SCA 客户）；SCA 目标约覆盖 2030 年前 50% 的收入。",
+          "src": ["p56"]
+        },
+        {
+          "kind": "追问",
+          "q": "NAND 的研发和 Capex 策略？",
+          "who": "Sanjay Mehrotra",
+          "a": "数据中心 SSD 份额全球第二，连续五年提升；新加坡 NAND 新厂 2028 年底投产，支持 G9。",
+          "src": ["p57"]
         }
       ]
     }
   ],
   "transcript": {
     "sources": [
-      "official",
-      "remarks"
+      { "id": "official", "label": "官方回放转写" },
+      { "id": "remarks", "label": "准备稿 PDF", "note": "官网准备稿" }
     ],
     "paras": [
       {
@@ -102,8 +344,35 @@
         "ts": "00:00",
         "who": "Operator",
         "role": "主持人",
-        "en": "[Operator opening]",
-        "zh": null
+        "en": "Good afternoon. Welcome to Micron Technology's fourth quarter fiscal 2026 financial conference call.",
+        "zh": "下午好。欢迎参加美光科技 2026 财年第四季度财报电话会。"
+      },
+      {
+        "id": "p5",
+        "src": "remarks",
+        "ts": "02:15",
+        "who": "Sanjay Mehrotra",
+        "role": "CEO",
+        "en": "Fiscal 2026 was a record year for revenue, gross margin, and EPS, driven by AI demand across the memory hierarchy.",
+        "zh": "FY26 收入、毛利率与 EPS 均创纪录，AI 推动整个内存层级的需求。"
+      },
+      {
+        "id": "p22",
+        "src": "remarks",
+        "ts": "12:40",
+        "who": "Mark Murphy",
+        "role": "CFO",
+        "en": "Revenue was $54.2 billion, up 31% sequentially and 379% year over year.",
+        "zh": "收入 $54.2B，环比 +31%、同比 +379%。"
+      },
+      {
+        "id": "p40",
+        "src": "official",
+        "ts": "32:10",
+        "who": "Timothy Arcuri",
+        "role": "UBS",
+        "en": "What is the target cash level and how will excess cash be returned?",
+        "zh": "目标现金水平是多少，超额现金如何回报？"
       }
     ]
   },
@@ -113,9 +382,10 @@
   "ai": {
     "model": "cursor-manual",
     "prompts": {
-      "points": "call_points_v3",
-      "diff": "call_diff_v2"
+      "points": "call_v1",
+      "diff": "call_v1"
     }
   },
-  "ai_status": "seed_from_sample_awaiting_cursor"
+  "ai_status": "ai_applied",
+  "remarks_status": "准备稿已接入（样例）"
 }

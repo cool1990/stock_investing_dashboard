@@ -674,6 +674,15 @@ table.data .warn {
   color: var(--muted);
 }
 
+.kpi-card__why {
+  font-size: 13px;
+  color: var(--ink-2, #3a414c);
+  line-height: 1.55;
+  border-top: 1px solid var(--line-soft, #eef0f3);
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
 .kpi-grid {
   display: grid;
   gap: 12px;

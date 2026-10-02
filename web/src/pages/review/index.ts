@@ -189,6 +189,7 @@ export function renderReviewPage(data: ReviewPage, ticker: string): HTMLElement 
           label: `${c.label} · ${c.basis}`,
           value: fmtCardValue(c.value, c.unit),
           sub: `同比 ${formatRatioChange(c.yoy)} · 环比 ${formatRatioChange(c.qoq)} · vs共识 ${formatRatioChange(c.vs_cons)}`,
+          why: c.why?.text ?? undefined,
           color: c.yoy_tone,
         }),
       );
