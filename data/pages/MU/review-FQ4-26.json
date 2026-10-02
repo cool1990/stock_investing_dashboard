@@ -14,12 +14,12 @@
       "eps_surp": 0.0536,
       "eps_surp_tone": "up",
       "guide_vs_cons": [
-        0.0034,
-        0.0029
+        null,
+        null
       ],
       "guide_vs_cons_tone": [
-        "up",
-        "up"
+        "na",
+        "na"
       ]
     },
     "summary": {
@@ -365,8 +365,8 @@
             "value": "$61.5B",
             "qoq": null,
             "yoy": null,
-            "vs_cons": 0.0029,
-            "vs_cons_tone": "up"
+            "vs_cons": null,
+            "vs_cons_tone": "na"
           },
           {
             "metric": "EPS",
@@ -375,8 +375,8 @@
             "value": "$38.15",
             "qoq": null,
             "yoy": null,
-            "vs_cons": 0.0034,
-            "vs_cons_tone": "up"
+            "vs_cons": null,
+            "vs_cons_tone": "na"
           }
         ]
       }

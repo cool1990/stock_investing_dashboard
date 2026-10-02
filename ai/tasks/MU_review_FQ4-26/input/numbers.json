@@ -6,11 +6,11 @@
     "eps_surp": 0.0536,
     "eps_surp_tone": "up",
     "guide_vs_cons": [
-      0.0034,
-      0.0029
+      null,
+      null
     ],
     "guide_vs_cons_tone": [
-      "up",
+      "na",
       "na"
     ]
   },

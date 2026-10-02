@@ -5,11 +5,11 @@
     "name_zh": "美光科技",
     "exchange": "纳斯达克",
     "sector": "存储",
-    "updated_at_bj": "2026-10-01 21:42",
+    "updated_at_bj": "2026-10-02 09:46",
     "latest_report": "FQ4-26",
     "latest_report_date": "2026-09-30",
     "release_timing": "after_close",
-    "snapshot_note": "共识快照：Yahoo 2026-10-01（绝对财期）。详情表与修正轨迹已用最新快照刷新。",
+    "snapshot_note": "共识快照：Yahoo _secondary_latest（绝对财期）。详情表与修正轨迹已用最新快照刷新。",
     "quarter_labels": [
       "Q1 · 11月",
       "Q2 · 2月",
@@ -18,13 +18,13 @@
       "全年"
     ],
     "header": {
-      "price": 1065.11,
+      "price": 1097.39,
       "price_1d": null,
       "price_ytd": null,
       "market_cap": null,
       "ev": null,
       "net_cash_b": 68.27,
-      "forward_pe_ntm": 13.4,
+      "forward_pe_ntm": 13.8,
       "short_interest": null,
       "next_earnings": null,
       "implied_move": null,
@@ -236,7 +236,7 @@
         "FY27": 156.53,
         "FY28": null
       },
-      "last_close": 1065.11,
+      "last_close": 1097.39,
       "note": "FY27 盈利共识约为 FY26 的 2.1 倍，同一股价下 FY27 PE 只有 TTM PE 的 48%，所以「看哪一年的 PE」对结论影响很大。NTM 需要 FQ2–FQ4-27 的季度共识，数据源滚动后补上。存储是周期股，盈利高点时 PE 天然偏低。"
     }
   },
@@ -379,7 +379,7 @@
           "consensus": 31.72,
           "actual": 33.42,
           "guide": null,
-          "next_day": null,
+          "next_day": 0.030306728882462997,
           "secondary": 31.35,
           "pre_release_source": "marketbeat"
         }
@@ -400,7 +400,7 @@
           "consensus": 73.46,
           "actual": 75.52,
           "guide": null,
-          "next_day": null,
+          "next_day": 0.030306728882462997,
           "secondary": null
         }
       ],
@@ -494,7 +494,7 @@
           "consensus": 51.33,
           "actual": 54.23,
           "guide": null,
-          "next_day": null,
+          "next_day": 0.030306728882462997,
           "secondary": 50.97
         }
       ],
@@ -514,7 +514,7 @@
           "consensus": 129.86,
           "actual": 133.19,
           "guide": null,
-          "next_day": null,
+          "next_day": 0.030306728882462997,
           "secondary": null
         }
       ],

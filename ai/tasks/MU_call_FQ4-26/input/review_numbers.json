@@ -111,23 +111,37 @@
     }
   ],
   "guidance": {
-    "next_q": "FQ1-27",
-    "rows": [
+    "groups": [
       {
-        "metric": "营收",
-        "guide": "$61.5B",
-        "cons": 61.32,
-        "vs": 0.0029,
-        "vs_tone": "up"
-      },
-      {
-        "metric": "EPS",
-        "guide": "$38.15",
-        "cons": 38.02,
-        "vs": 0.0034,
-        "vs_tone": "up"
+        "title": "下季指引 FQ1-27",
+        "rows": [
+          {
+            "metric": "营收",
+            "name": "营收",
+            "v": "$61.5B",
+            "value": "$61.5B",
+            "qoq": null,
+            "yoy": null,
+            "vs_cons": null,
+            "vs_cons_tone": "na"
+          },
+          {
+            "metric": "EPS",
+            "name": "摊薄 EPS",
+            "v": "$38.15",
+            "value": "$38.15",
+            "qoq": null,
+            "yoy": null,
+            "vs_cons": null,
+            "vs_cons_tone": "na"
+          }
+        ]
       }
     ],
-    "note": "指引来自 config/companies/MU.yaml；共识对比在快照齐全后填充。"
+    "reasons": {
+      "text": null,
+      "refs": [],
+      "status": "pending_ai"
+    }
   }
 }
