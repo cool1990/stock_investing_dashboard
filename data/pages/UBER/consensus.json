@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "ticker": "UBER",
+    "name_en": "Uber",
+    "name_zh": "优步",
+    "exchange": "纽交所",
+    "sector": "出行平台",
+    "updated_at_bj": "2026-10-01 23:49",
+    "latest_report": "—",
+    "latest_report_date": "—",
+    "release_timing": "after_close",
+    "snapshot_note": "共识快照：Yahoo 2026-10-01（绝对财期，方法 8k_2.02）。详情表遍历快照中的全部财期。",
+    "quarter_labels": [
+      "Q1 · 3月",
+      "Q2 · 6月",
+      "Q3 · 9月",
+      "Q4 · 12月",
+      "全年"
+    ],
+    "header": {
+      "price": 68.51,
+      "forward_pe_ntm": 16.3
+    }
+  },
+  "future": {
+    "years": [
+      "FY26",
+      "FY27"
+    ],
+    "est_years": [
+      "FY26",
+      "FY27"
+    ],
+    "eps": {
+      "FY26": [
+        null,
+        null,
+        0.92,
+        1.01,
+        3.19
+      ],
+      "FY27": [
+        null,
+        null,
+        null,
+        null,
+        4.56
+      ]
+    },
+    "rev": {
+      "FY26": [
+        null,
+        null,
+        14.67,
+        15.63,
+        57.89
+      ],
+      "FY27": [
+        null,
+        null,
+        null,
+        null,
+        66.79
+      ]
+    },
+    "detail": {
+      "eps": [
+        {
+          "period": "FQ3-26",
+          "end": "",
+          "guide": null,
+          "avg": 0.91568,
+          "low": 0.79,
+          "high": 1.133,
+          "n": 31,
+          "year_ago": 3.11,
+          "trend": {
+            "d7": 0.91568,
+            "d30": 0.95246,
+            "d60": 0.91859,
+            "d90": 0.91772
+          },
+          "revisions": {
+            "up30": 14.0,
+            "down30": 11.0
+          }
+        },
+        {
+          "period": "FQ4-26",
+          "end": "",
+          "guide": null,
+          "avg": 1.00906,
+          "low": 0.63,
+          "high": 1.279,
+          "n": 30,
+          "year_ago": 0.14,
+          "trend": {
+            "d7": 1.00906,
+            "d30": 1.04806,
+            "d60": 1.02984,
+            "d90": 1.02867
+          },
+          "revisions": {
+            "up30": 11.0,
+            "down30": 9.0
+          }
+        },
+        {
+          "period": "FY26",
+          "end": "",
+          "guide": null,
+          "avg": 3.19237,
+          "low": 2.43,
+          "high": 3.715,
+          "n": 38,
+          "year_ago": 4.73,
+          "trend": {
+            "d7": 3.19237,
+            "d30": 3.24546,
+            "d60": 3.01526,
+            "d90": 3.04555
+          },
+          "revisions": {
+            "up30": 27.0,
+            "down30": 2.0
+          }
+        },
+        {
+          "period": "FY27",
+          "end": "",
+          "guide": null,
+          "avg": 4.55688,
+          "low": 3.15,
+          "high": 6.01,
+          "n": 39,
+          "year_ago": 3.19237,
+          "trend": {
+            "d7": 4.55406,
+            "d30": 4.63552,
+            "d60": 4.51612,
+            "d90": 4.46043
+          },
+          "revisions": {
+            "up30": 20.0,
+            "down30": 9.0
+          }
+        }
+      ],
+      "rev": [
+        {
+          "period": "FQ3-26",
+          "end": "",
+          "guide": null,
+          "avg": 14.67,
+          "low": 14.27,
+          "high": 15.2,
+          "n": 40,
+          "year_ago": 13.47,
+          "revisions": {
+            "up30": 14.0,
+            "down30": 11.0
+          }
+        },
+        {
+          "period": "FQ4-26",
+          "end": "",
+          "guide": null,
+          "avg": 15.63,
+          "low": 14.71,
+          "high": 16.26,
+          "n": 39,
+          "year_ago": 14.37,
+          "revisions": {
+            "up30": 11.0,
+            "down30": 9.0
+          }
+        },
+        {
+          "period": "FY26",
+          "end": "",
+          "guide": null,
+          "avg": 57.89,
+          "low": 56.67,
+          "high": 60.57,
+          "n": 50,
+          "year_ago": 52.02,
+          "revisions": {
+            "up30": 27.0,
+            "down30": 2.0
+          }
+        },
+        {
+          "period": "FY27",
+          "end": "",
+          "guide": null,
+          "avg": 66.79,
+          "low": 59.12,
+          "high": 69.84,
+          "n": 48,
+          "year_ago": 57.89,
+          "revisions": {
+            "up30": 20.0,
+            "down30": 9.0
+          }
+        }
+      ],
+      "eps_note": "详情行覆盖快照中的每一个财期；指引来自公司配置。",
+      "rev_note": "营收修正家数来自 Yahoo；没有序列的字段留空，不沿用样例说明。"
+    },
+    "pe": {
+      "ttm_eps": null,
+      "ntm_eps": 4.21,
+      "ntm_method": "fy_time_weight FY26*0.2519+FY27*0.7481",
+      "fy": {
+        "FY26": 3.19,
+        "FY27": 4.56
+      },
+      "last_close": 68.51,
+      "note": "NTM 用当前财年与下一财年共识按剩余月数加权。不足 4 个季度且缺少两个财年共识时不显示，避免把两个季度加总当成一年。"
+    }
+  },
+  "revision": {
+    "FQ3-26": {
+      "points": [
+        [
+          90,
+          0.9177
+        ],
+        [
+          60,
+          0.9186
+        ],
+        [
+          30,
+          0.9525
+        ],
+        [
+          7,
+          0.9157
+        ],
+        [
+          0,
+          0.9157
+        ]
+      ],
+      "up30": 14,
+      "down30": 11,
+      "guide": null,
+      "n": 31,
+      "note": "近 30 天修正 −3.9%。FQ3-26 无公司指引。90 天累计修正 −0.2%。"
+    },
+    "FQ4-26": {
+      "points": [
+        [
+          90,
+          1.0287
+        ],
+        [
+          60,
+          1.0298
+        ],
+        [
+          30,
+          1.0481
+        ],
+        [
+          7,
+          1.0091
+        ],
+        [
+          0,
+          1.0091
+        ]
+      ],
+      "up30": 11,
+      "down30": 9,
+      "guide": null,
+      "n": 30,
+      "note": "近 30 天修正 −3.7%。FQ4-26 无公司指引。90 天累计修正 −1.9%。"
+    },
+    "FY26": {
+      "points": [
+        [
+          90,
+          3.0455
+        ],
+        [
+          60,
+          3.0153
+        ],
+        [
+          30,
+          3.2455
+        ],
+        [
+          7,
+          3.1924
+        ],
+        [
+          0,
+          3.1924
+        ]
+      ],
+      "up30": 27,
+      "down30": 2,
+      "guide": null,
+      "n": 38,
+      "note": "近 30 天修正 −1.6%。FY26 无公司指引。90 天累计修正 +4.8%。"
+    },
+    "FY27": {
+      "points": [
+        [
+          90,
+          4.4604
+        ],
+        [
+          60,
+          4.5161
+        ],
+        [
+          30,
+          4.6355
+        ],
+        [
+          7,
+          4.5541
+        ],
+        [
+          0,
+          4.5569
+        ]
+      ],
+      "up30": 20,
+      "down30": 9,
+      "guide": null,
+      "n": 39,
+      "note": "近 30 天修正 −1.7%。FY27 无公司指引。90 天累计修正 +2.2%。"
+    }
+  },
+  "history": {
+    "eps": {
+      "q": [],
+      "y": [],
+      "stats_q": {
+        "beat_count": "0 / 0",
+        "beat_sub": "暂无已公布季度",
+        "avg_surprise": "—",
+        "avg_surprise_sub": "由历史行重算",
+        "vs_guide": "—",
+        "vs_guide_sub": "没有同时具备两侧数字的期间",
+        "cons_vs_guide": "—",
+        "cons_vs_guide_sub": "没有同时具备两侧数字的期间"
+      },
+      "stats_y": {
+        "latest_label": "最近财年",
+        "latest_vs_cons": "—",
+        "latest_sub": "没有已公布年度",
+        "prior_label": "上一财年",
+        "prior_vs_cons": "—",
+        "prior_sub": "没有更早的年度"
+      },
+      "note_q": "历史统计由管道根据已录入的发布前共识重算，不再沿用样例说明。",
+      "note_y": "年度统计由历史行重算。没有全年指引时，相对指引为空。"
+    },
+    "rev": {
+      "q": [],
+      "y": [],
+      "stats_q": {
+        "beat_count": "0 / 0",
+        "beat_sub": "暂无已公布季度",
+        "avg_surprise": "—",
+        "avg_surprise_sub": "由历史行重算",
+        "vs_guide": "—",
+        "vs_guide_sub": "没有同时具备两侧数字的期间",
+        "cons_vs_guide": "—",
+        "cons_vs_guide_sub": "没有同时具备两侧数字的期间"
+      },
+      "stats_y": {
+        "latest_label": "最近财年",
+        "latest_vs_cons": "—",
+        "latest_sub": "没有已公布年度",
+        "prior_label": "上一财年",
+        "prior_vs_cons": "—",
+        "prior_sub": "没有更早的年度"
+      },
+      "note_q": "历史统计由管道根据已录入的发布前共识重算，不再沿用样例说明。",
+      "note_y": "年度统计由历史行重算。没有全年指引时，相对指引为空。"
+    }
+  }
+}

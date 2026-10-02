@@ -1,0 +1,53 @@
+"""Fallback us-gaap tags when a company YAML does not list its own map."""
+
+DEFAULT_XBRL_MAP: dict[str, list[str]] = {
+    "revenue": ["RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues"],
+    "cogs": ["CostOfGoodsAndServicesSold", "CostOfRevenue"],
+    "gross_profit": ["GrossProfit"],
+    "rnd": ["ResearchAndDevelopmentExpense"],
+    "sga": ["SellingGeneralAndAdministrativeExpense"],
+    "other_op_expense": ["OtherOperatingIncomeExpenseNet"],
+    "op_income": ["OperatingIncomeLoss"],
+    "interest_other": [
+        "InterestIncomeExpenseNet",
+        "InterestIncomeExpenseNonoperating",
+        "OtherNonoperatingIncomeExpense",
+    ],
+    "tax": ["IncomeTaxExpenseBenefit"],
+    "net_income": ["NetIncomeLoss"],
+    "eps_diluted": ["EarningsPerShareDiluted"],
+    "shares_diluted": ["WeightedAverageNumberOfDilutedSharesOutstanding"],
+    "cash": ["CashAndCashEquivalentsAtCarryingValue"],
+    "st_investments": [
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+        "ShortTermInvestments",
+    ],
+    "receivables": ["AccountsReceivableNetCurrent"],
+    "inventory": ["InventoryNet"],
+    "lt_securities": [
+        "AvailableForSaleSecuritiesDebtSecuritiesNoncurrent",
+        "LongTermInvestments",
+        "MarketableSecuritiesNoncurrent",
+    ],
+    "ppe_net": [
+        "PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization",
+        "PropertyPlantAndEquipmentNet",
+    ],
+    "total_assets": ["Assets"],
+    "st_debt": ["DebtCurrent", "LongTermDebtCurrent"],
+    "lt_debt": ["LongTermDebtAndCapitalLeaseObligations", "LongTermDebt", "LongTermDebtNoncurrent"],
+    "contract_liab_noncurrent": ["ContractWithCustomerLiabilityNoncurrent"],
+    "total_liabilities": ["Liabilities"],
+    "equity": ["StockholdersEquity"],
+    "cfo": ["NetCashProvidedByUsedInOperatingActivities"],
+    "capex_gross": ["PaymentsToAcquirePropertyPlantAndEquipment"],
+    "da": ["DepreciationDepletionAndAmortization", "DepreciationAndAmortization", "Depreciation"],
+    "sbc": ["ShareBasedCompensation", "AllocatedShareBasedCompensationExpense"],
+    "buyback": ["PaymentsForRepurchaseOfCommonStock"],
+    "dividends": ["PaymentsOfDividendsCommonStock", "PaymentsOfDividends"],
+    "debt_repay": [
+        "RepaymentsOfLongTermDebtAndCapitalSecurities",
+        "RepaymentsOfDebt",
+        "RepaymentsOfLongTermDebt",
+    ],
+}

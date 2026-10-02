@@ -1,7 +1,9 @@
 {
   "ticker": "MU",
-  "fetched_at": "2026-10-02T01:46:34Z",
+  "fetched_at": "2026-10-02T01:11:29Z",
   "source": "yahoo",
+  "period_method": "8k_2.02",
+  "reported_through": "FQ4-26",
   "price_close": null,
   "periods": {
     "FQ1-27": {

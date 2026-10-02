@@ -1,0 +1,981 @@
+{
+  "eps_basis": "non_gaap",
+  "quarters": {},
+  "years": {},
+  "raw": {
+    "yahoo_eps_by_release": {
+      "2026-09-10": {
+        "eps": 6.13,
+        "eps_estimate": 6.09,
+        "release_date": "2026-09-10",
+        "source": "yahoo"
+      },
+      "2026-06-11": {
+        "eps": 5.96,
+        "eps_estimate": 5.81,
+        "release_date": "2026-06-11",
+        "source": "yahoo"
+      },
+      "2026-03-12": {
+        "eps": 6.06,
+        "eps_estimate": 5.87,
+        "release_date": "2026-03-12",
+        "source": "yahoo"
+      },
+      "2025-12-10": {
+        "eps": 5.5,
+        "eps_estimate": 5.4,
+        "release_date": "2025-12-10",
+        "source": "yahoo"
+      },
+      "2025-09-11": {
+        "eps": 5.31,
+        "eps_estimate": 5.18,
+        "release_date": "2025-09-11",
+        "source": "yahoo"
+      },
+      "2025-06-12": {
+        "eps": 5.06,
+        "eps_estimate": 4.97,
+        "release_date": "2025-06-12",
+        "source": "yahoo"
+      },
+      "2025-03-12": {
+        "eps": 5.08,
+        "eps_estimate": 4.97,
+        "release_date": "2025-03-12",
+        "source": "yahoo"
+      },
+      "2024-12-11": {
+        "eps": 4.81,
+        "eps_estimate": 4.67,
+        "release_date": "2024-12-11",
+        "source": "yahoo"
+      },
+      "2024-09-12": {
+        "eps": 4.65,
+        "eps_estimate": 4.54,
+        "release_date": "2024-09-12",
+        "source": "yahoo"
+      },
+      "2024-06-13": {
+        "eps": 4.48,
+        "eps_estimate": 4.4,
+        "release_date": "2024-06-13",
+        "source": "yahoo"
+      },
+      "2024-03-14": {
+        "eps": 4.48,
+        "eps_estimate": 4.38,
+        "release_date": "2024-03-14",
+        "source": "yahoo"
+      },
+      "2023-12-13": {
+        "eps": 4.27,
+        "eps_estimate": 4.14,
+        "release_date": "2023-12-13",
+        "source": "yahoo"
+      },
+      "2023-09-14": {
+        "eps": 4.1,
+        "eps_estimate": 3.98,
+        "release_date": "2023-09-14",
+        "source": "yahoo"
+      },
+      "2023-06-15": {
+        "eps": 3.91,
+        "eps_estimate": 3.79,
+        "release_date": "2023-06-15",
+        "source": "yahoo"
+      },
+      "2023-03-15": {
+        "eps": 3.8,
+        "eps_estimate": 3.68,
+        "release_date": "2023-03-15",
+        "source": "yahoo"
+      },
+      "2022-12-15": {
+        "eps": 3.6,
+        "eps_estimate": 3.5,
+        "release_date": "2022-12-15",
+        "source": "yahoo"
+      },
+      "2022-09-15": {
+        "eps": 3.4,
+        "eps_estimate": 3.34,
+        "release_date": "2022-09-15",
+        "source": "yahoo"
+      },
+      "2022-06-16": {
+        "eps": 3.35,
+        "eps_estimate": 3.31,
+        "release_date": "2022-06-16",
+        "source": "yahoo"
+      },
+      "2022-03-22": {
+        "eps": 3.37,
+        "eps_estimate": 3.34,
+        "release_date": "2022-03-22",
+        "source": "yahoo"
+      },
+      "2021-12-16": {
+        "eps": 3.2,
+        "eps_estimate": 3.2,
+        "release_date": "2021-12-16",
+        "source": "yahoo"
+      },
+      "2021-09-21": {
+        "eps": 3.11,
+        "eps_estimate": 3.02,
+        "release_date": "2021-09-21",
+        "source": "yahoo"
+      },
+      "2021-06-17": {
+        "eps": 3.03,
+        "eps_estimate": 2.82,
+        "release_date": "2021-06-17",
+        "source": "yahoo"
+      },
+      "2021-03-23": {
+        "eps": 3.14,
+        "eps_estimate": 2.79,
+        "release_date": "2021-03-23",
+        "source": "yahoo"
+      },
+      "2020-12-10": {
+        "eps": 2.81,
+        "eps_estimate": 2.66,
+        "release_date": "2020-12-10",
+        "source": "yahoo"
+      },
+      "2020-09-15": {
+        "eps": 2.57,
+        "eps_estimate": 2.41,
+        "release_date": "2020-09-15",
+        "source": "yahoo"
+      },
+      "2020-06-11": {
+        "eps": 2.45,
+        "eps_estimate": 2.32,
+        "release_date": "2020-06-11",
+        "source": "yahoo"
+      },
+      "2020-03-12": {
+        "eps": 2.27,
+        "eps_estimate": 2.23,
+        "release_date": "2020-03-12",
+        "source": "yahoo"
+      },
+      "2019-12-12": {
+        "eps": 2.29,
+        "eps_estimate": 2.26,
+        "release_date": "2019-12-12",
+        "source": "yahoo"
+      },
+      "2019-09-17": {
+        "eps": 2.05,
+        "eps_estimate": 1.97,
+        "release_date": "2019-09-17",
+        "source": "yahoo"
+      },
+      "2019-06-18": {
+        "eps": 1.83,
+        "eps_estimate": 1.78,
+        "release_date": "2019-06-18",
+        "source": "yahoo"
+      },
+      "2019-03-14": {
+        "eps": 1.71,
+        "eps_estimate": 1.62,
+        "release_date": "2019-03-14",
+        "source": "yahoo"
+      },
+      "2018-12-13": {
+        "eps": 1.83,
+        "eps_estimate": 1.84,
+        "release_date": "2018-12-13",
+        "source": "yahoo"
+      },
+      "2018-09-13": {
+        "eps": 1.73,
+        "eps_estimate": 1.69,
+        "release_date": "2018-09-13",
+        "source": "yahoo"
+      },
+      "2018-06-14": {
+        "eps": 1.66,
+        "eps_estimate": 1.54,
+        "release_date": "2018-06-14",
+        "source": "yahoo"
+      },
+      "2018-03-15": {
+        "eps": 1.55,
+        "eps_estimate": 1.44,
+        "release_date": "2018-03-15",
+        "source": "yahoo"
+      },
+      "2017-12-14": {
+        "eps": 1.26,
+        "eps_estimate": 1.16,
+        "release_date": "2017-12-14",
+        "source": "yahoo"
+      },
+      "2017-09-19": {
+        "eps": 1.1,
+        "eps_estimate": 1.01,
+        "release_date": "2017-09-19",
+        "source": "yahoo"
+      },
+      "2017-06-20": {
+        "eps": 1.02,
+        "eps_estimate": 0.95,
+        "release_date": "2017-06-20",
+        "source": "yahoo"
+      },
+      "2017-03-16": {
+        "eps": 0.94,
+        "eps_estimate": 0.87,
+        "release_date": "2017-03-16",
+        "source": "yahoo"
+      },
+      "2016-12-15": {
+        "eps": 0.9,
+        "eps_estimate": 0.86,
+        "release_date": "2016-12-15",
+        "source": "yahoo"
+      },
+      "2016-09-20": {
+        "eps": 0.75,
+        "eps_estimate": 0.72,
+        "release_date": "2016-09-20",
+        "source": "yahoo"
+      },
+      "2016-06-21": {
+        "eps": 0.71,
+        "eps_estimate": 0.68,
+        "release_date": "2016-06-21",
+        "source": "yahoo"
+      },
+      "2016-03-17": {
+        "eps": 0.66,
+        "eps_estimate": 0.61,
+        "release_date": "2016-03-17",
+        "source": "yahoo"
+      },
+      "2015-12-10": {
+        "eps": 0.62,
+        "eps_estimate": 0.6,
+        "release_date": "2015-12-10",
+        "source": "yahoo"
+      },
+      "2015-09-17": {
+        "eps": 0.54,
+        "eps_estimate": 0.5,
+        "release_date": "2015-09-17",
+        "source": "yahoo"
+      },
+      "2015-06-16": {
+        "eps": 0.48,
+        "eps_estimate": 0.45,
+        "release_date": "2015-06-16",
+        "source": "yahoo"
+      },
+      "2015-03-17": {
+        "eps": 0.44,
+        "eps_estimate": 0.39,
+        "release_date": "2015-03-17",
+        "source": "yahoo"
+      },
+      "2014-12-11": {
+        "eps": 0.36,
+        "eps_estimate": 0.3,
+        "release_date": "2014-12-11",
+        "source": "yahoo"
+      },
+      "2014-09-16": {
+        "eps": 0.28,
+        "eps_estimate": 0.26,
+        "release_date": "2014-09-16",
+        "source": "yahoo"
+      }
+    },
+    "sec_revenue_by_end": {
+      "2007-11-30": {
+        "rev_usd": 3157881000,
+        "rev": 3.16,
+        "fp": "FY",
+        "fy": 2009,
+        "form": "10-K",
+        "filed": "2010-01-22",
+        "source": "sec:Revenues"
+      },
+      "2008-05-30": {
+        "rev_usd": 886886000,
+        "rev": 0.89,
+        "fp": "Q2",
+        "fy": 2009,
+        "form": "10-Q",
+        "filed": "2009-06-26",
+        "source": "sec:Revenues"
+      },
+      "2008-08-29": {
+        "rev_usd": 887257000,
+        "rev": 0.89,
+        "fp": "Q3",
+        "fy": 2009,
+        "form": "10-Q",
+        "filed": "2009-10-01",
+        "source": "sec:Revenues"
+      },
+      "2008-11-28": {
+        "rev_usd": 3579889000,
+        "rev": 3.58,
+        "fp": "FY",
+        "fy": 2010,
+        "form": "10-K",
+        "filed": "2011-01-27",
+        "source": "sec:Revenues"
+      },
+      "2009-02-27": {
+        "rev_usd": 786390000,
+        "rev": 0.79,
+        "fp": "FY",
+        "fy": 2010,
+        "form": "10-K",
+        "filed": "2011-01-27",
+        "source": "sec:Revenues"
+      },
+      "2009-05-29": {
+        "rev_usd": 704673000,
+        "rev": 0.7,
+        "fp": "FY",
+        "fy": 2010,
+        "form": "10-K",
+        "filed": "2011-01-27",
+        "source": "sec:Revenues"
+      },
+      "2009-08-28": {
+        "rev_usd": 697507000,
+        "rev": 0.7,
+        "fp": "FY",
+        "fy": 2010,
+        "form": "10-K",
+        "filed": "2011-01-27",
+        "source": "sec:Revenues"
+      },
+      "2009-11-27": {
+        "rev_usd": 757283000,
+        "rev": 0.76,
+        "fp": "FY",
+        "fy": 2010,
+        "form": "10-K",
+        "filed": "2011-01-27",
+        "source": "sec:Revenues"
+      },
+      "2010-03-05": {
+        "rev_usd": 858700000,
+        "rev": 0.86,
+        "fp": "FY",
+        "fy": 2011,
+        "form": "10-K",
+        "filed": "2012-01-26",
+        "source": "sec:Revenues"
+      },
+      "2010-06-04": {
+        "rev_usd": 943035000,
+        "rev": 0.94,
+        "fp": "FY",
+        "fy": 2011,
+        "form": "10-K",
+        "filed": "2012-01-26",
+        "source": "sec:Revenues"
+      },
+      "2010-09-03": {
+        "rev_usd": 990319000,
+        "rev": 0.99,
+        "fp": "FY",
+        "fy": 2011,
+        "form": "10-K",
+        "filed": "2012-01-26",
+        "source": "sec:Revenues"
+      },
+      "2010-12-03": {
+        "rev_usd": 1007946000,
+        "rev": 1.01,
+        "fp": "FY",
+        "fy": 2011,
+        "form": "10-K",
+        "filed": "2012-01-26",
+        "source": "sec:Revenues"
+      },
+      "2011-03-04": {
+        "rev_usd": 1027706000,
+        "rev": 1.03,
+        "fp": "FY",
+        "fy": 2012,
+        "form": "10-K",
+        "filed": "2013-01-22",
+        "source": "sec:Revenues"
+      },
+      "2011-06-03": {
+        "rev_usd": 1023179000,
+        "rev": 1.02,
+        "fp": "FY",
+        "fy": 2012,
+        "form": "10-K",
+        "filed": "2013-01-22",
+        "source": "sec:Revenues"
+      },
+      "2011-09-02": {
+        "rev_usd": 1013212000,
+        "rev": 1.01,
+        "fp": "FY",
+        "fy": 2012,
+        "form": "10-K",
+        "filed": "2013-01-22",
+        "source": "sec:Revenues"
+      },
+      "2011-12-02": {
+        "rev_usd": 1152161000,
+        "rev": 1.15,
+        "fp": "FY",
+        "fy": 2012,
+        "form": "10-K",
+        "filed": "2013-01-22",
+        "source": "sec:Revenues"
+      },
+      "2012-03-02": {
+        "rev_usd": 1045220000,
+        "rev": 1.05,
+        "fp": "FY",
+        "fy": 2013,
+        "form": "10-K",
+        "filed": "2014-01-21",
+        "source": "sec:Revenues"
+      },
+      "2012-06-01": {
+        "rev_usd": 1124449000,
+        "rev": 1.12,
+        "fp": "FY",
+        "fy": 2013,
+        "form": "10-K",
+        "filed": "2014-01-21",
+        "source": "sec:Revenues"
+      },
+      "2012-08-31": {
+        "rev_usd": 1080580000,
+        "rev": 1.08,
+        "fp": "FY",
+        "fy": 2013,
+        "form": "10-K",
+        "filed": "2014-01-21",
+        "source": "sec:Revenues"
+      },
+      "2012-11-30": {
+        "rev_usd": 1153428000,
+        "rev": 1.15,
+        "fp": "FY",
+        "fy": 2013,
+        "form": "10-K",
+        "filed": "2014-01-21",
+        "source": "sec:Revenues"
+      },
+      "2013-03-01": {
+        "rev_usd": 1007873000,
+        "rev": 1.01,
+        "fp": "FY",
+        "fy": 2014,
+        "form": "10-K",
+        "filed": "2015-01-20",
+        "source": "sec:Revenues"
+      },
+      "2013-05-31": {
+        "rev_usd": 1010549000,
+        "rev": 1.01,
+        "fp": "FY",
+        "fy": 2014,
+        "form": "10-K",
+        "filed": "2015-01-20",
+        "source": "sec:Revenues"
+      },
+      "2013-08-30": {
+        "rev_usd": 995119000,
+        "rev": 1.0,
+        "fp": "FY",
+        "fy": 2014,
+        "form": "10-K",
+        "filed": "2015-01-20",
+        "source": "sec:Revenues"
+      },
+      "2013-11-29": {
+        "rev_usd": 1041699000,
+        "rev": 1.04,
+        "fp": "FY",
+        "fy": 2014,
+        "form": "10-K",
+        "filed": "2015-01-20",
+        "source": "sec:Revenues"
+      },
+      "2014-02-28": {
+        "rev_usd": 1000120000,
+        "rev": 1.0,
+        "fp": "FY",
+        "fy": 2015,
+        "form": "10-K",
+        "filed": "2016-01-19",
+        "source": "sec:Revenues"
+      },
+      "2014-05-30": {
+        "rev_usd": 1068208000,
+        "rev": 1.07,
+        "fp": "FY",
+        "fy": 2015,
+        "form": "10-K",
+        "filed": "2016-01-19",
+        "source": "sec:Revenues"
+      },
+      "2014-08-29": {
+        "rev_usd": 1005409000,
+        "rev": 1.01,
+        "fp": "FY",
+        "fy": 2015,
+        "form": "10-K",
+        "filed": "2016-01-19",
+        "source": "sec:Revenues"
+      },
+      "2014-11-28": {
+        "rev_usd": 1073328000,
+        "rev": 1.07,
+        "fp": "FY",
+        "fy": 2015,
+        "form": "10-K",
+        "filed": "2016-01-19",
+        "source": "sec:Revenues"
+      },
+      "2015-02-27": {
+        "rev_usd": 1109181000,
+        "rev": 1.11,
+        "fp": "FY",
+        "fy": 2016,
+        "form": "10-K",
+        "filed": "2017-01-20",
+        "source": "sec:Revenues"
+      },
+      "2015-05-29": {
+        "rev_usd": 1162158000,
+        "rev": 1.16,
+        "fp": "FY",
+        "fy": 2016,
+        "form": "10-K",
+        "filed": "2017-01-20",
+        "source": "sec:Revenues"
+      },
+      "2015-08-28": {
+        "rev_usd": 1217768000,
+        "rev": 1.22,
+        "fp": "FY",
+        "fy": 2016,
+        "form": "10-K",
+        "filed": "2017-01-20",
+        "source": "sec:Revenues"
+      },
+      "2015-11-27": {
+        "rev_usd": 1306404000,
+        "rev": 1.31,
+        "fp": "FY",
+        "fy": 2016,
+        "form": "10-K",
+        "filed": "2017-01-20",
+        "source": "sec:Revenues"
+      },
+      "2016-03-04": {
+        "rev_usd": 1383335000,
+        "rev": 1.38,
+        "fp": "FY",
+        "fy": 2017,
+        "form": "10-K",
+        "filed": "2018-01-22",
+        "source": "sec:Revenues"
+      },
+      "2016-06-03": {
+        "rev_usd": 1398709000,
+        "rev": 1.4,
+        "fp": "FY",
+        "fy": 2017,
+        "form": "10-K",
+        "filed": "2018-01-22",
+        "source": "sec:Revenues"
+      },
+      "2016-09-02": {
+        "rev_usd": 1463967000,
+        "rev": 1.46,
+        "fp": "FY",
+        "fy": 2017,
+        "form": "10-K",
+        "filed": "2018-01-22",
+        "source": "sec:Revenues"
+      },
+      "2016-12-02": {
+        "rev_usd": 1608419000,
+        "rev": 1.61,
+        "fp": "FY",
+        "fy": 2017,
+        "form": "10-K",
+        "filed": "2018-01-22",
+        "source": "sec:Revenues"
+      },
+      "2017-03-03": {
+        "rev_usd": 1681646000,
+        "rev": 1.68,
+        "fp": "FY",
+        "fy": 2018,
+        "form": "10-K",
+        "filed": "2019-01-25",
+        "source": "sec:Revenues"
+      },
+      "2017-06-02": {
+        "rev_usd": 1772190000,
+        "rev": 1.77,
+        "fp": "FY",
+        "fy": 2018,
+        "form": "10-K",
+        "filed": "2019-01-25",
+        "source": "sec:Revenues"
+      },
+      "2017-09-01": {
+        "rev_usd": 1841074000,
+        "rev": 1.84,
+        "fp": "FY",
+        "fy": 2018,
+        "form": "10-K",
+        "filed": "2019-01-25",
+        "source": "sec:Revenues"
+      },
+      "2017-12-01": {
+        "rev_usd": 2006595000,
+        "rev": 2.01,
+        "fp": "FY",
+        "fy": 2018,
+        "form": "10-K",
+        "filed": "2019-01-25",
+        "source": "sec:Revenues"
+      },
+      "2018-03-02": {
+        "rev_usd": 2078947000,
+        "rev": 2.08,
+        "fp": "FY",
+        "fy": 2019,
+        "form": "10-K",
+        "filed": "2020-01-21",
+        "source": "sec:Revenues"
+      },
+      "2018-06-01": {
+        "rev_usd": 2195360000,
+        "rev": 2.2,
+        "fp": "FY",
+        "fy": 2019,
+        "form": "10-K",
+        "filed": "2020-01-21",
+        "source": "sec:Revenues"
+      },
+      "2018-08-31": {
+        "rev_usd": 2291076000,
+        "rev": 2.29,
+        "fp": "FY",
+        "fy": 2019,
+        "form": "10-K",
+        "filed": "2020-01-21",
+        "source": "sec:Revenues"
+      },
+      "2018-11-30": {
+        "rev_usd": 2464625000,
+        "rev": 2.46,
+        "fp": "FY",
+        "fy": 2019,
+        "form": "10-K",
+        "filed": "2020-01-21",
+        "source": "sec:Revenues"
+      },
+      "2019-03-01": {
+        "rev_usd": 2601000000,
+        "rev": 2.6,
+        "fp": "FY",
+        "fy": 2020,
+        "form": "10-K",
+        "filed": "2021-01-15",
+        "source": "sec:Revenues"
+      },
+      "2019-05-31": {
+        "rev_usd": 2744000000,
+        "rev": 2.74,
+        "fp": "FY",
+        "fy": 2020,
+        "form": "10-K",
+        "filed": "2021-01-15",
+        "source": "sec:Revenues"
+      },
+      "2019-08-30": {
+        "rev_usd": 2834000000,
+        "rev": 2.83,
+        "fp": "FY",
+        "fy": 2020,
+        "form": "10-K",
+        "filed": "2021-01-15",
+        "source": "sec:Revenues"
+      },
+      "2019-11-29": {
+        "rev_usd": 2992000000,
+        "rev": 2.99,
+        "fp": "FY",
+        "fy": 2020,
+        "form": "10-K",
+        "filed": "2021-01-15",
+        "source": "sec:Revenues"
+      },
+      "2020-02-28": {
+        "rev_usd": 3091000000,
+        "rev": 3.09,
+        "fp": "Q1",
+        "fy": 2021,
+        "form": "10-Q",
+        "filed": "2021-03-31",
+        "source": "sec:Revenues"
+      },
+      "2020-05-29": {
+        "rev_usd": 3128000000,
+        "rev": 3.13,
+        "fp": "Q2",
+        "fy": 2021,
+        "form": "10-Q",
+        "filed": "2021-06-30",
+        "source": "sec:Revenues"
+      },
+      "2020-08-28": {
+        "rev_usd": 3225000000,
+        "rev": 3.23,
+        "fp": "Q3",
+        "fy": 2021,
+        "form": "10-Q",
+        "filed": "2021-09-29",
+        "source": "sec:Revenues"
+      },
+      "2020-11-27": {
+        "rev_usd": 3424000000,
+        "rev": 3.42,
+        "fp": "FY",
+        "fy": 2020,
+        "form": "10-K",
+        "filed": "2021-01-15",
+        "source": "sec:Revenues"
+      },
+      "2021-03-05": {
+        "rev_usd": 3905000000,
+        "rev": 3.9,
+        "fp": "Q1",
+        "fy": 2022,
+        "form": "10-Q",
+        "filed": "2022-03-30",
+        "source": "sec:Revenues"
+      },
+      "2021-06-04": {
+        "rev_usd": 3835000000,
+        "rev": 3.83,
+        "fp": "Q2",
+        "fy": 2022,
+        "form": "10-Q",
+        "filed": "2022-06-29",
+        "source": "sec:Revenues"
+      },
+      "2021-09-03": {
+        "rev_usd": 3935000000,
+        "rev": 3.94,
+        "fp": "Q3",
+        "fy": 2022,
+        "form": "10-Q",
+        "filed": "2022-09-28",
+        "source": "sec:Revenues"
+      },
+      "2021-12-03": {
+        "rev_usd": 15785000000,
+        "rev": 15.79,
+        "fp": "FY",
+        "fy": 2023,
+        "form": "10-K",
+        "filed": "2024-01-17",
+        "source": "sec:Revenues"
+      },
+      "2022-03-04": {
+        "rev_usd": 4262000000,
+        "rev": 4.26,
+        "fp": "Q1",
+        "fy": 2023,
+        "form": "10-Q",
+        "filed": "2023-03-29",
+        "source": "sec:Revenues"
+      },
+      "2022-06-03": {
+        "rev_usd": 4386000000,
+        "rev": 4.39,
+        "fp": "Q2",
+        "fy": 2023,
+        "form": "10-Q",
+        "filed": "2023-06-28",
+        "source": "sec:Revenues"
+      },
+      "2022-09-02": {
+        "rev_usd": 4433000000,
+        "rev": 4.43,
+        "fp": "Q3",
+        "fy": 2023,
+        "form": "10-Q",
+        "filed": "2023-09-27",
+        "source": "sec:Revenues"
+      },
+      "2022-12-02": {
+        "rev_usd": 17606000000,
+        "rev": 17.61,
+        "fp": "FY",
+        "fy": 2024,
+        "form": "10-K",
+        "filed": "2025-01-13",
+        "source": "sec:Revenues"
+      },
+      "2023-03-03": {
+        "rev_usd": 4655000000,
+        "rev": 4.66,
+        "fp": "Q1",
+        "fy": 2024,
+        "form": "10-Q",
+        "filed": "2024-03-27",
+        "source": "sec:Revenues"
+      },
+      "2023-06-02": {
+        "rev_usd": 4816000000,
+        "rev": 4.82,
+        "fp": "Q2",
+        "fy": 2024,
+        "form": "10-Q",
+        "filed": "2024-06-26",
+        "source": "sec:Revenues"
+      },
+      "2023-09-01": {
+        "rev_usd": 4890000000,
+        "rev": 4.89,
+        "fp": "Q3",
+        "fy": 2024,
+        "form": "10-Q",
+        "filed": "2024-09-25",
+        "source": "sec:Revenues"
+      },
+      "2023-12-01": {
+        "rev_usd": 19409000000,
+        "rev": 19.41,
+        "fp": "FY",
+        "fy": 2025,
+        "form": "10-K",
+        "filed": "2026-01-15",
+        "source": "sec:Revenues"
+      },
+      "2024-03-01": {
+        "rev_usd": 5182000000,
+        "rev": 5.18,
+        "fp": "Q1",
+        "fy": 2025,
+        "form": "10-Q",
+        "filed": "2025-03-26",
+        "source": "sec:Revenues"
+      },
+      "2024-05-31": {
+        "rev_usd": 5309000000,
+        "rev": 5.31,
+        "fp": "Q2",
+        "fy": 2025,
+        "form": "10-Q",
+        "filed": "2025-06-25",
+        "source": "sec:Revenues"
+      },
+      "2024-08-30": {
+        "rev_usd": 5408000000,
+        "rev": 5.41,
+        "fp": "Q3",
+        "fy": 2025,
+        "form": "10-Q",
+        "filed": "2025-09-24",
+        "source": "sec:Revenues"
+      },
+      "2024-11-29": {
+        "rev_usd": 21505000000,
+        "rev": 21.5,
+        "fp": "FY",
+        "fy": 2025,
+        "form": "10-K",
+        "filed": "2026-01-15",
+        "source": "sec:Revenues"
+      },
+      "2025-02-28": {
+        "rev_usd": 5714000000,
+        "rev": 5.71,
+        "fp": "Q1",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-03-25",
+        "source": "sec:Revenues"
+      },
+      "2025-05-30": {
+        "rev_usd": 5873000000,
+        "rev": 5.87,
+        "fp": "Q2",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-06-15",
+        "source": "sec:Revenues"
+      },
+      "2025-08-29": {
+        "rev_usd": 5988000000,
+        "rev": 5.99,
+        "fp": "Q3",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-09-22",
+        "source": "sec:Revenues"
+      },
+      "2025-11-28": {
+        "rev_usd": 23769000000,
+        "rev": 23.77,
+        "fp": "FY",
+        "fy": 2025,
+        "form": "10-K",
+        "filed": "2026-01-15",
+        "source": "sec:Revenues"
+      },
+      "2026-02-27": {
+        "rev_usd": 6398000000,
+        "rev": 6.4,
+        "fp": "Q1",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-03-25",
+        "source": "sec:Revenues"
+      },
+      "2026-05-29": {
+        "rev_usd": 6618000000,
+        "rev": 6.62,
+        "fp": "Q2",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-06-15",
+        "source": "sec:Revenues"
+      },
+      "2026-08-28": {
+        "rev_usd": 6760000000,
+        "rev": 6.76,
+        "fp": "Q3",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-09-22",
+        "source": "sec:Revenues"
+      }
+    }
+  },
+  "updated_at": "2026-10-02T01:11:48Z"
+}

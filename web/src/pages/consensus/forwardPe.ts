@@ -8,12 +8,11 @@ export function renderForwardPe(
   onPrice: (v: string) => void,
 ): HTMLElement {
   const pe = data.future.pe;
+  const fyCols = Object.entries(pe.fy ?? {}).sort((a, b) => a[0].localeCompare(b[0]));
   const cols: Array<[string, number | null, boolean]> = [
     ['近 4 季（TTM）', pe.ttm_eps, false],
-    ['未来 4 季（NTM）', pe.ntm_eps, true],
-    ['FY26', pe.fy.FY26 ?? null, false],
-    ['FY27E', pe.fy.FY27 ?? null, true],
-    ['FY28E', pe.fy.FY28 ?? null, true],
+    ['未来 12 个月（NTM）', pe.ntm_eps, true],
+    ...fyCols.map(([name, v]): [string, number | null, boolean] => [`${name}E`, v, true]),
   ];
 
   const card = el('div', { className: 'card', style: 'display:flex;flex-direction:column' });
@@ -32,8 +31,11 @@ export function renderForwardPe(
   });
   label.append(document.createTextNode('股价'), input);
 
-  const method =
-    pe.ntm_method === 'blend' ? '时间加权' : pe.ntm_method === 'sum' ? '季度共识加总' : pe.ntm_method;
+  const method = pe.ntm_method?.startsWith('fy_time_weight')
+    ? '本财年与下财年按剩余月份加权'
+    : pe.ntm_method === 'sum_next_4_quarters'
+      ? '未来四个季度加总'
+      : pe.ntm_method || '—';
   card.appendChild(
     el('div', { className: 'card__head' }, [
       el('div', {}, [

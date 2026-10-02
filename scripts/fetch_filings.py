@@ -28,14 +28,19 @@ def load_red_rules() -> list[dict]:
         return (yaml.safe_load(f) or {}).get("rules") or []
 
 
-def is_red_8k(items: list[str], rules: list[dict]) -> tuple[bool, str | None]:
+def is_red_8k(items: list[str], rules: list[dict], text: str = "") -> tuple[bool, str | None]:
+    blob = (text or "").lower()
     for rule in rules:
         m = rule.get("match") or {}
         if m.get("form") != "8-K":
             continue
-        want = set(m.get("items") or [])
-        if want and want.intersection(items):
-            return True, rule.get("label")
+        want = set(str(x) for x in (m.get("items") or []))
+        if want and not want.intersection(items):
+            continue
+        keywords = [str(k).lower() for k in (m.get("keywords_any") or [])]
+        if keywords and not any(k in blob for k in keywords):
+            continue
+        return True, rule.get("label")
     return False, None
 
 
@@ -60,7 +65,7 @@ def fetch_company_filings(ticker: str, cik: int, rules: list[dict], limit: int =
         items = [x.strip() for x in str(items_raw).split(",") if x.strip()]
         red, why = False, None
         if form.startswith("8-K"):
-            red, why = is_red_8k(items, rules)
+            red, why = is_red_8k(items, rules, text=" ".join(items))
         elif form.startswith("4"):
             # Mark Form 4 as non-red by default (value filter needs ownership XML — skip)
             red, why = False, None
@@ -102,11 +107,9 @@ def main() -> int:
     for t in tickers:
         try:
             cfg = load_company(t)
-        except Exception:
-            # only MU may have company yaml; skip others for filings if no cik
-            if t != "MU":
-                continue
-            raise
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"{t}: missing company config ({e})")
+            continue
         try:
             cik = cfg["cik"]
             items.extend(fetch_company_filings(t, int(cik), rules))
@@ -127,6 +130,9 @@ def main() -> int:
     else:
         update_status("edgar_filings", True, f"{len(items)} filings")
     print(f"wrote {path} ({len(items)} items)")
+    if errors:
+        print("ERROR: " + "; ".join(errors), file=sys.stderr)
+        return 1
     return 0
 
 

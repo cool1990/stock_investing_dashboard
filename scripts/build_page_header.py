@@ -12,8 +12,13 @@ from typing import Optional
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts.lib.fiscal import parse_period_label  # noqa: E402
+from scripts.lib.fiscal import (  # noqa: E402
+    FiscalCalendar,
+    latest_quarter_ended_before,
+    parse_period_label,
+)
 from scripts.lib.io import load_company, read_json, write_json  # noqa: E402
+from scripts.lib.metrics import NOT_CONNECTED  # noqa: E402
 
 
 def bj_now() -> str:
@@ -23,8 +28,14 @@ def bj_now() -> str:
 def last_close(closes: dict) -> tuple[Optional[str], Optional[float]]:
     if not closes:
         return None, None
-    d = sorted(closes.keys())[-1]
-    return d, float(closes[d])
+    for d in sorted(closes.keys(), reverse=True):
+        try:
+            px = float(closes[d])
+        except (TypeError, ValueError):
+            continue
+        if px == px and abs(px) != float("inf"):  # skip NaN / inf
+            return d, px
+    return None, None
 
 
 def pct_change(closes: dict, end_date: str, start_date: str) -> Optional[float]:
@@ -67,13 +78,44 @@ def fmt_money_b(v: Optional[float]) -> Optional[str]:
     return f"${v:.1f}B"
 
 
-def latest_report(financials: dict) -> tuple[str, str]:
+def release_dates(ticker: str, cfg: dict) -> dict[str, str]:
+    months = ((cfg.get("fiscal") or {}).get("quarter_end_months")) or []
+    if len(months) != 4:
+        return {}
+    cal = FiscalCalendar(list(months))
+    data = read_json(ROOT / "data" / "filings" / "watchlist.json", default={"items": []}) or {}
+    out: dict[str, str] = {}
+    rows = []
+    for item in data.get("items") or []:
+        if str(item.get("t") or "").upper() != ticker.upper():
+            continue
+        if "2.02" not in (item.get("items") or []):
+            continue
+        filed = str(item.get("d") or "")[:10]
+        if not filed:
+            continue
+        try:
+            period = latest_quarter_ended_before(cal, filed)
+        except ValueError:
+            continue
+        rows.append((filed, period))
+    for filed, period in sorted(rows):
+        out.setdefault(period, filed)
+    return out
+
+
+def latest_report(financials: dict, releases: dict[str, str]) -> tuple[str, str]:
+    """Latest quarter with revenue, and the 8-K 2.02 date — not the period end."""
     periods = financials.get("periods") or {}
-    if not periods:
+    reported = [
+        p
+        for p, slot in periods.items()
+        if ((slot or {}).get("q") or {}).get("revenue") is not None
+    ]
+    if not reported:
         return "—", "—"
-    best = sorted(periods.keys(), key=lambda p: parse_period_label(p))[-1]
-    end = (periods[best] or {}).get("end") or "—"
-    return best, end
+    best = sorted(reported, key=lambda p: parse_period_label(p))[-1]
+    return best, releases.get(best) or "—"
 
 
 def build_header(ticker: str) -> dict:
@@ -131,8 +173,13 @@ def build_header(ticker: str) -> dict:
     if market_cap_b is not None and net_cash_b is not None:
         ev_b = market_cap_b - net_cash_b
 
-    report, report_date = latest_report(financials)
+    report, report_date = latest_report(financials, release_dates(ticker, cfg))
     hdr_cfg = cfg.get("header") or {}
+    nxt = hdr_cfg.get("next_earnings") or info.get("next_earnings")
+    if nxt and info.get("next_earnings_estimated") and "预估" not in str(nxt):
+        nxt = f"{nxt}（预估）"
+    div_q = hdr_cfg.get("dividend_quarterly")
+    dy = info.get("dividend_yield")
 
     # Forward PE from consensus page if available
     cons = read_json(ROOT / "data" / "pages" / ticker / "consensus.json", default={}) or {}
@@ -150,21 +197,17 @@ def build_header(ticker: str) -> dict:
         "ev": fmt_money_b(ev_b),
         "net_cash_b": round(net_cash_b, 2) if net_cash_b is not None else None,
         "forward_pe_ntm": fpe if fpe is not None else hdr_cfg.get("forward_pe_ntm"),
-        "short_interest": hdr_cfg.get("short_interest"),
-        "next_earnings": hdr_cfg.get("next_earnings") or info.get("next_earnings"),
-        "implied_move": hdr_cfg.get("implied_move"),
+        "short_interest": hdr_cfg.get("short_interest") or NOT_CONNECTED,
+        "next_earnings": nxt,
+        "implied_move": hdr_cfg.get("implied_move") or NOT_CONNECTED,
         "week52": week52,
-        "ev_ebitda_ntm": hdr_cfg.get("ev_ebitda_ntm"),
-        "dividend_quarterly": hdr_cfg.get("dividend_quarterly", 0.15),
-        "dividend_yield": (
-            f"{info['dividend_yield']:.2f}%"
-            if isinstance(info.get("dividend_yield"), (int, float))
-            else info.get("dividend_yield")
-        ),
+        "ev_ebitda_ntm": hdr_cfg.get("ev_ebitda_ntm") or NOT_CONNECTED,
+        "dividend_quarterly": div_q,
+        "dividend_yield": f"{dy:.2f}%" if isinstance(dy, (int, float)) else dy,
         "target_price": info.get("target_price"),
         "ratings": info.get("ratings"),
-        "inst_insider": hdr_cfg.get("inst_insider"),
-        "days_to_cover": hdr_cfg.get("days_to_cover"),
+        "inst_insider": hdr_cfg.get("inst_insider") or NOT_CONNECTED,
+        "days_to_cover": hdr_cfg.get("days_to_cover") or NOT_CONNECTED,
     }
 
     return {

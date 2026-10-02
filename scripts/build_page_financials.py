@@ -22,6 +22,7 @@ from scripts.lib.fiscal import (  # noqa: E402
 )
 from scripts.lib.fmt import format_change  # noqa: E402
 from scripts.lib.io import load_company, read_json, write_json  # noqa: E402
+from scripts.lib.metrics import roe_percent  # noqa: E402
 
 MODE_NOTES = {
     "q": "单季：流量科目由 10-Q 累计数相减得到；资产负债表取季末余额，环比为较上季末。",
@@ -105,17 +106,21 @@ def enrich_derived(periods: dict) -> None:
             if bag.get("ni_margin") is None:
                 m = safe_div(bag.get("net_income"), rev)
                 bag["ni_margin"] = m * 100 if m is not None else None
-            # FCF (company approx without gov subsidy): CFO - capex
             cfo = bag.get("cfo")
             capex = bag.get("capex_gross")
-            if bag.get("fcf_adj") is None and cfo is not None and capex is not None:
-                bag["fcf_adj"] = cfo - capex
+            # Gross capex is not the company "net capex" (after government incentives).
+            if bag.get("fcf_gross") is None and cfo is not None and capex is not None:
+                bag["fcf_gross"] = cfo - capex
+            if (
+                bag.get("fcf_adj") is None
+                and cfo is not None
+                and bag.get("capex_net") is not None
+            ):
+                bag["fcf_adj"] = cfo - bag["capex_net"]
             if bag.get("fcf_margin") is None:
-                m = safe_div(bag.get("fcf_adj"), rev)
+                fcf_for_m = bag.get("fcf_adj") if bag.get("fcf_adj") is not None else bag.get("fcf_gross")
+                m = safe_div(fcf_for_m, rev)
                 bag["fcf_margin"] = m * 100 if m is not None else None
-            # net capex = capex for now (gov subsidy awaits press release)
-            if bag.get("capex_net") is None and capex is not None:
-                bag["capex_net"] = capex
 
         # BS derived
         cash = bs.get("cash")
@@ -167,8 +172,14 @@ def row(
     formula: str | None = None,
     change_kind: str = "pct",
     include_qoq: bool = True,
+    abs_change: bool = False,
 ) -> dict:
-    yoy, yoy_tone = change_arrays(values, yoy_base, kind=change_kind)
+    def _mag(xs: list[Optional[float]]) -> list[Optional[float]]:
+        if not abs_change:
+            return xs
+        return [None if v is None else abs(v) for v in xs]
+
+    yoy, yoy_tone = change_arrays(_mag(values), _mag(yoy_base), kind=change_kind)
     out: dict[str, Any] = {
         "kind": kind,
         "name": name,
@@ -179,7 +190,7 @@ def row(
         "formula": formula,
     }
     if include_qoq and qoq_base is not None:
-        qoq, qoq_tone = change_arrays(values, qoq_base, kind=change_kind)
+        qoq, qoq_tone = change_arrays(_mag(values), _mag(qoq_base), kind=change_kind)
         out["qoq"] = qoq
         out["qoq_tone"] = qoq_tone
     else:
@@ -331,6 +342,8 @@ def build_is(periods: dict, mode: str) -> dict:
             else:
                 key = p
             ng = (periods.get(key) or {}).get("non_gaap") or {}
+            if mode in ("y", "ytd"):
+                return (ng.get("ytd") or {}).get(field)
             return ng.get(field)
 
         return _inner
@@ -593,6 +606,7 @@ def build_cf(periods: dict, mode: str) -> dict:
             formula=formula,
             change_kind=change_kind,
             include_qoq=include_qoq,
+            abs_change=sign < 0,
         )
 
     rows = [
@@ -608,15 +622,16 @@ def build_cf(periods: dict, mode: str) -> dict:
             "capex_net",
             "d",
             sign=-1.0,
-            formula="购建 PP&E − 政府补贴（补贴待新闻稿；P1 暂等于毛 Capex）",
+            formula="购建 PP&E − 政府补贴；没有新闻稿数字时留空",
         ),
         sec_row("筹资活动"),
         add("偿还债务", "debt_repay", sign=-1.0),
         add("回购", "buyback", sign=-1.0),
         add("股息", "dividends", sign=-1.0),
         sec_row("自由现金流"),
-        add("调整后 FCF（公司口径）", "fcf_adj", "b", formula="经营现金流 − 净 Capex"),
-        add("FCF 率", "fcf_margin", "d", formula="调整后 FCF ÷ 营业收入", fmt="pct", change_kind="pp"),
+        add("自由现金流（CFO−毛 Capex）", "fcf_gross", "d", formula="经营现金流 − 购建固定资产，不是公司净 Capex 口径"),
+        add("调整后 FCF（公司口径）", "fcf_adj", "b", formula="新闻稿调整后自由现金流（扣净 Capex）"),
+        add("FCF 率", "fcf_margin", "d", formula="FCF ÷ 营业收入（优先公司口径）", fmt="pct", change_kind="pp"),
     ]
     return {
         "title": title,
@@ -693,7 +708,7 @@ def build_eq(periods: dict, mode: str) -> dict:
             except ValueError:
                 return None
 
-    def pack(name, getter, kind="", formula=None, fmt="amt", change_kind="pct"):
+    def pack(name, getter, kind="", formula=None, fmt="amt", change_kind="pct", abs_change=False):
         vals = series_vals(col_keys, getter)
         if mode == "y":
             yb = [getter(annual_label(int(c.replace("FY", "")) - 1)) for c in col_keys]
@@ -709,7 +724,18 @@ def build_eq(periods: dict, mode: str) -> dict:
                         qb.append(None)
             else:
                 qb = None
-        return row(name, kind, fmt, vals, yb, qb, formula=formula, change_kind=change_kind, include_qoq=include_qoq)
+        return row(
+            name,
+            kind,
+            fmt,
+            vals,
+            yb,
+            qb,
+            formula=formula,
+            change_kind=change_kind,
+            include_qoq=include_qoq,
+            abs_change=abs_change,
+        )
 
     end_vals = series_vals(col_keys, equity_at)
     begin_vals = series_vals(col_keys, begin_eq)
@@ -726,13 +752,10 @@ def build_eq(periods: dict, mode: str) -> dict:
         known = ni + (sbc or 0) + (buy or 0) + (div or 0)
         other_vals.append(round(e - b - known, 2))
 
-    # ROE annualized: q NI * 4 / avg equity
+    # Quarterly ROE is annualized (×4). Annual NI is already a full year.
     roe_vals: list[Optional[float]] = []
     for b, e, ni in zip(begin_vals, end_vals, ni_vals):
-        if ni is None or b is None or e is None or (b + e) == 0:
-            roe_vals.append(None)
-        else:
-            roe_vals.append(round(ni * 4 / ((b + e) / 2) * 100, 2))
+        roe_vals.append(roe_percent(ni, b, e, annual=mode == "y"))
 
     def yoy_of(vals_map):
         # rebuild via pack helpers — simpler inline
@@ -742,8 +765,8 @@ def build_eq(periods: dict, mode: str) -> dict:
         pack("期初股东权益", begin_eq, "b"),
         pack("净利润", ni_at),
         pack("股权激励", sbc_at),
-        pack("回购", buyback_at),
-        pack("股息", div_at),
+        pack("回购", buyback_at, abs_change=True),
+        pack("股息", div_at, abs_change=True),
         row(
             "其他合计（推算）",
             "d",
@@ -762,7 +785,7 @@ def build_eq(periods: dict, mode: str) -> dict:
             roe_vals,
             [None] * len(col_keys),
             [None] * len(col_keys) if include_qoq else None,
-            formula="单季净利润 × 4 ÷ 平均股东权益",
+            formula="净利润 ÷ 平均股东权益" if mode == "y" else "单季净利润 × 4 ÷ 平均股东权益",
             change_kind="pp",
             include_qoq=include_qoq,
         ),
@@ -807,11 +830,24 @@ def build_page(ticker: str) -> dict:
         },
     }
 
+    notes = dict(MODE_NOTES)
+    long_q = []
+    for label, slot in periods.items():
+        days = period_days(periods, label)
+        if days is not None and days >= 96:
+            long_q.append(f"{label}（{days} 天）")
+    if long_q:
+        notes["q"] = notes["q"] + " 含 14 周季度（53 周财年），同比会略偏高：" + "、".join(long_q[:4]) + "。"
+    fy_end = (cfg.get("fiscal") or {}).get("quarter_end_months") or [8]
+    notes["y"] = f"年度：财年截至 {fy_end[-1]} 月。" + (
+        " 其中有 14 周季度（53 周财年），年度同比会略偏高。" if long_q else ""
+    )
+
     return {
         "ticker": ticker.upper(),
         "updated_at": raw.get("updated_at"),
         "tables": tables,
-        "mode_notes": MODE_NOTES,
+        "mode_notes": notes,
         "meta": {
             "name_en": cfg.get("name_en"),
             "name_zh": cfg.get("name_zh"),

@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from scripts.lib.http import get  # noqa: E402
 from scripts.lib.io import load_company, read_json, retry, update_status, write_json  # noqa: E402
 
 
@@ -42,20 +43,17 @@ def fetch_eps(ticker: str) -> dict:
     return quarters
 
 
-def fetch_revenue_sec(cik: int, user_agent: str) -> dict:
-    import requests
-
+def fetch_revenue_sec(cik: int) -> dict:
     cik_str = str(cik).zfill(10)
     concepts = [
         "RevenueFromContractWithCustomerExcludingAssessedTax",
         "Revenues",
     ]
-    headers = {"User-Agent": user_agent, "Accept-Encoding": "gzip, deflate"}
     out: dict = {}
     for concept in concepts:
         url = f"https://data.sec.gov/api/xbrl/companyconcept/CIK{cik_str}/us-gaap/{concept}.json"
         try:
-            r = requests.get(url, headers=headers, timeout=30)
+            r = get(url, sec=True, timeout=30)
             if r.status_code != 200:
                 continue
             units = r.json().get("units", {}).get("USD", [])
@@ -97,19 +95,22 @@ def main() -> int:
         default={"eps_basis": cfg.get("eps_basis", "non_gaap"), "quarters": {}, "years": {}, "raw": {}},
     )
 
+    yahoo_ok = False
+    sec_ok = False
     try:
         eps_by_release = fetch_eps(ticker)
         existing.setdefault("raw", {})["yahoo_eps_by_release"] = eps_by_release
         update_status("yahoo_actuals", True, f"{len(eps_by_release)} rows")
+        yahoo_ok = True
     except Exception as e:  # noqa: BLE001
         update_status("yahoo_actuals", False, str(e))
         print(f"yahoo actuals failed: {e}", file=sys.stderr)
 
     try:
-        ua = f"stock_investing_dashboard contact@example.com"
-        rev = fetch_revenue_sec(int(cfg["cik"]), ua)
+        rev = fetch_revenue_sec(int(cfg["cik"]))
         existing.setdefault("raw", {})["sec_revenue_by_end"] = rev
         update_status("sec_revenue", True, f"{len(rev)} rows")
+        sec_ok = True
     except Exception as e:  # noqa: BLE001
         update_status("sec_revenue", False, str(e))
         print(f"sec revenue failed: {e}", file=sys.stderr)
@@ -133,6 +134,9 @@ def main() -> int:
     existing["updated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     write_json(out_path, existing)
     print(f"wrote {out_path}")
+    if not yahoo_ok and not sec_ok:
+        print(f"ERROR: both actuals sources failed for {ticker}", file=sys.stderr)
+        return 1
     return 0
 
 

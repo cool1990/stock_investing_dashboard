@@ -32,7 +32,7 @@ def main() -> int:
     parser.add_argument("--ticker", default="MU")
     args = parser.parse_args()
     ticker = args.ticker.upper()
-    out = ROOT / "data" / "snapshots" / ticker / "_secondary_latest.json"
+    out = ROOT / "data" / "secondary" / f"{ticker}.json"
     try:
         raw = fetch_nasdaq(ticker)
         write_json(

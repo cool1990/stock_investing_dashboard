@@ -25,7 +25,7 @@
       "missing": "保留上一日快照；页面显示 [ ] 并在 _status.json 记失败",
       "status": {
         "state": "ok",
-        "last_ok": "2026-10-02T01:46:34Z",
+        "last_ok": "2026-10-02T01:56:46Z",
         "last_err": null,
         "err_msg": null
       }
@@ -40,7 +40,7 @@
       "missing": "显示 [ ]；可用 YAML overrides 手工覆盖并注明来源",
       "status": {
         "state": "ok",
-        "last_ok": "2026-10-02T01:46:36Z",
+        "last_ok": "2026-10-02T01:12:05Z",
         "last_err": null,
         "err_msg": null
       }
@@ -55,7 +55,7 @@
       "missing": "显示 [ ] 或「未披露」；不跨来源静默补齐",
       "status": {
         "state": "ok",
-        "last_ok": "2026-10-02T01:46:39Z",
+        "last_ok": "2026-10-02T01:12:07Z",
         "last_err": null,
         "err_msg": null
       }
@@ -70,7 +70,7 @@
       "missing": "列表为空；失败写入 _status.json",
       "status": {
         "state": "ok",
-        "last_ok": "2026-10-02T01:46:39Z",
+        "last_ok": "2026-10-02T01:11:28Z",
         "last_err": null,
         "err_msg": null
       }
@@ -99,8 +99,8 @@
       "freq": "发布当日",
       "missing": "准备稿未获取；原文 tab 可切换到第三方文字稿，但必须明确标注来源，不得静默顶替官方准备稿",
       "status": {
-        "state": "unknown",
-        "last_ok": null,
+        "state": "ok",
+        "last_ok": "2026-10-02T01:29:08Z",
         "last_err": null,
         "err_msg": null
       }
@@ -130,7 +130,7 @@
       "missing": "对应窗口显示 [ ]",
       "status": {
         "state": "ok",
-        "last_ok": "2026-10-02T01:46:38Z",
+        "last_ok": "2026-10-02T01:56:45Z",
         "last_err": null,
         "err_msg": null
       }

@@ -74,10 +74,19 @@ def get(
             if min_interval > 0:
                 time.sleep(min_interval)
             resp = requests.get(url, headers=hdrs, timeout=timeout)
+            # 403/404 are not transient (bad User-Agent, missing document).
+            if resp.status_code in (403, 404):
+                resp.raise_for_status()
             if resp.status_code in (429, 500, 502, 503, 504):
                 raise requests.HTTPError(f"HTTP {resp.status_code}", response=resp)
             resp.raise_for_status()
             return resp
+        except requests.HTTPError as exc:
+            status = getattr(getattr(exc, "response", None), "status_code", None)
+            if status in (403, 404):
+                raise
+            last_err = exc
+            time.sleep(2**attempt)
         except Exception as exc:  # noqa: BLE001
             last_err = exc
             time.sleep(2**attempt)

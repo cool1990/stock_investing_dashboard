@@ -27,7 +27,7 @@ export function renderStockHeader(meta: StockMeta, activeTab: StockTab): HTMLEle
       el('b', { text: meta.latest_report }),
       document.createTextNode(` · ${meta.latest_report_date} ${timing}`),
       el('br'),
-      document.createTextNode(`数据更新 [${meta.updated_at_bj} 北京]`),
+      document.createTextNode(`数据更新 ${meta.updated_at_bj} 北京`),
     ]),
   ]);
 
@@ -48,32 +48,32 @@ export function renderStockHeader(meta: StockMeta, activeTab: StockTab): HTMLEle
       displayValue(h.ev, '[$xxxB]'),
       `市值 − 净现金 $${h.net_cash_b ?? '[ ]'}B`,
     ),
-    metric('Forward PE（NTM）', displayValue(h.forward_pe_ntm, '[x.x]'), '股价 ÷ 未来 4 季共识 EPS'),
-    metric('做空比例', displayValue(h.short_interest, '[x.x%]'), '占流通股 · 半月更新'),
+    metric('Forward PE（NTM）', displayValue(h.forward_pe_ntm, '未接入'), '股价 ÷ 未来 12 个月共识 EPS'),
+    metric('做空比例', displayValue(h.short_interest, '未接入'), '占流通股 · 半月更新'),
     metric(
       '下次财报',
-      displayValue(h.next_earnings, '[2026-12-xx]'),
-      `隐含波动 ${displayValue(h.implied_move, '[±x%]')}`,
+      displayValue(h.next_earnings, '未接入'),
+      `隐含波动 ${displayValue(h.implied_move, '未接入')}`,
     ),
   ]);
 
   const more = el('details', { className: 'more-metrics' });
   more.appendChild(el('summary', { text: '更多指标 ▾' }));
   const panel = el('div', { className: 'more-metrics__panel' }, [
-    metric('52 周区间', displayValue(h.week52, '[xx – xxx]'), '距高点 [−x%]'),
-    metric('EV / EBITDA（NTM）', displayValue(h.ev_ebitda_ntm, '[x.x]'), ''),
+    metric('52 周区间', displayValue(h.week52, '未接入'), ''),
+    metric('EV / EBITDA（NTM）', displayValue(h.ev_ebitda_ntm, '未接入'), ''),
     metric(
       '股息',
-      h.dividend_quarterly != null ? `$${h.dividend_quarterly} / 季` : '[ ]',
-      `股息率 ${displayValue(h.dividend_yield, '[x.x%]')}`,
+      h.dividend_quarterly != null ? `$${h.dividend_quarterly} / 季` : '未接入',
+      `股息率 ${displayValue(h.dividend_yield, '未接入')}`,
     ),
     metric(
       '分析师目标价',
       displayValue(h.target_price, '[$xxx]'),
       displayValue(h.ratings, '买入 [x] · 持有 [x] · 卖出 [x]'),
     ),
-    metric('机构 / 内部人持股', displayValue(h.inst_insider, '[xx%] / [x%]'), '90 天内部人净买入 [ ]'),
-    metric('空头回补天数', displayValue(h.days_to_cover, '[x.x]'), '上期 [x.x]'),
+    metric('机构 / 内部人持股', displayValue(h.inst_insider, '未接入'), '90 天内部人净买入未接入'),
+    metric('空头回补天数', displayValue(h.days_to_cover, '未接入'), ''),
   ]);
   const tip = el('div', {
     className: 'footnote',

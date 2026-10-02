@@ -13,7 +13,7 @@ npm install
 npm run dev          # http://127.0.0.1:43123/stock_investing_dashboard/
 ```
 
-财务报表与 StockHeader 优先读 `data/pages/MU/*.json`（无则回退 sample）。
+页面只读 `data/pages/`。没有生成数据时显示加载错误，不会把 MU 样例套到其他代码上。开发服务器会优先读仓库根目录的 `data/`。
 
 ```bash
 # Python 数据管道
@@ -48,7 +48,9 @@ cd web && npm test
 
 1. 仓库 Settings → Pages → Source 选 **GitHub Actions**。
 2. push 到 `main` 触发 `pages.yml`。
-3. `data.yml` 工作日定时抓取共识 / 实际 / 股价 / XBRL 财务报表；共识按**绝对财期名**（如 `FQ1-27`）写入 `data/snapshots/`。可在 Actions 里手动 Run workflow。
+3. `data.yml` 工作日刷新观察池里的全部股票，并把 `data/` 与 `web/public/data/` 一起提交。共识只写入 `data/snapshots/<T>/YYYY-MM-DD.json`。
+4. `pages.yml` 除了 push 到 `main`，还会在「Daily data refresh」或「Earnings night snapshot」成功后部署。`GITHUB_TOKEN` 的 push 不会再触发 Pages，所以不能只靠 push 事件。
+5. 仓库变量 `SEC_USER_AGENT`（Settings → Secrets and variables → Actions → Variables，不是 Secret）必须设成带联系方式的字符串，例如 README 里的本地示例。云端代理如果要抓 SEC，把同一个值放进 Cursor 的环境密钥，不要写进仓库。
 
 线上：`https://cool1990.github.io/stock_investing_dashboard/`
 

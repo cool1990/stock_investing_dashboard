@@ -1,0 +1,12 @@
+{
+  "ticker": "NVDA",
+  "periods": [
+    {
+      "period": "FQ2-27",
+      "label": "FQ2-27",
+      "status": "not_connected",
+      "href": "#/NVDA/call/FQ2-27"
+    }
+  ],
+  "latest": "FQ2-27"
+}

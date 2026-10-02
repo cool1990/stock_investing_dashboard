@@ -14,9 +14,9 @@
       "vs_cons": 0.0565,
       "vs_cons_tone": "up",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     },
     {
@@ -32,27 +32,27 @@
       "vs_cons": null,
       "vs_cons_tone": "na",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     },
     {
       "key": "opm",
       "label": "营业利润率",
       "basis": "GAAP",
-      "value": null,
+      "value": 80.7,
       "unit": "%",
-      "yoy": null,
-      "yoy_tone": "na",
-      "qoq": null,
-      "qoq_tone": "na",
+      "yoy": 0.4838,
+      "yoy_tone": "up",
+      "qoq": 0.0031,
+      "qoq_tone": "up",
       "vs_cons": null,
       "vs_cons_tone": "na",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     },
     {
@@ -68,9 +68,9 @@
       "vs_cons": null,
       "vs_cons_tone": "na",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     },
     {
@@ -79,23 +79,23 @@
       "basis": "Non-GAAP",
       "value": 33.42,
       "unit": "$",
-      "yoy": null,
-      "yoy_tone": "na",
-      "qoq": 0.3547,
+      "yoy": 10.0297,
+      "yoy_tone": "up",
+      "qoq": 0.3309,
       "qoq_tone": "up",
       "vs_cons": 0.0536,
       "vs_cons_tone": "up",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     },
     {
       "key": "fcf",
       "label": "自由现金流",
-      "basis": "GAAP 近似",
-      "value": null,
+      "basis": "公司口径",
+      "value": 33.2,
       "unit": "B",
       "yoy": null,
       "yoy_tone": "na",
@@ -104,9 +104,9 @@
       "vs_cons": null,
       "vs_cons_tone": "na",
       "why": {
-        "text": null,
+        "text": "未接入",
         "refs": [],
-        "status": "pending_ai"
+        "status": "not_connected"
       }
     }
   ],
@@ -120,8 +120,10 @@
             "name": "营收",
             "v": "$61.5B",
             "value": "$61.5B",
-            "qoq": null,
-            "yoy": null,
+            "qoq": 0.1341,
+            "qoq_tone": "up",
+            "yoy": 3.5078,
+            "yoy_tone": "up",
             "vs_cons": null,
             "vs_cons_tone": "na"
           },
@@ -130,8 +132,22 @@
             "name": "摊薄 EPS",
             "v": "$38.15",
             "value": "$38.15",
-            "qoq": null,
+            "qoq": 0.1415,
+            "qoq_tone": "up",
+            "yoy": 6.9812,
+            "yoy_tone": "up",
+            "vs_cons": 0.0934,
+            "vs_cons_tone": "up"
+          },
+          {
+            "metric": "毛利率",
+            "name": "毛利率（Non-GAAP）",
+            "v": "86.25%",
+            "value": "86.25%",
+            "qoq": "−0.8pp",
+            "qoq_tone": "down",
             "yoy": null,
+            "yoy_tone": "na",
             "vs_cons": null,
             "vs_cons_tone": "na"
           }
@@ -139,9 +155,9 @@
       }
     ],
     "reasons": {
-      "text": null,
+      "text": "未接入",
       "refs": [],
-      "status": "pending_ai"
+      "status": "not_connected"
     }
   }
 }

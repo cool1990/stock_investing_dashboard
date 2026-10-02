@@ -1,0 +1,305 @@
+{
+  "eps_basis": "non_gaap",
+  "quarters": {},
+  "years": {},
+  "raw": {
+    "yahoo_eps_by_release": {
+      "2026-07-27": {
+        "eps": 2.11,
+        "eps_estimate": 2.06,
+        "release_date": "2026-07-27",
+        "source": "yahoo"
+      },
+      "2026-04-27": {
+        "eps": 1.96,
+        "eps_estimate": 1.89,
+        "release_date": "2026-04-27",
+        "source": "yahoo"
+      },
+      "2026-02-17": {
+        "eps": 1.99,
+        "eps_estimate": 1.91,
+        "release_date": "2026-02-17",
+        "source": "yahoo"
+      },
+      "2025-10-27": {
+        "eps": 1.93,
+        "eps_estimate": 1.79,
+        "release_date": "2025-10-27",
+        "source": "yahoo"
+      },
+      "2025-07-28": {
+        "eps": 1.65,
+        "eps_estimate": 1.56,
+        "release_date": "2025-07-28",
+        "source": "yahoo"
+      },
+      "2025-04-28": {
+        "eps": 1.57,
+        "eps_estimate": 1.5,
+        "release_date": "2025-04-28",
+        "source": "yahoo"
+      },
+      "2025-02-18": {
+        "eps": 1.88,
+        "eps_estimate": 1.82,
+        "release_date": "2025-02-18",
+        "source": "yahoo"
+      },
+      "2024-10-28": {
+        "eps": 1.64,
+        "eps_estimate": 1.44,
+        "release_date": "2024-10-28",
+        "source": "yahoo"
+      },
+      "2024-07-22": {
+        "eps": 1.28,
+        "eps_estimate": 1.23,
+        "release_date": "2024-07-22",
+        "source": "yahoo"
+      },
+      "2024-04-22": {
+        "eps": 1.17,
+        "eps_estimate": 1.13,
+        "release_date": "2024-04-22",
+        "source": "yahoo"
+      },
+      "2024-02-12": {
+        "eps": 1.38,
+        "eps_estimate": 1.33,
+        "release_date": "2024-02-12",
+        "source": "yahoo"
+      },
+      "2023-10-23": {
+        "eps": 1.26,
+        "eps_estimate": 1.22,
+        "release_date": "2023-10-23",
+        "source": "yahoo"
+      },
+      "2023-07-24": {
+        "eps": 1.22,
+        "eps_estimate": 1.19,
+        "release_date": "2023-07-24",
+        "source": "yahoo"
+      },
+      "2023-04-24": {
+        "eps": 1.29,
+        "eps_estimate": 1.25,
+        "release_date": "2023-04-24",
+        "source": "yahoo"
+      },
+      "2023-02-13": {
+        "eps": 0.96,
+        "eps_estimate": 0.92,
+        "release_date": "2023-02-13",
+        "source": "yahoo"
+      },
+      "2022-10-24": {
+        "eps": 1.06,
+        "eps_estimate": 0.96,
+        "release_date": "2022-10-24",
+        "source": "yahoo"
+      },
+      "2022-07-25": {
+        "eps": 1.08,
+        "eps_estimate": 0.97,
+        "release_date": "2022-07-25",
+        "source": "yahoo"
+      },
+      "2022-04-25": {
+        "eps": 1.17,
+        "eps_estimate": 1.0,
+        "release_date": "2022-04-25",
+        "source": "yahoo"
+      },
+      "2022-02-22": {
+        "eps": 0.82,
+        "eps_estimate": 0.78,
+        "release_date": "2022-02-22",
+        "source": "yahoo"
+      },
+      "2021-10-25": {
+        "eps": 0.8,
+        "eps_estimate": 0.75,
+        "release_date": "2021-10-25",
+        "source": "yahoo"
+      },
+      "2021-07-26": {
+        "eps": 0.86,
+        "eps_estimate": 0.76,
+        "release_date": "2021-07-26",
+        "source": "yahoo"
+      },
+      "2021-04-26": {
+        "eps": 0.83,
+        "eps_estimate": 0.74,
+        "release_date": "2021-04-26",
+        "source": "yahoo"
+      },
+      "2021-02-22": {
+        "eps": 0.83,
+        "eps_estimate": 0.74,
+        "release_date": "2021-02-22",
+        "source": "yahoo"
+      },
+      "2020-10-19": {
+        "eps": 0.7,
+        "eps_estimate": 0.61,
+        "release_date": "2020-10-19",
+        "source": "yahoo"
+      },
+      "2020-07-20": {
+        "eps": 0.66,
+        "eps_estimate": 0.52,
+        "release_date": "2020-07-20",
+        "source": "yahoo"
+      },
+      "2020-04-20": {
+        "eps": 0.6,
+        "eps_estimate": 0.54,
+        "release_date": "2020-04-20",
+        "source": "yahoo"
+      },
+      "2020-02-12": {
+        "eps": 0.54,
+        "eps_estimate": 0.53,
+        "release_date": "2020-02-12",
+        "source": "yahoo"
+      },
+      "2019-10-21": {
+        "eps": 0.54,
+        "eps_estimate": 0.51,
+        "release_date": "2019-10-21",
+        "source": "yahoo"
+      },
+      "2019-07-22": {
+        "eps": 0.57,
+        "eps_estimate": 0.53,
+        "release_date": "2019-07-22",
+        "source": "yahoo"
+      },
+      "2019-04-22": {
+        "eps": 0.54,
+        "eps_estimate": 0.49,
+        "release_date": "2019-04-22",
+        "source": "yahoo"
+      },
+      "2019-02-19": {
+        "eps": 0.52,
+        "eps_estimate": 0.47,
+        "release_date": "2019-02-19",
+        "source": "yahoo"
+      },
+      "2018-10-22": {
+        "eps": 0.49,
+        "eps_estimate": 0.41,
+        "release_date": "2018-10-22",
+        "source": "yahoo"
+      },
+      "2018-07-23": {
+        "eps": 0.45,
+        "eps_estimate": 0.4,
+        "release_date": "2018-07-23",
+        "source": "yahoo"
+      },
+      "2018-04-23": {
+        "eps": 0.4,
+        "eps_estimate": 0.37,
+        "release_date": "2018-04-23",
+        "source": "yahoo"
+      },
+      "2018-01-31": {
+        "eps": 0.39,
+        "eps_estimate": 0.39,
+        "release_date": "2018-01-31",
+        "source": "yahoo"
+      },
+      "2017-10-26": {
+        "eps": 0.35,
+        "eps_estimate": 0.34,
+        "release_date": "2017-10-26",
+        "source": "yahoo"
+      },
+      "2017-07-24": {
+        "eps": 0.34,
+        "eps_estimate": 0.32,
+        "release_date": "2017-07-24",
+        "source": "yahoo"
+      },
+      "2017-04-24": {
+        "eps": 0.32,
+        "eps_estimate": 0.32,
+        "release_date": "2017-04-24",
+        "source": "yahoo"
+      },
+      "2017-02-01": {
+        "eps": 0.34,
+        "eps_estimate": 0.33,
+        "release_date": "2017-02-01",
+        "source": "yahoo"
+      },
+      "2016-10-24": {
+        "eps": 0.3,
+        "eps_estimate": 0.28,
+        "release_date": "2016-10-24",
+        "source": "yahoo"
+      },
+      "2016-07-25": {
+        "eps": 0.29,
+        "eps_estimate": 0.28,
+        "release_date": "2016-07-25",
+        "source": "yahoo"
+      },
+      "2016-04-25": {
+        "eps": 0.28,
+        "eps_estimate": 0.27,
+        "release_date": "2016-04-25",
+        "source": "yahoo"
+      },
+      "2016-02-03": {
+        "eps": 0.31,
+        "eps_estimate": 0.29,
+        "release_date": "2016-02-03",
+        "source": "yahoo"
+      },
+      "2015-10-26": {
+        "eps": 0.28,
+        "eps_estimate": 0.26,
+        "release_date": "2015-10-26",
+        "source": "yahoo"
+      },
+      "2015-07-27": {
+        "eps": 0.27,
+        "eps_estimate": 0.24,
+        "release_date": "2015-07-27",
+        "source": "yahoo"
+      },
+      "2015-04-27": {
+        "eps": 0.23,
+        "eps_estimate": 0.21,
+        "release_date": "2015-04-27",
+        "source": "yahoo"
+      },
+      "2015-02-04": {
+        "eps": 0.27,
+        "eps_estimate": 0.27,
+        "release_date": "2015-02-04",
+        "source": "yahoo"
+      },
+      "2014-10-20": {
+        "eps": 0.26,
+        "eps_estimate": 0.24,
+        "release_date": "2014-10-20",
+        "source": "yahoo"
+      },
+      "2014-07-21": {
+        "eps": 0.21,
+        "eps_estimate": 0.2,
+        "release_date": "2014-07-21",
+        "source": "yahoo"
+      }
+    },
+    "sec_revenue_by_end": {}
+  },
+  "updated_at": "2026-10-01T15:47:45Z"
+}

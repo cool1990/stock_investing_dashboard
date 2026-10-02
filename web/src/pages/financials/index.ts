@@ -56,10 +56,8 @@ function formatCell(r: FinRow, v: number | null | undefined, unit: 'M' | 'B'): s
   if (v == null) return MISSING;
   if (r.fmt === 'eps') return `$${v.toFixed(2)}`;
   if (r.fmt === 'days' || r.unit === '天') return String(Math.round(v));
-  if (r.fmt === 'pct' || r.fmt === 'ratio' || r.unit === '%') {
-    const pct = Math.abs(v) <= 1.5 ? v * 100 : v;
-    return `${pct.toFixed(1)}%`;
-  }
+  if (r.fmt === 'ratio') return `${(v * 100).toFixed(1)}%`;
+  if (r.fmt === 'pct' || r.unit === '%') return `${v.toFixed(1)}%`;
   return formatAmtMillions(v, unit);
 }
 

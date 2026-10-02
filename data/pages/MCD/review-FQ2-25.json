@@ -1,0 +1,259 @@
+{
+  "period": "FQ2-25",
+  "content_origin": "pipeline",
+  "release": {
+    "date": null,
+    "timing": "before_open",
+    "press_url": null,
+    "remarks_url": null
+  },
+  "verdict": {
+    "label": "待判定",
+    "line": {
+      "rev_surp": null,
+      "rev_surp_tone": "na",
+      "eps_surp": null,
+      "eps_surp_tone": "na",
+      "guide_vs_cons": [
+        null,
+        null
+      ],
+      "guide_vs_cons_tone": [
+        "na",
+        "na"
+      ]
+    },
+    "summary": {
+      "text": "未接入：解读文案没有自动数据源，需手动 AI 任务。此页不使用样例总结。",
+      "refs": [],
+      "prompt_version": "review_summary_v2",
+      "status": "not_connected"
+    },
+    "watch": []
+  },
+  "cards": [
+    {
+      "key": "rev",
+      "label": "营收",
+      "basis": "GAAP",
+      "value": 6.84,
+      "unit": "B",
+      "yoy": 0.0544,
+      "yoy_tone": "up",
+      "qoq": 0.1489,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    },
+    {
+      "key": "gm",
+      "label": "毛利率",
+      "basis": "GAAP",
+      "value": null,
+      "unit": "%",
+      "yoy": null,
+      "yoy_tone": "na",
+      "qoq": null,
+      "qoq_tone": "na",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    },
+    {
+      "key": "opm",
+      "label": "营业利润率",
+      "basis": "GAAP",
+      "value": 47.2,
+      "unit": "%",
+      "yoy": 0.0224,
+      "yoy_tone": "up",
+      "qoq": 0.0277,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    },
+    {
+      "key": "nim",
+      "label": "净利润率",
+      "basis": "GAAP",
+      "value": 32.9,
+      "unit": "%",
+      "yoy": 0.0177,
+      "yoy_tone": "up",
+      "qoq": 0.0156,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    },
+    {
+      "key": "eps",
+      "label": "摊薄 EPS",
+      "basis": "GAAP",
+      "value": 3.14,
+      "unit": "$",
+      "yoy": 0.1214,
+      "yoy_tone": "up",
+      "qoq": 0.2077,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    },
+    {
+      "key": "fcf",
+      "label": "自由现金流",
+      "basis": "CFO−毛Capex",
+      "value": 1.25,
+      "unit": "B",
+      "yoy": 0.1819,
+      "yoy_tone": "up",
+      "qoq": -0.3319,
+      "qoq_tone": "down",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    }
+  ],
+  "metrics": {
+    "rev": {
+      "label": "营收",
+      "basis": "GAAP · $B",
+      "q": {
+        "labels": [
+          "FQ3-23",
+          "FQ4-23",
+          "FQ1-24",
+          "FQ2-24",
+          "FQ3-24",
+          "FQ4-24",
+          "FQ1-25",
+          "FQ2-25",
+          "FQ3-25",
+          "FQ4-25",
+          "FQ1-26",
+          "FQ2-26"
+        ],
+        "v": [
+          6.692,
+          6.406,
+          6.169,
+          6.49,
+          6.873,
+          6.388,
+          5.956,
+          6.843,
+          7.078,
+          7.009,
+          6.517,
+          7.099
+        ],
+        "yoy": [
+          0.1396,
+          0.0808,
+          0.0459,
+          -0.0012,
+          0.027,
+          -0.0028,
+          -0.0345,
+          0.0544,
+          0.0298,
+          0.0972,
+          0.0942,
+          0.0374
+        ],
+        "qoq": [
+          0.0299,
+          -0.0427,
+          -0.037,
+          0.052,
+          0.059,
+          -0.0706,
+          -0.0676,
+          0.1489,
+          0.0343,
+          -0.0097,
+          -0.0702,
+          0.0893
+        ]
+      },
+      "y": {
+        "labels": [],
+        "v": [],
+        "yoy": [],
+        "qoq": []
+      },
+      "hist_note": "由财务报表重算。",
+      "struct": []
+    }
+  },
+  "guidance": {
+    "groups": [
+      {
+        "title": "下季指引 FQ3-25",
+        "rows": [
+          {
+            "metric": "营收",
+            "name": "营收",
+            "v": null,
+            "value": null,
+            "qoq": null,
+            "qoq_tone": "na",
+            "yoy": null,
+            "yoy_tone": "na",
+            "vs_cons": null,
+            "vs_cons_tone": "na"
+          },
+          {
+            "metric": "EPS",
+            "name": "摊薄 EPS",
+            "v": null,
+            "value": null,
+            "qoq": null,
+            "qoq_tone": "na",
+            "yoy": null,
+            "yoy_tone": "na",
+            "vs_cons": null,
+            "vs_cons_tone": "na"
+          }
+        ]
+      }
+    ],
+    "reasons": {
+      "text": "未接入",
+      "refs": [],
+      "status": "not_connected"
+    }
+  },
+  "talk": {
+    "mgmt": [],
+    "qa": []
+  },
+  "ai_status": "not_connected"
+}

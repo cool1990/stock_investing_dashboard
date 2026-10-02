@@ -1,0 +1,31 @@
+{
+  "ticker": "CRWV",
+  "name_en": "CoreWeave",
+  "name_zh": "CoreWeave",
+  "exchange": "纳斯达克",
+  "sector": "AI 云",
+  "updated_at_bj": "2026-10-01 23:49",
+  "latest_report": "FQ2-26",
+  "latest_report_date": "—",
+  "release_timing": "after_close",
+  "header": {
+    "price": 87.12,
+    "price_1d": "+1.4%",
+    "price_ytd": "+21.7%",
+    "market_cap": "$40.0B",
+    "ev": null,
+    "net_cash_b": null,
+    "forward_pe_ntm": null,
+    "short_interest": "未接入",
+    "next_earnings": "2026-11-11（预估）",
+    "implied_move": "未接入",
+    "week52": "$61 – $143",
+    "ev_ebitda_ntm": "未接入",
+    "dividend_quarterly": null,
+    "dividend_yield": null,
+    "target_price": 141.58,
+    "ratings": "buy · 38 家",
+    "inst_insider": "未接入",
+    "days_to_cover": "未接入"
+  }
+}

@@ -22,63 +22,36 @@ jobs:
           cache: pip
       - name: Install deps
         run: pip install -r requirements.txt
-      - name: Fetch consensus snapshot
-        run: python3 scripts/fetch_consensus.py --ticker MU
-        continue-on-error: true
-      - name: Fetch actuals
-        run: python3 scripts/fetch_actuals.py --ticker MU
-        continue-on-error: true
-      - name: Fetch prices
-        run: python3 scripts/fetch_prices.py --ticker MU
-        continue-on-error: true
-      - name: Diagnose XBRL tags
-        run: python3 scripts/diagnose_xbrl_tags.py --ticker MU
-        continue-on-error: true
-      - name: Fetch financials (XBRL)
-        run: python3 scripts/fetch_financials.py --ticker MU
-        continue-on-error: true
-      - name: Fetch filings (EDGAR)
-        run: python3 scripts/fetch_filings.py --tickers MU
-        continue-on-error: true
-      - name: Secondary (optional)
-        run: python3 scripts/fetch_secondary.py --ticker MU
-        continue-on-error: true
-      - name: Build pages
-        run: |
-          python3 scripts/build_history.py --ticker MU
-          python3 scripts/build_page_consensus.py --ticker MU
-          python3 scripts/build_page_financials.py --ticker MU
-          python3 scripts/build_page_header.py --ticker MU
-          python3 scripts/build_page_price.py --ticker MU
-          python3 scripts/build_page_review.py --ticker MU --period FQ4-26
-          python3 scripts/ai_prepare.py --ticker MU --period FQ4-26 --kind both
-          python3 scripts/build_page_call.py --ticker MU --period FQ4-26
-          python3 scripts/build_page_watchlist.py
-          python3 scripts/build_calendar_ics.py
-          python3 scripts/build_sources.py
+      - name: Refresh the whole watchlist
+        run: python3 scripts/run_watchlist.py
       - name: Verify absolute period keys
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import json, re, sys
-          snaps = sorted(Path("data/snapshots/MU").glob("*.json"))
-          if not snaps:
-              print("WARN: no snapshots yet"); sys.exit(0)
-          d = json.loads(snaps[-1].read_text())
-          keys = list((d.get("periods") or {}).keys())
-          print("latest", snaps[-1].name, "keys", keys)
-          bad = [k for k in keys if not re.fullmatch(r"(FQ[1-4]|FY)\d{2}", k)]
-          if bad:
-              raise SystemExit(f"non-absolute period keys: {bad}")
+          bad_files = []
+          snaps = sorted(Path("data/snapshots").glob("*/*.json"))
+          dated = [p for p in snaps if re.fullmatch(r"\d{4}-\d{2}-\d{2}", p.stem)]
+          if not dated:
+              print("ERROR: no dated snapshots"); sys.exit(1)
+          for path in dated:
+              d = json.loads(path.read_text())
+              keys = list((d.get("periods") or {}).keys())
+              bad = [k for k in keys if not re.fullmatch(r"(FQ[1-4]|FY)\d{2}", k)]
+              if bad:
+                  bad_files.append((str(path), bad))
+          if bad_files:
+              raise SystemExit(f"non-absolute period keys: {bad_files}")
+          print("checked", len(dated), "dated snapshots")
           PY
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data ai/tasks
+          git add data web/public/data ai/tasks
           if git diff --staged --quiet; then
             echo "No data changes"
           else
-            git commit -m "chore(data): refresh MU snapshots $(date -u +%Y-%m-%d)"
+            git commit -m "chore(data): refresh watchlist $(date -u +%Y-%m-%d)"
             git push
           fi

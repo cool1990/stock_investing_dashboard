@@ -1,0 +1,134 @@
+{
+  "ticker": "UBER",
+  "fetched_at": "2026-10-01T15:47:54Z",
+  "source": "yahoo",
+  "period_method": "8k_2.02",
+  "reported_through": "FQ2-26",
+  "price_close": null,
+  "periods": {
+    "FQ3-26": {
+      "type": "q",
+      "eps": {
+        "avg": 0.91568,
+        "low": 0.79,
+        "high": 1.133,
+        "n": 31,
+        "year_ago": 3.11
+      },
+      "rev": {
+        "avg": 14.67,
+        "low": 14.27,
+        "high": 15.2,
+        "n": 40,
+        "year_ago": 13.47
+      },
+      "eps_trend": {
+        "d7": 0.91568,
+        "d30": 0.95246,
+        "d60": 0.91859,
+        "d90": 0.91772,
+        "current": 0.91568
+      },
+      "revisions": {
+        "up7": 1.0,
+        "up30": 14.0,
+        "down7": null,
+        "down30": 11.0
+      }
+    },
+    "FQ4-26": {
+      "type": "q",
+      "eps": {
+        "avg": 1.00906,
+        "low": 0.63,
+        "high": 1.279,
+        "n": 30,
+        "year_ago": 0.14
+      },
+      "rev": {
+        "avg": 15.63,
+        "low": 14.71,
+        "high": 16.26,
+        "n": 39,
+        "year_ago": 14.37
+      },
+      "eps_trend": {
+        "d7": 1.00906,
+        "d30": 1.04806,
+        "d60": 1.02984,
+        "d90": 1.02867,
+        "current": 1.00906
+      },
+      "revisions": {
+        "up7": 1.0,
+        "up30": 11.0,
+        "down7": null,
+        "down30": 9.0
+      }
+    },
+    "FY26": {
+      "type": "y",
+      "eps": {
+        "avg": 3.19237,
+        "low": 2.43,
+        "high": 3.715,
+        "n": 38,
+        "year_ago": 4.73
+      },
+      "rev": {
+        "avg": 57.89,
+        "low": 56.67,
+        "high": 60.57,
+        "n": 50,
+        "year_ago": 52.02
+      },
+      "eps_trend": {
+        "d7": 3.19237,
+        "d30": 3.24546,
+        "d60": 3.01526,
+        "d90": 3.04555,
+        "current": 3.19237
+      },
+      "revisions": {
+        "up7": 1.0,
+        "up30": 27.0,
+        "down7": null,
+        "down30": 2.0
+      }
+    },
+    "FY27": {
+      "type": "y",
+      "eps": {
+        "avg": 4.55688,
+        "low": 3.15,
+        "high": 6.01,
+        "n": 39,
+        "year_ago": 3.19237
+      },
+      "rev": {
+        "avg": 66.79,
+        "low": 59.12,
+        "high": 69.84,
+        "n": 48,
+        "year_ago": 57.89
+      },
+      "eps_trend": {
+        "d7": 4.55406,
+        "d30": 4.63552,
+        "d60": 4.51612,
+        "d90": 4.46043,
+        "current": 4.55688
+      },
+      "revisions": {
+        "up7": 1.0,
+        "up30": 20.0,
+        "down7": null,
+        "down30": 9.0
+      }
+    }
+  },
+  "secondary": {
+    "source": "nasdaq",
+    "periods": {}
+  }
+}

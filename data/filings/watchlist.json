@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-02T01:46:39Z",
+  "updated_at": "2026-10-02T01:11:28Z",
   "items": [
     {
       "t": "MU",
@@ -16,6 +16,1263 @@
       ]
     },
     {
+      "t": "META",
+      "d": "2026-09-30",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014886/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-29",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408019/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-29",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408016/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-29",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408014/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-29",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408009/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-29",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408007/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-29",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408004/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-09-28",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014647/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-23",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000014/xslF345X06/wk-form4_1790196985.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-09-23",
+      "form": "8-K",
+      "type": "8-K · 7.01",
+      "title": "MCD 8-K items 7.01,9.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000076/mcd-20260923.htm",
+      "items": [
+        "7.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "META",
+      "d": "2026-09-23",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014403/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-09-23",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014402/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-22",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119903926000016/xslF345X06/wk-form4_1790110579.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-21",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000043/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-21",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000042/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-21",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000041/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-21",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000040/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-21",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000039/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-18",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000124382126000007/xslF345X06/wk-form4_1789766132.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-18",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000128385426000010/xslF345X06/wk-form4_1789766082.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-18",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000012/xslF345X06/wk-form4_1789766007.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-18",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000158867026000014/xslF345X06/wk-form4_1789765959.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-18",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764926000012/xslF345X06/wk-form4_1789765856.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-09-18",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000122415426000003/xslF345X06/wk-form4_1789769889.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-09-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000153/xslF345X06/wk-form4_1789677090.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-09-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000152/xslF345X06/wk-form4_1789677079.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-09-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000151/xslF345X06/wk-form4_1789677064.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-17",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000224/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-17",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000223/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-17",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000222/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-17",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000221/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-17",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000220/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-09-17",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014140/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000033/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000032/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-16",
+      "form": "8-K",
+      "type": "8-K · 5.02",
+      "title": "SNDK 8-K items 5.02",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026062267/sndk-20260910.htm",
+      "items": [
+        "5.02"
+      ]
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393517/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393515/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393513/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393511/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393509/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393506/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393503/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393500/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393497/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393494/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393491/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393485/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393483/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-09-16",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014061/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-15",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000214/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-15",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000213/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-15",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000212/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-09-14",
+      "form": "8-K",
+      "type": "8-K · 8.01",
+      "title": "AMZN 8-K items 8.01,9.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+      "items": [
+        "8.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-11",
+      "form": "8-K",
+      "type": "8-K · 1.01",
+      "title": "SNDK 8-K items 1.01,9.01",
+      "why": "重大协议",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000119312526389293/d138343d8k.htm",
+      "items": [
+        "1.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000215218826000005/xslF345X06/wk-form4_1789160684.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000208/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000207/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000206/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000205/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000204/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000203/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000202/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000201/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000200/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000199/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-09-11",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326013860/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-09-10",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "ADBE 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000147/adbe-20260910.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-10",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000188/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-09-10",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326013794/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-09-09",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000128432326000002/xslF345X06/wk-form4_1788987268.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-09-09",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000159560226000007/xslF345X06/wk-form4_1788986939.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-09-09",
+      "form": "8-K",
+      "type": "8-K · 5.02",
+      "title": "AMZN 8-K items 5.02",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000036/amzn-20260908.htm",
+      "items": [
+        "5.02"
+      ]
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000029/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000028/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000027/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000026/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000025/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000024/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119903926000014/xslF345X06/wk-form4_1788901755.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-09-08",
+      "form": "8-K",
+      "type": "8-K · 5.02",
+      "title": "ADBE 8-K items 5.02,7.01,9.01",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000144/adbe-20260902.htm",
+      "items": [
+        "5.02",
+        "7.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000186/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000185/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000184/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000183/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000182/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000181/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000180/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000179/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000178/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000177/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000176/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000175/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-09-08",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326013672/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-04",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764726000009/xslF345X06/wk-form4_1788555631.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-03",
+      "form": "8-K",
+      "type": "8-K · 8.01",
+      "title": "NVDA 8-K items 8.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm",
+      "items": [
+        "8.01"
+      ]
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-03",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526382332/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-09-03",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526382328/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-09-03",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000193600626000024/xslF345X06/wk-form4_1788468119.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-09-02",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000074/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-02",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119903926000012/xslF345X06/wk-form4_1788387031.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-09-02",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000010/xslF345X06/wk-form4_1788386836.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-02",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000161/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-02",
+      "form": "8-K",
+      "type": "8-K · 7.01",
+      "title": "MSFT 8-K items 7.01,9.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+      "items": [
+        "7.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-01",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000159/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-01",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000158/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-01",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000157/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-01",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000156/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-01",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000155/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-01",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000154/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MSFT",
+      "d": "2026-09-01",
+      "form": "4",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000153/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-08-31",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526377149/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
       "t": "MU",
       "d": "2026-08-28",
       "form": "4",
@@ -24,6 +1281,116 @@
       "why": null,
       "red": false,
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000179875726000007/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-08-27",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000072/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-08-27",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000071/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-08-27",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000070/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-08-27",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526371799/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-08-27",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526371797/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-08-27",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526371794/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-08-27",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526371788/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-08-27",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526371785/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-08-27",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526371778/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-27",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000104329826000002/xslF345X06/wk-form4_1787862279.xml",
       "items": []
     },
     {
@@ -41,6 +1408,20 @@
       ]
     },
     {
+      "t": "NVDA",
+      "d": "2026-08-26",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "NVDA 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
+    },
+    {
       "t": "MU",
       "d": "2026-08-25",
       "form": "4",
@@ -49,6 +1430,127 @@
       "why": null,
       "red": false,
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000015/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-25",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000137454526000010/xslF345X06/wk-form4_1787692115.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-25",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000202481326000010/xslF345X06/wk-form4_1787691690.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-25",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000193600626000022/xslF345X06/wk-form4_1787691176.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-25",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000155797926000008/xslF345X06/wk-form4_1787690696.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-25",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000163990226000008/xslF345X06/wk-form4_1787690246.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-25",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000139733326000006/xslF345X06/wk-form4_1787689790.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-08-24",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000066/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-08-24",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000065/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-08-24",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000064/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-08-24",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000063/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-08-24",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000134784226000015/xslF345X06/wk-form4_1787607122.xml",
       "items": []
     },
     {
@@ -61,6 +1563,503 @@
       "red": false,
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000131107926000003/xslF345X06/primarydocument.xml",
       "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-20",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012729/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-20",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012727/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-20",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012726/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-19",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000193600626000020/xslF345X06/wk-form4_1787174724.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012611/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012610/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012609/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012608/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012607/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012606/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012605/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012604/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012603/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012602/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012600/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-18",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012599/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-08-17",
+      "form": "8-K",
+      "type": "8-K · 1.01",
+      "title": "NVDA 8-K items 1.01,2.03,7.01",
+      "why": "重大协议",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
+      "items": [
+        "1.01",
+        "2.03",
+        "7.01"
+      ]
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-08-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000139/xslF345X06/wk-form4_1787001069.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-08-12",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000131026426000008/xslF345X06/wk-form4_1786569187.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-12",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326012279/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-08-11",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000173947326000003/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-08-11",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526345383/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-08-10",
+      "form": "8-K",
+      "type": "8-K · 8.01",
+      "title": "GOOGL 8-K items 8.01,9.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+      "items": [
+        "8.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-10",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000032/xslF345X06/wk-form4_1786407545.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-08-07",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764726000007/xslF345X06/wk-form4_1786135642.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-08-06",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526338824/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-06",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000116007726000008/xslF345X06/form4-08072026_010856.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-08-05",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "SNDK 8-K items 2.02,8.01,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026053346/sndk-20260805.htm",
+      "items": [
+        "2.02",
+        "8.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "META",
+      "d": "2026-08-05",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326011964/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-05",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000030/xslF345X06/wk-form4_1785962562.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-08-05",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000028/xslF345X06/wk-form4_1785962062.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-08-04",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000058/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-08-04",
+      "form": "8-K",
+      "type": "8-K · 5.02",
+      "title": "MCD 8-K items 5.02,7.01,9.01",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000069/mcd-20260803.htm",
+      "items": [
+        "5.02",
+        "7.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MCD",
+      "d": "2026-08-04",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "MCD 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000067/mcd-20260804.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "META",
+      "d": "2026-08-04",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326011909/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-08-04",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326011908/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-07-31",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000137/xslF345X06/wk-form4_1785531148.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-07-30",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526326284/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-07-30",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "AMZN 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260730.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-07-29",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000116840426000041/xslF345X06/form4-07292026_110704.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-07-29",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526324312/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-07-29",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326011342/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-07-29",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "META 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-20260729.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
     },
     {
       "t": "MU",
@@ -85,6 +2084,72 @@
       "items": []
     },
     {
+      "t": "GOOGL",
+      "d": "2026-07-28",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526321684/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-07-28",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526321683/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-07-28",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526321678/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-07-28",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526321676/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-07-28",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526321674/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "GOOGL",
+      "d": "2026-07-28",
+      "form": "4",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526321672/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
       "t": "MU",
       "d": "2026-07-27",
       "form": "4",
@@ -93,6 +2158,17 @@
       "why": null,
       "red": false,
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000165214926000005/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-07-22",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326011028/xslF345X06/ownership.xml",
       "items": []
     },
     {
@@ -107,6 +2183,143 @@
       "items": []
     },
     {
+      "t": "ADBE",
+      "d": "2026-07-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000135/xslF345X06/wk-form4_1784319856.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-07-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000134/xslF345X06/wk-form4_1784319848.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-07-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000133/xslF345X06/wk-form4_1784319839.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-07-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000132/xslF345X06/wk-form4_1784319831.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-07-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000131/xslF345X06/wk-form4_1784319822.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-07-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000130/xslF345X06/wk-form4_1784319814.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-07-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000129/xslF345X06/wk-form4_1784319806.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-07-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000214062626000006/xslF345X06/wk-form4_1784319781.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-07-17",
+      "form": "8-K",
+      "type": "8-K · 5.02",
+      "title": "ADBE 8-K items 5.02",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000120/adbe-20260714.htm",
+      "items": [
+        "5.02"
+      ]
+    },
+    {
+      "t": "META",
+      "d": "2026-07-15",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326010694/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-07-09",
+      "form": "8-K",
+      "type": "8-K · 8.01",
+      "title": "AMZN 8-K items 8.01,9.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926082293/tm2619352d4_8k.htm",
+      "items": [
+        "8.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "META",
+      "d": "2026-07-08",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326010417/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
       "t": "MU",
       "d": "2026-07-06",
       "form": "4",
@@ -115,6 +2328,28 @@
       "why": null,
       "red": false,
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000163206326000003/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-07-06",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764726000005/xslF345X06/wk-form4_1783371701.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-07-06",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326010283/xslF345X06/ownership.xml",
       "items": []
     },
     {
@@ -151,6 +2386,74 @@
       "items": []
     },
     {
+      "t": "SNDK",
+      "d": "2026-07-02",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000056/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-07-02",
+      "form": "8-K",
+      "type": "8-K · 5.02",
+      "title": "NVDA 8-K items 5.02",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm",
+      "items": [
+        "5.02"
+      ]
+    },
+    {
+      "t": "MCD",
+      "d": "2026-07-02",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000174593826000003/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-07-02",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000133221526000002/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-07-02",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000155433926000002/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-07-02",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000022/xslF345X06/wk-form4_1783023822.xml",
+      "items": []
+    },
+    {
       "t": "MU",
       "d": "2026-06-30",
       "form": "4",
@@ -173,6 +2476,129 @@
       "items": []
     },
     {
+      "t": "NVDA",
+      "d": "2026-06-30",
+      "form": "8-K",
+      "type": "8-K · 5.07",
+      "title": "NVDA 8-K items 5.07",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000056/nvda-20260624.htm",
+      "items": [
+        "5.07"
+      ]
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-29",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119903926000009/xslF345X06/wk-form4_1782767219.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-29",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000172529226000004/xslF345X06/wk-form4_1782767179.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-29",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119765226000007/xslF345X06/wk-form4_1782767137.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-29",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000176867026000004/xslF345X06/wk-form4_1782767093.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-29",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000128411626000004/xslF345X06/wk-form4_1782767057.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-29",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119765026000002/xslF345X06/wk-form4_1782767025.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-29",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000121988826000002/xslF345X06/wk-form4_1782766973.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-29",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000181822426000006/xslF345X06/wk-form4_1782766926.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-29",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764726000003/xslF345X06/wk-form4_1782766872.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-06-26",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000118/xslF345X06/wk-form4_1782505207.xml",
+      "items": []
+    },
+    {
       "t": "MU",
       "d": "2026-06-24",
       "form": "8-K",
@@ -183,6 +2609,210 @@
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/mu-20260624.htm",
       "items": [
         "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-23",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119903926000007/xslF345X06/wk-form4_1782247316.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-23",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000008/xslF345X06/wk-form4_1782209038.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-23",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000128385426000008/xslF345X06/wk-form4_1782208976.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-23",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000158867026000012/xslF345X06/wk-form4_1782208938.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-23",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000134784226000013/xslF345X06/wk-form4_1782208887.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-23",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764926000010/xslF345X06/wk-form4_1782208834.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-06-22",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000054/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-18",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764926000008/xslF345X06/wk-form4_1781816696.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-18",
+      "form": "8-K",
+      "type": "8-K · 8.01",
+      "title": "NVDA 8-K items 8.01,9.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119312526275783/d48176d8k.htm",
+      "items": [
+        "8.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-06-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000214062626000004/xslF345X06/wk-form4_1781730595.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-06-17",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326009177/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-06-17",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326009174/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-06-17",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326009173/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-06-17",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326009172/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "META",
+      "d": "2026-06-17",
+      "form": "4",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326009171/xslF345X06/ownership.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-06-16",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000164372426000003/xslF345X06/wk-form4_1781659850.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-06-16",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000116/xslF345X06/wk-form4_1781659315.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-06-12",
+      "form": "8-K",
+      "type": "8-K · 8.01",
+      "title": "AMZN 8-K items 8.01,9.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926073562/tm2613616d5_8k.htm",
+      "items": [
+        "8.01",
         "9.01"
       ]
     },
@@ -198,6 +2828,58 @@
       "items": []
     },
     {
+      "t": "ADBE",
+      "d": "2026-06-11",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "ADBE 8-K items 2.02,5.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000109/adbe-20260608.htm",
+      "items": [
+        "2.02",
+        "5.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-10",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000124382126000005/xslF345X06/wk-form4_1781125804.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-06-10",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000168580026000015/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-06-10",
+      "form": "8-K",
+      "type": "8-K · 1.01",
+      "title": "AMZN 8-K items 1.01,2.03,9.01",
+      "why": "重大协议",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926072140/tm2613616d4_8k.htm",
+      "items": [
+        "1.01",
+        "2.03",
+        "9.01"
+      ]
+    },
+    {
       "t": "MU",
       "d": "2026-06-09",
       "form": "8-K",
@@ -210,6 +2892,39 @@
         "5.02",
         "9.01"
       ]
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-06-05",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000052/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "NVDA",
+      "d": "2026-06-05",
+      "form": "4",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000176867026000002/xslF345X06/wk-form4_1780693972.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-06-03",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000193600626000018/xslF345X06/wk-form4_1780518424.xml",
+      "items": []
     },
     {
       "t": "MU",
@@ -234,6 +2949,288 @@
       "items": []
     },
     {
+      "t": "SNDK",
+      "d": "2026-06-02",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000048/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-06-01",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000172393726000005/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-27",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000046/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-27",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000045/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-27",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000044/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-05-27",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000168580026000013/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-26",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000137454526000008/xslF345X06/wk-form4_1779835625.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-26",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000202481326000008/xslF345X06/wk-form4_1779835185.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-26",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000020/xslF345X06/wk-form4_1779834787.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-26",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000155797926000006/xslF345X06/wk-form4_1779834363.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-26",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000163990226000006/xslF345X06/wk-form4_1779833908.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-26",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000018/xslF345X06/wk-form4_1779833555.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-22",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000040/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-22",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000039/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-22",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000038/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-22",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000037/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-05-22",
+      "form": "8-K",
+      "type": "8-K · 5.07",
+      "title": "MCD 8-K items 5.07",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000055/mcd-20260520.htm",
+      "items": [
+        "5.07"
+      ]
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-22",
+      "form": "8-K",
+      "type": "8-K · 5.07",
+      "title": "AMZN 8-K items 5.07",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926065717/tm2614288d1_8k.htm",
+      "items": [
+        "5.07"
+      ]
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-19",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000202481326000006/xslF345X06/wk-form4_1779225197.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-19",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000193600626000016/xslF345X06/wk-form4_1779224693.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-19",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000185110126000002/xslF345X06/wk-form4_1779224183.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-19",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000118381826000005/xslF345X06/wk-form4_1779223704.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-15",
+      "form": "8-K",
+      "type": "8-K · 8.01",
+      "title": "SNDK 8-K items 8.01,9.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000119312526224694/d157363d8k.htm",
+      "items": [
+        "8.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-14",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000032/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-14",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000031/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
       "t": "MU",
       "d": "2026-05-13",
       "form": "4",
@@ -242,6 +3239,42 @@
       "why": null,
       "red": false,
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000122409526000001/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "SNDK",
+      "d": "2026-05-11",
+      "form": "4",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000136324926000028/xslF345X06/edgardoc.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-05-07",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "MCD 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000048/mcd-20260507.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-06",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000137454526000006/xslF345X06/wk-form4_1778100121.xml",
       "items": []
     },
     {
@@ -267,6 +3300,135 @@
       "items": []
     },
     {
+      "t": "AMZN",
+      "d": "2026-05-05",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000193600626000014/xslF345X06/wk-form4_1778013858.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-05",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000016/xslF345X06/wk-form4_1778013416.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-05-04",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000120952226000008/xslF345X06/wk-form4_1777928327.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-05-01",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000107/xslF345X06/wk-form4_1777684649.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-30",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000105/xslF345X06/wk-form4_1777583385.xml",
+      "items": []
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-04-29",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "AMZN 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260429.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-04-28",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000120952226000006/xslF345X06/wk-form4_1777408932.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-04-23",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000168580026000011/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-22",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000103/xslF345X06/wk-form4_1776890002.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-21",
+      "form": "8-K",
+      "type": "8-K · 5.02",
+      "title": "ADBE 8-K items 5.02,5.07,8.01,9.01",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000101/adbe-20260415.htm",
+      "items": [
+        "5.02",
+        "5.07",
+        "8.01",
+        "9.01"
+      ]
+    },
+    {
+      "t": "AMZN",
+      "d": "2026-04-21",
+      "form": "4",
+      "type": "4",
+      "title": "AMZN 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000137454526000004/xslF345X06/wk-form4_1776804668.xml",
+      "items": []
+    },
+    {
       "t": "MU",
       "d": "2026-04-17",
       "form": "4",
@@ -275,6 +3437,160 @@
       "why": null,
       "red": false,
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000165214926000003/xslF345X06/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000097/xslF345X06/wk-form4_1776458315.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000095/xslF345X06/wk-form4_1776458263.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000094/xslF345X06/wk-form4_1776458256.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000093/xslF345X06/wk-form4_1776458249.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000092/xslF345X06/wk-form4_1776458241.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000091/xslF345X06/wk-form4_1776458225.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000090/xslF345X06/wk-form4_1776458175.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000089/xslF345X06/wk-form4_1776458165.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000088/xslF345X06/wk-form4_1776458157.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000087/xslF345X06/wk-form4_1776458150.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000083/xslF345X06/wk-form4_1776457714.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000082/xslF345X06/wk-form4_1776457706.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000081/xslF345X06/wk-form4_1776457697.xml",
+      "items": []
+    },
+    {
+      "t": "ADBE",
+      "d": "2026-04-17",
+      "form": "4",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000080/xslF345X06/wk-form4_1776457685.xml",
       "items": []
     },
     {
@@ -311,6 +3627,17 @@
       "items": []
     },
     {
+      "t": "MCD",
+      "d": "2026-04-13",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000168580026000009/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
       "t": "MU",
       "d": "2026-04-03",
       "form": "4",
@@ -344,13 +3671,26 @@
       "items": []
     },
     {
+      "t": "MCD",
+      "d": "2026-04-02",
+      "form": "8-K/A",
+      "type": "8-K/A · 5.02",
+      "title": "MCD 8-K/A items 5.02",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000042/mcd-20260330.htm",
+      "items": [
+        "5.02"
+      ]
+    },
+    {
       "t": "MU",
       "d": "2026-04-01",
       "form": "8-K",
       "type": "8-K · 8.01",
       "title": "MU 8-K items 8.01,9.01",
-      "why": "监管 / 诉讼",
-      "red": true,
+      "why": null,
+      "red": false,
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926038249/tm2610810d1_8k.htm",
       "items": [
         "8.01",
@@ -363,13 +3703,35 @@
       "form": "8-K",
       "type": "8-K · 8.01",
       "title": "MU 8-K items 8.01,9.01",
-      "why": "监管 / 诉讼",
-      "red": true,
+      "why": null,
+      "red": false,
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926034174/tm269755d1_8k.htm",
       "items": [
         "8.01",
         "9.01"
       ]
+    },
+    {
+      "t": "MCD",
+      "d": "2026-03-24",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000168580026000007/xslF345X06/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-03-19",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000207699826000003/xslF345X06/form4.xml",
+      "items": []
     },
     {
       "t": "MU",
@@ -382,6 +3744,221 @@
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/mu-20260318.htm",
       "items": [
         "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MCD",
+      "d": "2026-03-11",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000168580026000005/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-26",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000172393726000002/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-25",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000168580026000003/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-25",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000194355126000003/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000187685926000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000176747826000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000172393726000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000194349426000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000159811526000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000196294426000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000168580026000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000173947326000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000203579726000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000164733426000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000207699826000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-17",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000194355126000001/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-11",
+      "form": "8-K",
+      "type": "8-K · 2.02",
+      "title": "MCD 8-K items 2.02,9.01",
+      "why": "业绩发布",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000032/mcd-20260211.htm",
+      "items": [
+        "2.02",
+        "9.01"
+      ]
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-11",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000031/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-02-10",
+      "form": "8-K",
+      "type": "8-K · 5.02",
+      "title": "MCD 8-K items 5.02,9.01",
+      "why": "高管变动",
+      "red": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000028/mcd-20260204.htm",
+      "items": [
+        "5.02",
         "9.01"
       ]
     },
@@ -464,6 +4041,50 @@
       "why": null,
       "red": false,
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000205876926000002/xslF345X05/primarydocument.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-01-13",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000024/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-01-05",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000022/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-01-05",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000019/xslF345X05/form4.xml",
+      "items": []
+    },
+    {
+      "t": "MCD",
+      "d": "2026-01-05",
+      "form": "4",
+      "type": "4",
+      "title": "MCD 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000018/xslF345X05/form4.xml",
       "items": []
     }
   ]

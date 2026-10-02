@@ -12,7 +12,7 @@ export interface PricePage {
     string,
     { latest: number | null; latest_tone: string; avg8: number | null; up8: number | null }
   >;
-  vol: { avg_abs_move: number | null; avg_iv: number | null };
+  vol: { avg_abs_move: number | null; avg_iv: number | null; iv_note?: string };
   beat_but_down: { n: number | null; of: number; note?: string };
   series: { dates: string[]; close_adj: number[] };
   events: Array<{
@@ -30,6 +30,7 @@ export interface PricePage {
     t5: number | null;
     t5_tone: string;
     iv: number | null;
+    iv_note?: string;
     eps_surp: number | null;
     eps_surp_tone: string;
     rev_surp: number | null;
@@ -104,7 +105,9 @@ function scatter(events: PricePage['events']): HTMLElement {
 
 export function renderPricePage(data: PricePage): HTMLElement {
   const root = el('main', { className: 'main price-page' });
-  root.appendChild(renderBanner('股价反应 P0：结构与表格已就位；行情序列与期权 IV 在 P3 接入。'));
+  root.appendChild(
+    renderBanner('盘后用次日开盘相对前收盘近似，并标明「近似」。期权隐含波动未接入。'),
+  );
 
   root.appendChild(
     el('div', { className: 'section__head' }, [
@@ -139,7 +142,7 @@ export function renderPricePage(data: PricePage): HTMLElement {
       value:
         data.vol.avg_abs_move != null && data.vol.avg_iv != null
           ? `${formatRatioChange(data.vol.avg_abs_move)} / ${formatRatioChange(data.vol.avg_iv)}`
-          : null,
+          : data.vol.iv_note || '未接入',
       sub: '近 8 次 |Δ| 均 vs 期权隐含',
     }),
   );
@@ -176,15 +179,24 @@ export function renderPricePage(data: PricePage): HTMLElement {
         cells: [
           { text: e.q },
           { text: `${e.d} ${e.timing === 'after_close' ? '盘后' : '盘前'}` },
-          { text: formatRatioChange(e.ah), color: e.ah_tone },
+          {
+            text:
+              e.ah != null
+                ? `${formatRatioChange(e.ah)}${e.ah_note ? ` ${e.ah_note}` : ''}`
+                : e.ah_note || '未接入',
+            color: e.ah_tone,
+          },
           { text: formatRatioChange(e.close), color: e.close_tone },
           { text: formatRatioChange(e.t5), color: e.t5_tone },
-          { text: formatRatioChange(e.iv) },
+          { text: e.iv != null ? formatRatioChange(e.iv) : e.iv_note || '未接入' },
           { text: formatRatioChange(e.eps_surp), color: e.eps_surp_tone },
           { text: formatRatioChange(e.rev_surp), color: e.rev_surp_tone },
-          { text: formatRatioChange(e.guide_vs_cons), color: e.guide_vs_cons_tone },
           {
-            text: e.note.text ?? '[一句话：市场在交易什么]',
+            text: e.guide_vs_cons != null ? formatRatioChange(e.guide_vs_cons) : '未接入',
+            color: e.guide_vs_cons_tone,
+          },
+          {
+            text: e.note.text ?? '未接入',
             className: e.note.text ? '' : 'faint',
           },
         ],

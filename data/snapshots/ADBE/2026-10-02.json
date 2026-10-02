@@ -1,0 +1,134 @@
+{
+  "ticker": "ADBE",
+  "fetched_at": "2026-10-02T01:11:46Z",
+  "source": "yahoo",
+  "period_method": "8k_2.02",
+  "reported_through": "FQ3-26",
+  "price_close": null,
+  "periods": {
+    "FQ4-26": {
+      "type": "q",
+      "eps": {
+        "avg": 6.33138,
+        "low": 6.05,
+        "high": 6.35,
+        "n": 29,
+        "year_ago": 5.5
+      },
+      "rev": {
+        "avg": 6.83,
+        "low": 6.8,
+        "high": 6.94,
+        "n": 27,
+        "year_ago": 6.19
+      },
+      "eps_trend": {
+        "d7": 6.08663,
+        "d30": 6.07854,
+        "d60": 6.0792,
+        "d90": 5.77245,
+        "current": 6.08663
+      },
+      "revisions": {
+        "up7": 1.0,
+        "up30": 1.0,
+        "down7": null,
+        "down30": 0.0
+      }
+    },
+    "FQ1-27": {
+      "type": "q",
+      "eps": {
+        "avg": 6.76066,
+        "low": 6.29945,
+        "high": 7.32,
+        "n": 29,
+        "year_ago": 5.5
+      },
+      "rev": {
+        "avg": 7.05,
+        "low": 6.92,
+        "high": 7.59,
+        "n": 22,
+        "year_ago": 6.4
+      },
+      "eps_trend": {
+        "d7": 6.76066,
+        "d30": 6.74132,
+        "d60": 6.74252,
+        "d90": 6.73317,
+        "current": 6.76066
+      },
+      "revisions": {
+        "up7": 0.0,
+        "up30": 0.0,
+        "down7": 1.0,
+        "down30": 2.0
+      }
+    },
+    "FY26": {
+      "type": "y",
+      "eps": {
+        "avg": 24.48076,
+        "low": 24.45,
+        "high": 24.6,
+        "n": 34,
+        "year_ago": 20.94
+      },
+      "rev": {
+        "avg": 26.61,
+        "low": 26.58,
+        "high": 26.71,
+        "n": 34,
+        "year_ago": 23.77
+      },
+      "eps_trend": {
+        "d7": 24.47957,
+        "d30": 24.41209,
+        "d60": 24.4109,
+        "d90": 24.42853,
+        "current": 24.48076
+      },
+      "revisions": {
+        "up7": 0.0,
+        "up30": 0.0,
+        "down7": null,
+        "down30": 0.0
+      }
+    },
+    "FY27": {
+      "type": "y",
+      "eps": {
+        "avg": 27.67328,
+        "low": 26.0,
+        "high": 29.19,
+        "n": 36,
+        "year_ago": 24.48076
+      },
+      "rev": {
+        "avg": 29.05,
+        "low": 28.35,
+        "high": 29.79,
+        "n": 35,
+        "year_ago": 26.61
+      },
+      "eps_trend": {
+        "d7": 27.67166,
+        "d30": 27.49039,
+        "d60": 27.48687,
+        "d90": 27.53911,
+        "current": 27.67328
+      },
+      "revisions": {
+        "up7": 1.0,
+        "up30": 1.0,
+        "down7": null,
+        "down30": 1.0
+      }
+    }
+  },
+  "secondary": {
+    "source": "nasdaq",
+    "periods": {}
+  }
+}

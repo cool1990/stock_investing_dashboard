@@ -1,0 +1,21 @@
+ticker: UBER
+cik: 1543151
+name_en: Uber
+name_zh: 优步
+exchange: 纽交所
+sector: 出行平台
+fiscal:
+  quarter_end_months: [3, 6, 9, 12]
+  fy_label: end_year
+release_timing: after_close
+backfill_from: FQ1-22
+eps_basis: non_gaap
+ir:
+  prepared_remarks_url_pattern: null
+guidance: {}
+overrides:
+  actuals: {}
+  financials: {}
+peers: []
+header:
+  dividend_quarterly: null

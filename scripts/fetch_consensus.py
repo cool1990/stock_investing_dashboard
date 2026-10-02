@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from scripts.lib.anchor import resolve_reported_through  # noqa: E402
 from scripts.lib.fiscal import FiscalCalendar, yahoo_relative_to_absolute  # noqa: E402
 from scripts.lib.io import load_company, retry, update_status, write_json  # noqa: E402
 
@@ -54,6 +55,12 @@ def fetch_yahoo(ticker: str) -> dict:
     cfg = load_company(ticker)
     cal = FiscalCalendar(list(cfg["fiscal"]["quarter_end_months"]))
     as_of = datetime.now(timezone.utc).date()
+    year_ago_0q = None
+    if ee is not None and "0q" in getattr(ee, "index", []):
+        year_ago_0q = _num(ee.loc["0q"].get("yearAgoEps"))
+    reported_through, period_method = resolve_reported_through(
+        ticker, cal, as_of, year_ago_0q
+    )
 
     periods: dict = {}
 
@@ -80,7 +87,9 @@ def fetch_yahoo(ticker: str) -> dict:
                     end = end.date()
             except Exception:  # noqa: BLE001
                 end = None
-            period = yahoo_relative_to_absolute(cal, label, as_of, end_date=end)
+            period = yahoo_relative_to_absolute(
+                cal, label, as_of, end_date=end, reported_through=reported_through
+            )
             ptype = "q" if label.endswith("q") else "y"
             slot = ensure(period, ptype)
             slot["eps"] = {
@@ -102,7 +111,9 @@ def fetch_yahoo(ticker: str) -> dict:
                     end = end.date()
             except Exception:  # noqa: BLE001
                 pass
-            period = yahoo_relative_to_absolute(cal, label, as_of, end_date=end)
+            period = yahoo_relative_to_absolute(
+                cal, label, as_of, end_date=end, reported_through=reported_through
+            )
             ptype = "q" if label.endswith("q") else "y"
             slot = ensure(period, ptype)
             # Yahoo revenue often in absolute dollars
@@ -123,7 +134,9 @@ def fetch_yahoo(ticker: str) -> dict:
 
         if trend is not None and label in trend.index:
             row = trend.loc[label]
-            period = yahoo_relative_to_absolute(cal, label, as_of, end_date=end)
+            period = yahoo_relative_to_absolute(
+                cal, label, as_of, end_date=end, reported_through=reported_through
+            )
             ptype = "q" if label.endswith("q") else "y"
             slot = ensure(period, ptype)
             slot["eps_trend"] = {
@@ -136,7 +149,9 @@ def fetch_yahoo(ticker: str) -> dict:
 
         if revisions is not None and label in revisions.index:
             row = revisions.loc[label]
-            period = yahoo_relative_to_absolute(cal, label, as_of, end_date=end)
+            period = yahoo_relative_to_absolute(
+                cal, label, as_of, end_date=end, reported_through=reported_through
+            )
             ptype = "q" if label.endswith("q") else "y"
             slot = ensure(period, ptype)
             slot["revisions"] = {
@@ -150,6 +165,8 @@ def fetch_yahoo(ticker: str) -> dict:
         "ticker": ticker.upper(),
         "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source": "yahoo",
+        "period_method": period_method,
+        "reported_through": reported_through,
         "price_close": None,
         "periods": periods,
         "secondary": {"source": "nasdaq", "periods": {}},

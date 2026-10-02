@@ -9,7 +9,7 @@ import { renderFinancialsPage } from './pages/financials';
 import { renderCallPage } from './pages/call';
 import { renderPricePage } from './pages/price';
 import { renderSourcesPage } from './pages/sources';
-import { loadJson, sampleOrPage } from './lib/load';
+import { loadJson, pagePaths } from './lib/load';
 import type { ConsensusPage, StockMeta } from './lib/types';
 import { el } from './components/segmented';
 import { onRouteChange, parseHash, routeTab, type Route } from './router';
@@ -20,7 +20,7 @@ let watchlistFilter = '';
 
 async function loadStockMeta(ticker: string, fallback?: StockMeta): Promise<StockMeta> {
   try {
-    const h = await loadJson<StockMeta>(sampleOrPage('stockHeader', ticker));
+    const h = await loadJson<StockMeta>(pagePaths('stockHeader', ticker));
     return { ...h, ticker: h.ticker || ticker };
   } catch {
     if (fallback) return { ...fallback, ticker };
@@ -31,19 +31,19 @@ async function loadStockMeta(ticker: string, fallback?: StockMeta): Promise<Stoc
 async function loadRouteData(route: Route): Promise<unknown> {
   switch (route.name) {
     case 'watchlist':
-      return loadJson(sampleOrPage('watchlist'));
+      return loadJson(pagePaths('watchlist'));
     case 'sources':
-      return loadJson(sampleOrPage('sources'));
+      return loadJson(pagePaths('sources'));
     case 'review':
-      return loadJson(sampleOrPage('review', route.ticker));
+      return loadJson(pagePaths('review', route.ticker, route.period));
     case 'financials':
-      return loadJson(sampleOrPage('financials', route.ticker));
+      return loadJson(pagePaths('financials', route.ticker));
     case 'call':
-      return loadJson(sampleOrPage('call', route.ticker));
+      return loadJson(pagePaths('call', route.ticker, route.period));
     case 'consensus':
-      return loadJson<ConsensusPage>(sampleOrPage('consensus', route.ticker));
+      return loadJson<ConsensusPage>(pagePaths('consensus', route.ticker));
     case 'price':
-      return loadJson(sampleOrPage('price', route.ticker));
+      return loadJson(pagePaths('price', route.ticker));
     default:
       return null;
   }
@@ -141,8 +141,8 @@ async function render() {
         text: err instanceof Error ? err.message : '加载失败',
       }),
       el('div', { className: 'placeholder-page' }, [
-        el('p', { text: '目前样例数据主要覆盖 MU。' }),
-        el('a', { href: '#/MU', text: '打开 MU 财报解读' }),
+        el('p', { text: '这只股票还没有生成页面数据。' }),
+        el('a', { href: '#/', text: '返回观察池' }),
       ]),
     );
   }

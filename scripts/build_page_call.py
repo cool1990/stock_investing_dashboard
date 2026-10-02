@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build call page from AI draft (or sample seed) + index."""
+"""Build the call page. Sample transcripts are never presented as official."""
 
 from __future__ import annotations
 
@@ -11,39 +11,99 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts.lib.io import read_json, write_json  # noqa: E402
+from scripts.lib.fiscal import parse_period_label  # noqa: E402
+from scripts.lib.io import read_json, write_json, write_page  # noqa: E402
+from scripts.lib.metrics import NOT_CONNECTED  # noqa: E402
+
+
+def empty_page(period: str) -> dict:
+    return {
+        "period": period,
+        "date_et": None,
+        "duration_min": None,
+        "status": "not_connected",
+        "ai_status": "not_connected",
+        "content_origin": "not_connected",
+        "links": {"remarks_pdf": None, "webcast": None, "third_party": None},
+        "executives": [],
+        "guidance": [],
+        "prev_period": "",
+        "speakers": [],
+        "qa_topics": [],
+        "qa": [],
+        "transcript": {"sources": [], "paras": []},
+        "banner": "电话会原文、时长与 AI 摘要未接入。此页不使用样例稿。",
+        "remarks_status": NOT_CONNECTED,
+    }
+
+
+def usable_draft(draft: dict) -> bool:
+    origin = str(draft.get("origin") or draft.get("content_origin") or "")
+    status = str(draft.get("ai_status") or draft.get("status") or "")
+    if origin == "reviewed":
+        return True
+    if "sample" in status or "seed" in status or status == "official_transcript":
+        return False
+    return False
+
+
+def usable_remarks(record: dict) -> bool:
+    if str(record.get("content_origin") or "") != "remarks_fetch":
+        return False
+    paras = (record.get("transcript") or {}).get("paras") or []
+    return bool(paras)
+
+
+def latest_period(ticker: str) -> str:
+    fin = read_json(ROOT / "data" / "financials" / f"{ticker}.json", default={}) or {}
+    periods = [
+        p
+        for p, slot in (fin.get("periods") or {}).items()
+        if (slot.get("q") or {}).get("revenue") is not None
+    ]
+    if not periods:
+        return ""
+    return sorted(periods, key=parse_period_label)[-1]
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--ticker", default="MU")
-    parser.add_argument("--period", default="FQ4-26")
+    parser.add_argument("--period", default="")
     args = parser.parse_args()
     ticker = args.ticker.upper()
-    period = args.period
+    period = args.period or latest_period(ticker)
+    if not period:
+        print(f"no period for {ticker} call page", file=sys.stderr)
+        return 1
 
     draft_path = ROOT / "ai" / "tasks" / f"{ticker}_call_{period}" / "output" / "draft.json"
-    sample = read_json(ROOT / "web" / "public" / "sample" / "call.json", default={}) or {}
+    remarks_path = ROOT / "data" / "calls" / ticker / f"{period}.json"
+    page = empty_page(period)
     if draft_path.exists():
-        page = json.loads(draft_path.read_text(encoding="utf-8"))
-    else:
-        page = dict(sample)
-        page["period"] = period
-        page["ai_status"] = "awaiting_ai_prepare"
+        draft = json.loads(draft_path.read_text(encoding="utf-8"))
+        if usable_draft(draft):
+            page = draft
+            page["period"] = period
+            page["content_origin"] = "reviewed"
+        else:
+            page["banner"] = "已有任务包草稿，但 origin 不是 reviewed，因此不展示为电话会原文。"
 
-    page.setdefault("links", sample.get("links") or {})
-    # Official remarks missing → explicit flag (decision #4)
-    page["remarks_status"] = "准备稿未获取"
-    page.setdefault(
-        "banner",
-        "P4 手动模式：任务包见 ai/tasks/；准备稿未获取时原文 tab 不得静默使用第三方顶替。",
-    )
+    if page.get("content_origin") != "reviewed" and remarks_path.exists():
+        record = read_json(remarks_path, default={}) or {}
+        if usable_remarks(record):
+            page = dict(record)
+            page["period"] = period
+            page["content_origin"] = "remarks_fetch"
+            page.setdefault("ai_status", "not_connected")
+            page.setdefault(
+                "banner",
+                f"{period} 已接入官方准备稿。要点 / 问答摘要仍未接入。",
+            )
 
-    out = ROOT / "data" / "pages" / ticker / "call.json"
-    write_json(out, page)
-    write_json(ROOT / "web" / "public" / "data" / "pages" / ticker / "call.json", page)
+    write_page(f"{ticker}/call.json", page)
     write_json(ROOT / "data" / "pages" / ticker / f"call-{period}.json", page)
-
+    write_json(ROOT / "web" / "public" / "data" / "pages" / ticker / f"call-{period}.json", page)
     index = {
         "ticker": ticker,
         "periods": [
@@ -58,7 +118,7 @@ def main() -> int:
     }
     write_json(ROOT / "data" / "pages" / ticker / "call-index.json", index)
     write_json(ROOT / "web" / "public" / "data" / "pages" / ticker / "call-index.json", index)
-    print(f"wrote {out}")
+    print(f"wrote call {ticker} {period} origin={page.get('content_origin')}")
     return 0
 
 

@@ -26,6 +26,13 @@ def read_json(path: Path, default: Any = None) -> Any:
         return json.load(f)
 
 
+def write_page(rel: str, data: Any) -> None:
+    """Write a page JSON to both ``data/pages`` and the dev-server copy."""
+    rel_path = Path(rel)
+    write_json(ROOT / "data" / "pages" / rel_path, data)
+    write_json(ROOT / "web" / "public" / "data" / "pages" / rel_path, data)
+
+
 def write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")

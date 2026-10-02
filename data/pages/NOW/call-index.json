@@ -1,0 +1,12 @@
+{
+  "ticker": "NOW",
+  "periods": [
+    {
+      "period": "FQ2-26",
+      "label": "FQ2-26",
+      "status": "not_connected",
+      "href": "#/NOW/call/FQ2-26"
+    }
+  ],
+  "latest": "FQ2-26"
+}

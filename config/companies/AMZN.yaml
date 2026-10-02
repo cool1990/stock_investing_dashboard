@@ -1,0 +1,21 @@
+ticker: AMZN
+cik: 1018724
+name_en: Amazon
+name_zh: 亚马逊
+exchange: 纳斯达克
+sector: 电商 / 云
+fiscal:
+  quarter_end_months: [3, 6, 9, 12]
+  fy_label: end_year
+release_timing: after_close
+backfill_from: FQ1-22
+eps_basis: non_gaap
+ir:
+  prepared_remarks_url_pattern: null
+guidance: {}
+overrides:
+  actuals: {}
+  financials: {}
+peers: []
+header:
+  dividend_quarterly: null

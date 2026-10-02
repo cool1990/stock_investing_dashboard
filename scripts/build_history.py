@@ -13,6 +13,16 @@ sys.path.insert(0, str(ROOT))
 from scripts.lib.io import load_company, read_json, write_json  # noqa: E402
 
 
+def _finite(v) -> float | None:
+    try:
+        x = float(v)
+    except (TypeError, ValueError):
+        return None
+    if x != x or abs(x) == float("inf"):
+        return None
+    return x
+
+
 def next_day_move(closes: dict, release_date: str, timing: str) -> float | None:
     days = sorted(closes.keys())
     if release_date not in closes and release_date not in days:
@@ -29,15 +39,19 @@ def next_day_move(closes: dict, release_date: str, timing: str) -> float | None:
     if timing == "after_close":
         if idx + 1 >= len(days):
             return None
-        t = closes[days[idx]]
-        t1 = closes[days[idx + 1]]
-        return (t1 / t - 1) if t else None
+        t = _finite(closes[days[idx]])
+        t1 = _finite(closes[days[idx + 1]])
+        if t is None or t1 is None or t == 0:
+            return None
+        return t1 / t - 1
     # before open: T close / T-1 close - 1
     if idx == 0:
         return None
-    t = closes[days[idx]]
-    tm1 = closes[days[idx - 1]]
-    return (t / tm1 - 1) if tm1 else None
+    t = _finite(closes[days[idx]])
+    tm1 = _finite(closes[days[idx - 1]])
+    if t is None or tm1 is None or tm1 == 0:
+        return None
+    return t / tm1 - 1
 
 
 def main() -> int:
@@ -63,12 +77,14 @@ def main() -> int:
                 rows = []
                 for r in page["history"][metric][period]:
                     row = dict(r)
-                    if row.get("next_day") is None and row.get("release_date"):
+                    if _finite(row.get("next_day")) is None and row.get("release_date"):
                         row["next_day"] = next_day_move(
                             prices.get("closes", {}),
                             row["release_date"],
                             cfg.get("release_timing", "after_close"),
                         )
+                    else:
+                        row["next_day"] = _finite(row.get("next_day"))
                     rows.append(row)
                 history[metric][period] = rows
     else:

@@ -21,10 +21,18 @@ export function renderHistoryTiles(
           { k: '共识 vs 指引', v: block.stats_q.cons_vs_guide, sub: block.stats_q.cons_vs_guide_sub },
         ]
       : [
-          { k: 'FY26 实际 vs 共识', v: block.stats_y.fy26_vs_cons, sub: block.stats_y.fy26_sub },
-          { k: 'FY25 实际 vs 共识', v: block.stats_y.fy25_vs_cons, sub: block.stats_y.fy25_sub },
-          { k: '年度指引', v: '无', sub: '美光只给下季指引' },
-          { k: '次日股价（年报季）', v: '[±x%]', sub: '见「股价反应」' },
+          {
+            k: `${block.stats_y.latest_label ?? '最近财年'} 实际 vs 共识`,
+            v: block.stats_y.latest_vs_cons ?? block.stats_y.fy26_vs_cons,
+            sub: block.stats_y.latest_sub ?? block.stats_y.fy26_sub,
+          },
+          {
+            k: `${block.stats_y.prior_label ?? '上一财年'} 实际 vs 共识`,
+            v: block.stats_y.prior_vs_cons ?? block.stats_y.fy25_vs_cons,
+            sub: block.stats_y.prior_sub ?? block.stats_y.fy25_sub,
+          },
+          { k: '年度指引', v: '无', sub: '只在公司给出年度指引时填入' },
+          { k: '次日股价（年报季）', v: '见股价反应', sub: '不在此重复估算' },
         ];
 
   const wrap = el('div', { className: 'history-tiles' });

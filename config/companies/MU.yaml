@@ -12,7 +12,14 @@ backfill_from: FQ1-22
 eps_basis: non_gaap
 ir:
   prepared_remarks_url_pattern: null
-# Tag order = fallback preference (from diagnose_xbrl_tags.py / data/raw/MU/xbrl_tags.txt)
+  # Q4 Event.svc；title 匹配 "Fourth Quarter 2026 Financial Call" 等。
+  events_feed: >-
+    https://investors.micron.com/feed/Event.svc/GetEventList?languageId=1&bodyType=0&pageNumber=0&pageSize=50&tagList=%7B%22exclude%22%3Afalse%2C%22includeTags%22%3A%5B%22earnings-events%22%5D%7D&includeTags=true&year=-1&excludeSelection=1
+executives:
+  - { ini: SK, name: Satya Kumar, role_zh: 投资者关系与财务副总裁 }
+  - { ini: SM, name: Sanjay Mehrotra, role_zh: 董事长、总裁兼 CEO }
+  - { ini: MM, name: Mark Murphy, role_zh: 执行副总裁兼 CFO }
+# Tag order = per-period preference. A later tag fills periods the earlier one missed.
 xbrl_map:
   revenue: [RevenueFromContractWithCustomerExcludingAssessedTax, Revenues]
   cogs: [CostOfGoodsAndServicesSold, CostOfRevenue]
@@ -21,7 +28,10 @@ xbrl_map:
   sga: [SellingGeneralAndAdministrativeExpense]
   other_op_expense: [OtherOperatingIncomeExpenseNet]
   op_income: [OperatingIncomeLoss]
-  interest_other: [OtherNonoperatingIncomeExpense]
+  interest_other:
+    - InterestIncomeExpenseNet
+    - InterestIncomeExpenseNonoperating
+    - OtherNonoperatingIncomeExpense
   tax: [IncomeTaxExpenseBenefit]
   net_income: [NetIncomeLoss]
   eps_diluted: [EarningsPerShareDiluted]
@@ -37,7 +47,7 @@ xbrl_map:
   total_assets: [Assets]
   st_debt: [DebtCurrent, LongTermDebtCurrent]
   lt_debt: [LongTermDebtAndCapitalLeaseObligations, LongTermDebt, LongTermDebtNoncurrent]
-  contract_liab_noncurrent: [ContractWithCustomerLiability]
+  contract_liab_noncurrent: [ContractWithCustomerLiabilityNoncurrent, ContractWithCustomerLiability]
   total_liabilities: [Liabilities]
   equity: [StockholdersEquity]
   cfo: [NetCashProvidedByUsedInOperatingActivities]
@@ -51,30 +61,110 @@ metrics: {}
 guidance_groups: {}
 guidance:
   FQ3-26: { eps_mid: 19.15, rev_mid: 33.5 }
-  FQ1-27: { eps_mid: 38.15, rev_mid: 61.5 }
+  # FQ1-27 中值来自 2026-09-30 8-K EX-99.1。毛利率取 Non-GAAP 中值。
+  FQ1-27: { eps_mid: 38.15, rev_mid: 61.5, gm_mid: 86.25 }
+# 8-K EX-99.1（2026-09-30，季度截至 2026-09-03）。10-K 进 companyfacts 后可删对应覆盖。
+# null 表示不覆盖，留给 XBRL。
 overrides:
   actuals: {}
-  # FQ4-26 / FY26: 10-K not yet in companyfacts (max end 2026-05-28 as of P1).
-  # Seeded from earnings acceptance numbers; remove when XBRL catches up.
   financials:
+    FQ1-26:
+      non_gaap:
+        eps_diluted: 4.78
+    FQ2-26:
+      non_gaap:
+        eps_diluted: 12.20
+    FQ3-26:
+      non_gaap:
+        gross_profit: 35199
+        op_income: 33681
+        net_income: 28857
+        eps_diluted: 25.11
+    FQ4-25:
+      q:
+        eps_diluted: 2.83
+      non_gaap:
+        gross_profit: 5169
+        op_income: 3955
+        net_income: 3469
+        eps_diluted: 3.03
     FQ4-26:
       end: "2026-09-03"
       q:
         revenue: 54229
         cogs: 7182
         gross_profit: 47047
+        rnd: 1913
+        sga: 859
+        other_op_expense: 524
+        op_income: 43751
+        interest_other: -88
         net_income: 37701
         eps_diluted: 32.87
+        shares_diluted: 1147000000
         cfo: 43973
+        capex_net: 10773
+        fcf_adj: 33200
       ytd:
         revenue: 133188
+        cogs: 25684
+        gross_profit: 107504
+        rnd: 5650
+        sga: 1947
+        other_op_expense: 567
+        op_income: 99340
+        interest_other: -647
+        net_income: 84969
+        eps_diluted: 74.33
+        shares_diluted: 1143000000
         cfo: 89675
-        net_income: 84969   # Q1–Q4 sum until 10-K YTD lands
-        eps_diluted: null   # 年度 EPS 取 10-K 原值，不可加总
+        capex_gross: 30712
+        capex_net: 27370
+        fcf_adj: 62310
+        da: 9503
+        sbc: 1333
+        debt_repay: 10043
+        buyback: 1777
+        dividends: 610
+      bs:
+        cash: 38364
+        st_investments: 5070
+        receivables: 36197
+        inventory: 10372
+        lt_securities: 30019
+        ppe_net: 63310
+        total_assets: 195888
+        st_debt: 491
+        lt_debt: 4688
+        contract_liab_noncurrent: 12895
+        total_liabilities: 57510
+        equity: 138378
       non_gaap:
+        gross_profit: 47204
+        op_income: 44636
+        net_income: 38398
         eps_diluted: 33.42
-        net_income: null
-        op_income: null
+        ytd:
+          gross_profit: 108032
+          op_income: 101191
+          net_income: 86758
+          eps_diluted: 75.52
+segments:
+  FQ4-26:
+    - { label: CMBU, rev_m: 16283 }
+    - { label: CDBU, rev_m: 18002 }
+    - { label: MCBU, rev_m: 13114 }
+    - { label: AEBU, rev_m: 6824 }
+  FQ3-26:
+    - { label: CMBU, rev_m: 13769 }
+    - { label: CDBU, rev_m: 11524 }
+    - { label: MCBU, rev_m: 11521 }
+    - { label: AEBU, rev_m: 4634 }
+  FQ4-25:
+    - { label: CMBU, rev_m: 4543 }
+    - { label: CDBU, rev_m: 1577 }
+    - { label: MCBU, rev_m: 3760 }
+    - { label: AEBU, rev_m: 1434 }
 peers: [WDC, SNDK, STX]
 header:
   price: null

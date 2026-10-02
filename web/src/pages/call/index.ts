@@ -2,13 +2,13 @@ import { createSegmented, el } from '../../components/segmented';
 import { renderBanner } from '../../components/banner';
 import { renderFooterNote } from '../../components/footerNote';
 import { renderTag } from '../../components/tag';
-import { displayValue } from '../../components/placeholder';
-
 export interface CallPage {
   period: string;
   date_et: string;
   duration_min: number | null;
   status: string;
+  content_origin?: string;
+  banner?: string;
   links: { remarks_pdf: string | null; webcast: string | null; third_party: string | null };
   executives: Array<{ ini: string; name: string; role_zh: string }>;
   guidance: Array<{ label: string; v: string }>;
@@ -48,11 +48,16 @@ export interface CallPage {
 }
 
 export function renderCallPage(data: CallPage, ticker: string): HTMLElement {
-  let tab: 'points' | 'qa' | 'transcript' = 'points';
-  let srcId =
-    typeof data.transcript.sources[0] === 'string'
-      ? data.transcript.sources[0]
-      : data.transcript.sources[0]?.id ?? 'remarks';
+  const hasTranscript = (data.transcript?.paras?.length ?? 0) > 0;
+  const hasPoints = (data.speakers?.length ?? 0) > 0;
+  // Remarks-only pages have no AI points yet — open 原文 first.
+  let tab: 'points' | 'qa' | 'transcript' = !hasPoints && hasTranscript ? 'transcript' : 'points';
+  const sources = data.transcript?.sources ?? [];
+  let srcId = sources.length
+    ? typeof sources[0] === 'string'
+      ? sources[0]
+      : sources[0]?.id ?? 'remarks'
+    : '';
   let query = '';
   const root = el('main', { className: 'main call-page' });
 
@@ -68,20 +73,19 @@ export function renderCallPage(data: CallPage, ticker: string): HTMLElement {
   const paint = () => {
     root.replaceChildren();
     const remarksMissing = !data.links.remarks_pdf;
-    root.appendChild(
-      renderBanner(
-        remarksMissing
-          ? '准备稿未获取。原文 tab 可切换第三方来源，但必须明确标注，不得静默顶替官方准备稿。'
-          : `${data.period} 电话会 · ${data.date_et} ET · 状态 ${data.status}`,
-      ),
-    );
+    const bannerText =
+      data.banner ||
+      (remarksMissing
+        ? '准备稿未获取。原文 tab 可切换第三方来源，但必须明确标注，不得静默顶替官方准备稿。'
+        : `${data.period} 电话会 · ${data.date_et} ET · 状态 ${data.status}`);
+    root.appendChild(renderBanner(bannerText));
 
     const head = el('div', { className: 'section__head' }, [
       el('div', {}, [
         el('h2', { text: '电话会' }),
         el('div', {
           className: 'section__sub',
-          text: `时长 ${displayValue(data.duration_min, '[ ]')} 分钟 · 上期 ${data.prev_period}`,
+          text: `时长 ${data.duration_min != null ? data.duration_min : '未接入'} 分钟 · 上期 ${data.prev_period || '未接入'}`,
         }),
       ]),
       el('div', { className: 'toolbar' }, [
@@ -187,7 +191,11 @@ export function renderCallPage(data: CallPage, ticker: string): HTMLElement {
         root.appendChild(card);
       }
     } else {
-      const srcOpts = data.transcript.sources.map((s) =>
+      if (!sources.length) {
+        root.appendChild(el('div', { className: 'card faint', text: '未接入：没有电话会原文来源。' }));
+        return;
+      }
+      const srcOpts = sources.map((s) =>
         typeof s === 'string'
           ? { value: s, label: s === 'remarks' ? '官方准备稿' : s }
           : { value: s.id, label: s.label },
@@ -206,7 +214,7 @@ export function renderCallPage(data: CallPage, ticker: string): HTMLElement {
       const search = el('input', {
         className: 'call-search',
         type: 'search',
-        placeholder: '搜索原文（P0 简单包含匹配；P4 接 minisearch）',
+        placeholder: '搜索原文',
         value: query,
         'aria-label': '搜索电话会原文',
       }) as HTMLInputElement;

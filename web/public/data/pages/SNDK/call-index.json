@@ -1,0 +1,12 @@
+{
+  "ticker": "SNDK",
+  "periods": [
+    {
+      "period": "FQ4-26",
+      "label": "FQ4-26",
+      "status": "not_connected",
+      "href": "#/SNDK/call/FQ4-26"
+    }
+  ],
+  "latest": "FQ4-26"
+}

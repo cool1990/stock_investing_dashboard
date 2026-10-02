@@ -1,5 +1,5 @@
 {
-  "as_of_bj": "2026-10-01 21:46",
+  "as_of_bj": "2026-10-02 09:57",
   "groups": [
     {
       "id": "all",
@@ -16,6 +16,10 @@
     {
       "id": "pf",
       "label": "平台"
+    },
+    {
+      "id": "cn",
+      "label": "消费"
     }
   ],
   "kpi": {
@@ -24,14 +28,17 @@
       "tickers": 1
     },
     "earn30d": {
-      "n": null,
-      "next": null
+      "n": 5,
+      "next": {
+        "t": "GOOGL",
+        "d": "2026-10-28"
+      }
     },
     "rev30d": {
       "up": 1,
-      "down": null
+      "down": 1
     },
-    "todo": null
+    "todo": 1
   },
   "stocks": [
     {
@@ -40,53 +47,124 @@
       "group": "hw",
       "sub": "存储",
       "has_page": true,
-      "price": 1065.11,
-      "d1": 2.8e-05,
-      "d1_tone": "flat",
-      "ytd": 2.734001,
+      "price": 1097.39,
+      "d1": 0.030307,
+      "d1_tone": "up",
+      "ytd": 2.84496,
       "ytd_tone": "up",
-      "mcap": "$1.20T",
-      "ntm_eps": 79.57,
-      "rev30": 0.0897,
+      "mcap": "$1.24T",
+      "ntm_eps": 179.13,
+      "rev30": 0.0957,
       "rev30_tone": "up",
-      "fpe": 13.4,
+      "fpe": 6.1,
       "short": null,
+      "short_note": "未接入",
       "short_date": null,
       "last": {
-        "d": "2026-09-03",
+        "d": "2026-09-30",
         "q": "FQ4-26",
         "eps_surp": 0.0536,
         "eps_surp_tone": "up"
       },
+      "react": 0.0303,
+      "react_tone": "up",
+      "next": {
+        "d": null,
+        "approx": "2026-12-23",
+        "estimated": true
+      },
+      "red7d": 1
+    },
+    {
+      "t": "SNDK",
+      "name": "Sandisk",
+      "group": "hw",
+      "sub": "存储",
+      "has_page": true,
+      "price": 1739.89,
+      "d1": 0.005856,
+      "d1_tone": "up",
+      "ytd": 6.329556,
+      "ytd_tone": "up",
+      "mcap": "$254.8B",
+      "ntm_eps": 226.56,
+      "rev30": -0.0005,
+      "rev30_tone": "flat",
+      "fpe": 7.7,
+      "short": null,
+      "short_note": "未接入",
+      "short_date": null,
+      "last": {
+        "d": "2026-08-05",
+        "q": "FQ4-26",
+        "eps_surp": null,
+        "eps_surp_tone": "na"
+      },
       "react": null,
       "react_tone": "na",
       "next": {
-        "d": "2026-12-23",
-        "approx": null
+        "d": null,
+        "approx": "2026-10-29",
+        "estimated": true
       },
-      "red7d": 1
+      "red7d": 0
+    },
+    {
+      "t": "ADBE",
+      "name": "Adobe",
+      "group": "sw",
+      "sub": "软件",
+      "has_page": true,
+      "price": 239.94,
+      "d1": 0.029035,
+      "d1_tone": "up",
+      "ytd": -0.314438,
+      "ytd_tone": "down",
+      "mcap": "$95.4B",
+      "ntm_eps": 27.15,
+      "rev30": 0.0013,
+      "rev30_tone": "flat",
+      "fpe": 8.8,
+      "short": null,
+      "short_note": "未接入",
+      "short_date": null,
+      "last": {
+        "d": "2026-09-10",
+        "q": "FQ3-26",
+        "eps_surp": null,
+        "eps_surp_tone": "na"
+      },
+      "react": null,
+      "react_tone": "na",
+      "next": {
+        "d": null,
+        "approx": "2026-12-09",
+        "estimated": true
+      },
+      "red7d": 0
     },
     {
       "t": "NVDA",
       "name": "NVIDIA",
       "group": "hw",
       "sub": "AI 芯片",
-      "has_page": false,
-      "price": 230.48,
-      "d1": 0.009195,
+      "has_page": true,
+      "price": 228.38,
+      "d1": 0.005149,
       "d1_tone": "up",
-      "ytd": 0.23871,
+      "ytd": 0.224558,
       "ytd_tone": "up",
-      "mcap": "$5.57T",
-      "ntm_eps": null,
-      "rev30": null,
-      "rev30_tone": "na",
-      "fpe": null,
+      "mcap": "$5.51T",
+      "ntm_eps": 13.56,
+      "rev30": 0.0014,
+      "rev30_tone": "flat",
+      "fpe": 16.8,
       "short": null,
+      "short_note": "未接入",
       "short_date": null,
       "last": {
-        "d": null,
-        "q": null,
+        "d": "2026-08-26",
+        "q": "FQ2-27",
         "eps_surp": null,
         "eps_surp_tone": "na"
       },
@@ -94,191 +172,33 @@
       "react_tone": "na",
       "next": {
         "d": null,
-        "approx": null
+        "approx": "2026-11-17",
+        "estimated": true
       },
-      "red7d": null
+      "red7d": 0
     },
     {
-      "t": "AVGO",
-      "name": "Broadcom",
-      "group": "hw",
-      "sub": "AI 芯片 / 网络",
-      "has_page": false,
-      "price": 351.7,
-      "d1": 0.001452,
-      "d1_tone": "up",
-      "ytd": 0.021781,
-      "ytd_tone": "up",
-      "mcap": "$1.68T",
-      "ntm_eps": null,
-      "rev30": null,
-      "rev30_tone": "na",
-      "fpe": null,
-      "short": null,
-      "short_date": null,
-      "last": {
-        "d": null,
-        "q": null,
-        "eps_surp": null,
-        "eps_surp_tone": "na"
-      },
-      "react": null,
-      "react_tone": "na",
-      "next": {
-        "d": null,
-        "approx": null
-      },
-      "red7d": null
-    },
-    {
-      "t": "SNDK",
-      "name": "SanDisk",
-      "group": "hw",
-      "sub": "存储",
-      "has_page": false,
-      "price": 1746.72,
-      "d1": 0.003926,
-      "d1_tone": "up",
-      "ytd": 6.358328,
-      "ytd_tone": "up",
-      "mcap": "$255.8B",
-      "ntm_eps": null,
-      "rev30": null,
-      "rev30_tone": "na",
-      "fpe": null,
-      "short": null,
-      "short_date": null,
-      "last": {
-        "d": null,
-        "q": null,
-        "eps_surp": null,
-        "eps_surp_tone": "na"
-      },
-      "react": null,
-      "react_tone": "na",
-      "next": {
-        "d": null,
-        "approx": null
-      },
-      "red7d": null
-    },
-    {
-      "t": "CRWV",
-      "name": "CoreWeave",
-      "group": "hw",
-      "sub": "AI 云",
-      "has_page": false,
-      "price": 87.22,
-      "d1": 0.001205,
-      "d1_tone": "up",
-      "ytd": 0.218056,
-      "ytd_tone": "up",
-      "mcap": "$48.1B",
-      "ntm_eps": null,
-      "rev30": null,
-      "rev30_tone": "na",
-      "fpe": null,
-      "short": null,
-      "short_date": null,
-      "last": {
-        "d": null,
-        "q": null,
-        "eps_surp": null,
-        "eps_surp_tone": "na"
-      },
-      "react": null,
-      "react_tone": "na",
-      "next": {
-        "d": null,
-        "approx": null
-      },
-      "red7d": null
-    },
-    {
-      "t": "CDNS",
-      "name": "Cadence",
-      "group": "sw",
-      "sub": "EDA 软件",
-      "has_page": false,
-      "price": 345.97,
-      "d1": 0.047791,
-      "d1_tone": "up",
-      "ytd": 0.106821,
-      "ytd_tone": "up",
-      "mcap": "$95.3B",
-      "ntm_eps": null,
-      "rev30": null,
-      "rev30_tone": "na",
-      "fpe": null,
-      "short": null,
-      "short_date": null,
-      "last": {
-        "d": null,
-        "q": null,
-        "eps_surp": null,
-        "eps_surp_tone": "na"
-      },
-      "react": null,
-      "react_tone": "na",
-      "next": {
-        "d": null,
-        "approx": null
-      },
-      "red7d": null
-    },
-    {
-      "t": "NOW",
-      "name": "ServiceNow",
-      "group": "sw",
-      "sub": "企业软件",
-      "has_page": false,
-      "price": 139.32,
-      "d1": 0.039624,
-      "d1_tone": "up",
-      "ytd": -0.090541,
-      "ytd_tone": "down",
-      "mcap": "$144.0B",
-      "ntm_eps": null,
-      "rev30": null,
-      "rev30_tone": "na",
-      "fpe": null,
-      "short": null,
-      "short_date": null,
-      "last": {
-        "d": null,
-        "q": null,
-        "eps_surp": null,
-        "eps_surp_tone": "na"
-      },
-      "react": null,
-      "react_tone": "na",
-      "next": {
-        "d": null,
-        "approx": null
-      },
-      "red7d": null
-    },
-    {
-      "t": "UBER",
-      "name": "Uber",
-      "group": "pf",
-      "sub": "出行平台",
-      "has_page": false,
-      "price": 68.42,
-      "d1": -0.001314,
+      "t": "MCD",
+      "name": "McDonald's",
+      "group": "cn",
+      "sub": "餐饮",
+      "has_page": true,
+      "price": 230.94,
+      "d1": -0.012993,
       "d1_tone": "down",
-      "ytd": -0.162648,
+      "ytd": -0.24438,
       "ytd_tone": "down",
-      "mcap": "$139.8B",
-      "ntm_eps": null,
-      "rev30": null,
-      "rev30_tone": "na",
-      "fpe": null,
+      "mcap": "$163.4B",
+      "ntm_eps": 13.59,
+      "rev30": -0.0059,
+      "rev30_tone": "flat",
+      "fpe": 17.0,
       "short": null,
+      "short_note": "未接入",
       "short_date": null,
       "last": {
-        "d": null,
-        "q": null,
+        "d": "2026-08-04",
+        "q": "FQ2-26",
         "eps_surp": null,
         "eps_surp_tone": "na"
       },
@@ -286,9 +206,146 @@
       "react_tone": "na",
       "next": {
         "d": null,
-        "approx": null
+        "approx": "2026-11-05",
+        "estimated": true
       },
-      "red7d": null
+      "red7d": 0
+    },
+    {
+      "t": "GOOGL",
+      "name": "Alphabet",
+      "group": "pf",
+      "sub": "互联网平台",
+      "has_page": true,
+      "price": 344.08,
+      "d1": 0.009269,
+      "d1_tone": "up",
+      "ytd": 0.099297,
+      "ytd_tone": "up",
+      "mcap": "$2.02T",
+      "ntm_eps": 16.37,
+      "rev30": 0.0063,
+      "rev30_tone": "flat",
+      "fpe": 21.0,
+      "short": null,
+      "short_note": "未接入",
+      "short_date": null,
+      "last": {
+        "d": null,
+        "q": "FQ2-26",
+        "eps_surp": null,
+        "eps_surp_tone": "na"
+      },
+      "react": null,
+      "react_tone": "na",
+      "next": {
+        "d": null,
+        "approx": "2026-10-28",
+        "estimated": true
+      },
+      "red7d": 0
+    },
+    {
+      "t": "META",
+      "name": "Meta",
+      "group": "pf",
+      "sub": "社交平台",
+      "has_page": true,
+      "price": 725.18,
+      "d1": -0.018422,
+      "d1_tone": "down",
+      "ytd": 0.098608,
+      "ytd_tone": "up",
+      "mcap": "$1.60T",
+      "ntm_eps": 33.35,
+      "rev30": -0.0294,
+      "rev30_tone": "down",
+      "fpe": 21.7,
+      "short": null,
+      "short_note": "未接入",
+      "short_date": null,
+      "last": {
+        "d": "2026-07-29",
+        "q": "FQ2-26",
+        "eps_surp": null,
+        "eps_surp_tone": "na"
+      },
+      "react": null,
+      "react_tone": "na",
+      "next": {
+        "d": null,
+        "approx": "2026-10-28",
+        "estimated": true
+      },
+      "red7d": 0
+    },
+    {
+      "t": "AMZN",
+      "name": "Amazon",
+      "group": "pf",
+      "sub": "电商 / 云",
+      "has_page": true,
+      "price": 249.15,
+      "d1": 0.010054,
+      "d1_tone": "up",
+      "ytd": 0.079413,
+      "ytd_tone": "up",
+      "mcap": "$2.69T",
+      "ntm_eps": 11.1,
+      "rev30": -0.0038,
+      "rev30_tone": "flat",
+      "fpe": 22.4,
+      "short": null,
+      "short_note": "未接入",
+      "short_date": null,
+      "last": {
+        "d": "2026-07-30",
+        "q": "FQ2-26",
+        "eps_surp": null,
+        "eps_surp_tone": "na"
+      },
+      "react": null,
+      "react_tone": "na",
+      "next": {
+        "d": null,
+        "approx": "2026-10-29",
+        "estimated": true
+      },
+      "red7d": 0
+    },
+    {
+      "t": "MSFT",
+      "name": "Microsoft",
+      "group": "sw",
+      "sub": "软件 / 云",
+      "has_page": true,
+      "price": 512.9,
+      "d1": 0.007741,
+      "d1_tone": "up",
+      "ytd": 0.060543,
+      "ytd_tone": "up",
+      "mcap": "$3.81T",
+      "ntm_eps": 20.74,
+      "rev30": -0.0006,
+      "rev30_tone": "flat",
+      "fpe": 24.7,
+      "short": null,
+      "short_note": "未接入",
+      "short_date": null,
+      "last": {
+        "d": null,
+        "q": "FQ4-26",
+        "eps_surp": null,
+        "eps_surp_tone": "na"
+      },
+      "react": null,
+      "react_tone": "na",
+      "next": {
+        "d": null,
+        "approx": "2026-10-28",
+        "estimated": true
+      },
+      "red7d": 0
     }
   ],
   "news": [
@@ -302,268 +359,429 @@
       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/mu-20260930.htm"
     },
     {
-      "d": "2026-08-28",
-      "t": "MU",
+      "d": "2026-09-30",
+      "t": "META",
       "type": "4",
-      "title": "MU 4",
+      "title": "META 4",
       "why": null,
       "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000179875726000007/xslF345X06/primarydocument.xml"
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014886/xslF345X06/ownership.xml"
     },
     {
-      "d": "2026-08-26",
-      "t": "MU",
+      "d": "2026-09-29",
+      "t": "GOOGL",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408019/xslF345X06/ownership.xml"
+    },
+    {
+      "d": "2026-09-29",
+      "t": "GOOGL",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408016/xslF345X06/ownership.xml"
+    },
+    {
+      "d": "2026-09-29",
+      "t": "GOOGL",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408014/xslF345X06/ownership.xml"
+    },
+    {
+      "d": "2026-09-29",
+      "t": "GOOGL",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408009/xslF345X06/ownership.xml"
+    },
+    {
+      "d": "2026-09-29",
+      "t": "GOOGL",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408007/xslF345X06/ownership.xml"
+    },
+    {
+      "d": "2026-09-29",
+      "t": "GOOGL",
+      "type": "4",
+      "title": "GOOGL 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526408004/xslF345X06/ownership.xml"
+    },
+    {
+      "d": "2026-09-28",
+      "t": "META",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014647/xslF345X06/ownership.xml"
+    },
+    {
+      "d": "2026-09-23",
+      "t": "NVDA",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000014/xslF345X06/wk-form4_1790196985.xml"
+    },
+    {
+      "d": "2026-09-23",
+      "t": "MCD",
+      "type": "8-K · 7.01",
+      "title": "MCD 8-K items 7.01,9.01",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000076/mcd-20260923.htm"
+    },
+    {
+      "d": "2026-09-23",
+      "t": "META",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014403/xslF345X06/ownership.xml"
+    },
+    {
+      "d": "2026-09-23",
+      "t": "META",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014402/xslF345X06/ownership.xml"
+    },
+    {
+      "d": "2026-09-22",
+      "t": "NVDA",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119903926000016/xslF345X06/wk-form4_1790110579.xml"
+    },
+    {
+      "d": "2026-09-21",
+      "t": "SNDK",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000043/xslF345X06/edgardoc.xml"
+    },
+    {
+      "d": "2026-09-21",
+      "t": "SNDK",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000042/xslF345X06/edgardoc.xml"
+    },
+    {
+      "d": "2026-09-21",
+      "t": "SNDK",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000041/xslF345X06/edgardoc.xml"
+    },
+    {
+      "d": "2026-09-21",
+      "t": "SNDK",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000040/xslF345X06/edgardoc.xml"
+    },
+    {
+      "d": "2026-09-21",
+      "t": "SNDK",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000039/xslF345X06/edgardoc.xml"
+    },
+    {
+      "d": "2026-09-18",
+      "t": "NVDA",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000124382126000007/xslF345X06/wk-form4_1789766132.xml"
+    },
+    {
+      "d": "2026-09-18",
+      "t": "NVDA",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000128385426000010/xslF345X06/wk-form4_1789766082.xml"
+    },
+    {
+      "d": "2026-09-18",
+      "t": "NVDA",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000169684126000012/xslF345X06/wk-form4_1789766007.xml"
+    },
+    {
+      "d": "2026-09-18",
+      "t": "NVDA",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000158867026000014/xslF345X06/wk-form4_1789765959.xml"
+    },
+    {
+      "d": "2026-09-18",
+      "t": "NVDA",
+      "type": "4",
+      "title": "NVDA 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119764926000012/xslF345X06/wk-form4_1789765856.xml"
+    },
+    {
+      "d": "2026-09-18",
+      "t": "ADBE",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000122415426000003/xslF345X06/wk-form4_1789769889.xml"
+    },
+    {
+      "d": "2026-09-17",
+      "t": "ADBE",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000153/xslF345X06/wk-form4_1789677090.xml"
+    },
+    {
+      "d": "2026-09-17",
+      "t": "ADBE",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000152/xslF345X06/wk-form4_1789677079.xml"
+    },
+    {
+      "d": "2026-09-17",
+      "t": "ADBE",
+      "type": "4",
+      "title": "ADBE 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000151/xslF345X06/wk-form4_1789677064.xml"
+    },
+    {
+      "d": "2026-09-17",
+      "t": "MSFT",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000224/xslF345X06/form4.xml"
+    },
+    {
+      "d": "2026-09-17",
+      "t": "MSFT",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000223/xslF345X06/form4.xml"
+    },
+    {
+      "d": "2026-09-17",
+      "t": "MSFT",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000222/xslF345X06/form4.xml"
+    },
+    {
+      "d": "2026-09-17",
+      "t": "MSFT",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000221/xslF345X06/form4.xml"
+    },
+    {
+      "d": "2026-09-17",
+      "t": "MSFT",
+      "type": "4",
+      "title": "MSFT 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000078901926000220/xslF345X06/form4.xml"
+    },
+    {
+      "d": "2026-09-17",
+      "t": "META",
+      "type": "4",
+      "title": "META 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014140/xslF345X06/ownership.xml"
+    },
+    {
+      "d": "2026-09-16",
+      "t": "SNDK",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000033/xslF345X06/edgardoc.xml"
+    },
+    {
+      "d": "2026-09-16",
+      "t": "SNDK",
+      "type": "4",
+      "title": "SNDK 4",
+      "why": null,
+      "red": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000124264826000032/xslF345X06/edgardoc.xml"
+    },
+    {
+      "d": "2026-09-16",
+      "t": "SNDK",
       "type": "8-K · 5.02",
-      "title": "MU 8-K items 5.02,9.01",
+      "title": "SNDK 8-K items 5.02",
       "why": "高管变动",
       "red": true,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926101067/tm2624017d1_8k.htm"
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026062267/sndk-20260910.htm"
     },
     {
-      "d": "2026-08-25",
-      "t": "MU",
+      "d": "2026-09-16",
+      "t": "GOOGL",
       "type": "4",
-      "title": "MU 4",
+      "title": "GOOGL 4",
       "why": null,
       "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000015/xslF345X06/primarydocument.xml"
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393517/xslF345X06/ownership.xml"
     },
     {
-      "d": "2026-08-20",
-      "t": "MU",
+      "d": "2026-09-16",
+      "t": "GOOGL",
       "type": "4",
-      "title": "MU 4",
+      "title": "GOOGL 4",
       "why": null,
       "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000131107926000003/xslF345X06/primarydocument.xml"
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393515/xslF345X06/ownership.xml"
     },
     {
-      "d": "2026-07-28",
-      "t": "MU",
+      "d": "2026-09-16",
+      "t": "GOOGL",
       "type": "4",
-      "title": "MU 4",
+      "title": "GOOGL 4",
       "why": null,
       "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000014/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-07-28",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000013/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-07-27",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000165214926000005/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-07-17",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000165214926000004/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-07-06",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000163206326000003/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-07-02",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000145336826000001/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-07-02",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000121836326000003/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-07-02",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000205876926000004/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-06-30",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000012/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-06-30",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000011/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-06-24",
-      "t": "MU",
-      "type": "8-K · 2.02",
-      "title": "MU 8-K items 2.02,9.01",
-      "why": "业绩发布",
-      "red": true,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/mu-20260624.htm"
-    },
-    {
-      "d": "2026-06-11",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000179875726000006/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-06-09",
-      "t": "MU",
-      "type": "8-K · 5.02",
-      "title": "MU 8-K items 5.02,9.01",
-      "why": "高管变动",
-      "red": true,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926071845/tm2617112d1_8k.htm"
-    },
-    {
-      "d": "2026-06-02",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000010/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-06-02",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000009/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-05-13",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000122409526000001/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-05-05",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000124265426000005/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-05-05",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000159319926000003/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-04-17",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000165214926000003/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-04-16",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000120149026000003/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-04-14",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000131107926000002/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-04-13",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000120149026000002/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-04-03",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000163206326000002/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-04-02",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000205876926000003/xslF345X06/primarydocument.xml"
-    },
-    {
-      "d": "2026-04-02",
-      "t": "MU",
-      "type": "4",
-      "title": "MU 4",
-      "why": null,
-      "red": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/723125/000121836326000002/xslF345X06/primarydocument.xml"
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526393513/xslF345X06/ownership.xml"
     }
   ],
-  "calendar": [],
+  "calendar": [
+    {
+      "d": "2026-10-28",
+      "t": "GOOGL",
+      "timing": "after_close",
+      "q": "FQ2-26",
+      "estimated": true,
+      "cons_eps": null,
+      "iv": null,
+      "iv_note": "未接入"
+    },
+    {
+      "d": "2026-10-28",
+      "t": "MSFT",
+      "timing": "after_close",
+      "q": "FQ4-26",
+      "estimated": true,
+      "cons_eps": null,
+      "iv": null,
+      "iv_note": "未接入"
+    },
+    {
+      "d": "2026-10-28",
+      "t": "META",
+      "timing": "after_close",
+      "q": "FQ2-26",
+      "estimated": true,
+      "cons_eps": null,
+      "iv": null,
+      "iv_note": "未接入"
+    },
+    {
+      "d": "2026-10-29",
+      "t": "SNDK",
+      "timing": "after_close",
+      "q": "FQ4-26",
+      "estimated": true,
+      "cons_eps": null,
+      "iv": null,
+      "iv_note": "未接入"
+    },
+    {
+      "d": "2026-10-29",
+      "t": "AMZN",
+      "timing": "after_close",
+      "q": "FQ2-26",
+      "estimated": true,
+      "cons_eps": null,
+      "iv": null,
+      "iv_note": "未接入"
+    },
+    {
+      "d": "2026-11-05",
+      "t": "MCD",
+      "timing": "before_open",
+      "q": "FQ2-26",
+      "estimated": true,
+      "cons_eps": null,
+      "iv": null,
+      "iv_note": "未接入"
+    },
+    {
+      "d": "2026-11-17",
+      "t": "NVDA",
+      "timing": "after_close",
+      "q": "FQ2-27",
+      "estimated": true,
+      "cons_eps": null,
+      "iv": null,
+      "iv_note": "未接入"
+    }
+  ],
   "recent": [
     {
       "d": "2026-09-30",
@@ -571,8 +789,8 @@
       "q": "FQ4-26",
       "eps_surp": 0.0536,
       "eps_surp_tone": "up",
-      "rev_surp": null,
-      "rev_surp_tone": "na"
+      "rev_surp": 0.0565,
+      "rev_surp_tone": "up"
     },
     {
       "d": "2026-06-24",
@@ -580,45 +798,9 @@
       "q": "FQ3-26",
       "eps_surp": 0.1739,
       "eps_surp_tone": "up",
-      "rev_surp": null,
-      "rev_surp_tone": "na"
-    },
-    {
-      "d": "2026-03-18",
-      "t": "MU",
-      "q": "FQ2-26",
-      "eps_surp": 0.3275,
-      "eps_surp_tone": "up",
-      "rev_surp": null,
-      "rev_surp_tone": "na"
-    },
-    {
-      "d": "2025-12-17",
-      "t": "MU",
-      "q": "FQ1-26",
-      "eps_surp": 0.2679,
-      "eps_surp_tone": "up",
-      "rev_surp": null,
-      "rev_surp_tone": "na"
-    },
-    {
-      "d": "2025-09-23",
-      "t": "MU",
-      "q": "FQ4-25",
-      "eps_surp": 0.0594,
-      "eps_surp_tone": "up",
-      "rev_surp": null,
-      "rev_surp_tone": "na"
-    },
-    {
-      "d": "2025-06-25",
-      "t": "MU",
-      "q": "FQ3-25",
-      "eps_surp": 0.2166,
-      "eps_surp_tone": "up",
-      "rev_surp": null,
-      "rev_surp_tone": "na"
+      "rev_surp": 0.1546,
+      "rev_surp_tone": "up"
     }
   ],
-  "red_rules_note": "红色规则见 config/red_rules.yaml（8-K 2.02/5.02 等）。"
+  "red_rules_note": "红色规则见 config/red_rules.yaml。8-K 8.01 只有标题含关键词才标红。"
 }

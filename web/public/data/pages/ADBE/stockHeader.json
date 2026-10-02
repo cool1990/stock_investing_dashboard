@@ -1,0 +1,31 @@
+{
+  "ticker": "ADBE",
+  "name_en": "Adobe",
+  "name_zh": "Adobe",
+  "exchange": "纳斯达克",
+  "sector": "软件",
+  "updated_at_bj": "2026-10-02 09:13",
+  "latest_report": "FQ3-26",
+  "latest_report_date": "2026-09-10",
+  "release_timing": "after_close",
+  "header": {
+    "price": 239.94,
+    "price_1d": "+2.9%",
+    "price_ytd": "−31.4%",
+    "market_cap": "$95.4B",
+    "ev": null,
+    "net_cash_b": null,
+    "forward_pe_ntm": 8.8,
+    "short_interest": "未接入",
+    "next_earnings": "2026-12-09（预估）",
+    "implied_move": "未接入",
+    "week52": "$193 – $360",
+    "ev_ebitda_ntm": "未接入",
+    "dividend_quarterly": null,
+    "dividend_yield": null,
+    "target_price": 275.06,
+    "ratings": "hold · 32 家",
+    "inst_insider": "未接入",
+    "days_to_cover": "未接入"
+  }
+}

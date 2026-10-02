@@ -1,0 +1,21 @@
+ticker: ADBE
+cik: 796343
+name_en: Adobe
+name_zh: Adobe
+exchange: 纳斯达克
+sector: 软件
+fiscal:
+  quarter_end_months: [2, 5, 8, 11]  # FY 截至 11 月末
+  fy_label: end_year
+release_timing: after_close
+backfill_from: FQ1-22
+eps_basis: non_gaap
+ir:
+  prepared_remarks_url_pattern: null
+guidance: {}
+overrides:
+  actuals: {}
+  financials: {}
+peers: []
+header:
+  dividend_quarterly: null

@@ -1,0 +1,12 @@
+{
+  "ticker": "AVGO",
+  "periods": [
+    {
+      "period": "FQ3-26",
+      "label": "FQ3-26",
+      "status": "not_connected",
+      "href": "#/AVGO/call/FQ3-26"
+    }
+  ],
+  "latest": "FQ3-26"
+}

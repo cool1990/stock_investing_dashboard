@@ -60,12 +60,17 @@ def fiscal_quarter_for_end_date(cal: FiscalCalendar, end: date | datetime | str)
     q_month = months[q_idx]
     fy_end_m = cal.fy_end_month
 
+    # A November/December quarter can close in early January. The calendar
+    # year of that close is already the next year, so do not add one again.
+    year = end_d.year
+    if end_d.month < q_month and (q_month - end_d.month) > 6:
+        year -= 1
     # If this quarter's month is after the FY-end month in the calendar year,
     # the fiscal year label is next calendar year (e.g. Nov is after Aug → FY+1).
     if q_month > fy_end_m:
-        fy = end_d.year + 1
+        fy = year + 1
     else:
-        fy = end_d.year
+        fy = year
     return fy, fq
 
 
@@ -154,13 +159,108 @@ def days_between(start: date | datetime | str, end: date | datetime | str) -> in
     return (_as_date(end) - _as_date(start)).days
 
 
+def shift_period(label: str, steps: int) -> str:
+    """Move a quarterly (or annual) label by ``steps`` quarters (or years)."""
+    fy, fq = parse_period_label(label)
+    if fq is None:
+        return period_label(fy + steps)
+    if steps >= 0:
+        for _ in range(steps):
+            if fq == 4:
+                fy, fq = fy + 1, 1
+            else:
+                fq += 1
+    else:
+        for _ in range(-steps):
+            if fq == 1:
+                fy, fq = fy - 1, 4
+            else:
+                fq -= 1
+    return period_label(fy, fq)
+
+
+def quarter_end_date(cal: FiscalCalendar, fy: int, fq: int) -> date:
+    """Nominal quarter end: day 28 of that quarter's end month."""
+    month = cal.quarter_end_months[fq - 1]
+    year = fy - 1 if month > cal.fy_end_month else fy
+    return date(year, month, 28)
+
+
+def latest_quarter_ended_before(cal: FiscalCalendar, day: date | datetime | str) -> str:
+    """Latest fiscal quarter whose nominal end is strictly before ``day``.
+
+    An 8-K item 2.02 filed on ``day`` reports this quarter (earnings land
+    weeks after the period ends).
+    """
+    day_d = _as_date(day)
+    best_end: date | None = None
+    best: str | None = None
+    for fy in range(day_d.year - 2, day_d.year + 2):
+        for fq in (1, 2, 3, 4):
+            ed = quarter_end_date(cal, fy, fq)
+            if ed < day_d and (best_end is None or ed > best_end):
+                best_end = ed
+                best = period_label(fy, fq)
+    if best is None:
+        raise ValueError(f"no fiscal quarter before {day_d}")
+    return best
+
+
+def match_year_ago_period(
+    year_ago: float,
+    actuals: dict[str, float],
+    *,
+    tol: float = 0.02,
+) -> str | None:
+    """Return the historical quarter whose EPS matches Yahoo ``yearAgoEps``."""
+    best: str | None = None
+    best_rel = 1e9
+    for period, val in actuals.items():
+        if val is None:
+            continue
+        try:
+            _fy, fq = parse_period_label(period)
+        except ValueError:
+            continue
+        if fq is None:
+            continue
+        rel = abs(float(year_ago) - float(val)) / max(abs(float(val)), 0.05)
+        if rel < best_rel:
+            best_rel = rel
+            best = period
+    if best is not None and best_rel <= tol:
+        return best
+    return None
+
+
+def reported_through_from_year_ago(year_ago: float, actuals: dict[str, float]) -> str | None:
+    """Last *reported* quarter implied by 0q's year-ago EPS.
+
+    If year-ago matches FQ4-25, 0q is FQ4-26, so the last reported quarter
+    is FQ3-26.
+    """
+    matched = match_year_ago_period(year_ago, actuals)
+    if matched is None:
+        return None
+    current = shift_period(matched, 4)
+    return shift_period(current, -1)
+
+
 def yahoo_relative_to_absolute(
     cal: FiscalCalendar,
     relative: str,
     as_of: date | datetime | str,
     end_date: date | datetime | str | None = None,
+    *,
+    reported_through: str | None = None,
 ) -> str:
-    """Map Yahoo labels 0q/+1q/0y/+1y to absolute FQ*/FY* names."""
+    """Map Yahoo labels 0q/+1q/0y/+1y to absolute FQ*/FY* names.
+
+    ``reported_through`` is the last quarter that has already reported
+    (the 8-K 2.02 quarter). Yahoo's ``0q`` is the next unreported quarter,
+    which is *not* "the next quarter-end on or after as_of" during the
+    weeks between period-end and the earnings release.
+    """
     as_of_d = _as_date(as_of)
     rel = relative.strip().lower()
 
@@ -176,7 +276,22 @@ def yahoo_relative_to_absolute(
             return period_label(fy + 1)
         raise ValueError(f"Unknown relative label: {relative}")
 
-    # Infer "current" quarter as the next quarter end on/after as_of
+    if reported_through:
+        if rel in ("0q", "+0q", "currentq"):
+            return shift_period(reported_through, 1)
+        if rel in ("+1q", "nextq"):
+            return shift_period(reported_through, 2)
+        zq = shift_period(reported_through, 1)
+        fy, _fq = parse_period_label(zq)
+        if rel in ("0y", "+0y", "currenty"):
+            return period_label(fy)
+        if rel in ("+1y", "nexty"):
+            return period_label(fy + 1)
+        raise ValueError(f"Unknown relative label: {relative}")
+
+    # Last resort when neither Yahoo's period end nor an 8-K / year-ago
+    # anchor is available. This mis-labels the gap between quarter-end and
+    # the earnings release; callers should pass reported_through.
     months = cal.quarter_end_months
     candidates: list[tuple[date, int, int]] = []
     for year in range(as_of_d.year - 1, as_of_d.year + 2):

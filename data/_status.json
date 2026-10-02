@@ -8,7 +8,7 @@
     "yahoo_consensus": {
       "ok": true,
       "message": "MU periods=4",
-      "updated_at_utc": "2026-10-02T01:46:34Z"
+      "updated_at_utc": "2026-10-02T01:56:46Z"
     },
     "sec_companyfacts": {
       "ok": true,
@@ -17,38 +17,43 @@
     },
     "sec_financials": {
       "ok": true,
-      "message": "20 periods",
-      "updated_at_utc": "2026-10-02T01:46:39Z"
+      "message": "18 periods",
+      "updated_at_utc": "2026-10-02T01:12:07Z"
     },
     "yahoo_prices": {
       "ok": true,
       "message": "10666 days",
-      "updated_at_utc": "2026-10-02T01:46:38Z"
+      "updated_at_utc": "2026-10-02T01:56:45Z"
     },
     "edgar_filings": {
       "ok": true,
-      "message": "40 filings",
-      "updated_at_utc": "2026-10-02T01:46:39Z"
+      "message": "360 filings",
+      "updated_at_utc": "2026-10-02T01:11:28Z"
     },
     "watchlist_page": {
       "ok": true,
-      "message": "8 tickers",
-      "updated_at_utc": "2026-10-02T01:46:42Z"
+      "message": "9 tickers",
+      "updated_at_utc": "2026-10-02T01:57:54Z"
     },
     "yahoo_actuals": {
       "ok": true,
       "message": "49 rows",
-      "updated_at_utc": "2026-10-02T01:46:36Z"
+      "updated_at_utc": "2026-10-02T01:12:05Z"
     },
     "sec_revenue": {
       "ok": true,
-      "message": "36 rows",
-      "updated_at_utc": "2026-10-02T01:46:36Z"
+      "message": "39 rows",
+      "updated_at_utc": "2026-10-02T01:12:05Z"
     },
     "nasdaq_secondary": {
       "ok": true,
       "message": "ok",
-      "updated_at_utc": "2026-10-02T01:46:41Z"
+      "updated_at_utc": "2026-10-02T01:12:07Z"
+    },
+    "remarks": {
+      "ok": true,
+      "message": "MU FQ4-26 4 paras",
+      "updated_at_utc": "2026-10-02T01:29:08Z"
     }
   }
 }

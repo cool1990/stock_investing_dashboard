@@ -1,0 +1,10 @@
+{
+  "ticker": "AMZN",
+  "kind": "review",
+  "period": "FQ2-26",
+  "provider": "manual",
+  "prompt": "scripts/prompts/review_summary_v2.md",
+  "created_at": "2026-10-02T01:12:08Z",
+  "status": "ready_for_cursor",
+  "instruction": "手动模式：用 Cursor 打开 prompt，阅读 input/，按 schema 写出 output/draft.json，再运行 python3 scripts/ai_check.py --task AMZN_review_FQ2-26"
+}

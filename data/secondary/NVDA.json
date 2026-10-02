@@ -1,0 +1,125 @@
+{
+  "ticker": "NVDA",
+  "fetched_at": "2026-10-02T01:11:40Z",
+  "source": "nasdaq",
+  "raw": {
+    "data": {
+      "symbol": "nvda",
+      "quarterlyForecast": {
+        "asOf": null,
+        "headers": {
+          "fiscalEnd": "Fiscal Quarter End",
+          "consensusEPSForecast": "Consensus EPS* Forecast",
+          "highEPSForecast": "High EPS* Forecast",
+          "lowEPSForecast": "Low EPS* Forecast",
+          "noOfEstimates": "Number of Estimates",
+          "up": "Over the Last 4 Weeks Number of Revisions - Up",
+          "down": "Over the Last 4 Weeks Number of Revisions - Down"
+        },
+        "rows": [
+          {
+            "fiscalEnd": "Oct 2026",
+            "consensusEPSForecast": 2.47,
+            "highEPSForecast": 2.7,
+            "lowEPSForecast": 2.34,
+            "noOfEstimates": 13,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Jan 2027",
+            "consensusEPSForecast": 2.71,
+            "highEPSForecast": 2.94,
+            "lowEPSForecast": 2.53,
+            "noOfEstimates": 12,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Apr 2027",
+            "consensusEPSForecast": 3.15,
+            "highEPSForecast": 3.53,
+            "lowEPSForecast": 2.9,
+            "noOfEstimates": 11,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Jul 2027",
+            "consensusEPSForecast": 3.58,
+            "highEPSForecast": 3.94,
+            "lowEPSForecast": 3.23,
+            "noOfEstimates": 11,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Oct 2027",
+            "consensusEPSForecast": 4.0,
+            "highEPSForecast": 4.41,
+            "lowEPSForecast": 3.49,
+            "noOfEstimates": 11,
+            "up": 0,
+            "down": 0
+          }
+        ]
+      },
+      "yearlyForecast": {
+        "asOf": null,
+        "headers": {
+          "fiscalEnd": "Fiscal Year End",
+          "consensusEPSForecast": "Consensus EPS* Forecast",
+          "highEPSForecast": "High EPS* Forecast",
+          "lowEPSForecast": "Low EPS* Forecast",
+          "noOfEstimates": "Number of Estimates",
+          "up": "Over the Last 4 Weeks Number of Revisions - Up",
+          "down": "Over the Last 4 Weeks Number of Revisions - Down"
+        },
+        "rows": [
+          {
+            "fiscalEnd": "Jan 2027",
+            "consensusEPSForecast": 9.25,
+            "highEPSForecast": 9.71,
+            "lowEPSForecast": 9.01,
+            "noOfEstimates": 17,
+            "up": 1,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Jan 2028",
+            "consensusEPSForecast": 15.33,
+            "highEPSForecast": 17.04,
+            "lowEPSForecast": 12.29,
+            "noOfEstimates": 16,
+            "up": 1,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Jan 2029",
+            "consensusEPSForecast": 21.64,
+            "highEPSForecast": 24.16,
+            "lowEPSForecast": 19.21,
+            "noOfEstimates": 7,
+            "up": 0,
+            "down": 0
+          },
+          {
+            "fiscalEnd": "Jan 2030",
+            "consensusEPSForecast": 26.35,
+            "highEPSForecast": 30.37,
+            "lowEPSForecast": 22.33,
+            "noOfEstimates": 2,
+            "up": 0,
+            "down": 0
+          }
+        ]
+      }
+    },
+    "message": null,
+    "status": {
+      "rCode": 200,
+      "bCodeMessage": null,
+      "developerMessage": null
+    }
+  }
+}
