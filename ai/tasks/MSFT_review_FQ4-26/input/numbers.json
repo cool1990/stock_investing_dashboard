@@ -1,0 +1,127 @@
+{
+  "period": "FQ4-26",
+  "verdict_line": {
+    "rev_surp": null,
+    "rev_surp_tone": "na",
+    "eps_surp": null,
+    "eps_surp_tone": "na",
+    "guide_vs_cons": [
+      null,
+      null
+    ],
+    "guide_vs_cons_tone": [
+      "na",
+      "na"
+    ]
+  },
+  "cards": [
+    {
+      "key": "rev",
+      "label": "营收",
+      "basis": "GAAP",
+      "value": 90.01,
+      "unit": "B",
+      "yoy": 0.1775,
+      "yoy_tone": "up",
+      "qoq": 0.0859,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    },
+    {
+      "key": "gm",
+      "label": "毛利率",
+      "basis": "GAAP",
+      "value": 67.2,
+      "unit": "%",
+      "yoy": -0.0139,
+      "yoy_tone": "down",
+      "qoq": -0.0044,
+      "qoq_tone": "down",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    },
+    {
+      "key": "opm",
+      "label": "营业利润率",
+      "basis": "GAAP",
+      "value": 45.1,
+      "unit": "%",
+      "yoy": 0.0021,
+      "yoy_tone": "up",
+      "qoq": -0.0122,
+      "qoq_tone": "down",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    },
+    {
+      "key": "nim",
+      "label": "净利润率",
+      "basis": "GAAP",
+      "value": 39.7,
+      "unit": "%",
+      "yoy": 0.0411,
+      "yoy_tone": "up",
+      "qoq": 0.014,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    },
+    {
+      "key": "eps",
+      "label": "摊薄 EPS",
+      "basis": "GAAP",
+      "value": 4.8,
+      "unit": "$",
+      "yoy": 0.3151,
+      "yoy_tone": "up",
+      "qoq": 0.1241,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    },
+    {
+      "key": "fcf",
+      "label": "自由现金流",
+      "basis": "CFO−毛Capex",
+      "value": 19.64,
+      "unit": "B",
+      "yoy": -0.2319,
+      "yoy_tone": "down",
+      "qoq": 0.2427,
+      "qoq_tone": "up",
+      "vs_cons": null,
+      "vs_cons_tone": "na",
+      "why": {
+        "text": "未接入",
+        "refs": [],
+        "status": "not_connected"
+      }
+    }
+  ]
+}

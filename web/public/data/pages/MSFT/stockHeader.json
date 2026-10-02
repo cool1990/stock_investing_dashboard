@@ -1,0 +1,31 @@
+{
+  "ticker": "MSFT",
+  "name_en": "Microsoft",
+  "name_zh": "微软",
+  "exchange": "纳斯达克",
+  "sector": "软件 / 云",
+  "updated_at_bj": "2026-10-02 09:13",
+  "latest_report": "FQ4-26",
+  "latest_report_date": "—",
+  "release_timing": "after_close",
+  "header": {
+    "price": 512.9,
+    "price_1d": "+0.8%",
+    "price_ytd": "+6.1%",
+    "market_cap": "$3808.6B",
+    "ev": "$3744.9B",
+    "net_cash_b": 63.67,
+    "forward_pe_ntm": 24.7,
+    "short_interest": "未接入",
+    "next_earnings": "2026-10-28（预估）",
+    "implied_move": "未接入",
+    "week52": "$353 – $542",
+    "ev_ebitda_ntm": "未接入",
+    "dividend_quarterly": null,
+    "dividend_yield": "0.71%",
+    "target_price": 578.9,
+    "ratings": "strong_buy · 52 家",
+    "inst_insider": "未接入",
+    "days_to_cover": "未接入"
+  }
+}

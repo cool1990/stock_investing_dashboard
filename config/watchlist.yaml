@@ -2,13 +2,16 @@
 groups:
   - id: ai_hw
     name: AI 硬件
-    tickers: [MU, NVDA, AVGO, SNDK, CRWV]
+    tickers: [MU, NVDA, SNDK]
   - id: software
     name: 软件
-    tickers: [CDNS, NOW]
+    tickers: [ADBE, MSFT]
   - id: platform
     name: 平台
-    tickers: [UBER]
+    tickers: [GOOGL, META, AMZN]
+  - id: consumer
+    name: 消费
+    tickers: [MCD]
 
 defaults:
   # 「添加股票」链接：Actions 用 GITHUB_REPOSITORY 覆盖；本地构建回退到此值
@@ -16,11 +19,12 @@ defaults:
   add_stock_path: blob/main/config/watchlist.yaml
 
 tickers:
-  MU:   { name_en: Micron Technology, name_zh: 美光科技, exchange: 纳斯达克, sector: 存储, group: AI 硬件 }
-  NVDA: { name_en: NVIDIA, name_zh: 英伟达, exchange: 纳斯达克, sector: AI 芯片, group: AI 硬件 }
-  AVGO: { name_en: Broadcom, name_zh: 博通, exchange: 纳斯达克, sector: AI 芯片 / 网络, group: AI 硬件 }
-  SNDK: { name_en: SanDisk, name_zh: 闪迪, exchange: 纳斯达克, sector: 存储, group: AI 硬件 }
-  CRWV: { name_en: CoreWeave, name_zh: CoreWeave, exchange: 纳斯达克, sector: AI 云, group: AI 硬件 }
-  CDNS: { name_en: Cadence, name_zh: 铿腾电子, exchange: 纳斯达克, sector: EDA 软件, group: 软件 }
-  NOW:  { name_en: ServiceNow, name_zh: ServiceNow, exchange: 纽交所, sector: 企业软件, group: 软件 }
-  UBER: { name_en: Uber, name_zh: 优步, exchange: 纽交所, sector: 出行平台, group: 平台 }
+  MU:    { name_en: Micron Technology, name_zh: 美光科技, exchange: 纳斯达克, sector: 存储, group: AI 硬件 }
+  SNDK:  { name_en: Sandisk, name_zh: 闪迪, exchange: 纳斯达克, sector: 存储, group: AI 硬件 }
+  NVDA:  { name_en: NVIDIA, name_zh: 英伟达, exchange: 纳斯达克, sector: AI 芯片, group: AI 硬件 }
+  MCD:   { name_en: McDonald's, name_zh: 麦当劳, exchange: 纽交所, sector: 餐饮, group: 消费 }
+  ADBE:  { name_en: Adobe, name_zh: Adobe, exchange: 纳斯达克, sector: 软件, group: 软件 }
+  GOOGL: { name_en: Alphabet, name_zh: 谷歌, exchange: 纳斯达克, sector: 互联网平台, group: 平台 }
+  MSFT:  { name_en: Microsoft, name_zh: 微软, exchange: 纳斯达克, sector: 软件 / 云, group: 软件 }
+  META:  { name_en: Meta Platforms, name_zh: Meta, exchange: 纳斯达克, sector: 社交平台, group: 平台 }
+  AMZN:  { name_en: Amazon, name_zh: 亚马逊, exchange: 纳斯达克, sector: 电商 / 云, group: 平台 }

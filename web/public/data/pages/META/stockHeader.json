@@ -1,0 +1,31 @@
+{
+  "ticker": "META",
+  "name_en": "Meta Platforms",
+  "name_zh": "Meta",
+  "exchange": "纳斯达克",
+  "sector": "社交平台",
+  "updated_at_bj": "2026-10-02 09:13",
+  "latest_report": "FQ2-26",
+  "latest_report_date": "2026-07-29",
+  "release_timing": "after_close",
+  "header": {
+    "price": 725.18,
+    "price_1d": "−1.8%",
+    "price_ytd": "+9.9%",
+    "market_cap": "$1599.1B",
+    "ev": null,
+    "net_cash_b": null,
+    "forward_pe_ntm": 21.7,
+    "short_interest": "未接入",
+    "next_earnings": "2026-10-28（预估）",
+    "implied_move": "未接入",
+    "week52": "$526 – $778",
+    "ev_ebitda_ntm": "未接入",
+    "dividend_quarterly": null,
+    "dividend_yield": "0.29%",
+    "target_price": 794.96,
+    "ratings": "strong_buy · 58 家",
+    "inst_insider": "未接入",
+    "days_to_cover": "未接入"
+  }
+}

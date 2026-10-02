@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import math
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -31,14 +32,24 @@ def fetch_prices(ticker: str) -> dict:
                 d = idx.tz_convert("America/New_York").date().isoformat()
             except Exception:  # noqa: BLE001
                 d = str(idx)[:10]
-            closes[d] = round(float(row["Close"]), 4)
-            if "Open" in row and row["Open"] == row["Open"]:
-                opens[d] = round(float(row["Open"]), 4)
+            close = float(row["Close"])
+            if not math.isfinite(close):
+                continue
+            closes[d] = round(close, 4)
+            if "Open" in row:
+                op = float(row["Open"])
+                if math.isfinite(op):
+                    opens[d] = round(op, 4)
             adj = None
             for col in ("Adj Close", "AdjClose"):
-                if col in row and row[col] == row[col]:
-                    adj = float(row[col])
-                    break
+                if col in row:
+                    try:
+                        cand = float(row[col])
+                    except (TypeError, ValueError):
+                        continue
+                    if math.isfinite(cand):
+                        adj = cand
+                        break
             closes_adj[d] = round(adj, 4) if adj is not None else closes[d]
     now_et = datetime.now(ZoneInfo("America/New_York"))
     # An unfinished session is not a close. Keep the open so the next-open

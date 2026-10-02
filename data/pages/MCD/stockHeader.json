@@ -1,0 +1,31 @@
+{
+  "ticker": "MCD",
+  "name_en": "McDonald's",
+  "name_zh": "麦当劳",
+  "exchange": "纽交所",
+  "sector": "餐饮",
+  "updated_at_bj": "2026-10-02 09:13",
+  "latest_report": "FQ2-26",
+  "latest_report_date": "2026-08-04",
+  "release_timing": "before_open",
+  "header": {
+    "price": 230.94,
+    "price_1d": "−1.3%",
+    "price_ytd": "−24.4%",
+    "market_cap": "$163.4B",
+    "ev": null,
+    "net_cash_b": null,
+    "forward_pe_ntm": 17.0,
+    "short_interest": "未接入",
+    "next_earnings": "2026-11-05（预估）",
+    "implied_move": "未接入",
+    "week52": "$231 – $341",
+    "ev_ebitda_ntm": "未接入",
+    "dividend_quarterly": null,
+    "dividend_yield": "3.18%",
+    "target_price": 297.21,
+    "ratings": "buy · 29 家",
+    "inst_insider": "未接入",
+    "days_to_cover": "未接入"
+  }
+}

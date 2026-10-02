@@ -28,8 +28,14 @@ def bj_now() -> str:
 def last_close(closes: dict) -> tuple[Optional[str], Optional[float]]:
     if not closes:
         return None, None
-    d = sorted(closes.keys())[-1]
-    return d, float(closes[d])
+    for d in sorted(closes.keys(), reverse=True):
+        try:
+            px = float(closes[d])
+        except (TypeError, ValueError):
+            continue
+        if px == px and abs(px) != float("inf"):  # skip NaN / inf
+            return d, px
+    return None, None
 
 
 def pct_change(closes: dict, end_date: str, start_date: str) -> Optional[float]:

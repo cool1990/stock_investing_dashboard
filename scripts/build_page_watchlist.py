@@ -35,14 +35,26 @@ def tone_pct(p: float | None) -> str:
     return "up" if p > 0 else "down"
 
 
+def _finite(v) -> float | None:
+    try:
+        x = float(v)
+    except (TypeError, ValueError):
+        return None
+    if x != x or abs(x) == float("inf"):
+        return None
+    return x
+
+
 def price_stats(closes: dict) -> tuple[float | None, float | None, float | None]:
     if not closes:
         return None, None, None
-    keys = sorted(closes.keys())
-    last = float(closes[keys[-1]])
+    keys = [k for k in sorted(closes.keys()) if _finite(closes[k]) is not None]
+    if not keys:
+        return None, None, None
+    last = _finite(closes[keys[-1]])
     d1 = None
-    if len(keys) >= 2:
-        prev = float(closes[keys[-2]])
+    if last is not None and len(keys) >= 2:
+        prev = _finite(closes[keys[-2]])
         if prev:
             d1 = (last / prev - 1) * 100
     ytd = None
@@ -52,8 +64,10 @@ def price_stats(closes: dict) -> tuple[float | None, float | None, float | None]
         if k <= y0:
             base_k = k
             break
-    if base_k and closes[base_k]:
-        ytd = (last / float(closes[base_k]) - 1) * 100
+    if last is not None and base_k:
+        base = _finite(closes[base_k])
+        if base:
+            ytd = (last / base - 1) * 100
     return last, d1, ytd
 
 
@@ -133,12 +147,13 @@ def main() -> int:
     wl = load_watchlist()
     tickers_cfg = wl.get("tickers") or {}
 
-    group_id_map = {"AI 硬件": "hw", "软件": "sw", "平台": "pf"}
+    group_id_map = {"AI 硬件": "hw", "软件": "sw", "平台": "pf", "消费": "cn"}
     groups = [
         {"id": "all", "label": "全部"},
         {"id": "hw", "label": "AI 硬件"},
         {"id": "sw", "label": "软件"},
         {"id": "pf", "label": "平台"},
+        {"id": "cn", "label": "消费"},
     ]
 
     filings = (read_json(ROOT / "data" / "filings" / "watchlist.json", default={"items": []}) or {}).get("items") or []
@@ -187,9 +202,11 @@ def main() -> int:
             last_date = None
 
         ntm, rev30, r_tone, header_fpe = ntm_and_rev(t)
-        fpe = header_fpe
+        fpe = header_fpe if _finite(header_fpe) is not None else None
         if fpe is None and price and ntm and ntm > 0:
             fpe = round(price / ntm, 1)
+        if _finite(fpe) is None:
+            fpe = None
 
         try:
             cfg = load_company(t)

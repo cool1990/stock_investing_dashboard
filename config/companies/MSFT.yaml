@@ -1,0 +1,21 @@
+ticker: MSFT
+cik: 789019
+name_en: Microsoft
+name_zh: 微软
+exchange: 纳斯达克
+sector: 软件 / 云
+fiscal:
+  quarter_end_months: [9, 12, 3, 6]  # FY 截至 6 月
+  fy_label: end_year
+release_timing: after_close
+backfill_from: FQ1-22
+eps_basis: non_gaap
+ir:
+  prepared_remarks_url_pattern: null
+guidance: {}
+overrides:
+  actuals: {}
+  financials: {}
+peers: []
+header:
+  dividend_quarterly: null

@@ -1,0 +1,675 @@
+{
+  "eps_basis": "non_gaap",
+  "quarters": {},
+  "years": {},
+  "raw": {
+    "yahoo_eps_by_release": {
+      "2026-07-29": {
+        "eps": 4.74,
+        "eps_estimate": 4.24,
+        "release_date": "2026-07-29",
+        "source": "yahoo"
+      },
+      "2026-04-29": {
+        "eps": 4.27,
+        "eps_estimate": 4.07,
+        "release_date": "2026-04-29",
+        "source": "yahoo"
+      },
+      "2026-01-28": {
+        "eps": 4.14,
+        "eps_estimate": 3.92,
+        "release_date": "2026-01-28",
+        "source": "yahoo"
+      },
+      "2025-10-29": {
+        "eps": 4.13,
+        "eps_estimate": 3.66,
+        "release_date": "2025-10-29",
+        "source": "yahoo"
+      },
+      "2025-07-30": {
+        "eps": 3.65,
+        "eps_estimate": 3.38,
+        "release_date": "2025-07-30",
+        "source": "yahoo"
+      },
+      "2025-04-30": {
+        "eps": 3.46,
+        "eps_estimate": 3.22,
+        "release_date": "2025-04-30",
+        "source": "yahoo"
+      },
+      "2025-01-29": {
+        "eps": 3.23,
+        "eps_estimate": 3.12,
+        "release_date": "2025-01-29",
+        "source": "yahoo"
+      },
+      "2024-10-30": {
+        "eps": 3.3,
+        "eps_estimate": 3.11,
+        "release_date": "2024-10-30",
+        "source": "yahoo"
+      },
+      "2024-07-30": {
+        "eps": 2.95,
+        "eps_estimate": 2.94,
+        "release_date": "2024-07-30",
+        "source": "yahoo"
+      },
+      "2024-04-25": {
+        "eps": 2.94,
+        "eps_estimate": 2.84,
+        "release_date": "2024-04-25",
+        "source": "yahoo"
+      },
+      "2024-01-30": {
+        "eps": 2.93,
+        "eps_estimate": 2.77,
+        "release_date": "2024-01-30",
+        "source": "yahoo"
+      },
+      "2023-10-24": {
+        "eps": 2.99,
+        "eps_estimate": 2.65,
+        "release_date": "2023-10-24",
+        "source": "yahoo"
+      },
+      "2023-07-25": {
+        "eps": 2.69,
+        "eps_estimate": 2.55,
+        "release_date": "2023-07-25",
+        "source": "yahoo"
+      },
+      "2023-04-25": {
+        "eps": 2.45,
+        "eps_estimate": 2.23,
+        "release_date": "2023-04-25",
+        "source": "yahoo"
+      },
+      "2023-01-24": {
+        "eps": 2.32,
+        "eps_estimate": 2.32,
+        "release_date": "2023-01-24",
+        "source": "yahoo"
+      },
+      "2022-10-25": {
+        "eps": 2.35,
+        "eps_estimate": 2.31,
+        "release_date": "2022-10-25",
+        "source": "yahoo"
+      },
+      "2022-07-26": {
+        "eps": 2.23,
+        "eps_estimate": 2.29,
+        "release_date": "2022-07-26",
+        "source": "yahoo"
+      },
+      "2022-04-26": {
+        "eps": 2.22,
+        "eps_estimate": 2.2,
+        "release_date": "2022-04-26",
+        "source": "yahoo"
+      },
+      "2022-01-25": {
+        "eps": 2.48,
+        "eps_estimate": 2.32,
+        "release_date": "2022-01-25",
+        "source": "yahoo"
+      },
+      "2021-10-26": {
+        "eps": 2.27,
+        "eps_estimate": 2.08,
+        "release_date": "2021-10-26",
+        "source": "yahoo"
+      },
+      "2021-07-27": {
+        "eps": 2.17,
+        "eps_estimate": 1.93,
+        "release_date": "2021-07-27",
+        "source": "yahoo"
+      },
+      "2021-04-27": {
+        "eps": 1.95,
+        "eps_estimate": 1.78,
+        "release_date": "2021-04-27",
+        "source": "yahoo"
+      },
+      "2021-01-26": {
+        "eps": 2.03,
+        "eps_estimate": 1.64,
+        "release_date": "2021-01-26",
+        "source": "yahoo"
+      },
+      "2020-10-27": {
+        "eps": 1.82,
+        "eps_estimate": 1.55,
+        "release_date": "2020-10-27",
+        "source": "yahoo"
+      },
+      "2020-07-22": {
+        "eps": 1.46,
+        "eps_estimate": 1.37,
+        "release_date": "2020-07-22",
+        "source": "yahoo"
+      },
+      "2020-04-29": {
+        "eps": 1.4,
+        "eps_estimate": 1.27,
+        "release_date": "2020-04-29",
+        "source": "yahoo"
+      },
+      "2020-01-29": {
+        "eps": 1.51,
+        "eps_estimate": 1.32,
+        "release_date": "2020-01-29",
+        "source": "yahoo"
+      },
+      "2019-10-23": {
+        "eps": 1.38,
+        "eps_estimate": 1.24,
+        "release_date": "2019-10-23",
+        "source": "yahoo"
+      },
+      "2019-07-18": {
+        "eps": 1.37,
+        "eps_estimate": 1.21,
+        "release_date": "2019-07-18",
+        "source": "yahoo"
+      },
+      "2019-04-24": {
+        "eps": 1.14,
+        "eps_estimate": 1.0,
+        "release_date": "2019-04-24",
+        "source": "yahoo"
+      },
+      "2019-01-30": {
+        "eps": 1.1,
+        "eps_estimate": 1.09,
+        "release_date": "2019-01-30",
+        "source": "yahoo"
+      },
+      "2018-10-24": {
+        "eps": 1.14,
+        "eps_estimate": 0.97,
+        "release_date": "2018-10-24",
+        "source": "yahoo"
+      },
+      "2018-07-19": {
+        "eps": 1.13,
+        "eps_estimate": 1.08,
+        "release_date": "2018-07-19",
+        "source": "yahoo"
+      },
+      "2018-04-26": {
+        "eps": 0.95,
+        "eps_estimate": 0.85,
+        "release_date": "2018-04-26",
+        "source": "yahoo"
+      },
+      "2018-01-31": {
+        "eps": 0.96,
+        "eps_estimate": 0.87,
+        "release_date": "2018-01-31",
+        "source": "yahoo"
+      },
+      "2017-10-26": {
+        "eps": 0.84,
+        "eps_estimate": 0.73,
+        "release_date": "2017-10-26",
+        "source": "yahoo"
+      },
+      "2017-07-20": {
+        "eps": 0.98,
+        "eps_estimate": 0.71,
+        "release_date": "2017-07-20",
+        "source": "yahoo"
+      },
+      "2017-04-27": {
+        "eps": 0.73,
+        "eps_estimate": 0.7,
+        "release_date": "2017-04-27",
+        "source": "yahoo"
+      },
+      "2017-01-26": {
+        "eps": 0.84,
+        "eps_estimate": 0.79,
+        "release_date": "2017-01-26",
+        "source": "yahoo"
+      },
+      "2016-10-20": {
+        "eps": 0.76,
+        "eps_estimate": 0.68,
+        "release_date": "2016-10-20",
+        "source": "yahoo"
+      },
+      "2016-07-19": {
+        "eps": 0.69,
+        "eps_estimate": 0.58,
+        "release_date": "2016-07-19",
+        "source": "yahoo"
+      },
+      "2016-04-21": {
+        "eps": 0.62,
+        "eps_estimate": 0.64,
+        "release_date": "2016-04-21",
+        "source": "yahoo"
+      },
+      "2016-01-28": {
+        "eps": 0.78,
+        "eps_estimate": 0.71,
+        "release_date": "2016-01-28",
+        "source": "yahoo"
+      },
+      "2015-10-22": {
+        "eps": 0.67,
+        "eps_estimate": 0.59,
+        "release_date": "2015-10-22",
+        "source": "yahoo"
+      },
+      "2015-07-21": {
+        "eps": 0.62,
+        "eps_estimate": 0.57,
+        "release_date": "2015-07-21",
+        "source": "yahoo"
+      },
+      "2015-04-23": {
+        "eps": 0.62,
+        "eps_estimate": 0.53,
+        "release_date": "2015-04-23",
+        "source": "yahoo"
+      },
+      "2015-01-26": {
+        "eps": 0.77,
+        "eps_estimate": 0.74,
+        "release_date": "2015-01-26",
+        "source": "yahoo"
+      },
+      "2014-10-23": {
+        "eps": 0.65,
+        "eps_estimate": 0.54,
+        "release_date": "2014-10-23",
+        "source": "yahoo"
+      },
+      "2014-07-22": {
+        "eps": 0.55,
+        "eps_estimate": 0.6,
+        "release_date": "2014-07-22",
+        "source": "yahoo"
+      }
+    },
+    "sec_revenue_by_end": {
+      "2016-06-30": {
+        "rev_usd": 91154000000,
+        "rev": 91.15,
+        "fp": "FY",
+        "fy": 2018,
+        "form": "10-K",
+        "filed": "2018-08-03",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2016-09-30": {
+        "rev_usd": 21928000000,
+        "rev": 21.93,
+        "fp": "FY",
+        "fy": 2018,
+        "form": "10-K",
+        "filed": "2018-08-03",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2016-12-31": {
+        "rev_usd": 25826000000,
+        "rev": 25.83,
+        "fp": "FY",
+        "fy": 2018,
+        "form": "10-K",
+        "filed": "2018-08-03",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2017-03-31": {
+        "rev_usd": 23212000000,
+        "rev": 23.21,
+        "fp": "FY",
+        "fy": 2018,
+        "form": "10-K",
+        "filed": "2018-08-03",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2017-06-30": {
+        "rev_usd": 25605000000,
+        "rev": 25.61,
+        "fp": "FY",
+        "fy": 2018,
+        "form": "10-K",
+        "filed": "2018-08-03",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2017-09-30": {
+        "rev_usd": 24538000000,
+        "rev": 24.54,
+        "fp": "FY",
+        "fy": 2019,
+        "form": "10-K",
+        "filed": "2019-08-01",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2017-12-31": {
+        "rev_usd": 28918000000,
+        "rev": 28.92,
+        "fp": "FY",
+        "fy": 2019,
+        "form": "10-K",
+        "filed": "2019-08-01",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2018-03-31": {
+        "rev_usd": 26819000000,
+        "rev": 26.82,
+        "fp": "FY",
+        "fy": 2019,
+        "form": "10-K",
+        "filed": "2019-08-01",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2018-06-30": {
+        "rev_usd": 30085000000,
+        "rev": 30.09,
+        "fp": "FY",
+        "fy": 2019,
+        "form": "10-K",
+        "filed": "2019-08-01",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2018-09-30": {
+        "rev_usd": 29084000000,
+        "rev": 29.08,
+        "fp": "FY",
+        "fy": 2020,
+        "form": "10-K",
+        "filed": "2020-07-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2018-12-31": {
+        "rev_usd": 32471000000,
+        "rev": 32.47,
+        "fp": "FY",
+        "fy": 2020,
+        "form": "10-K",
+        "filed": "2020-07-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2019-03-31": {
+        "rev_usd": 30571000000,
+        "rev": 30.57,
+        "fp": "FY",
+        "fy": 2020,
+        "form": "10-K",
+        "filed": "2020-07-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2019-06-30": {
+        "rev_usd": 33717000000,
+        "rev": 33.72,
+        "fp": "FY",
+        "fy": 2020,
+        "form": "10-K",
+        "filed": "2020-07-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2019-09-30": {
+        "rev_usd": 33055000000,
+        "rev": 33.05,
+        "fp": "Q1",
+        "fy": 2021,
+        "form": "10-Q",
+        "filed": "2020-10-27",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2019-12-31": {
+        "rev_usd": 36906000000,
+        "rev": 36.91,
+        "fp": "Q2",
+        "fy": 2021,
+        "form": "10-Q",
+        "filed": "2021-01-26",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2020-03-31": {
+        "rev_usd": 35021000000,
+        "rev": 35.02,
+        "fp": "Q3",
+        "fy": 2021,
+        "form": "10-Q",
+        "filed": "2021-04-27",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2020-06-30": {
+        "rev_usd": 38033000000,
+        "rev": 38.03,
+        "fp": "FY",
+        "fy": 2020,
+        "form": "10-K",
+        "filed": "2020-07-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2020-09-30": {
+        "rev_usd": 37154000000,
+        "rev": 37.15,
+        "fp": "Q1",
+        "fy": 2022,
+        "form": "10-Q",
+        "filed": "2021-10-26",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2020-12-31": {
+        "rev_usd": 43076000000,
+        "rev": 43.08,
+        "fp": "Q2",
+        "fy": 2022,
+        "form": "10-Q",
+        "filed": "2022-01-25",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2021-03-31": {
+        "rev_usd": 41706000000,
+        "rev": 41.71,
+        "fp": "Q3",
+        "fy": 2022,
+        "form": "10-Q",
+        "filed": "2022-04-26",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2021-06-30": {
+        "rev_usd": 168088000000,
+        "rev": 168.09,
+        "fp": "FY",
+        "fy": 2023,
+        "form": "10-K",
+        "filed": "2023-07-27",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2021-09-30": {
+        "rev_usd": 45317000000,
+        "rev": 45.32,
+        "fp": "Q1",
+        "fy": 2023,
+        "form": "10-Q",
+        "filed": "2022-10-25",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2021-12-31": {
+        "rev_usd": 51728000000,
+        "rev": 51.73,
+        "fp": "Q2",
+        "fy": 2023,
+        "form": "10-Q",
+        "filed": "2023-01-24",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2022-03-31": {
+        "rev_usd": 49360000000,
+        "rev": 49.36,
+        "fp": "Q3",
+        "fy": 2023,
+        "form": "10-Q",
+        "filed": "2023-04-25",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2022-06-30": {
+        "rev_usd": 198270000000,
+        "rev": 198.27,
+        "fp": "FY",
+        "fy": 2024,
+        "form": "10-K",
+        "filed": "2024-07-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2022-09-30": {
+        "rev_usd": 50122000000,
+        "rev": 50.12,
+        "fp": "Q1",
+        "fy": 2024,
+        "form": "10-Q",
+        "filed": "2023-10-24",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2022-12-31": {
+        "rev_usd": 52747000000,
+        "rev": 52.75,
+        "fp": "Q2",
+        "fy": 2024,
+        "form": "10-Q",
+        "filed": "2024-01-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2023-03-31": {
+        "rev_usd": 52857000000,
+        "rev": 52.86,
+        "fp": "Q3",
+        "fy": 2024,
+        "form": "10-Q",
+        "filed": "2024-04-25",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2023-06-30": {
+        "rev_usd": 211915000000,
+        "rev": 211.91,
+        "fp": "FY",
+        "fy": 2025,
+        "form": "10-K",
+        "filed": "2025-07-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2023-09-30": {
+        "rev_usd": 56517000000,
+        "rev": 56.52,
+        "fp": "Q1",
+        "fy": 2025,
+        "form": "10-Q",
+        "filed": "2024-10-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2023-12-31": {
+        "rev_usd": 62020000000,
+        "rev": 62.02,
+        "fp": "Q2",
+        "fy": 2025,
+        "form": "10-Q",
+        "filed": "2025-01-29",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2024-03-31": {
+        "rev_usd": 61858000000,
+        "rev": 61.86,
+        "fp": "Q3",
+        "fy": 2025,
+        "form": "10-Q",
+        "filed": "2025-04-30",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2024-06-30": {
+        "rev_usd": 245122000000,
+        "rev": 245.12,
+        "fp": "FY",
+        "fy": 2026,
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2024-09-30": {
+        "rev_usd": 65585000000,
+        "rev": 65.58,
+        "fp": "Q1",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2025-10-29",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2024-12-31": {
+        "rev_usd": 69632000000,
+        "rev": 69.63,
+        "fp": "Q2",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-01-28",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2025-03-31": {
+        "rev_usd": 70066000000,
+        "rev": 70.07,
+        "fp": "Q3",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-04-29",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2025-06-30": {
+        "rev_usd": 281724000000,
+        "rev": 281.72,
+        "fp": "FY",
+        "fy": 2026,
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2025-09-30": {
+        "rev_usd": 77673000000,
+        "rev": 77.67,
+        "fp": "Q1",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2025-10-29",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2025-12-31": {
+        "rev_usd": 81273000000,
+        "rev": 81.27,
+        "fp": "Q2",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-01-28",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2026-03-31": {
+        "rev_usd": 82886000000,
+        "rev": 82.89,
+        "fp": "Q3",
+        "fy": 2026,
+        "form": "10-Q",
+        "filed": "2026-04-29",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      },
+      "2026-06-30": {
+        "rev_usd": 331839000000,
+        "rev": 331.84,
+        "fp": "FY",
+        "fy": 2026,
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "source": "sec:RevenueFromContractWithCustomerExcludingAssessedTax"
+      }
+    }
+  },
+  "updated_at": "2026-10-02T01:11:57Z"
+}

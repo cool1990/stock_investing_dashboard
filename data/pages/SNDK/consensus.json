@@ -5,11 +5,11 @@
     "name_zh": "闪迪",
     "exchange": "纳斯达克",
     "sector": "存储",
-    "updated_at_bj": "2026-10-01 23:49",
+    "updated_at_bj": "2026-10-02 09:13",
     "latest_report": "—",
     "latest_report_date": "—",
     "release_timing": "after_close",
-    "snapshot_note": "共识快照：Yahoo 2026-10-01（绝对财期，方法 8k_2.02）。详情表遍历快照中的全部财期。",
+    "snapshot_note": "共识快照：Yahoo 2026-10-02（绝对财期，方法 8k_2.02）。详情表遍历快照中的全部财期。",
     "quarter_labels": [
       "Q1 · 9月",
       "Q2 · 12月",
@@ -209,8 +209,8 @@
     },
     "pe": {
       "ttm_eps": null,
-      "ntm_eps": 226.43,
-      "ntm_method": "fy_time_weight FY27*0.7474+FY28*0.2526",
+      "ntm_eps": 226.56,
+      "ntm_method": "fy_time_weight FY27*0.7447+FY28*0.2553",
       "fy": {
         "FY27": 213.9,
         "FY28": 263.49

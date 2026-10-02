@@ -378,7 +378,15 @@ def main() -> int:
 
     prices = read_json(ROOT / "data" / "prices" / f"{ticker}.json", default={}) or {}
     closes = prices.get("closes") or {}
-    last_close = closes[sorted(closes.keys())[-1]] if closes else None
+    last_close = None
+    for day in sorted(closes.keys(), reverse=True):
+        try:
+            px = float(closes[day])
+        except (TypeError, ValueError):
+            continue
+        if px == px and abs(px) != float("inf"):
+            last_close = px
+            break
 
     page.setdefault("meta", {})
     page["meta"]["updated_at_bj"] = bj_now()
@@ -386,9 +394,9 @@ def main() -> int:
     page["meta"]["name_zh"] = cfg.get("name_zh", page["meta"].get("name_zh"))
     page["meta"]["ticker"] = ticker
     page.setdefault("future", {}).setdefault("pe", {})
-    page["future"]["pe"]["last_close"] = round(last_close, 2) if last_close else None
+    page["future"]["pe"]["last_close"] = round(last_close, 2) if last_close is not None else None
     page["meta"].setdefault("header", {})
-    if last_close:
+    if last_close is not None:
         page["meta"]["header"]["price"] = round(last_close, 2)
 
     snap = latest_snapshot(ticker)
@@ -406,7 +414,7 @@ def main() -> int:
         page["future"]["pe"]["ttm_eps"] = ttm
 
     ntm = page["future"]["pe"].get("ntm_eps")
-    if last_close and ntm and ntm > 0:
+    if last_close is not None and ntm and ntm > 0:
         page["meta"]["header"]["forward_pe_ntm"] = round(last_close / ntm, 1)
     else:
         page["meta"]["header"]["forward_pe_ntm"] = None

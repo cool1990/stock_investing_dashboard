@@ -7,8 +7,8 @@
     },
     "yahoo_consensus": {
       "ok": true,
-      "message": "UBER periods=4",
-      "updated_at_utc": "2026-10-01T15:47:54Z"
+      "message": "AMZN periods=4",
+      "updated_at_utc": "2026-10-02T01:12:04Z"
     },
     "sec_companyfacts": {
       "ok": true,
@@ -18,37 +18,37 @@
     "sec_financials": {
       "ok": true,
       "message": "18 periods",
-      "updated_at_utc": "2026-10-01T15:49:14Z"
+      "updated_at_utc": "2026-10-02T01:12:07Z"
     },
     "yahoo_prices": {
       "ok": true,
-      "message": "1858 days",
-      "updated_at_utc": "2026-10-01T15:49:52Z"
+      "message": "7390 days",
+      "updated_at_utc": "2026-10-02T01:13:14Z"
     },
     "edgar_filings": {
       "ok": true,
-      "message": "320 filings",
-      "updated_at_utc": "2026-10-01T15:47:17Z"
+      "message": "360 filings",
+      "updated_at_utc": "2026-10-02T01:11:28Z"
     },
     "watchlist_page": {
       "ok": true,
-      "message": "8 tickers",
-      "updated_at_utc": "2026-10-01T15:49:52Z"
+      "message": "9 tickers",
+      "updated_at_utc": "2026-10-02T01:13:14Z"
     },
     "yahoo_actuals": {
       "ok": true,
-      "message": "30 rows",
-      "updated_at_utc": "2026-10-01T15:47:55Z"
+      "message": "49 rows",
+      "updated_at_utc": "2026-10-02T01:12:05Z"
     },
     "sec_revenue": {
       "ok": true,
-      "message": "4 rows",
-      "updated_at_utc": "2026-10-01T15:47:55Z"
+      "message": "39 rows",
+      "updated_at_utc": "2026-10-02T01:12:05Z"
     },
     "nasdaq_secondary": {
       "ok": true,
       "message": "ok",
-      "updated_at_utc": "2026-10-01T15:47:58Z"
+      "updated_at_utc": "2026-10-02T01:12:07Z"
     }
   }
 }

@@ -77,7 +77,7 @@
         "consensus": 31.72,
         "actual": 33.42,
         "guide": null,
-        "next_day": null,
+        "next_day": NaN,
         "secondary": 31.35,
         "pre_release_source": "marketbeat"
       }
@@ -98,7 +98,7 @@
         "consensus": 73.46,
         "actual": 75.52,
         "guide": null,
-        "next_day": null,
+        "next_day": NaN,
         "secondary": null
       }
     ]
@@ -174,7 +174,7 @@
         "consensus": 51.33,
         "actual": 54.23,
         "guide": null,
-        "next_day": null,
+        "next_day": NaN,
         "secondary": 50.97
       }
     ],
@@ -194,7 +194,7 @@
         "consensus": 129.86,
         "actual": 133.19,
         "guide": null,
-        "next_day": null,
+        "next_day": NaN,
         "secondary": null
       }
     ]

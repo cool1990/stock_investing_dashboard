@@ -20,6 +20,6 @@
     "sources": [],
     "paras": []
   },
-  "banner": "已有任务包草稿，但 origin 不是 reviewed，因此不展示为电话会原文。",
+  "banner": "电话会原文、时长与 AI 摘要未接入。此页不使用样例稿。",
   "remarks_status": "未接入"
 }

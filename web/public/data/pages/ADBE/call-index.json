@@ -1,0 +1,12 @@
+{
+  "ticker": "ADBE",
+  "periods": [
+    {
+      "period": "FQ3-26",
+      "label": "FQ3-26",
+      "status": "not_connected",
+      "href": "#/ADBE/call/FQ3-26"
+    }
+  ],
+  "latest": "FQ3-26"
+}

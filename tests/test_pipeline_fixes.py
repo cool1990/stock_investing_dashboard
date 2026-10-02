@@ -186,3 +186,11 @@ def test_incomplete_session_dropped_before_the_close():
     assert "2026-10-02" not in drop_incomplete_session(series, noon)
     after = datetime(2026, 10, 2, 16, 5)
     assert drop_incomplete_session(series, after)["2026-10-02"] == 11
+
+
+def test_watchlist_price_stats_skip_nan_closes():
+    from scripts.build_page_watchlist import price_stats
+
+    last, d1, ytd = price_stats({"2026-09-29": 100.0, "2026-09-30": 110.0, "2026-10-01": float("nan")})
+    assert last == 110.0
+    assert abs(d1 - 10.0) < 1e-9
